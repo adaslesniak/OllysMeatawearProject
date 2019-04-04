@@ -7,7 +7,7 @@ public class Log {
     
     //channels are here so we can later disable some channels to have a clearel log - especially for debug
     enum Channel {
-        case connection
+        case bluetooth
         case viewNavigation
         case userAction
         case debug //all crap goes here

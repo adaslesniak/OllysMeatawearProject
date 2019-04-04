@@ -4,39 +4,40 @@ import Foundation
 
 
 class Devices {
-    
-    internal private(set) static var nearby = [MetaWear]()
-    internal private(set) static var paired = [MetaWear]()
-    internal private(set) static var connected = [MetaWear]()
+
+    private static var _known: [DeviceCard] = {
+        //TODO: implement reading it from some persistent memory
+        return []
+    }()
+    static var known: [DeviceCard] { return _known }
+    //private static var nearby = [DeviceCard:MetaWear]()
     
     private static var listeners = [() -> Void]()
     
     
-    public static func scanAreaForNewDevices() {
+    public static func scanArea(_ whendDone: @escaping ([DeviceCard:MetaWear]) -> Void) {
+        var nearby = [DeviceCard:MetaWear]()
+        var requestPending = 0
         MetaWearScanner.shared.startScan(allowDuplicates: true) { device in
             guard device.rssi > -80 else {
                 return //signal too weak
             }
-            guard !connected.contains(device) else {
-                return //already connected
-            }
-            device.connectAndSetup().continueWith { task in
-                guard task.error == nil else {
-                    
+            requestPending += 1
+            device.createCard(name: "") { info in
+                if let named = known.first(where: { $0 == info }) {
+                    Log.add("found known device: \(named)", on: .bluetooth)
+                    nearby[named] = device
+                } else {
+                    Log.add("found new nearby device: \(info)", on: .bluetooth)
+                    nearby[info] = device
                 }
                 
+                requestPending -= 1
+                if requestPending == 0 {
+                    whendDone(nearby)
+                }
             }
         }
     }
     
-    private static var scanner: MetaWearScanner = {
-        let scnr = MetaWearScanner.shared
-        scnr.startScan(allowDuplicates: false, callback: onDeviceFound)
-        return scnr
-    }()
-    
-    
-    private static func onDeviceFound(_ device: Any) {
-        nearby.append(device)
-    }
 }
