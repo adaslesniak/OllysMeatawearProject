@@ -14,6 +14,8 @@
 		81E09C3D22569CA300CE21EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81E09C3C22569CA300CE21EB /* Assets.xcassets */; };
 		81E09C4022569CA300CE21EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81E09C3E22569CA300CE21EB /* LaunchScreen.storyboard */; };
 		81E09C4B2256AE2B00CE21EB /* InitialView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81E09C4A2256AE2B00CE21EB /* InitialView.xib */; };
+		81E09C4D2256B1C000CE21EB /* DevicesScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E09C4C2256B1C000CE21EB /* DevicesScanner.swift */; };
+		81E09C4F2256B5CC00CE21EB /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E09C4E2256B5CC00CE21EB /* Log.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		81E09C3F22569CA300CE21EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81E09C4122569CA300CE21EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81E09C4A2256AE2B00CE21EB /* InitialView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InitialView.xib; sourceTree = "<group>"; };
+		81E09C4C2256B1C000CE21EB /* DevicesScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesScanner.swift; sourceTree = "<group>"; };
+		81E09C4E2256B5CC00CE21EB /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		89FFC2ABBB881D0E48E7E92A /* Pods-OllysProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OllysProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-OllysProject/Pods-OllysProject.release.xcconfig"; sourceTree = "<group>"; };
 		EE8BBB570C2BD6F902C7E9F0 /* Pods-OllysProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OllysProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OllysProject/Pods-OllysProject.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,6 +83,8 @@
 				81E09C3C22569CA300CE21EB /* Assets.xcassets */,
 				81E09C3E22569CA300CE21EB /* LaunchScreen.storyboard */,
 				81E09C4122569CA300CE21EB /* Info.plist */,
+				81E09C4C2256B1C000CE21EB /* DevicesScanner.swift */,
+				81E09C4E2256B5CC00CE21EB /* Log.swift */,
 			);
 			path = OllysProject;
 			sourceTree = "<group>";
@@ -206,7 +212,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81E09C4D2256B1C000CE21EB /* DevicesScanner.swift in Sources */,
 				81E09C3822569CA200CE21EB /* InitialViewCtrl.swift in Sources */,
+				81E09C4F2256B5CC00CE21EB /* Log.swift in Sources */,
 				81E09C3622569CA200CE21EB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
