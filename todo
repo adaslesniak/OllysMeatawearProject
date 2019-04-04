@@ -1,0 +1,23 @@
+what I would like doing is as follows:
+
+
+0 - create table of known devices (which sits in the background...not shown on screen), with fields: device serial number, device name (a field we can amend)
+1 - on load first screen -bluetooth scan for devices (the MetaWear ones...not phones and other stuff) , display a message that says: “place your device on here:” and have an empty circle underneath it
+2 - using the scan…create a list of currently visible Metawear devices, with fields name, serial number, RSSI
+(again, this list/table is not visible to user)
+3 - from that list, select device with highest RSSI (which is a bluetooth signal strength – and should be the one the user has placed on the phone)
+4 - if that RSSI < -80 && device not already on known devices list (identified by comparing serial numbers)
+5 - then fill the circle pink appear
+and
+6 - make green light on metawear device flash
+and
+7 - show message box to user (underneath the circle): "do you see green flashing light yes/no"
+8 - if user clicks yes - load new screen with message : "Name your device:" and is able to enter a name in a box.....then click button to 'continue' or 'add another device'
+9 - for both answers (yes and no) for now – just send back to start (we’ll do something more complete at a later stage)
+10 - if 'no' to 7. send back to start
+
+some particulars on how I'd like it doing:
+
+The current project I've sent the link for provides references for all the bluetooth bits of code you'd need within the viewcontroller swift files – so you should probably be able to achieve most of the above tweaking these files…which is fine – but please remove or comment out any redundant code at the end of the work
+second - I would like print messages to console at every stage and showing the contents of tables - to help me understand what’s going on
+I think in total there should be two screens
