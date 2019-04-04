@@ -2,6 +2,7 @@
 // Copyright ©Aulendil   All rights reserved.
 
 import UIKit
+import MetaWear
 
 class ViewController: UIViewController {
 

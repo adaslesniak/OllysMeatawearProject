@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6BC5CC1993C63369A7B68C78 /* Pods_OllysProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FED26A07F1C7A857897D524 /* Pods_OllysProject.framework */; };
 		81E09C3622569CA200CE21EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E09C3522569CA200CE21EB /* AppDelegate.swift */; };
 		81E09C3822569CA200CE21EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E09C3722569CA200CE21EB /* ViewController.swift */; };
 		81E09C3B22569CA200CE21EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81E09C3922569CA200CE21EB /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6FED26A07F1C7A857897D524 /* Pods_OllysProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OllysProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81E09C3222569CA200CE21EB /* OllysProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OllysProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81E09C3522569CA200CE21EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81E09C3722569CA200CE21EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		81E09C3C22569CA300CE21EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81E09C3F22569CA300CE21EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81E09C4122569CA300CE21EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89FFC2ABBB881D0E48E7E92A /* Pods-OllysProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OllysProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-OllysProject/Pods-OllysProject.release.xcconfig"; sourceTree = "<group>"; };
+		EE8BBB570C2BD6F902C7E9F0 /* Pods-OllysProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OllysProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OllysProject/Pods-OllysProject.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BC5CC1993C63369A7B68C78 /* Pods_OllysProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		637BFB7D9B898C6935553CA1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EE8BBB570C2BD6F902C7E9F0 /* Pods-OllysProject.debug.xcconfig */,
+				89FFC2ABBB881D0E48E7E92A /* Pods-OllysProject.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		81E09C2922569CA200CE21EB = {
 			isa = PBXGroup;
 			children = (
 				81E09C3422569CA200CE21EB /* OllysProject */,
 				81E09C3322569CA200CE21EB /* Products */,
+				637BFB7D9B898C6935553CA1 /* Pods */,
+				FE8AF19B2AE2F577F7AEA8CD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +80,14 @@
 			path = OllysProject;
 			sourceTree = "<group>";
 		};
+		FE8AF19B2AE2F577F7AEA8CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6FED26A07F1C7A857897D524 /* Pods_OllysProject.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 81E09C4422569CA300CE21EB /* Build configuration list for PBXNativeTarget "OllysProject" */;
 			buildPhases = (
+				8B9750AAF84671A705E16319 /* [CP] Check Pods Manifest.lock */,
 				81E09C2E22569CA200CE21EB /* Sources */,
 				81E09C2F22569CA200CE21EB /* Frameworks */,
 				81E09C3022569CA200CE21EB /* Resources */,
+				E6A488D3F9A04CD9B354EB2F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,47 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8B9750AAF84671A705E16319 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OllysProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6A488D3F9A04CD9B354EB2F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OllysProject/Pods-OllysProject-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts-Swift/BoltsSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/MetaWear/MetaWear.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BoltsSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MetaWear.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OllysProject/Pods-OllysProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		81E09C2E22569CA200CE21EB /* Sources */ = {
@@ -280,6 +347,7 @@
 		};
 		81E09C4522569CA300CE21EB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE8BBB570C2BD6F902C7E9F0 /* Pods-OllysProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +366,7 @@
 		};
 		81E09C4622569CA300CE21EB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89FFC2ABBB881D0E48E7E92A /* Pods-OllysProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

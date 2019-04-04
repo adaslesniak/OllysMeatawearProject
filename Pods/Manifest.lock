@@ -1,0 +1,22 @@
+PODS:
+  - Bolts-Swift (1.4.0)
+  - MetaWear (3.2.0):
+    - MetaWear/Core (= 3.2.0)
+  - MetaWear/Core (3.2.0):
+    - Bolts-Swift (~> 1)
+
+DEPENDENCIES:
+  - MetaWear
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Bolts-Swift
+    - MetaWear
+
+SPEC CHECKSUMS:
+  Bolts-Swift: 650d72e8017721b1a6bbe43d542c4578f8e5ba6f
+  MetaWear: 387b9c7b55649c04cbf2cebc12775ac9d4dc8170
+
+PODFILE CHECKSUM: 5037007b61a4ed8cc825bfa9faaca172faf3feb6
+
+COCOAPODS: 1.5.3
