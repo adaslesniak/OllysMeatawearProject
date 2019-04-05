@@ -5,9 +5,15 @@ import MetaWear
 
 class InitialViewCtrl: UIViewController {
 
+    @IBOutlet weak var instruction: UILabel!
+    @IBOutlet weak var placeholder: UIView! //FIXME: that's bad name - put device area marker would be too long
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        Devices.scanArea { [weak self] result in
+            
+        }
     }
 
 
