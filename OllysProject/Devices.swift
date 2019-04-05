@@ -10,8 +10,6 @@ class Devices {
         return []
     }()
     static var known: [DeviceCard] { return _known }
-    //private static var nearby = [DeviceCard:MetaWear]()
-    
     private static var listeners = [() -> Void]()
     
     
@@ -23,17 +21,19 @@ class Devices {
                 return //signal too weak
             }
             requestPending += 1
-            device.createCard(name: "") { info in
+            device.createCard() { info in
                 if let named = known.first(where: { $0 == info }) {
                     Log.add("found known device: \(named)", on: .bluetooth)
                     nearby[named] = device
                 } else {
-                    Log.add("found new nearby device: \(info)", on: .bluetooth)
+                    Log.add("found new device: \(info)", on: .bluetooth)
                     nearby[info] = device
+                    
                 }
                 
                 requestPending -= 1
                 if requestPending == 0 {
+                    MetaWearScanner.shared.stopScan() //that is buggy name - scan is singular - should be startScanning and stopScanning if it's continuus process
                     whendDone(nearby)
                 }
             }
@@ -42,7 +42,8 @@ class Devices {
     
     
     public static func remember(_ toBeRemembered: MetaWear, as givenName: String) {
-        toBeRemembered.createCard(name: givenName) { card in
+        print("\n >>> WRONG <<<\n")
+        toBeRemembered.createCard() { card in
             _known.append(card)
             //TODO: save this to some persistent storage
         }

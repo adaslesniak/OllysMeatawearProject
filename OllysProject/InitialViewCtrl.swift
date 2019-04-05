@@ -37,10 +37,13 @@ class InitialViewCtrl: UIViewController {
         }
     }
     
-    func scanForNearestDevice() {
+    private func scanForNearestDevice() {
+        print(">>> scanning for nearest device <<<")
         checkedDevice = nil
         Devices.scanArea { [weak self] result in
+            print(" >>> got results from scan <<<")
             do {
+                Log.add("scanned \(result.count) devices", on: .bluetooth)
                 guard let closest = result.keys.sorted(by: { $0.signal?.strength ?? -10000 > $1.signal?.strength ?? -10000 }).first else {
                     throw Exception.error("there is no closest from \(result.count) visible devices") //that should be zero
                 }
@@ -53,20 +56,25 @@ class InitialViewCtrl: UIViewController {
                 guard let closestDevice = result[closest] else {
                     throw Exception.error("ups... that is impossible to happen")
                 }
-                self?.learnDevice(closestDevice)
+                ExecuteOnMain() {
+                    self?.learnDevice(closestDevice)
+                }
+                
             } catch {
                 Log.warning("failed to find neareast new device: \(error)")
-                self?.scanForNearestDevice()
+                ExecuteInBackground(after: 0.5) {
+                    self?.scanForNearestDevice()
+                }
             }
-            
         }
     }
     
-    func learnDevice(_ device: MetaWear) {
-        placeholder.backgroundColor = UIColor.red
+    
+    private func learnDevice(_ device: MetaWear) {
+        self.placeholder.backgroundColor = UIColor.red
         device.flashGreen()
-        checkedDevice = device //that is... ugly way to pass argument to anonymous method
-        confirmatioPanel.isHidden = false
+        self.checkedDevice = device //that is... ugly way to pass argument to anonymous method
+        self.confirmatioPanel.isHidden = false
     }
 
 

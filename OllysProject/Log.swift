@@ -48,7 +48,11 @@ public class Log {
         guard isChannelEnabled || lvl.isHighPriority else {
             return
         }
-        print("[\(chnl)]: \(msg)")
+        if chnl == .debug {
+            print(" - \(msg)")
+        } else {
+            print("[\(chnl)]: \(msg)")
+        }
     }
     
 }

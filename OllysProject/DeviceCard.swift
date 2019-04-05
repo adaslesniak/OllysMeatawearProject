@@ -5,23 +5,24 @@ import Foundation
 
 class DeviceCard : CustomStringConvertible, Hashable {
     let name: String
-    let serialNumber: String
+    let id: UUID
     var signal: (when: Date, strength: Int)? = nil
     
-    init(name: String, serial: String) {
+    init(name: String, id: UUID, serial: String? = nil) {
         self.name = name
-        self.serialNumber = serial
+        self.id = id
     }
     
+    //326A9000-85CB-9195-D9DD-464CFBBAE75A - that is my device thing
     static func == (_ lhv: DeviceCard, _ rhv: DeviceCard) -> Bool {
-        return lhv.serialNumber == rhv.serialNumber
+        return lhv.id == rhv.id
     }
     
     var description: String {
-        return "\(name)(\(serialNumber)) RRSI: \(signal?.strength.description ?? "unknown")"
+        return "\(name)(\(id)) RRSI: \(signal?.strength.description ?? "unknown")"
     }
     
     func hash(into hasher: inout Hasher) {
-        hasher.combine(serialNumber)
+        hasher.combine(id)
     }
 }

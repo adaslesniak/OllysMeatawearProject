@@ -22,6 +22,7 @@
 		81E09C582256DBF200CE21EB /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E09C572256DBF200CE21EB /* UIView+.swift */; };
 		81E09C5A2256DCF100CE21EB /* NamingViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E09C592256DCF100CE21EB /* NamingViewCtrl.swift */; };
 		81E09C5C2256DD0A00CE21EB /* NamingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81E09C5B2256DD0A00CE21EB /* NamingView.xib */; };
+		81E09C6022581B1B00CE21EB /* Thread+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E09C5F22581B1A00CE21EB /* Thread+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		81E09C572256DBF200CE21EB /* UIView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		81E09C592256DCF100CE21EB /* NamingViewCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamingViewCtrl.swift; sourceTree = "<group>"; };
 		81E09C5B2256DD0A00CE21EB /* NamingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NamingView.xib; sourceTree = "<group>"; };
+		81E09C5F22581B1A00CE21EB /* Thread+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Thread+.swift"; sourceTree = "<group>"; };
 		89FFC2ABBB881D0E48E7E92A /* Pods-OllysProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OllysProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-OllysProject/Pods-OllysProject.release.xcconfig"; sourceTree = "<group>"; };
 		EE8BBB570C2BD6F902C7E9F0 /* Pods-OllysProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OllysProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OllysProject/Pods-OllysProject.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,6 +111,7 @@
 		81E09C542256D3AF00CE21EB /* SwiftSugar */ = {
 			isa = PBXGroup;
 			children = (
+				81E09C5F22581B1A00CE21EB /* Thread+.swift */,
 				81E09C572256DBF200CE21EB /* UIView+.swift */,
 				81E09C552256D40300CE21EB /* Typealiases.swift */,
 			);
@@ -246,6 +249,7 @@
 				81E09C512256CC0700CE21EB /* MetaWear+.swift in Sources */,
 				81E09C582256DBF200CE21EB /* UIView+.swift in Sources */,
 				81E09C3822569CA200CE21EB /* InitialViewCtrl.swift in Sources */,
+				81E09C6022581B1B00CE21EB /* Thread+.swift in Sources */,
 				81E09C4F2256B5CC00CE21EB /* Log.swift in Sources */,
 				81E09C3622569CA200CE21EB /* AppDelegate.swift in Sources */,
 			);
