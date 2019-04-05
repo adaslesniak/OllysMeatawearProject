@@ -11,6 +11,12 @@ class InitialViewCtrl: UIViewController {
     @IBOutlet weak var confirmBtn: UIButton!
     @IBOutlet weak var denyBtn: UIButton!
     
+    private var checkedDevice: MetaWear?
+    
+    static func instantiate() -> InitialViewCtrl {
+        return InitialViewCtrl(nibName: "InitialView", bundle: nil)
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,11 +27,18 @@ class InitialViewCtrl: UIViewController {
             self?.scanForNearestDevice()
         }
         confirmBtn.addAction(.tap) { [weak self] in
-            Log.error("NOT_IMPLEMENTED")
+            guard let self = self, let checked = self.checkedDevice else {
+                return
+            }
+            NamingViewCtrl.presentOver(self) { [weak self] givenName in
+                Devices.remember(checked, as: givenName)
+                self?.scanForNearestDevice()
+            }
         }
     }
     
     func scanForNearestDevice() {
+        checkedDevice = nil
         Devices.scanArea { [weak self] result in
             do {
                 guard let closest = result.keys.sorted(by: { $0.signal?.strength ?? -10000 > $1.signal?.strength ?? -10000 }).first else {
@@ -52,6 +65,7 @@ class InitialViewCtrl: UIViewController {
     func learnDevice(_ device: MetaWear) {
         placeholder.backgroundColor = UIColor.red
         device.flashGreen()
+        checkedDevice = device //that is... ugly way to pass argument to anonymous method
         confirmatioPanel.isHidden = false
     }
 

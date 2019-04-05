@@ -14,12 +14,14 @@
 		81E09C3D22569CA300CE21EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81E09C3C22569CA300CE21EB /* Assets.xcassets */; };
 		81E09C4022569CA300CE21EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81E09C3E22569CA300CE21EB /* LaunchScreen.storyboard */; };
 		81E09C4B2256AE2B00CE21EB /* InitialView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81E09C4A2256AE2B00CE21EB /* InitialView.xib */; };
-		81E09C4D2256B1C000CE21EB /* DevicesScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E09C4C2256B1C000CE21EB /* DevicesScanner.swift */; };
+		81E09C4D2256B1C000CE21EB /* Devices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E09C4C2256B1C000CE21EB /* Devices.swift */; };
 		81E09C4F2256B5CC00CE21EB /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E09C4E2256B5CC00CE21EB /* Log.swift */; };
 		81E09C512256CC0700CE21EB /* MetaWear+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E09C502256CC0700CE21EB /* MetaWear+.swift */; };
 		81E09C532256CC3000CE21EB /* DeviceCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E09C522256CC3000CE21EB /* DeviceCard.swift */; };
 		81E09C562256D40300CE21EB /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E09C552256D40300CE21EB /* Typealiases.swift */; };
 		81E09C582256DBF200CE21EB /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E09C572256DBF200CE21EB /* UIView+.swift */; };
+		81E09C5A2256DCF100CE21EB /* NamingViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E09C592256DCF100CE21EB /* NamingViewCtrl.swift */; };
+		81E09C5C2256DD0A00CE21EB /* NamingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81E09C5B2256DD0A00CE21EB /* NamingView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,12 +34,14 @@
 		81E09C3F22569CA300CE21EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81E09C4122569CA300CE21EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81E09C4A2256AE2B00CE21EB /* InitialView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InitialView.xib; sourceTree = "<group>"; };
-		81E09C4C2256B1C000CE21EB /* DevicesScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesScanner.swift; sourceTree = "<group>"; };
+		81E09C4C2256B1C000CE21EB /* Devices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Devices.swift; sourceTree = "<group>"; };
 		81E09C4E2256B5CC00CE21EB /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		81E09C502256CC0700CE21EB /* MetaWear+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MetaWear+.swift"; sourceTree = "<group>"; };
 		81E09C522256CC3000CE21EB /* DeviceCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceCard.swift; sourceTree = "<group>"; };
 		81E09C552256D40300CE21EB /* Typealiases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
 		81E09C572256DBF200CE21EB /* UIView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		81E09C592256DCF100CE21EB /* NamingViewCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamingViewCtrl.swift; sourceTree = "<group>"; };
+		81E09C5B2256DD0A00CE21EB /* NamingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NamingView.xib; sourceTree = "<group>"; };
 		89FFC2ABBB881D0E48E7E92A /* Pods-OllysProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OllysProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-OllysProject/Pods-OllysProject.release.xcconfig"; sourceTree = "<group>"; };
 		EE8BBB570C2BD6F902C7E9F0 /* Pods-OllysProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OllysProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OllysProject/Pods-OllysProject.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,11 +92,13 @@
 				81E09C3522569CA200CE21EB /* AppDelegate.swift */,
 				81E09C3722569CA200CE21EB /* InitialViewCtrl.swift */,
 				81E09C4A2256AE2B00CE21EB /* InitialView.xib */,
+				81E09C592256DCF100CE21EB /* NamingViewCtrl.swift */,
+				81E09C5B2256DD0A00CE21EB /* NamingView.xib */,
 				81E09C3922569CA200CE21EB /* Main.storyboard */,
 				81E09C3C22569CA300CE21EB /* Assets.xcassets */,
 				81E09C3E22569CA300CE21EB /* LaunchScreen.storyboard */,
 				81E09C4122569CA300CE21EB /* Info.plist */,
-				81E09C4C2256B1C000CE21EB /* DevicesScanner.swift */,
+				81E09C4C2256B1C000CE21EB /* Devices.swift */,
 				81E09C4E2256B5CC00CE21EB /* Log.swift */,
 				81E09C502256CC0700CE21EB /* MetaWear+.swift */,
 				81E09C522256CC3000CE21EB /* DeviceCard.swift */,
@@ -180,6 +186,7 @@
 				81E09C4022569CA300CE21EB /* LaunchScreen.storyboard in Resources */,
 				81E09C4B2256AE2B00CE21EB /* InitialView.xib in Resources */,
 				81E09C3D22569CA300CE21EB /* Assets.xcassets in Resources */,
+				81E09C5C2256DD0A00CE21EB /* NamingView.xib in Resources */,
 				81E09C3B22569CA200CE21EB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,8 +239,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81E09C4D2256B1C000CE21EB /* DevicesScanner.swift in Sources */,
+				81E09C4D2256B1C000CE21EB /* Devices.swift in Sources */,
 				81E09C532256CC3000CE21EB /* DeviceCard.swift in Sources */,
+				81E09C5A2256DCF100CE21EB /* NamingViewCtrl.swift in Sources */,
 				81E09C562256D40300CE21EB /* Typealiases.swift in Sources */,
 				81E09C512256CC0700CE21EB /* MetaWear+.swift in Sources */,
 				81E09C582256DBF200CE21EB /* UIView+.swift in Sources */,
@@ -389,6 +397,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z683BMN45B;
 				INFOPLIST_FILE = OllysProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -408,6 +417,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z683BMN45B;
 				INFOPLIST_FILE = OllysProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -6,18 +6,21 @@ import Foundation
 
 extension MetaWear {
     
-    func createCard(name: String, whenReady: (DeviceCard) -> Void) {
+    func createCard(name: String, whenReady: @escaping (DeviceCard) -> Void) {
         self.readSerialNumber().continueWith { task in
-            guard task.error == nil else {
-                Log.error("failed to read serial number")
-                return
+            do {
+                guard task.error == nil else {
+                    throw Exception.error("failed to read serial number: \(task.error!)")
+                }
+                guard let sn = task.result else {
+                    throw Exception.error("no serial number")
+                }
+                let card = DeviceCard(name: name, serial: sn)
+                card.signal = (Date(), self.rssi)
+                whenReady(card)
+            } catch {
+                Log.error("couldn't create card: \(error)")
             }
-            guard let sn = task.result else {
-                Log.error("no serial number")
-                return
-            }
-            let card = DeviceCard(name: name, serial: sn)
-            card.signal = (Date(), self.rssi)
         }
     }
     

@@ -40,4 +40,14 @@ class Devices {
         }
     }
     
+    
+    public static func remember(_ toBeRemembered: MetaWear, as givenName: String) {
+        /*guard !known.contains(toBeRemembered) else {
+            Log.error("already remembered")
+            return
+        }
+        _known.append(toBeRemembered)*/
+        //TODO: save this to some persistent storage
+    }
+    
 }
