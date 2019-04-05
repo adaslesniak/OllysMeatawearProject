@@ -42,12 +42,10 @@ class Devices {
     
     
     public static func remember(_ toBeRemembered: MetaWear, as givenName: String) {
-        /*guard !known.contains(toBeRemembered) else {
-            Log.error("already remembered")
-            return
+        toBeRemembered.createCard(name: givenName) { card in
+            _known.append(card)
+            //TODO: save this to some persistent storage
         }
-        _known.append(toBeRemembered)*/
-        //TODO: save this to some persistent storage
     }
     
 }
