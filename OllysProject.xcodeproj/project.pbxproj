@@ -18,6 +18,8 @@
 		81E09C4F2256B5CC00CE21EB /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E09C4E2256B5CC00CE21EB /* Log.swift */; };
 		81E09C512256CC0700CE21EB /* MetaWear+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E09C502256CC0700CE21EB /* MetaWear+.swift */; };
 		81E09C532256CC3000CE21EB /* DeviceCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E09C522256CC3000CE21EB /* DeviceCard.swift */; };
+		81E09C562256D40300CE21EB /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E09C552256D40300CE21EB /* Typealiases.swift */; };
+		81E09C582256DBF200CE21EB /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E09C572256DBF200CE21EB /* UIView+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		81E09C4E2256B5CC00CE21EB /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		81E09C502256CC0700CE21EB /* MetaWear+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MetaWear+.swift"; sourceTree = "<group>"; };
 		81E09C522256CC3000CE21EB /* DeviceCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceCard.swift; sourceTree = "<group>"; };
+		81E09C552256D40300CE21EB /* Typealiases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
+		81E09C572256DBF200CE21EB /* UIView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		89FFC2ABBB881D0E48E7E92A /* Pods-OllysProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OllysProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-OllysProject/Pods-OllysProject.release.xcconfig"; sourceTree = "<group>"; };
 		EE8BBB570C2BD6F902C7E9F0 /* Pods-OllysProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OllysProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OllysProject/Pods-OllysProject.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -62,6 +66,7 @@
 		81E09C2922569CA200CE21EB = {
 			isa = PBXGroup;
 			children = (
+				81E09C542256D3AF00CE21EB /* SwiftSugar */,
 				81E09C3422569CA200CE21EB /* OllysProject */,
 				81E09C3322569CA200CE21EB /* Products */,
 				637BFB7D9B898C6935553CA1 /* Pods */,
@@ -93,6 +98,15 @@
 				81E09C522256CC3000CE21EB /* DeviceCard.swift */,
 			);
 			path = OllysProject;
+			sourceTree = "<group>";
+		};
+		81E09C542256D3AF00CE21EB /* SwiftSugar */ = {
+			isa = PBXGroup;
+			children = (
+				81E09C572256DBF200CE21EB /* UIView+.swift */,
+				81E09C552256D40300CE21EB /* Typealiases.swift */,
+			);
+			path = SwiftSugar;
 			sourceTree = "<group>";
 		};
 		FE8AF19B2AE2F577F7AEA8CD /* Frameworks */ = {
@@ -220,7 +234,9 @@
 			files = (
 				81E09C4D2256B1C000CE21EB /* DevicesScanner.swift in Sources */,
 				81E09C532256CC3000CE21EB /* DeviceCard.swift in Sources */,
+				81E09C562256D40300CE21EB /* Typealiases.swift in Sources */,
 				81E09C512256CC0700CE21EB /* MetaWear+.swift in Sources */,
+				81E09C582256DBF200CE21EB /* UIView+.swift in Sources */,
 				81E09C3822569CA200CE21EB /* InitialViewCtrl.swift in Sources */,
 				81E09C4F2256B5CC00CE21EB /* Log.swift in Sources */,
 				81E09C3622569CA200CE21EB /* AppDelegate.swift in Sources */,

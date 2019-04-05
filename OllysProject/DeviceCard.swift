@@ -6,7 +6,7 @@ import Foundation
 class DeviceCard : CustomStringConvertible, Hashable {
     let name: String
     let serialNumber: String
-    var rrsi: (when: Date, strenght: Int)? = nil
+    var signal: (when: Date, strength: Int)? = nil
     
     init(name: String, serial: String) {
         self.name = name
@@ -18,7 +18,7 @@ class DeviceCard : CustomStringConvertible, Hashable {
     }
     
     var description: String {
-        return "\(name)(\(serialNumber)) RRSI: \(rrsi?.strenght.description ?? "unknown")"
+        return "\(name)(\(serialNumber)) RRSI: \(signal?.strength.description ?? "unknown")"
     }
     
     func hash(into hasher: inout Hasher) {
