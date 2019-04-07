@@ -21,6 +21,7 @@ class Devices {
                 return //signal too weak
             }
             requestPending += 1
+            //TODO: refactor it - can be done synchronously and should be DeviceCard(about: device)
             device.createCard() { info in
                 if let named = known.first(where: { $0 == info }) {
                     Log.add("found known device: \(named)", on: .bluetooth)

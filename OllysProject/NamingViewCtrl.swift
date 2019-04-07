@@ -21,6 +21,7 @@ class NamingViewCtrl: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        textField.delegate = self
         finishBtn.isEnabled = false
         finishBtn.addAction(.tap) { [weak self] in
             guard self?.finishBtn.isEnabled == true else {
