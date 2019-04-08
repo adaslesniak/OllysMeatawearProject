@@ -7,84 +7,89 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		03AD79CA40DA3DAD8F76566125A62447 /* dataprocessor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8A07EF4E2A7E5DF41A148D56B05006A6 /* dataprocessor.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
-		08D87448F70C44E06005EEC7E780C599 /* async_creator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B20E16974BE4015A4C2E098B5B0B6E37 /* async_creator.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
-		0AB921FD3D7C660C84DBB0C57F3DAF32 /* Task+Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4547A8835886443FDC9895C11144D9 /* Task+Delay.swift */; };
-		0B3922BE5F0C6D791CF7094EFCC24DB9 /* MetaWearScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86C4DE062CCF9E728A506C0F927A6C9 /* MetaWearScanner.swift */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
-		13E78CC99EC7CC31BEE49C6311628F96 /* datainterpreter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59C7CB2D6C7BB9CDF906B321A137C334 /* datainterpreter.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
-		1B7D221310B4B2B3FE4D54E02A5493D2 /* Task+ContinueWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F2AADE6536980A8D961EC14CD3F738 /* Task+ContinueWith.swift */; };
-		1DCB344A6C40E40E8654F8D652168F6E /* dfu_utility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37D8DEF09D0B415A35046040E9632496 /* dfu_utility.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
-		1ED609BA2A6C171A6107A76B5B0E9666 /* BoltsSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BDCFDDD207AC12A5B86AB650E168553 /* BoltsSwift.framework */; };
-		2584F859A8FB34C24B628F9011BAE6D0 /* accelerometer_bosch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84604750C8EAE4899DC3EF521315D390 /* accelerometer_bosch.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		082234F2D80266B0E13A8707359EB198 /* accelerometer_bosch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5652D6772FB7759BA8210578B75DAE5E /* accelerometer_bosch.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		0AB921FD3D7C660C84DBB0C57F3DAF32 /* Task+Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E1302C347A69376629836AE0C9454F /* Task+Delay.swift */; };
+		0BE78CDD6129671844A05723E55C7E83 /* dataprocessor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AC5B2727246216586505D06A052BE9B /* dataprocessor.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		0C6F8F97DCFE6D6103BEE1F6A063B3BB /* ScannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D07B73D198C470F6520996795E00AEB /* ScannerModel.swift */; };
+		10139BD5708F796D632CEAA74F8E4A54 /* anonymous_datasignal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 28B7625480F6F8919E497CDA0E388E00 /* anonymous_datasignal.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		10F9D62556882EDEE5CFE70EAD64D48B /* gyro_bmi160.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF42F38917ADD85444FADFA60D7D97B8 /* gyro_bmi160.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		124C314810381BD02B3A35BE45B7242F /* humidity_bme280.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 669E543E3C413AAB7C6F0F0A06C516DF /* humidity_bme280.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		124C760AF33AC33E90ED2B475BD8E8F5 /* metawearboard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2CE76FBE7CA76B9B674493ADDB4F3FEE /* metawearboard.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		12F6031AD169EE8977E44A59B65EA297 /* MetaWear+Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72A8693B690C2BB0E93E3BD69D96A53 /* MetaWear+Async.swift */; };
+		1384857E26C99D7760D19EFDF02EEEA1 /* ibeacon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19583228A746E0FB8B68D8A1C18AC6A2 /* ibeacon.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		1A96BFE284355A453E818602E2F22D13 /* dfu_operations.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50400B01FACEF0B6FFDB8C5FA678E8D2 /* dfu_operations.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		1B7D221310B4B2B3FE4D54E02A5493D2 /* Task+ContinueWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF7CAC3AA940555F16A88B819C09C0 /* Task+ContinueWith.swift */; };
+		1CB075B4097D70DFF66B66D1B84ED8E0 /* accelerometer_mma8452q.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F67632BACE86521308AB865DE7742F4 /* accelerometer_mma8452q.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		1CD44CE85FBD84D1A80191FE813A429C /* accelerometer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA0F0B360484A717E1A55908528C1589 /* accelerometer.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		1DC9D6610A57CBA0E20A873E38959B62 /* task.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DEA003777ECCB0E3F47F4EDFE90B7ACA /* task.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		1DF3B2007A1C90B1DEE6625DF23D3A28 /* datainterpreter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2C01E0A1DECB8A07982839B2838E792 /* datainterpreter.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		2290AB3D50B328C71BC603EF4CF904B1 /* haptic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00245D0362C7E6C42EF9C7110735B9D9 /* haptic.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		2385E92FC8D4B379DC6D60A8435D7609 /* timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5FEA49EBBA19C42F0E92C5EDBDD067F3 /* timer.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
 		26D552578DB7C6476C99785DD9CE0DA1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02BCAD734E3ADF765E353B264097D32A /* Foundation.framework */; };
 		270CD3F0CFD77A586C5ED81CAD5B9A2F /* Pods-OllysProject-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B369E78CD0D88DE214D283D4489B6AF9 /* Pods-OllysProject-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2B7EDA66D3C97547DBEFFDE50F0A9B45 /* multichanneltemperature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA28E877A03880A27341AFACD99A2938 /* multichanneltemperature.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
-		3001BC3413CF75C1889062E34754C104 /* debug.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E70B9C21FA692F6DD254F995D718683C /* debug.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
-		32109B52AD647180F99770FABA386CB0 /* memory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F21EE3B9B5C36F6E72F5C21060B83120 /* memory.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
-		324C6BDA5797BFDA465C57854EB33754 /* DeviceInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC245E11B51135AD4CF546B9ABA77EB /* DeviceInformation.swift */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
-		36ED5AAF343A39FCD19A63098AA68527 /* datasignal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 361AB9B09BF9E6F78797A8E036C779C1 /* datasignal.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
-		371DCBD6153769454B730C98875B52C6 /* dataprocessor_config.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF35B9C6BC2D58F85102CF0D6FA735B8 /* dataprocessor_config.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
-		3B16E109E69CA48A02989EF4408FBC28 /* haptic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7B255FA75C7933830D080C2006F7F11E /* haptic.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
-		3DF35A4175A95079F33B0AA91A12169F /* ibeacon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7444D9A49BE34CBEA228BC2182CB9CE /* ibeacon.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
-		411859C86267F059B4B015E241FD2B51 /* responseheader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB5E5D81848A2BE507EE46E187BCEC3B /* responseheader.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
-		496873C42409CC400322BC730F009CCF /* Bolts-Swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 119B04CFAD5BA549231D56FCEE03D4D2 /* Bolts-Swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4FED762C5894068676AB3705F3E11CDF /* ambientlight_ltr329.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0BA4886C2B1BFFDC6EBC107D25E28BEA /* ambientlight_ltr329.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
-		54EB4AC4BC4C791F88F89B29B3D8FB27 /* dfu_operations.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 601583551FFD9AEDC47385C49AFC8AAD /* dfu_operations.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
-		55589999B0DFD872C48BA614FF554EA0 /* TaskCompletionSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA818D85F9062D37DCF208D36245D8A /* TaskCompletionSource.swift */; };
+		2B0B7FB5D847BA640FB3A18B3A7073CA /* barometer_bosch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 280C6953E09905F56B8DF5DEA4912A43 /* barometer_bosch.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		2CF1755A10152534FA17064C38740108 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02BCAD734E3ADF765E353B264097D32A /* Foundation.framework */; };
+		4172FA373EF8B39208FD4DEE6EE24893 /* settings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3276B3083FDABD36EA79FFBEB058B198 /* settings.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		45F173971A91DEAE4E0C5F9834B922C4 /* magnetometer_bmm150.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35661B99571CB37235847E49FA614923 /* magnetometer_bmm150.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		496873C42409CC400322BC730F009CCF /* Bolts-Swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A5BC8282897F3D4949763912962FCB70 /* Bolts-Swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		546263F37ECDC9387048740354232479 /* MetaWear.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81D4ACFA83398C1ED9E68E84D144176 /* MetaWear.swift */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		55589999B0DFD872C48BA614FF554EA0 /* TaskCompletionSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD39B0C39B3CECF579AA905B42EBBEB /* TaskCompletionSource.swift */; };
 		55908EF90F9D250B22494EC301BA363E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02BCAD734E3ADF765E353B264097D32A /* Foundation.framework */; };
-		5626C787FCA997909370F10607A8DAB3 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6A7A6844E756B342F3A31F3C691C8A /* Task.swift */; };
-		5912797EE4ED59336CC8F809D2DB9883 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3441713E97A3BF9ABA6117AACA9A8F4C /* Errors.swift */; };
-		5A603BDBF0F00F4944C0D11A908381B6 /* dfu_operations_details.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F659FA3B2AB1F9B6F5B043E2EF59A198 /* dfu_operations_details.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		5626C787FCA997909370F10607A8DAB3 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE78941375BEFC23F3E38A6B0452E4DE /* Task.swift */; };
+		5912797EE4ED59336CC8F809D2DB9883 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3C193C93FE6D63537D572CA63A19F6 /* Errors.swift */; };
 		5AF9E60EB3C7E94942587076203DF448 /* Pods-OllysProject-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD275033D9C84ABC5049C23D0658EA4 /* Pods-OllysProject-dummy.m */; };
-		5BE9060E6A09C22119C392BEE117DB95 /* humidity_bme280.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C90840B2D363163E7E8417CD6D0828CF /* humidity_bme280.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
-		5D1E49FA8C22DDAD65C408230BEBA48D /* LogDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9ECB587590D0C2A1F94327B59489186 /* LogDelegate.swift */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
-		6367DE1641FD2ADDA018D5E6809E6736 /* MetaWear-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 780C8726F0DF68C540C0F19B1963DF6F /* MetaWear-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		68DD518E43950F3639CF07877F1F3247 /* proximity_tsl2671.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D723E5439A4A2D58A701E43CC83E5FC /* proximity_tsl2671.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
-		75DFB0290B6C39F983D61508B4728603 /* Executor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167E4066EC24C69CD52244DA5795E81D /* Executor.swift */; };
-		782AF6B7291A5D3DF9F9AFC9B12F5D67 /* Task+WhenAny.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA6DE078D256530AB644D7EDEDDAFB2 /* Task+WhenAny.swift */; };
-		7AABBC24907BEA41B294D6A25925239A /* serialpassthrough.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13B39284823BBB525C3A7189674B0084 /* serialpassthrough.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
-		7DDB2831F2AAF157DDDBFDF98E23AD04 /* version.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49FA247D0E9910053B0B43D4B6F83AE8 /* version.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
-		7F65CCD0DBCD2C76715CEFE40508FC70 /* MetaWear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B6D558BB66B40B915F7CE2BC835EF /* MetaWear.swift */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
-		8A5C412036F8450D3BD5DBB1176A67E2 /* moduleinfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A693A255290A0AB82CBE6333EBC88E0B /* moduleinfo.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
-		8EA445269326FBE109D77466E31B638E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02BCAD734E3ADF765E353B264097D32A /* Foundation.framework */; };
-		A4A3D9423E0C19D8D451475EB7FBE9B5 /* gpio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A3C6214813276CA8A1E9799304E5124 /* gpio.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
-		A78B22DBC3068421BC2DB7BF19D40824 /* anonymous_datasignal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7A6990F7E81B8152E210C578C55530F /* anonymous_datasignal.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
-		A7BB54EA0D96ACB6F9EE876B5DABE7EA /* utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F5B9690BFE11F34928F70856EA90BB2 /* utils.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
-		AE3011BF98946E079966A4B37867A330 /* led.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B88A3BEF9D494C5030A8D485C2F5095F /* led.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
-		B0DA42AC497DD418D2AF1367F1ACE588 /* String+VersionCompare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EB0F10F57432FDD26BE8141E58EE75 /* String+VersionCompare.swift */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
-		B174C118C4EF4A8A534BA6097D2874AB /* colordetector_tcs34725.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83D172BE69AA45691CBEF0D1B96BDFC4 /* colordetector_tcs34725.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
-		B3D39AB272540D59E3D855355F76B539 /* metawearboard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 12BB90D294796D358C3FAFEFCBBC0FEE /* metawearboard.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
-		B672F8A9F41DCC7EF83A38F2141048E4 /* MblMwGattChar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0521655EB74BCD70D82CD88043E388E4 /* MblMwGattChar.swift */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
-		B7C88AA55F3475C9668A4A2A2705CC4E /* magnetometer_bmm150.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5ECADAF6B72BEDD0990A263D910EC0CB /* magnetometer_bmm150.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
-		BB7AB25DA9178882E3E8DA1E32A99643 /* event.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB0FD7265CCABE520544A9A1BC5DB5A7 /* event.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
-		C1B092A738485E4EACE95C7ABC0C9C02 /* threadpool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACC471A41E8AE83F7F42559013BF1CB4 /* threadpool.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
-		C25A6DC4B01A0BBB3DF00BE3BA9507A7 /* macro.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A95FEF7B26FD81468F28ABF19FE8087 /* macro.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
-		C6F238287BCF6D71B1310B914C4A4BE3 /* accelerometer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98C398768FF1E24B799E922F16B59CDF /* accelerometer.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
-		C8324DC156AEEC1A357F9ECE2EF947F0 /* conductance.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42CAA11FF8A621C3390402748C160949 /* conductance.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
-		C95B86083B393D31397907DACDE645DB /* neopixel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 09BAF6A5E159FE1D07B0D32C8EFA0F07 /* neopixel.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
-		CDBDE5A3E4F39426033A5CFD0110D33A /* logging.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F5B366A79EA0AB389D85FAF11A107BB /* logging.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
-		CDFA35198367A4692BC0CFEFE1A18090 /* CBUUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6B033BA969DEDB82C47D02AF44BFEB /* CBUUID.swift */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
-		CE587E582F94E000C3C3961C3D97BC1D /* Task+WhenAll.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2777B523A2CC4BDF3439692008820F /* Task+WhenAll.swift */; };
-		CF74072B9D3A0D5D1810A75C4E302909 /* miniz.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A0BD07D20A53EE62B9CE1AB38D5BF16C /* miniz.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
-		D4C824392C5F671819A78B2D15688906 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E86BE4C7B7586BCB410310314805D6C /* CoreBluetooth.framework */; };
-		D61B018741ECEFFB3C6387CE22684B8B /* settings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC25B8BA6411C3280CC10408EAE0323C /* settings.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
-		D67436FA448AD4BD14EB04AB6F299575 /* MetaWearData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB02499F463A101735749349CFF3FFBA /* MetaWearData.swift */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
-		E4D0FC704AC5F39BE1FCB5E762E75384 /* Bridging.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D554B5BC27FDD270FC005ED25871ED /* Bridging.swift */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
-		E68A9A1E0C91C955101996382C682815 /* MetaWear-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ADFC699E4057F07ADF01EBC76FFF9E2 /* MetaWear-dummy.m */; };
-		E9830B2245A0186893EA082BDA6BCB30 /* accelerometer_mma8452q.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 295DABE967667B7D77F2045EC08C31F5 /* accelerometer_mma8452q.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
-		EBB12804AA9D370FA85AF5AB6D8EE1B4 /* barometer_bosch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A54B31FBC7E257DDBEE2585202514CE7 /* barometer_bosch.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
-		EDE9A5CFCE55CA865146BA1B501E8748 /* timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 156A980A266AE0E4FA59AC799EE4925E /* timer.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
-		EEE96BA5DCB80E30C754E5CC1579E24C /* file_operations.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D1C2DD85E62671E0668817A2A4D418AE /* file_operations.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
-		F29C1ED93CA1E94493E2F88246540452 /* sensor_fusion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07C62A4021B02C7B1731FB00374B8855 /* sensor_fusion.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
-		F34D5961A30B15D1A1DF13CA02883992 /* cbindings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8346E2E179BE838381F9B83B5955F4 /* cbindings.swift */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
-		F5E549AADF4AE6F9909B30269A235304 /* task.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B680453C761E6495417A6A57FB350AE /* task.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
-		F73B0D246D053E26DBAFE01471766B61 /* Bolts-Swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE5A0E73825D4D8ECAB75E448283325 /* Bolts-Swift-dummy.m */; };
-		F87C26973D66D5EC7CA7724ACFA7DC47 /* switch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 24C57B7CD980129CA803C119C23AD20C /* switch.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
-		FAC0DE2C9B141FFA051FCEED77D24DAE /* gyro_bmi160.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50F3FDD9900EE49302380D63DE55DAB /* gyro_bmi160.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		5EFB51F9B675A1E447919A3130C78CBC /* proximity_tsl2671.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 51D66A1DBDBA2D41D9E87A075CEF5DF6 /* proximity_tsl2671.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		5F7E6EB9F2E67AC1D0BB058E38A9C240 /* dfu_utility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3D0BA5F9E5067847ED7925273B24B31 /* dfu_utility.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		617BC42B042C01A1712B1353F238C6AF /* datasignal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB11DD08CB9FE089596A3043117C079A /* datasignal.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		657A755F965439CC877033DF6904B114 /* responseheader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 12E84E3A3AF3A5E9464056F9C458E48B /* responseheader.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		69C3EF5585CFD3AC1F44306D21EA1553 /* MetaWear+LED.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F46F958F79B9954AA224BB2E30FA1AD /* MetaWear+LED.swift */; };
+		6A6CFEDBD4A18D508E25CFCE4C250497 /* neopixel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6EF1393F5CE50F69FE9A0CBD11378188 /* neopixel.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		6B4B452FEA61A657C46E9415C625365A /* dataprocessor_config.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 817F0C11B33FA7D02A324CB2D4EB7625 /* dataprocessor_config.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		6CF53545B2866BED4E9E69DB1AD3AD86 /* sensor_fusion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D6C4BAC417CF6A9E9801DE2CA280F941 /* sensor_fusion.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		6DF4D45CBD8E9D3DCF7924791517793D /* BoltsSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BDCFDDD207AC12A5B86AB650E168553 /* BoltsSwift.framework */; };
+		6EBFA77F46277302B7C6E930A7CE0961 /* DeviceInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4457AD46C705F07DE254BD292750E7B /* DeviceInformation.swift */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		6EEA71AF3ED7C41A711609C1F5B615A3 /* MetaWear-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 235D23B072DE90B4EB4FD97782F221A6 /* MetaWear-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75DFB0290B6C39F983D61508B4728603 /* Executor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD900DF2A5819A27DF6CC4931B5F7FB /* Executor.swift */; };
+		782AF6B7291A5D3DF9F9AFC9B12F5D67 /* Task+WhenAny.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5E9375384A8052B9EEFD0B05BA6E16 /* Task+WhenAny.swift */; };
+		7D8A086B4D17B5BBECEB2103F669EA2C /* MblMwGattChar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E0B061CFEA397B286972B244FF30D5 /* MblMwGattChar.swift */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		80C744BAD334AF86B5B86212B7AEC67E /* gpio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D36059C1E6859650D8653D79EFE8F6DF /* gpio.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		80D56C5BB22F22589009E473B877AF0D /* MblMwEvent+Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6FA955795E346531ED1B8B4606FBAF /* MblMwEvent+Async.swift */; };
+		81A68ECA59AF5B9A29CA0280F84B3FCC /* led.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 91952868E2A27C067E3EEE1075CDADE5 /* led.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		84D2801277D0D30AC0D68073E1A1A65E /* macro.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B813E9A946890FE53EAEB4399B298A9B /* macro.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		856B668FFD99BF36D982195849995872 /* String+VersionCompare.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D69A7D8D7E7D3C3D8005CBA2F88151 /* String+VersionCompare.swift */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		85EAD3C48F2BB5255E0AC2B7254476BD /* async_creator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2732D20D26BFF64BA24D2303B0209C94 /* async_creator.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		8C7D4790CA826B5FB25B3C8DF73C6B1F /* file_operations.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D1C6D98B701474F8F346088DC066C36 /* file_operations.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		8ED24CCE60F9CD1D8EA9DF97D3A30760 /* conductance.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5A07090E61541EA6D4CAAB9A944ABD6 /* conductance.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		907B6A013E69FEFE0EB9BB174CDD69B7 /* MetaWear-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 16EB2DED0BFED543C73296E6700994C8 /* MetaWear-dummy.m */; };
+		925AC1A29C74E77AE0163AB2BE869FE9 /* event.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F284737BA0146085776728423653B7C /* event.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		92B9904553D43FC15891DB64D4D08843 /* utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 72CE62EE3D2862A3B810FEB4910DCD48 /* utils.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		9402F76EAAB2D301CFFFA6900E45237B /* threadpool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3082B83B4985AB04347F89149204BD6F /* threadpool.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		9413582E29DAD47F6D438018E02EC143 /* serialpassthrough.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4994F758FB35EDF0841755B5C7EBEEC /* serialpassthrough.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		947BBF778513C5C02EB72BBA1864D5C9 /* memory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 09645A5D290DA45E83CA4D64B98161B3 /* memory.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		94AC984A4CC0FDBF0AF3AEC55DB12FB7 /* Bridging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066F13E331398D2EF49F164A515D3D19 /* Bridging.swift */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		98AE7CD9ED58AA08D2EA4F37D0850073 /* dfu_operations_details.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A7A4E5AA37DBC0702DE7E9D1DC9366A /* dfu_operations_details.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		AAAB024BF34E82F26F32B88B46598F0C /* multichanneltemperature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3EE194CA25C83793F82567E316A0F54 /* multichanneltemperature.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		B8106FFD9EAE30A6E00F6EDD0C90CD50 /* MetaWearScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBCABAD1EFFAC7775DD64CDF27570F0 /* MetaWearScanner.swift */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		BA80C22FEC80BF4246189BE53F88E391 /* CBUUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4DEE3F1D85753D4F830B9E4AC58E6A /* CBUUID.swift */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		C17675B431D4B43DA2CBBE14CD247725 /* LogDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2408C1485CD604E61BF64C502109C16F /* LogDelegate.swift */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		C1C769F92621A6117BC28F49D0513A8B /* logging.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 951521C1480084151F46CC21AF11CD48 /* logging.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		C509F2CACEF1E82F387558ADAD15B1B3 /* switch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55408F912871BE23E9CA5849F28E5504 /* switch.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		C8FCEFECBEA1C0B8820528C7CC130B08 /* moduleinfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50242A75693DFF033669329D43FB9864 /* moduleinfo.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		CE587E582F94E000C3C3961C3D97BC1D /* Task+WhenAll.swift in Sources */ = {isa = PBXBuildFile; fileRef = E347A409E7FDC73DCFAFB53EFE417DBA /* Task+WhenAll.swift */; };
+		D4C6AE73C4EA2C35FBEA01E4DA19A5A4 /* MblMwDataSignal+Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC64FF1C4C5990EC1384C44AB93D37E7 /* MblMwDataSignal+Async.swift */; };
+		DDF488E9AC522DE08AA5F208DCD78D98 /* version.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C39E38CAF6F8763F87FDECFF289FE5C2 /* version.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		EEA5364DFC329F1B02549ABD7DBA1547 /* ambientlight_ltr329.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1581A3555713D35B5089FDFC10C5F34 /* ambientlight_ltr329.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		F00C3D71C319F7678E9D06D0E8814BCA /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E86BE4C7B7586BCB410310314805D6C /* CoreBluetooth.framework */; };
+		F2626130E7E3BFE3D15D3C075181CE70 /* miniz.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7DF5C7022F76FBAC08F786DEB8A3CC1C /* miniz.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		F659CD932F1E04A6E21AFEFFA7013BBE /* debug.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63C99BAAB10EB81D11E4D8E116C2C45D /* debug.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		F73B0D246D053E26DBAFE01471766B61 /* Bolts-Swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1903A93CB712F3F69A64AA7D11BB92E6 /* Bolts-Swift-dummy.m */; };
+		FA1C05880C4444C8F85C361667FA7FAC /* MetaWearData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037205B0BF12854A97FB27FE19C71228 /* MetaWearData.swift */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		FC00442A927FA369C673C14C3E739571 /* colordetector_tcs34725.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A317D21E2D922572CE987933CB0078C2 /* colordetector_tcs34725.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
+		FF1B058978DAFAA95584F6D2FCEFEC7F /* cbindings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05597729B9EB7F554AAD7F180FD6690A /* cbindings.swift */; settings = {COMPILER_FLAGS = "-Wno-documentation -Wno-comma"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		30651A3F85B5EB5B5FFD8117C76C17DF /* PBXContainerItemProxy */ = {
+		0EBF24749BB9090E1BACA2346B1037B1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -102,107 +107,122 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 1831B7D224016544A8BE2474514ABC98;
+			remoteGlobalIDString = 3637413E57E9A9056AB857FB88F715FD;
 			remoteInfo = MetaWear;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00245D0362C7E6C42EF9C7110735B9D9 /* haptic.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = haptic.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/peripheral/cpp/haptic.cpp"; sourceTree = "<group>"; };
+		01163EBEC1AE3EE94AB3CEAC7226F666 /* MetaWear.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MetaWear.modulemap; sourceTree = "<group>"; };
 		02BCAD734E3ADF765E353B264097D32A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		0402A807F0A969B1E17D77D2DADE734A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0521655EB74BCD70D82CD88043E388E4 /* MblMwGattChar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MblMwGattChar.swift; path = MetaWear/Core/MblMwGattChar.swift; sourceTree = "<group>"; };
-		07C62A4021B02C7B1731FB00374B8855 /* sensor_fusion.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = sensor_fusion.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/sensor/cpp/sensor_fusion.cpp"; sourceTree = "<group>"; };
-		09BAF6A5E159FE1D07B0D32C8EFA0F07 /* neopixel.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = neopixel.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/peripheral/cpp/neopixel.cpp"; sourceTree = "<group>"; };
-		0BA4886C2B1BFFDC6EBC107D25E28BEA /* ambientlight_ltr329.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = ambientlight_ltr329.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/sensor/cpp/ambientlight_ltr329.cpp"; sourceTree = "<group>"; };
-		0F5B366A79EA0AB389D85FAF11A107BB /* logging.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = logging.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/core/cpp/logging.cpp"; sourceTree = "<group>"; };
-		119B04CFAD5BA549231D56FCEE03D4D2 /* Bolts-Swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Bolts-Swift-umbrella.h"; sourceTree = "<group>"; };
-		12BB90D294796D358C3FAFEFCBBC0FEE /* metawearboard.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = metawearboard.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/impl/cpp/metawearboard.cpp"; sourceTree = "<group>"; };
-		13B39284823BBB525C3A7189674B0084 /* serialpassthrough.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = serialpassthrough.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/sensor/cpp/serialpassthrough.cpp"; sourceTree = "<group>"; };
-		156A980A266AE0E4FA59AC799EE4925E /* timer.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = timer.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/core/cpp/timer.cpp"; sourceTree = "<group>"; };
-		167E4066EC24C69CD52244DA5795E81D /* Executor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Executor.swift; path = Sources/BoltsSwift/Executor.swift; sourceTree = "<group>"; };
+		037205B0BF12854A97FB27FE19C71228 /* MetaWearData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MetaWearData.swift; path = MetaWear/Core/MetaWearData.swift; sourceTree = "<group>"; };
+		05597729B9EB7F554AAD7F180FD6690A /* cbindings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = cbindings.swift; path = "MetaWear/MetaWear-SDK-Cpp/bindings/swift/cbindings.swift"; sourceTree = "<group>"; };
+		066F13E331398D2EF49F164A515D3D19 /* Bridging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Bridging.swift; path = MetaWear/Core/Bridging.swift; sourceTree = "<group>"; };
+		09645A5D290DA45E83CA4D64B98161B3 /* memory.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = memory.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/platform/cpp/memory.cpp"; sourceTree = "<group>"; };
+		0AEF7CAC3AA940555F16A88B819C09C0 /* Task+ContinueWith.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Task+ContinueWith.swift"; path = "Sources/BoltsSwift/Task+ContinueWith.swift"; sourceTree = "<group>"; };
+		0C6FA955795E346531ED1B8B4606FBAF /* MblMwEvent+Async.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "MblMwEvent+Async.swift"; path = "MetaWear/AsyncUtils/MblMwEvent+Async.swift"; sourceTree = "<group>"; };
+		0D1C6D98B701474F8F346088DC066C36 /* file_operations.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = file_operations.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/dfu/cpp/file_operations.cpp"; sourceTree = "<group>"; };
+		109DD47ED022A9AF9B954E83E85A405B /* Bolts-Swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Bolts-Swift.xcconfig"; sourceTree = "<group>"; };
+		12E84E3A3AF3A5E9464056F9C458E48B /* responseheader.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = responseheader.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/core/cpp/responseheader.cpp"; sourceTree = "<group>"; };
+		16EB2DED0BFED543C73296E6700994C8 /* MetaWear-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MetaWear-dummy.m"; sourceTree = "<group>"; };
+		1903A93CB712F3F69A64AA7D11BB92E6 /* Bolts-Swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Bolts-Swift-dummy.m"; sourceTree = "<group>"; };
+		19583228A746E0FB8B68D8A1C18AC6A2 /* ibeacon.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = ibeacon.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/peripheral/cpp/ibeacon.cpp"; sourceTree = "<group>"; };
+		1AC5B2727246216586505D06A052BE9B /* dataprocessor.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = dataprocessor.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/processor/cpp/dataprocessor.cpp"; sourceTree = "<group>"; };
 		1B25FE0C2ED59149A72996015F20255F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1CA6DE078D256530AB644D7EDEDDAFB2 /* Task+WhenAny.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Task+WhenAny.swift"; path = "Sources/BoltsSwift/Task+WhenAny.swift"; sourceTree = "<group>"; };
+		1BBCABAD1EFFAC7775DD64CDF27570F0 /* MetaWearScanner.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MetaWearScanner.swift; path = MetaWear/Core/MetaWearScanner.swift; sourceTree = "<group>"; };
 		1DD275033D9C84ABC5049C23D0658EA4 /* Pods-OllysProject-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OllysProject-dummy.m"; sourceTree = "<group>"; };
-		24C57B7CD980129CA803C119C23AD20C /* switch.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = switch.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/sensor/cpp/switch.cpp"; sourceTree = "<group>"; };
-		295DABE967667B7D77F2045EC08C31F5 /* accelerometer_mma8452q.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = accelerometer_mma8452q.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/sensor/cpp/accelerometer_mma8452q.cpp"; sourceTree = "<group>"; };
+		235D23B072DE90B4EB4FD97782F221A6 /* MetaWear-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MetaWear-umbrella.h"; sourceTree = "<group>"; };
+		2408C1485CD604E61BF64C502109C16F /* LogDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LogDelegate.swift; path = MetaWear/Core/LogDelegate.swift; sourceTree = "<group>"; };
+		2732D20D26BFF64BA24D2303B0209C94 /* async_creator.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = async_creator.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/platform/cpp/async_creator.cpp"; sourceTree = "<group>"; };
+		280C6953E09905F56B8DF5DEA4912A43 /* barometer_bosch.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = barometer_bosch.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/sensor/cpp/barometer_bosch.cpp"; sourceTree = "<group>"; };
+		28B7625480F6F8919E497CDA0E388E00 /* anonymous_datasignal.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = anonymous_datasignal.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/core/cpp/anonymous_datasignal.cpp"; sourceTree = "<group>"; };
 		2AB194FA680DB98901FF7A45DD3D7C3B /* Pods-OllysProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OllysProject.debug.xcconfig"; sourceTree = "<group>"; };
-		2E7C9431489B0D47F399B1A6E342A108 /* Bolts-Swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Bolts-Swift-prefix.pch"; sourceTree = "<group>"; };
+		2CE76FBE7CA76B9B674493ADDB4F3FEE /* metawearboard.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = metawearboard.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/impl/cpp/metawearboard.cpp"; sourceTree = "<group>"; };
 		2E86BE4C7B7586BCB410310314805D6C /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/CoreBluetooth.framework; sourceTree = DEVELOPER_DIR; };
-		3441713E97A3BF9ABA6117AACA9A8F4C /* Errors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Errors.swift; path = Sources/BoltsSwift/Errors.swift; sourceTree = "<group>"; };
-		361AB9B09BF9E6F78797A8E036C779C1 /* datasignal.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = datasignal.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/core/cpp/datasignal.cpp"; sourceTree = "<group>"; };
-		37D8DEF09D0B415A35046040E9632496 /* dfu_utility.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = dfu_utility.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/dfu/cpp/dfu_utility.cpp"; sourceTree = "<group>"; };
-		37FAED3E4A06A6E7DBC021248435ECFF /* Bolts-Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Bolts-Swift.modulemap"; sourceTree = "<group>"; };
-		3A3C6214813276CA8A1E9799304E5124 /* gpio.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = gpio.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/sensor/cpp/gpio.cpp"; sourceTree = "<group>"; };
-		3D723E5439A4A2D58A701E43CC83E5FC /* proximity_tsl2671.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = proximity_tsl2671.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/sensor/cpp/proximity_tsl2671.cpp"; sourceTree = "<group>"; };
-		3EE5A0E73825D4D8ECAB75E448283325 /* Bolts-Swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Bolts-Swift-dummy.m"; sourceTree = "<group>"; };
-		42CAA11FF8A621C3390402748C160949 /* conductance.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = conductance.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/sensor/cpp/conductance.cpp"; sourceTree = "<group>"; };
-		43EB0F10F57432FDD26BE8141E58EE75 /* String+VersionCompare.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+VersionCompare.swift"; path = "MetaWear/Core/String+VersionCompare.swift"; sourceTree = "<group>"; };
-		44F4ED687DFDCA5E1F058494D2076498 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		49888D08E0E182AE5ED3E70B1A0000B6 /* MetaWear.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MetaWear.modulemap; sourceTree = "<group>"; };
-		49FA247D0E9910053B0B43D4B6F83AE8 /* version.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = version.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/core/cpp/version.cpp"; sourceTree = "<group>"; };
-		4A95FEF7B26FD81468F28ABF19FE8087 /* macro.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = macro.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/core/cpp/macro.cpp"; sourceTree = "<group>"; };
+		2F284737BA0146085776728423653B7C /* event.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = event.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/core/cpp/event.cpp"; sourceTree = "<group>"; };
+		3082B83B4985AB04347F89149204BD6F /* threadpool.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = threadpool.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/platform/cpp/threadpool.cpp"; sourceTree = "<group>"; };
+		3276B3083FDABD36EA79FFBEB058B198 /* settings.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = settings.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/core/cpp/settings.cpp"; sourceTree = "<group>"; };
+		34E1302C347A69376629836AE0C9454F /* Task+Delay.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Task+Delay.swift"; path = "Sources/BoltsSwift/Task+Delay.swift"; sourceTree = "<group>"; };
+		35661B99571CB37235847E49FA614923 /* magnetometer_bmm150.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = magnetometer_bmm150.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/sensor/cpp/magnetometer_bmm150.cpp"; sourceTree = "<group>"; };
+		50242A75693DFF033669329D43FB9864 /* moduleinfo.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = moduleinfo.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/core/cpp/moduleinfo.cpp"; sourceTree = "<group>"; };
+		50400B01FACEF0B6FFDB8C5FA678E8D2 /* dfu_operations.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = dfu_operations.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/dfu/cpp/dfu_operations.cpp"; sourceTree = "<group>"; };
+		51D66A1DBDBA2D41D9E87A075CEF5DF6 /* proximity_tsl2671.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = proximity_tsl2671.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/sensor/cpp/proximity_tsl2671.cpp"; sourceTree = "<group>"; };
 		528F27A48ADFDD1DDAFE01DC4B3A4543 /* Pods_OllysProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_OllysProject.framework; path = "Pods-OllysProject.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52E0B061CFEA397B286972B244FF30D5 /* MblMwGattChar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MblMwGattChar.swift; path = MetaWear/Core/MblMwGattChar.swift; sourceTree = "<group>"; };
 		54833E0AF74E44DB930665D8A3F5D5BF /* Pods-OllysProject-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OllysProject-acknowledgements.plist"; sourceTree = "<group>"; };
-		59C7CB2D6C7BB9CDF906B321A137C334 /* datainterpreter.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = datainterpreter.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/impl/cpp/datainterpreter.cpp"; sourceTree = "<group>"; };
+		55408F912871BE23E9CA5849F28E5504 /* switch.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = switch.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/sensor/cpp/switch.cpp"; sourceTree = "<group>"; };
+		5652D6772FB7759BA8210578B75DAE5E /* accelerometer_bosch.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = accelerometer_bosch.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/sensor/cpp/accelerometer_bosch.cpp"; sourceTree = "<group>"; };
 		5BDCFDDD207AC12A5B86AB650E168553 /* BoltsSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BoltsSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D453B0D04B12F6601FB7981F9823743 /* Pods-OllysProject-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OllysProject-acknowledgements.markdown"; sourceTree = "<group>"; };
-		5ECADAF6B72BEDD0990A263D910EC0CB /* magnetometer_bmm150.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = magnetometer_bmm150.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/sensor/cpp/magnetometer_bmm150.cpp"; sourceTree = "<group>"; };
-		601583551FFD9AEDC47385C49AFC8AAD /* dfu_operations.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = dfu_operations.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/dfu/cpp/dfu_operations.cpp"; sourceTree = "<group>"; };
+		5D5E9375384A8052B9EEFD0B05BA6E16 /* Task+WhenAny.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Task+WhenAny.swift"; path = "Sources/BoltsSwift/Task+WhenAny.swift"; sourceTree = "<group>"; };
+		5FEA49EBBA19C42F0E92C5EDBDD067F3 /* timer.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = timer.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/core/cpp/timer.cpp"; sourceTree = "<group>"; };
 		62BBD34B9571B661923C81B14B6D006C /* Pods-OllysProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OllysProject.release.xcconfig"; sourceTree = "<group>"; };
+		63C99BAAB10EB81D11E4D8E116C2C45D /* debug.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = debug.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/core/cpp/debug.cpp"; sourceTree = "<group>"; };
+		669E543E3C413AAB7C6F0F0A06C516DF /* humidity_bme280.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = humidity_bme280.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/sensor/cpp/humidity_bme280.cpp"; sourceTree = "<group>"; };
 		673E977856066E63C8015F95AA8E811A /* BoltsSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BoltsSwift.framework; path = "Bolts-Swift.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		743B6D558BB66B40B915F7CE2BC835EF /* MetaWear.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MetaWear.swift; path = MetaWear/Core/MetaWear.swift; sourceTree = "<group>"; };
-		77F2AADE6536980A8D961EC14CD3F738 /* Task+ContinueWith.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Task+ContinueWith.swift"; path = "Sources/BoltsSwift/Task+ContinueWith.swift"; sourceTree = "<group>"; };
-		780C8726F0DF68C540C0F19B1963DF6F /* MetaWear-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MetaWear-umbrella.h"; sourceTree = "<group>"; };
-		7ADFC699E4057F07ADF01EBC76FFF9E2 /* MetaWear-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MetaWear-dummy.m"; sourceTree = "<group>"; };
-		7B255FA75C7933830D080C2006F7F11E /* haptic.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = haptic.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/peripheral/cpp/haptic.cpp"; sourceTree = "<group>"; };
+		67942405809E45D5D89DCD6334019207 /* MetaWear-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MetaWear-prefix.pch"; sourceTree = "<group>"; };
+		6D07B73D198C470F6520996795E00AEB /* ScannerModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScannerModel.swift; path = MetaWear/UI/ScannerModel.swift; sourceTree = "<group>"; };
+		6DD900DF2A5819A27DF6CC4931B5F7FB /* Executor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Executor.swift; path = Sources/BoltsSwift/Executor.swift; sourceTree = "<group>"; };
+		6EF1393F5CE50F69FE9A0CBD11378188 /* neopixel.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = neopixel.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/peripheral/cpp/neopixel.cpp"; sourceTree = "<group>"; };
+		72CE62EE3D2862A3B810FEB4910DCD48 /* utils.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = utils.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/sensor/cpp/utils.cpp"; sourceTree = "<group>"; };
+		7D015F98419D949A4DBA15A042B0538B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DF5C7022F76FBAC08F786DEB8A3CC1C /* miniz.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = miniz.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/dfu/cpp/miniz.cpp"; sourceTree = "<group>"; };
+		817F0C11B33FA7D02A324CB2D4EB7625 /* dataprocessor_config.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = dataprocessor_config.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/processor/cpp/dataprocessor_config.cpp"; sourceTree = "<group>"; };
 		82CCDEDB019ED07C028EDE744D1D7A27 /* Pods-OllysProject-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OllysProject-resources.sh"; sourceTree = "<group>"; };
-		83D172BE69AA45691CBEF0D1B96BDFC4 /* colordetector_tcs34725.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = colordetector_tcs34725.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/sensor/cpp/colordetector_tcs34725.cpp"; sourceTree = "<group>"; };
-		84604750C8EAE4899DC3EF521315D390 /* accelerometer_bosch.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = accelerometer_bosch.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/sensor/cpp/accelerometer_bosch.cpp"; sourceTree = "<group>"; };
-		8A07EF4E2A7E5DF41A148D56B05006A6 /* dataprocessor.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = dataprocessor.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/processor/cpp/dataprocessor.cpp"; sourceTree = "<group>"; };
-		8A6A7A6844E756B342F3A31F3C691C8A /* Task.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Task.swift; path = Sources/BoltsSwift/Task.swift; sourceTree = "<group>"; };
-		8AA818D85F9062D37DCF208D36245D8A /* TaskCompletionSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskCompletionSource.swift; path = Sources/BoltsSwift/TaskCompletionSource.swift; sourceTree = "<group>"; };
-		8B680453C761E6495417A6A57FB350AE /* task.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = task.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/platform/cpp/task.cpp"; sourceTree = "<group>"; };
-		8F5B9690BFE11F34928F70856EA90BB2 /* utils.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = utils.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/sensor/cpp/utils.cpp"; sourceTree = "<group>"; };
+		8F4DEE3F1D85753D4F830B9E4AC58E6A /* CBUUID.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CBUUID.swift; path = MetaWear/Core/CBUUID.swift; sourceTree = "<group>"; };
+		91952868E2A27C067E3EEE1075CDADE5 /* led.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = led.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/peripheral/cpp/led.cpp"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		98C398768FF1E24B799E922F16B59CDF /* accelerometer.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = accelerometer.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/sensor/cpp/accelerometer.cpp"; sourceTree = "<group>"; };
-		9D8346E2E179BE838381F9B83B5955F4 /* cbindings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = cbindings.swift; path = "MetaWear/MetaWear-SDK-Cpp/bindings/swift/cbindings.swift"; sourceTree = "<group>"; };
+		951521C1480084151F46CC21AF11CD48 /* logging.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = logging.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/core/cpp/logging.cpp"; sourceTree = "<group>"; };
+		9A7A4E5AA37DBC0702DE7E9D1DC9366A /* dfu_operations_details.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = dfu_operations_details.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/dfu/cpp/dfu_operations_details.cpp"; sourceTree = "<group>"; };
+		9AD39B0C39B3CECF579AA905B42EBBEB /* TaskCompletionSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskCompletionSource.swift; path = Sources/BoltsSwift/TaskCompletionSource.swift; sourceTree = "<group>"; };
 		9DC42C46B5F89C42BC0917CB15FA97D8 /* Pods-OllysProject-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OllysProject-frameworks.sh"; sourceTree = "<group>"; };
-		9E4547A8835886443FDC9895C11144D9 /* Task+Delay.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Task+Delay.swift"; path = "Sources/BoltsSwift/Task+Delay.swift"; sourceTree = "<group>"; };
-		A0BD07D20A53EE62B9CE1AB38D5BF16C /* miniz.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = miniz.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/dfu/cpp/miniz.cpp"; sourceTree = "<group>"; };
-		A50F3FDD9900EE49302380D63DE55DAB /* gyro_bmi160.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = gyro_bmi160.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/sensor/cpp/gyro_bmi160.cpp"; sourceTree = "<group>"; };
-		A54B31FBC7E257DDBEE2585202514CE7 /* barometer_bosch.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = barometer_bosch.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/sensor/cpp/barometer_bosch.cpp"; sourceTree = "<group>"; };
-		A693A255290A0AB82CBE6333EBC88E0B /* moduleinfo.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = moduleinfo.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/core/cpp/moduleinfo.cpp"; sourceTree = "<group>"; };
-		A7444D9A49BE34CBEA228BC2182CB9CE /* ibeacon.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = ibeacon.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/peripheral/cpp/ibeacon.cpp"; sourceTree = "<group>"; };
-		A7A6990F7E81B8152E210C578C55530F /* anonymous_datasignal.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = anonymous_datasignal.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/core/cpp/anonymous_datasignal.cpp"; sourceTree = "<group>"; };
-		AB0FD7265CCABE520544A9A1BC5DB5A7 /* event.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = event.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/core/cpp/event.cpp"; sourceTree = "<group>"; };
-		ACC471A41E8AE83F7F42559013BF1CB4 /* threadpool.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = threadpool.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/platform/cpp/threadpool.cpp"; sourceTree = "<group>"; };
-		B20E16974BE4015A4C2E098B5B0B6E37 /* async_creator.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = async_creator.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/platform/cpp/async_creator.cpp"; sourceTree = "<group>"; };
+		9F46F958F79B9954AA224BB2E30FA1AD /* MetaWear+LED.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "MetaWear+LED.swift"; path = "MetaWear/AsyncUtils/MetaWear+LED.swift"; sourceTree = "<group>"; };
+		9F67632BACE86521308AB865DE7742F4 /* accelerometer_mma8452q.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = accelerometer_mma8452q.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/sensor/cpp/accelerometer_mma8452q.cpp"; sourceTree = "<group>"; };
+		A2C01E0A1DECB8A07982839B2838E792 /* datainterpreter.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = datainterpreter.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/impl/cpp/datainterpreter.cpp"; sourceTree = "<group>"; };
+		A317D21E2D922572CE987933CB0078C2 /* colordetector_tcs34725.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = colordetector_tcs34725.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/sensor/cpp/colordetector_tcs34725.cpp"; sourceTree = "<group>"; };
+		A4457AD46C705F07DE254BD292750E7B /* DeviceInformation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DeviceInformation.swift; path = MetaWear/Core/DeviceInformation.swift; sourceTree = "<group>"; };
+		A5BC8282897F3D4949763912962FCB70 /* Bolts-Swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Bolts-Swift-umbrella.h"; sourceTree = "<group>"; };
+		AB11DD08CB9FE089596A3043117C079A /* datasignal.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = datasignal.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/core/cpp/datasignal.cpp"; sourceTree = "<group>"; };
+		AC64FF1C4C5990EC1384C44AB93D37E7 /* MblMwDataSignal+Async.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "MblMwDataSignal+Async.swift"; path = "MetaWear/AsyncUtils/MblMwDataSignal+Async.swift"; sourceTree = "<group>"; };
+		AD61314CF0E13B7435A14D48C770FE49 /* Bolts-Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Bolts-Swift.modulemap"; sourceTree = "<group>"; };
 		B369E78CD0D88DE214D283D4489B6AF9 /* Pods-OllysProject-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OllysProject-umbrella.h"; sourceTree = "<group>"; };
-		B88A3BEF9D494C5030A8D485C2F5095F /* led.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = led.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/peripheral/cpp/led.cpp"; sourceTree = "<group>"; };
+		B813E9A946890FE53EAEB4399B298A9B /* macro.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = macro.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/core/cpp/macro.cpp"; sourceTree = "<group>"; };
+		B81D4ACFA83398C1ED9E68E84D144176 /* MetaWear.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MetaWear.swift; path = MetaWear/Core/MetaWear.swift; sourceTree = "<group>"; };
 		B9FDCFD3D2D5F6CE6348BD83063F8348 /* MetaWear.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MetaWear.framework; path = MetaWear.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BA28E877A03880A27341AFACD99A2938 /* multichanneltemperature.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = multichanneltemperature.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/sensor/cpp/multichanneltemperature.cpp"; sourceTree = "<group>"; };
 		BF2BF3F4C152DF71065081B2404C6B16 /* Pods-OllysProject.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-OllysProject.modulemap"; sourceTree = "<group>"; };
-		C86C4DE062CCF9E728A506C0F927A6C9 /* MetaWearScanner.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MetaWearScanner.swift; path = MetaWear/Core/MetaWearScanner.swift; sourceTree = "<group>"; };
-		C90840B2D363163E7E8417CD6D0828CF /* humidity_bme280.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = humidity_bme280.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/sensor/cpp/humidity_bme280.cpp"; sourceTree = "<group>"; };
-		C9ECB587590D0C2A1F94327B59489186 /* LogDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LogDelegate.swift; path = MetaWear/Core/LogDelegate.swift; sourceTree = "<group>"; };
-		CB02499F463A101735749349CFF3FFBA /* MetaWearData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MetaWearData.swift; path = MetaWear/Core/MetaWearData.swift; sourceTree = "<group>"; };
-		CB5E5D81848A2BE507EE46E187BCEC3B /* responseheader.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = responseheader.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/core/cpp/responseheader.cpp"; sourceTree = "<group>"; };
-		CB6B033BA969DEDB82C47D02AF44BFEB /* CBUUID.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CBUUID.swift; path = MetaWear/Core/CBUUID.swift; sourceTree = "<group>"; };
-		D13E09106C8D57A7B8D0314685FB3D62 /* Bolts-Swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Bolts-Swift.xcconfig"; sourceTree = "<group>"; };
-		D1C2DD85E62671E0668817A2A4D418AE /* file_operations.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = file_operations.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/dfu/cpp/file_operations.cpp"; sourceTree = "<group>"; };
-		D2D554B5BC27FDD270FC005ED25871ED /* Bridging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Bridging.swift; path = MetaWear/Core/Bridging.swift; sourceTree = "<group>"; };
-		D508909C6685D56B3F3490A9A5610FFB /* MetaWear.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MetaWear.xcconfig; sourceTree = "<group>"; };
-		DC25B8BA6411C3280CC10408EAE0323C /* settings.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = settings.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/core/cpp/settings.cpp"; sourceTree = "<group>"; };
-		DF35B9C6BC2D58F85102CF0D6FA735B8 /* dataprocessor_config.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = dataprocessor_config.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/processor/cpp/dataprocessor_config.cpp"; sourceTree = "<group>"; };
-		E70B9C21FA692F6DD254F995D718683C /* debug.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = debug.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/core/cpp/debug.cpp"; sourceTree = "<group>"; };
-		EBC245E11B51135AD4CF546B9ABA77EB /* DeviceInformation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DeviceInformation.swift; path = MetaWear/Core/DeviceInformation.swift; sourceTree = "<group>"; };
-		EE2777B523A2CC4BDF3439692008820F /* Task+WhenAll.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Task+WhenAll.swift"; path = "Sources/BoltsSwift/Task+WhenAll.swift"; sourceTree = "<group>"; };
-		EEFA25A061ED5441D8EA91EC98777635 /* MetaWear-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MetaWear-prefix.pch"; sourceTree = "<group>"; };
-		F21EE3B9B5C36F6E72F5C21060B83120 /* memory.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = memory.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/platform/cpp/memory.cpp"; sourceTree = "<group>"; };
-		F659FA3B2AB1F9B6F5B043E2EF59A198 /* dfu_operations_details.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = dfu_operations_details.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/dfu/cpp/dfu_operations_details.cpp"; sourceTree = "<group>"; };
+		C1581A3555713D35B5089FDFC10C5F34 /* ambientlight_ltr329.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = ambientlight_ltr329.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/sensor/cpp/ambientlight_ltr329.cpp"; sourceTree = "<group>"; };
+		C22C9F0B2ECBDCC1CADB2DDA93D62901 /* MetaWear.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MetaWear.xcconfig; sourceTree = "<group>"; };
+		C39E38CAF6F8763F87FDECFF289FE5C2 /* version.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = version.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/core/cpp/version.cpp"; sourceTree = "<group>"; };
+		CA08A1C6CA91900319208976CB8BE5AD /* Bolts-Swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Bolts-Swift-prefix.pch"; sourceTree = "<group>"; };
+		D36059C1E6859650D8653D79EFE8F6DF /* gpio.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = gpio.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/sensor/cpp/gpio.cpp"; sourceTree = "<group>"; };
+		D3D0BA5F9E5067847ED7925273B24B31 /* dfu_utility.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = dfu_utility.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/dfu/cpp/dfu_utility.cpp"; sourceTree = "<group>"; };
+		D3EE194CA25C83793F82567E316A0F54 /* multichanneltemperature.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = multichanneltemperature.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/sensor/cpp/multichanneltemperature.cpp"; sourceTree = "<group>"; };
+		D5A07090E61541EA6D4CAAB9A944ABD6 /* conductance.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = conductance.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/sensor/cpp/conductance.cpp"; sourceTree = "<group>"; };
+		D6C4BAC417CF6A9E9801DE2CA280F941 /* sensor_fusion.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = sensor_fusion.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/sensor/cpp/sensor_fusion.cpp"; sourceTree = "<group>"; };
+		D930A66A68FEC43B02E70AB7B2B8AD34 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEA003777ECCB0E3F47F4EDFE90B7ACA /* task.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = task.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/platform/cpp/task.cpp"; sourceTree = "<group>"; };
+		E347A409E7FDC73DCFAFB53EFE417DBA /* Task+WhenAll.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Task+WhenAll.swift"; path = "Sources/BoltsSwift/Task+WhenAll.swift"; sourceTree = "<group>"; };
+		E3D69A7D8D7E7D3C3D8005CBA2F88151 /* String+VersionCompare.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+VersionCompare.swift"; path = "MetaWear/Core/String+VersionCompare.swift"; sourceTree = "<group>"; };
+		E4994F758FB35EDF0841755B5C7EBEEC /* serialpassthrough.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = serialpassthrough.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/sensor/cpp/serialpassthrough.cpp"; sourceTree = "<group>"; };
+		E72A8693B690C2BB0E93E3BD69D96A53 /* MetaWear+Async.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "MetaWear+Async.swift"; path = "MetaWear/AsyncUtils/MetaWear+Async.swift"; sourceTree = "<group>"; };
+		EE78941375BEFC23F3E38A6B0452E4DE /* Task.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Task.swift; path = Sources/BoltsSwift/Task.swift; sourceTree = "<group>"; };
+		EF42F38917ADD85444FADFA60D7D97B8 /* gyro_bmi160.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = gyro_bmi160.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/sensor/cpp/gyro_bmi160.cpp"; sourceTree = "<group>"; };
+		FA0F0B360484A717E1A55908528C1589 /* accelerometer.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = accelerometer.cpp; path = "MetaWear/MetaWear-SDK-Cpp/src/metawear/sensor/cpp/accelerometer.cpp"; sourceTree = "<group>"; };
+		FA3C193C93FE6D63537D572CA63A19F6 /* Errors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Errors.swift; path = Sources/BoltsSwift/Errors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		25074C0EE2729253DDA5CF4D958F53BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DF4D45CBD8E9D3DCF7924791517793D /* BoltsSwift.framework in Frameworks */,
+				F00C3D71C319F7678E9D06D0E8814BCA /* CoreBluetooth.framework in Frameworks */,
+				2CF1755A10152534FA17064C38740108 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3B45D2C37A548EB2239F1759687411C2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -216,16 +236,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				26D552578DB7C6476C99785DD9CE0DA1 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A0DA601D2BB8A0AC6FC256CEB8C9C741 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1ED609BA2A6C171A6107A76B5B0E9666 /* BoltsSwift.framework in Frameworks */,
-				D4C824392C5F671819A78B2D15688906 /* CoreBluetooth.framework in Frameworks */,
-				8EA445269326FBE109D77466E31B638E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,66 +259,74 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		1E2FA5560A10672996FA213EEA0E08CB /* Core */ = {
+		072F0A783161B3A102F4D68FD325CB94 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				98C398768FF1E24B799E922F16B59CDF /* accelerometer.cpp */,
-				84604750C8EAE4899DC3EF521315D390 /* accelerometer_bosch.cpp */,
-				295DABE967667B7D77F2045EC08C31F5 /* accelerometer_mma8452q.cpp */,
-				0BA4886C2B1BFFDC6EBC107D25E28BEA /* ambientlight_ltr329.cpp */,
-				A7A6990F7E81B8152E210C578C55530F /* anonymous_datasignal.cpp */,
-				B20E16974BE4015A4C2E098B5B0B6E37 /* async_creator.cpp */,
-				A54B31FBC7E257DDBEE2585202514CE7 /* barometer_bosch.cpp */,
-				D2D554B5BC27FDD270FC005ED25871ED /* Bridging.swift */,
-				9D8346E2E179BE838381F9B83B5955F4 /* cbindings.swift */,
-				CB6B033BA969DEDB82C47D02AF44BFEB /* CBUUID.swift */,
-				83D172BE69AA45691CBEF0D1B96BDFC4 /* colordetector_tcs34725.cpp */,
-				42CAA11FF8A621C3390402748C160949 /* conductance.cpp */,
-				59C7CB2D6C7BB9CDF906B321A137C334 /* datainterpreter.cpp */,
-				8A07EF4E2A7E5DF41A148D56B05006A6 /* dataprocessor.cpp */,
-				DF35B9C6BC2D58F85102CF0D6FA735B8 /* dataprocessor_config.cpp */,
-				361AB9B09BF9E6F78797A8E036C779C1 /* datasignal.cpp */,
-				E70B9C21FA692F6DD254F995D718683C /* debug.cpp */,
-				EBC245E11B51135AD4CF546B9ABA77EB /* DeviceInformation.swift */,
-				601583551FFD9AEDC47385C49AFC8AAD /* dfu_operations.cpp */,
-				F659FA3B2AB1F9B6F5B043E2EF59A198 /* dfu_operations_details.cpp */,
-				37D8DEF09D0B415A35046040E9632496 /* dfu_utility.cpp */,
-				AB0FD7265CCABE520544A9A1BC5DB5A7 /* event.cpp */,
-				D1C2DD85E62671E0668817A2A4D418AE /* file_operations.cpp */,
-				3A3C6214813276CA8A1E9799304E5124 /* gpio.cpp */,
-				A50F3FDD9900EE49302380D63DE55DAB /* gyro_bmi160.cpp */,
-				7B255FA75C7933830D080C2006F7F11E /* haptic.cpp */,
-				C90840B2D363163E7E8417CD6D0828CF /* humidity_bme280.cpp */,
-				A7444D9A49BE34CBEA228BC2182CB9CE /* ibeacon.cpp */,
-				B88A3BEF9D494C5030A8D485C2F5095F /* led.cpp */,
-				C9ECB587590D0C2A1F94327B59489186 /* LogDelegate.swift */,
-				0F5B366A79EA0AB389D85FAF11A107BB /* logging.cpp */,
-				4A95FEF7B26FD81468F28ABF19FE8087 /* macro.cpp */,
-				5ECADAF6B72BEDD0990A263D910EC0CB /* magnetometer_bmm150.cpp */,
-				0521655EB74BCD70D82CD88043E388E4 /* MblMwGattChar.swift */,
-				F21EE3B9B5C36F6E72F5C21060B83120 /* memory.cpp */,
-				743B6D558BB66B40B915F7CE2BC835EF /* MetaWear.swift */,
-				12BB90D294796D358C3FAFEFCBBC0FEE /* metawearboard.cpp */,
-				CB02499F463A101735749349CFF3FFBA /* MetaWearData.swift */,
-				C86C4DE062CCF9E728A506C0F927A6C9 /* MetaWearScanner.swift */,
-				A0BD07D20A53EE62B9CE1AB38D5BF16C /* miniz.cpp */,
-				A693A255290A0AB82CBE6333EBC88E0B /* moduleinfo.cpp */,
-				BA28E877A03880A27341AFACD99A2938 /* multichanneltemperature.cpp */,
-				09BAF6A5E159FE1D07B0D32C8EFA0F07 /* neopixel.cpp */,
-				3D723E5439A4A2D58A701E43CC83E5FC /* proximity_tsl2671.cpp */,
-				CB5E5D81848A2BE507EE46E187BCEC3B /* responseheader.cpp */,
-				07C62A4021B02C7B1731FB00374B8855 /* sensor_fusion.cpp */,
-				13B39284823BBB525C3A7189674B0084 /* serialpassthrough.cpp */,
-				DC25B8BA6411C3280CC10408EAE0323C /* settings.cpp */,
-				43EB0F10F57432FDD26BE8141E58EE75 /* String+VersionCompare.swift */,
-				24C57B7CD980129CA803C119C23AD20C /* switch.cpp */,
-				8B680453C761E6495417A6A57FB350AE /* task.cpp */,
-				ACC471A41E8AE83F7F42559013BF1CB4 /* threadpool.cpp */,
-				156A980A266AE0E4FA59AC799EE4925E /* timer.cpp */,
-				8F5B9690BFE11F34928F70856EA90BB2 /* utils.cpp */,
-				49FA247D0E9910053B0B43D4B6F83AE8 /* version.cpp */,
+				FA0F0B360484A717E1A55908528C1589 /* accelerometer.cpp */,
+				5652D6772FB7759BA8210578B75DAE5E /* accelerometer_bosch.cpp */,
+				9F67632BACE86521308AB865DE7742F4 /* accelerometer_mma8452q.cpp */,
+				C1581A3555713D35B5089FDFC10C5F34 /* ambientlight_ltr329.cpp */,
+				28B7625480F6F8919E497CDA0E388E00 /* anonymous_datasignal.cpp */,
+				2732D20D26BFF64BA24D2303B0209C94 /* async_creator.cpp */,
+				280C6953E09905F56B8DF5DEA4912A43 /* barometer_bosch.cpp */,
+				066F13E331398D2EF49F164A515D3D19 /* Bridging.swift */,
+				05597729B9EB7F554AAD7F180FD6690A /* cbindings.swift */,
+				8F4DEE3F1D85753D4F830B9E4AC58E6A /* CBUUID.swift */,
+				A317D21E2D922572CE987933CB0078C2 /* colordetector_tcs34725.cpp */,
+				D5A07090E61541EA6D4CAAB9A944ABD6 /* conductance.cpp */,
+				A2C01E0A1DECB8A07982839B2838E792 /* datainterpreter.cpp */,
+				1AC5B2727246216586505D06A052BE9B /* dataprocessor.cpp */,
+				817F0C11B33FA7D02A324CB2D4EB7625 /* dataprocessor_config.cpp */,
+				AB11DD08CB9FE089596A3043117C079A /* datasignal.cpp */,
+				63C99BAAB10EB81D11E4D8E116C2C45D /* debug.cpp */,
+				A4457AD46C705F07DE254BD292750E7B /* DeviceInformation.swift */,
+				50400B01FACEF0B6FFDB8C5FA678E8D2 /* dfu_operations.cpp */,
+				9A7A4E5AA37DBC0702DE7E9D1DC9366A /* dfu_operations_details.cpp */,
+				D3D0BA5F9E5067847ED7925273B24B31 /* dfu_utility.cpp */,
+				2F284737BA0146085776728423653B7C /* event.cpp */,
+				0D1C6D98B701474F8F346088DC066C36 /* file_operations.cpp */,
+				D36059C1E6859650D8653D79EFE8F6DF /* gpio.cpp */,
+				EF42F38917ADD85444FADFA60D7D97B8 /* gyro_bmi160.cpp */,
+				00245D0362C7E6C42EF9C7110735B9D9 /* haptic.cpp */,
+				669E543E3C413AAB7C6F0F0A06C516DF /* humidity_bme280.cpp */,
+				19583228A746E0FB8B68D8A1C18AC6A2 /* ibeacon.cpp */,
+				91952868E2A27C067E3EEE1075CDADE5 /* led.cpp */,
+				2408C1485CD604E61BF64C502109C16F /* LogDelegate.swift */,
+				951521C1480084151F46CC21AF11CD48 /* logging.cpp */,
+				B813E9A946890FE53EAEB4399B298A9B /* macro.cpp */,
+				35661B99571CB37235847E49FA614923 /* magnetometer_bmm150.cpp */,
+				52E0B061CFEA397B286972B244FF30D5 /* MblMwGattChar.swift */,
+				09645A5D290DA45E83CA4D64B98161B3 /* memory.cpp */,
+				B81D4ACFA83398C1ED9E68E84D144176 /* MetaWear.swift */,
+				2CE76FBE7CA76B9B674493ADDB4F3FEE /* metawearboard.cpp */,
+				037205B0BF12854A97FB27FE19C71228 /* MetaWearData.swift */,
+				1BBCABAD1EFFAC7775DD64CDF27570F0 /* MetaWearScanner.swift */,
+				7DF5C7022F76FBAC08F786DEB8A3CC1C /* miniz.cpp */,
+				50242A75693DFF033669329D43FB9864 /* moduleinfo.cpp */,
+				D3EE194CA25C83793F82567E316A0F54 /* multichanneltemperature.cpp */,
+				6EF1393F5CE50F69FE9A0CBD11378188 /* neopixel.cpp */,
+				51D66A1DBDBA2D41D9E87A075CEF5DF6 /* proximity_tsl2671.cpp */,
+				12E84E3A3AF3A5E9464056F9C458E48B /* responseheader.cpp */,
+				D6C4BAC417CF6A9E9801DE2CA280F941 /* sensor_fusion.cpp */,
+				E4994F758FB35EDF0841755B5C7EBEEC /* serialpassthrough.cpp */,
+				3276B3083FDABD36EA79FFBEB058B198 /* settings.cpp */,
+				E3D69A7D8D7E7D3C3D8005CBA2F88151 /* String+VersionCompare.swift */,
+				55408F912871BE23E9CA5849F28E5504 /* switch.cpp */,
+				DEA003777ECCB0E3F47F4EDFE90B7ACA /* task.cpp */,
+				3082B83B4985AB04347F89149204BD6F /* threadpool.cpp */,
+				5FEA49EBBA19C42F0E92C5EDBDD067F3 /* timer.cpp */,
+				72CE62EE3D2862A3B810FEB4910DCD48 /* utils.cpp */,
+				C39E38CAF6F8763F87FDECFF289FE5C2 /* version.cpp */,
 			);
 			name = Core;
+			sourceTree = "<group>";
+		};
+		1ED0A3D97CDC46881B4D9122CE0E94F0 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				6D07B73D198C470F6520996795E00AEB /* ScannerModel.swift */,
+			);
+			name = UI;
 			sourceTree = "<group>";
 		};
 		4E299C57FD8995EBBD54618B67C08B3A /* Products */ = {
@@ -348,18 +366,53 @@
 			path = "Target Support Files/Pods-OllysProject";
 			sourceTree = "<group>";
 		};
-		74A23941C224FD891631155612845210 /* Support Files */ = {
+		63D2049C4A8B7B7EC2CE7E8914D57B0A /* AsyncUtils */ = {
 			isa = PBXGroup;
 			children = (
-				0402A807F0A969B1E17D77D2DADE734A /* Info.plist */,
-				49888D08E0E182AE5ED3E70B1A0000B6 /* MetaWear.modulemap */,
-				D508909C6685D56B3F3490A9A5610FFB /* MetaWear.xcconfig */,
-				7ADFC699E4057F07ADF01EBC76FFF9E2 /* MetaWear-dummy.m */,
-				EEFA25A061ED5441D8EA91EC98777635 /* MetaWear-prefix.pch */,
-				780C8726F0DF68C540C0F19B1963DF6F /* MetaWear-umbrella.h */,
+				AC64FF1C4C5990EC1384C44AB93D37E7 /* MblMwDataSignal+Async.swift */,
+				0C6FA955795E346531ED1B8B4606FBAF /* MblMwEvent+Async.swift */,
+				E72A8693B690C2BB0E93E3BD69D96A53 /* MetaWear+Async.swift */,
+				9F46F958F79B9954AA224BB2E30FA1AD /* MetaWear+LED.swift */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/MetaWear";
+			name = AsyncUtils;
+			sourceTree = "<group>";
+		};
+		67F6D69A5C417FFBDC9C87C1BD04C612 /* Bolts-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				FA3C193C93FE6D63537D572CA63A19F6 /* Errors.swift */,
+				6DD900DF2A5819A27DF6CC4931B5F7FB /* Executor.swift */,
+				EE78941375BEFC23F3E38A6B0452E4DE /* Task.swift */,
+				0AEF7CAC3AA940555F16A88B819C09C0 /* Task+ContinueWith.swift */,
+				34E1302C347A69376629836AE0C9454F /* Task+Delay.swift */,
+				E347A409E7FDC73DCFAFB53EFE417DBA /* Task+WhenAll.swift */,
+				5D5E9375384A8052B9EEFD0B05BA6E16 /* Task+WhenAny.swift */,
+				9AD39B0C39B3CECF579AA905B42EBBEB /* TaskCompletionSource.swift */,
+				F4A8A1B932A108CD9370C6A540D118DB /* Support Files */,
+			);
+			name = "Bolts-Swift";
+			path = "Bolts-Swift";
+			sourceTree = "<group>";
+		};
+		71A5F826BFED9FDB5738BF3B3622A35F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				67F6D69A5C417FFBDC9C87C1BD04C612 /* Bolts-Swift */,
+				7A81E6597116FF5143C5755A0D476F3E /* MetaWear */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7A81E6597116FF5143C5755A0D476F3E /* MetaWear */ = {
+			isa = PBXGroup;
+			children = (
+				63D2049C4A8B7B7EC2CE7E8914D57B0A /* AsyncUtils */,
+				072F0A783161B3A102F4D68FD325CB94 /* Core */,
+				A301C95E1164BC2C5FC797E17C8668A4 /* Support Files */,
+				1ED0A3D97CDC46881B4D9122CE0E94F0 /* UI */,
+			);
+			name = MetaWear;
+			path = MetaWear;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -367,60 +420,38 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				05F7D3875BE314A664E029F00FF89EA0 /* Frameworks */,
-				AB397116ADE7E1586042E0547D869D05 /* Pods */,
+				71A5F826BFED9FDB5738BF3B3622A35F /* Pods */,
 				4E299C57FD8995EBBD54618B67C08B3A /* Products */,
 				04E639388E1F87A3B06AE70E1155C4B5 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		8F2671ACB6CF749ACC6DB2B4DED0634F /* Support Files */ = {
+		A301C95E1164BC2C5FC797E17C8668A4 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				37FAED3E4A06A6E7DBC021248435ECFF /* Bolts-Swift.modulemap */,
-				D13E09106C8D57A7B8D0314685FB3D62 /* Bolts-Swift.xcconfig */,
-				3EE5A0E73825D4D8ECAB75E448283325 /* Bolts-Swift-dummy.m */,
-				2E7C9431489B0D47F399B1A6E342A108 /* Bolts-Swift-prefix.pch */,
-				119B04CFAD5BA549231D56FCEE03D4D2 /* Bolts-Swift-umbrella.h */,
-				44F4ED687DFDCA5E1F058494D2076498 /* Info.plist */,
+				7D015F98419D949A4DBA15A042B0538B /* Info.plist */,
+				01163EBEC1AE3EE94AB3CEAC7226F666 /* MetaWear.modulemap */,
+				C22C9F0B2ECBDCC1CADB2DDA93D62901 /* MetaWear.xcconfig */,
+				16EB2DED0BFED543C73296E6700994C8 /* MetaWear-dummy.m */,
+				67942405809E45D5D89DCD6334019207 /* MetaWear-prefix.pch */,
+				235D23B072DE90B4EB4FD97782F221A6 /* MetaWear-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MetaWear";
+			sourceTree = "<group>";
+		};
+		F4A8A1B932A108CD9370C6A540D118DB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				AD61314CF0E13B7435A14D48C770FE49 /* Bolts-Swift.modulemap */,
+				109DD47ED022A9AF9B954E83E85A405B /* Bolts-Swift.xcconfig */,
+				1903A93CB712F3F69A64AA7D11BB92E6 /* Bolts-Swift-dummy.m */,
+				CA08A1C6CA91900319208976CB8BE5AD /* Bolts-Swift-prefix.pch */,
+				A5BC8282897F3D4949763912962FCB70 /* Bolts-Swift-umbrella.h */,
+				D930A66A68FEC43B02E70AB7B2B8AD34 /* Info.plist */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Bolts-Swift";
-			sourceTree = "<group>";
-		};
-		AB397116ADE7E1586042E0547D869D05 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				E53FE0EF79233743B6B34B560989D42F /* Bolts-Swift */,
-				D0A81ADC0FC3ACC316B7FFF19999123B /* MetaWear */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		D0A81ADC0FC3ACC316B7FFF19999123B /* MetaWear */ = {
-			isa = PBXGroup;
-			children = (
-				1E2FA5560A10672996FA213EEA0E08CB /* Core */,
-				74A23941C224FD891631155612845210 /* Support Files */,
-			);
-			name = MetaWear;
-			path = MetaWear;
-			sourceTree = "<group>";
-		};
-		E53FE0EF79233743B6B34B560989D42F /* Bolts-Swift */ = {
-			isa = PBXGroup;
-			children = (
-				3441713E97A3BF9ABA6117AACA9A8F4C /* Errors.swift */,
-				167E4066EC24C69CD52244DA5795E81D /* Executor.swift */,
-				8A6A7A6844E756B342F3A31F3C691C8A /* Task.swift */,
-				77F2AADE6536980A8D961EC14CD3F738 /* Task+ContinueWith.swift */,
-				9E4547A8835886443FDC9895C11144D9 /* Task+Delay.swift */,
-				EE2777B523A2CC4BDF3439692008820F /* Task+WhenAll.swift */,
-				1CA6DE078D256530AB644D7EDEDDAFB2 /* Task+WhenAny.swift */,
-				8AA818D85F9062D37DCF208D36245D8A /* TaskCompletionSource.swift */,
-				8F2671ACB6CF749ACC6DB2B4DED0634F /* Support Files */,
-			);
-			name = "Bolts-Swift";
-			path = "Bolts-Swift";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -434,6 +465,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		473B609B56C05143BA47B9F06C5746F2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EEA71AF3ED7C41A711609C1F5B615A3 /* MetaWear-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6F9494DF92AB4A4A1945AA9E481793A9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -442,29 +481,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7BD9F8328493C1149646EECFDA47D835 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6367DE1641FD2ADDA018D5E6809E6736 /* MetaWear-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		1831B7D224016544A8BE2474514ABC98 /* MetaWear */ = {
+		3637413E57E9A9056AB857FB88F715FD /* MetaWear */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5A44B871939EBEA88C330047DF868EA5 /* Build configuration list for PBXNativeTarget "MetaWear" */;
+			buildConfigurationList = 516A767C4EE034368DC0F9B00278CB60 /* Build configuration list for PBXNativeTarget "MetaWear" */;
 			buildPhases = (
-				44858CF41FC7AF052366223D877141D1 /* Sources */,
-				A0DA601D2BB8A0AC6FC256CEB8C9C741 /* Frameworks */,
-				7BD9F8328493C1149646EECFDA47D835 /* Headers */,
+				55A0DA7136B8BCC6BFEA6FEABEFA6DF4 /* Sources */,
+				25074C0EE2729253DDA5CF4D958F53BB /* Frameworks */,
+				473B609B56C05143BA47B9F06C5746F2 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				429FA091E9341CF7DF396250CCA2BA0D /* PBXTargetDependency */,
+				C52212EF44604A1C7DEA282549B1D3A8 /* PBXTargetDependency */,
 			);
 			name = MetaWear;
 			productName = MetaWear;
@@ -529,7 +560,7 @@
 			projectRoot = "";
 			targets = (
 				D19B48CA399A7DEF6381AD8475D635B3 /* Bolts-Swift */,
-				1831B7D224016544A8BE2474514ABC98 /* MetaWear */,
+				3637413E57E9A9056AB857FB88F715FD /* MetaWear */,
 				A13E40BF6EE2C5B5DA171C0B96C0D525 /* Pods-OllysProject */,
 			);
 		};
@@ -544,66 +575,71 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		44858CF41FC7AF052366223D877141D1 /* Sources */ = {
+		55A0DA7136B8BCC6BFEA6FEABEFA6DF4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6F238287BCF6D71B1310B914C4A4BE3 /* accelerometer.cpp in Sources */,
-				2584F859A8FB34C24B628F9011BAE6D0 /* accelerometer_bosch.cpp in Sources */,
-				E9830B2245A0186893EA082BDA6BCB30 /* accelerometer_mma8452q.cpp in Sources */,
-				4FED762C5894068676AB3705F3E11CDF /* ambientlight_ltr329.cpp in Sources */,
-				A78B22DBC3068421BC2DB7BF19D40824 /* anonymous_datasignal.cpp in Sources */,
-				08D87448F70C44E06005EEC7E780C599 /* async_creator.cpp in Sources */,
-				EBB12804AA9D370FA85AF5AB6D8EE1B4 /* barometer_bosch.cpp in Sources */,
-				E4D0FC704AC5F39BE1FCB5E762E75384 /* Bridging.swift in Sources */,
-				F34D5961A30B15D1A1DF13CA02883992 /* cbindings.swift in Sources */,
-				CDFA35198367A4692BC0CFEFE1A18090 /* CBUUID.swift in Sources */,
-				B174C118C4EF4A8A534BA6097D2874AB /* colordetector_tcs34725.cpp in Sources */,
-				C8324DC156AEEC1A357F9ECE2EF947F0 /* conductance.cpp in Sources */,
-				13E78CC99EC7CC31BEE49C6311628F96 /* datainterpreter.cpp in Sources */,
-				03AD79CA40DA3DAD8F76566125A62447 /* dataprocessor.cpp in Sources */,
-				371DCBD6153769454B730C98875B52C6 /* dataprocessor_config.cpp in Sources */,
-				36ED5AAF343A39FCD19A63098AA68527 /* datasignal.cpp in Sources */,
-				3001BC3413CF75C1889062E34754C104 /* debug.cpp in Sources */,
-				324C6BDA5797BFDA465C57854EB33754 /* DeviceInformation.swift in Sources */,
-				54EB4AC4BC4C791F88F89B29B3D8FB27 /* dfu_operations.cpp in Sources */,
-				5A603BDBF0F00F4944C0D11A908381B6 /* dfu_operations_details.cpp in Sources */,
-				1DCB344A6C40E40E8654F8D652168F6E /* dfu_utility.cpp in Sources */,
-				BB7AB25DA9178882E3E8DA1E32A99643 /* event.cpp in Sources */,
-				EEE96BA5DCB80E30C754E5CC1579E24C /* file_operations.cpp in Sources */,
-				A4A3D9423E0C19D8D451475EB7FBE9B5 /* gpio.cpp in Sources */,
-				FAC0DE2C9B141FFA051FCEED77D24DAE /* gyro_bmi160.cpp in Sources */,
-				3B16E109E69CA48A02989EF4408FBC28 /* haptic.cpp in Sources */,
-				5BE9060E6A09C22119C392BEE117DB95 /* humidity_bme280.cpp in Sources */,
-				3DF35A4175A95079F33B0AA91A12169F /* ibeacon.cpp in Sources */,
-				AE3011BF98946E079966A4B37867A330 /* led.cpp in Sources */,
-				5D1E49FA8C22DDAD65C408230BEBA48D /* LogDelegate.swift in Sources */,
-				CDBDE5A3E4F39426033A5CFD0110D33A /* logging.cpp in Sources */,
-				C25A6DC4B01A0BBB3DF00BE3BA9507A7 /* macro.cpp in Sources */,
-				B7C88AA55F3475C9668A4A2A2705CC4E /* magnetometer_bmm150.cpp in Sources */,
-				B672F8A9F41DCC7EF83A38F2141048E4 /* MblMwGattChar.swift in Sources */,
-				32109B52AD647180F99770FABA386CB0 /* memory.cpp in Sources */,
-				E68A9A1E0C91C955101996382C682815 /* MetaWear-dummy.m in Sources */,
-				7F65CCD0DBCD2C76715CEFE40508FC70 /* MetaWear.swift in Sources */,
-				B3D39AB272540D59E3D855355F76B539 /* metawearboard.cpp in Sources */,
-				D67436FA448AD4BD14EB04AB6F299575 /* MetaWearData.swift in Sources */,
-				0B3922BE5F0C6D791CF7094EFCC24DB9 /* MetaWearScanner.swift in Sources */,
-				CF74072B9D3A0D5D1810A75C4E302909 /* miniz.cpp in Sources */,
-				8A5C412036F8450D3BD5DBB1176A67E2 /* moduleinfo.cpp in Sources */,
-				2B7EDA66D3C97547DBEFFDE50F0A9B45 /* multichanneltemperature.cpp in Sources */,
-				C95B86083B393D31397907DACDE645DB /* neopixel.cpp in Sources */,
-				68DD518E43950F3639CF07877F1F3247 /* proximity_tsl2671.cpp in Sources */,
-				411859C86267F059B4B015E241FD2B51 /* responseheader.cpp in Sources */,
-				F29C1ED93CA1E94493E2F88246540452 /* sensor_fusion.cpp in Sources */,
-				7AABBC24907BEA41B294D6A25925239A /* serialpassthrough.cpp in Sources */,
-				D61B018741ECEFFB3C6387CE22684B8B /* settings.cpp in Sources */,
-				B0DA42AC497DD418D2AF1367F1ACE588 /* String+VersionCompare.swift in Sources */,
-				F87C26973D66D5EC7CA7724ACFA7DC47 /* switch.cpp in Sources */,
-				F5E549AADF4AE6F9909B30269A235304 /* task.cpp in Sources */,
-				C1B092A738485E4EACE95C7ABC0C9C02 /* threadpool.cpp in Sources */,
-				EDE9A5CFCE55CA865146BA1B501E8748 /* timer.cpp in Sources */,
-				A7BB54EA0D96ACB6F9EE876B5DABE7EA /* utils.cpp in Sources */,
-				7DDB2831F2AAF157DDDBFDF98E23AD04 /* version.cpp in Sources */,
+				1CD44CE85FBD84D1A80191FE813A429C /* accelerometer.cpp in Sources */,
+				082234F2D80266B0E13A8707359EB198 /* accelerometer_bosch.cpp in Sources */,
+				1CB075B4097D70DFF66B66D1B84ED8E0 /* accelerometer_mma8452q.cpp in Sources */,
+				EEA5364DFC329F1B02549ABD7DBA1547 /* ambientlight_ltr329.cpp in Sources */,
+				10139BD5708F796D632CEAA74F8E4A54 /* anonymous_datasignal.cpp in Sources */,
+				85EAD3C48F2BB5255E0AC2B7254476BD /* async_creator.cpp in Sources */,
+				2B0B7FB5D847BA640FB3A18B3A7073CA /* barometer_bosch.cpp in Sources */,
+				94AC984A4CC0FDBF0AF3AEC55DB12FB7 /* Bridging.swift in Sources */,
+				FF1B058978DAFAA95584F6D2FCEFEC7F /* cbindings.swift in Sources */,
+				BA80C22FEC80BF4246189BE53F88E391 /* CBUUID.swift in Sources */,
+				FC00442A927FA369C673C14C3E739571 /* colordetector_tcs34725.cpp in Sources */,
+				8ED24CCE60F9CD1D8EA9DF97D3A30760 /* conductance.cpp in Sources */,
+				1DF3B2007A1C90B1DEE6625DF23D3A28 /* datainterpreter.cpp in Sources */,
+				0BE78CDD6129671844A05723E55C7E83 /* dataprocessor.cpp in Sources */,
+				6B4B452FEA61A657C46E9415C625365A /* dataprocessor_config.cpp in Sources */,
+				617BC42B042C01A1712B1353F238C6AF /* datasignal.cpp in Sources */,
+				F659CD932F1E04A6E21AFEFFA7013BBE /* debug.cpp in Sources */,
+				6EBFA77F46277302B7C6E930A7CE0961 /* DeviceInformation.swift in Sources */,
+				1A96BFE284355A453E818602E2F22D13 /* dfu_operations.cpp in Sources */,
+				98AE7CD9ED58AA08D2EA4F37D0850073 /* dfu_operations_details.cpp in Sources */,
+				5F7E6EB9F2E67AC1D0BB058E38A9C240 /* dfu_utility.cpp in Sources */,
+				925AC1A29C74E77AE0163AB2BE869FE9 /* event.cpp in Sources */,
+				8C7D4790CA826B5FB25B3C8DF73C6B1F /* file_operations.cpp in Sources */,
+				80C744BAD334AF86B5B86212B7AEC67E /* gpio.cpp in Sources */,
+				10F9D62556882EDEE5CFE70EAD64D48B /* gyro_bmi160.cpp in Sources */,
+				2290AB3D50B328C71BC603EF4CF904B1 /* haptic.cpp in Sources */,
+				124C314810381BD02B3A35BE45B7242F /* humidity_bme280.cpp in Sources */,
+				1384857E26C99D7760D19EFDF02EEEA1 /* ibeacon.cpp in Sources */,
+				81A68ECA59AF5B9A29CA0280F84B3FCC /* led.cpp in Sources */,
+				C17675B431D4B43DA2CBBE14CD247725 /* LogDelegate.swift in Sources */,
+				C1C769F92621A6117BC28F49D0513A8B /* logging.cpp in Sources */,
+				84D2801277D0D30AC0D68073E1A1A65E /* macro.cpp in Sources */,
+				45F173971A91DEAE4E0C5F9834B922C4 /* magnetometer_bmm150.cpp in Sources */,
+				D4C6AE73C4EA2C35FBEA01E4DA19A5A4 /* MblMwDataSignal+Async.swift in Sources */,
+				80D56C5BB22F22589009E473B877AF0D /* MblMwEvent+Async.swift in Sources */,
+				7D8A086B4D17B5BBECEB2103F669EA2C /* MblMwGattChar.swift in Sources */,
+				947BBF778513C5C02EB72BBA1864D5C9 /* memory.cpp in Sources */,
+				12F6031AD169EE8977E44A59B65EA297 /* MetaWear+Async.swift in Sources */,
+				69C3EF5585CFD3AC1F44306D21EA1553 /* MetaWear+LED.swift in Sources */,
+				907B6A013E69FEFE0EB9BB174CDD69B7 /* MetaWear-dummy.m in Sources */,
+				546263F37ECDC9387048740354232479 /* MetaWear.swift in Sources */,
+				124C760AF33AC33E90ED2B475BD8E8F5 /* metawearboard.cpp in Sources */,
+				FA1C05880C4444C8F85C361667FA7FAC /* MetaWearData.swift in Sources */,
+				B8106FFD9EAE30A6E00F6EDD0C90CD50 /* MetaWearScanner.swift in Sources */,
+				F2626130E7E3BFE3D15D3C075181CE70 /* miniz.cpp in Sources */,
+				C8FCEFECBEA1C0B8820528C7CC130B08 /* moduleinfo.cpp in Sources */,
+				AAAB024BF34E82F26F32B88B46598F0C /* multichanneltemperature.cpp in Sources */,
+				6A6CFEDBD4A18D508E25CFCE4C250497 /* neopixel.cpp in Sources */,
+				5EFB51F9B675A1E447919A3130C78CBC /* proximity_tsl2671.cpp in Sources */,
+				657A755F965439CC877033DF6904B114 /* responseheader.cpp in Sources */,
+				0C6F8F97DCFE6D6103BEE1F6A063B3BB /* ScannerModel.swift in Sources */,
+				6CF53545B2866BED4E9E69DB1AD3AD86 /* sensor_fusion.cpp in Sources */,
+				9413582E29DAD47F6D438018E02EC143 /* serialpassthrough.cpp in Sources */,
+				4172FA373EF8B39208FD4DEE6EE24893 /* settings.cpp in Sources */,
+				856B668FFD99BF36D982195849995872 /* String+VersionCompare.swift in Sources */,
+				C509F2CACEF1E82F387558ADAD15B1B3 /* switch.cpp in Sources */,
+				1DC9D6610A57CBA0E20A873E38959B62 /* task.cpp in Sources */,
+				9402F76EAAB2D301CFFFA6900E45237B /* threadpool.cpp in Sources */,
+				2385E92FC8D4B379DC6D60A8435D7609 /* timer.cpp in Sources */,
+				92B9904553D43FC15891DB64D4D08843 /* utils.cpp in Sources */,
+				DDF488E9AC522DE08AA5F208DCD78D98 /* version.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,17 +662,17 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		429FA091E9341CF7DF396250CCA2BA0D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Bolts-Swift";
-			target = D19B48CA399A7DEF6381AD8475D635B3 /* Bolts-Swift */;
-			targetProxy = 30651A3F85B5EB5B5FFD8117C76C17DF /* PBXContainerItemProxy */;
-		};
 		9CF444FBCD85C931F7B4C90F750FB2D6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MetaWear;
-			target = 1831B7D224016544A8BE2474514ABC98 /* MetaWear */;
+			target = 3637413E57E9A9056AB857FB88F715FD /* MetaWear */;
 			targetProxy = 5FCD0D27ACE7F69264524CE8AB1A1C22 /* PBXContainerItemProxy */;
+		};
+		C52212EF44604A1C7DEA282549B1D3A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Bolts-Swift";
+			target = D19B48CA399A7DEF6381AD8475D635B3 /* Bolts-Swift */;
+			targetProxy = 0EBF24749BB9090E1BACA2346B1037B1 /* PBXContainerItemProxy */;
 		};
 		E6685C3EFAA61452F224DB329FDB72B6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -686,6 +722,44 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		4A476F821D984FFC78FB69D6D290289E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C22C9F0B2ECBDCC1CADB2DDA93D62901 /* MetaWear.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MetaWear/MetaWear-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MetaWear/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/MetaWear/MetaWear.modulemap";
+				PRODUCT_MODULE_NAME = MetaWear;
+				PRODUCT_NAME = MetaWear;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		4DA7C6EC6A9D89DBAE233A60CD8B44DE /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -850,7 +924,7 @@
 		};
 		B72AD5BAF18537604165EB2FE4A0F700 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D13E09106C8D57A7B8D0314685FB3D62 /* Bolts-Swift.xcconfig */;
+			baseConfigurationReference = 109DD47ED022A9AF9B954E83E85A405B /* Bolts-Swift.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -887,7 +961,7 @@
 		};
 		BA833883214449E0080D5EB51B43862C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D13E09106C8D57A7B8D0314685FB3D62 /* Bolts-Swift.xcconfig */;
+			baseConfigurationReference = 109DD47ED022A9AF9B954E83E85A405B /* Bolts-Swift.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -921,9 +995,9 @@
 			};
 			name = Debug;
 		};
-		DAC5892E560E5FD377A2DFA9FD74FB4D /* Debug */ = {
+		CA84F475DB8D235D9A6625FFEF185CF5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D508909C6685D56B3F3490A9A5610FFB /* MetaWear.xcconfig */;
+			baseConfigurationReference = C22C9F0B2ECBDCC1CADB2DDA93D62901 /* MetaWear.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -958,44 +1032,6 @@
 			};
 			name = Debug;
 		};
-		FD2BEE7193E4FD9640B274B3F329C601 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D508909C6685D56B3F3490A9A5610FFB /* MetaWear.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/MetaWear/MetaWear-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MetaWear/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/MetaWear/MetaWear.modulemap";
-				PRODUCT_MODULE_NAME = MetaWear;
-				PRODUCT_NAME = MetaWear;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1017,11 +1053,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5A44B871939EBEA88C330047DF868EA5 /* Build configuration list for PBXNativeTarget "MetaWear" */ = {
+		516A767C4EE034368DC0F9B00278CB60 /* Build configuration list for PBXNativeTarget "MetaWear" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DAC5892E560E5FD377A2DFA9FD74FB4D /* Debug */,
-				FD2BEE7193E4FD9640B274B3F329C601 /* Release */,
+				CA84F475DB8D235D9A6625FFEF185CF5 /* Debug */,
+				4A476F821D984FFC78FB69D6D290289E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

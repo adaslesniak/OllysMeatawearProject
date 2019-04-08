@@ -76,7 +76,7 @@ class InitialViewCtrl: UIViewController {
                 Log.error("could not connect with device: \(device)")
                 return
             }
-            device.flashGreen()
+            device.flashLED(color: .green, intensity: 1.0, _repeat: 3)
             device.remember()
             ExecuteOnMain {
                 self?.checkedDevice = device  //that is... ugly way to pass argument to anonymous method

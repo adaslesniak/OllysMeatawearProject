@@ -3,5 +3,5 @@ platform :ios, '10.0'
 
 target 'OllysProject' do
     use_frameworks!
-    pod "MetaWear"
+    pod 'MetaWear', :subspecs => ['Core', 'AsyncUtils', 'UI']
 end
