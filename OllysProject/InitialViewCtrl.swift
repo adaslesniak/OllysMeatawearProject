@@ -1,6 +1,7 @@
 // ViewController.swift [] created by: Adas Lesniak on: 04/04/2019
 import UIKit
 import MetaWear
+import MetaWearCpp
 
 
 class InitialViewCtrl: UIViewController {
@@ -41,7 +42,7 @@ class InitialViewCtrl: UIViewController {
         print(">>> scanning for nearest device <<<")
         checkedDevice = nil
         Devices.scanArea { [weak self] result in
-            print(" >>> got results from scan <<<")
+            Log.add(" >>> got results from scan <<<")
             do {
                 Log.add("scanned \(result.count) devices", on: .bluetooth)
                 guard let closest = result.keys.sorted(by: { $0.signal?.strength ?? -10000 > $1.signal?.strength ?? -10000 }).first else {
@@ -56,10 +57,9 @@ class InitialViewCtrl: UIViewController {
                 guard let closestDevice = result[closest] else {
                     throw Exception.error("ups... that is impossible to happen")
                 }
-                ExecuteOnMain() {
+                ExecuteOnMain {
                     self?.learnDevice(closestDevice)
                 }
-                
             } catch {
                 Log.warning("failed to find neareast new device: \(error)")
                 ExecuteInBackground(after: 0.5) {
@@ -71,10 +71,18 @@ class InitialViewCtrl: UIViewController {
     
     
     private func learnDevice(_ device: MetaWear) {
-        self.placeholder.backgroundColor = UIColor.red
-        device.flashGreen()
-        self.checkedDevice = device //that is... ugly way to pass argument to anonymous method
-        self.confirmatioPanel.isHidden = false
+        device.connectAndSetup().continueWith { [weak self] task in
+            guard task.error == nil else {
+                Log.error("could not connect with device: \(device)")
+                return
+            }
+            device.flashGreen()
+            device.remember()
+            ExecuteOnMain {
+                self?.checkedDevice = device  //that is... ugly way to pass argument to anonymous method
+                self?.confirmatioPanel.isHidden = false
+            }
+        }
     }
 
 

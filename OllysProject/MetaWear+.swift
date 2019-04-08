@@ -14,13 +14,14 @@ extension MetaWear {
     }
     
     
+    //make sure to call it on connected devices only
     func flashGreen() {
         Log.add("flashing green...")
         var pattern = MblMwLedPattern()
-        /*mbl_mw_led_load_preset_pattern(&pattern, MBL_MW_LED_PRESET_PULSE)
+        mbl_mw_led_load_preset_pattern(&pattern, MBL_MW_LED_PRESET_PULSE)
         mbl_mw_led_stop_and_clear(self.board)
         mbl_mw_led_write_pattern(self.board, &pattern, MBL_MW_LED_COLOR_GREEN)
-        mbl_mw_led_play(self.board)*/
+        mbl_mw_led_play(self.board)
         Log.add("...flash green command send")
     }
     
