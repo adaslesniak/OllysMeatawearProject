@@ -77,7 +77,7 @@ class InitialViewCtrl: UIViewController {
                 return
             }
             device.flashLED(color: .green, intensity: 1.0, _repeat: 3)
-            device.remember()
+            Devices.remember(device, as: "unnamed")
             ExecuteOnMain {
                 self?.checkedDevice = device  //that is... ugly way to pass argument to anonymous method
                 self?.confirmatioPanel.isHidden = false

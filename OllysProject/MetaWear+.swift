@@ -6,11 +6,10 @@ import Foundation
 
 extension MetaWear {
     
-    func createCard(whenReady: @escaping (DeviceCard) -> Void) {
+    func createCard() -> DeviceCard {
         let card = DeviceCard(name: self.name, id: self.peripheral.identifier)
         card.signal = (Date(), rssi)
-        whenReady(card)
-        return
+        return card
     }
     
 }

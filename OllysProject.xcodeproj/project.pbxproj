@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6BC5CC1993C63369A7B68C78 /* Pods_OllysProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FED26A07F1C7A857897D524 /* Pods_OllysProject.framework */; };
+		81D8AD29225C017600C8815B /* Dictionary+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D8AD28225C017600C8815B /* Dictionary+.swift */; };
+		81D8AD2B225C01C600C8815B /* PersistentDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D8AD2A225C01C600C8815B /* PersistentDictionary.swift */; };
 		81E09C3622569CA200CE21EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E09C3522569CA200CE21EB /* AppDelegate.swift */; };
 		81E09C3822569CA200CE21EB /* InitialViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E09C3722569CA200CE21EB /* InitialViewCtrl.swift */; };
 		81E09C3B22569CA200CE21EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81E09C3922569CA200CE21EB /* Main.storyboard */; };
@@ -27,6 +29,8 @@
 
 /* Begin PBXFileReference section */
 		6FED26A07F1C7A857897D524 /* Pods_OllysProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OllysProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		81D8AD28225C017600C8815B /* Dictionary+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+.swift"; sourceTree = "<group>"; };
+		81D8AD2A225C01C600C8815B /* PersistentDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentDictionary.swift; sourceTree = "<group>"; };
 		81E09C3222569CA200CE21EB /* OllysProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OllysProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81E09C3522569CA200CE21EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81E09C3722569CA200CE21EB /* InitialViewCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewCtrl.swift; sourceTree = "<group>"; };
@@ -111,6 +115,8 @@
 		81E09C542256D3AF00CE21EB /* SwiftSugar */ = {
 			isa = PBXGroup;
 			children = (
+				81D8AD2A225C01C600C8815B /* PersistentDictionary.swift */,
+				81D8AD28225C017600C8815B /* Dictionary+.swift */,
 				81E09C5F22581B1A00CE21EB /* Thread+.swift */,
 				81E09C572256DBF200CE21EB /* UIView+.swift */,
 				81E09C552256D40300CE21EB /* Typealiases.swift */,
@@ -246,11 +252,13 @@
 				81E09C532256CC3000CE21EB /* DeviceCard.swift in Sources */,
 				81E09C5A2256DCF100CE21EB /* NamingViewCtrl.swift in Sources */,
 				81E09C562256D40300CE21EB /* Typealiases.swift in Sources */,
+				81D8AD29225C017600C8815B /* Dictionary+.swift in Sources */,
 				81E09C512256CC0700CE21EB /* MetaWear+.swift in Sources */,
 				81E09C582256DBF200CE21EB /* UIView+.swift in Sources */,
 				81E09C3822569CA200CE21EB /* InitialViewCtrl.swift in Sources */,
 				81E09C6022581B1B00CE21EB /* Thread+.swift in Sources */,
 				81E09C4F2256B5CC00CE21EB /* Log.swift in Sources */,
+				81D8AD2B225C01C600C8815B /* PersistentDictionary.swift in Sources */,
 				81E09C3622569CA200CE21EB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

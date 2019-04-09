@@ -3,6 +3,7 @@ import MetaWear
 import Foundation
 
 
+//IMPORTANT NOTE: this card will look differnt for the same device on different phones, as apple generates different uuid's (but on the same phone works fine)
 class DeviceCard : CustomStringConvertible, Hashable {
     let name: String
     let id: UUID
