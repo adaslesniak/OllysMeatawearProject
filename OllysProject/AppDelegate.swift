@@ -11,7 +11,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        //let initialVC = InitialViewCtrl(nibName: "InitialView", bundle: nil)
+        Devices.debugForgetRmemberedDevices()
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = InitialViewCtrl.instantiate()
         window?.makeKeyAndVisible()

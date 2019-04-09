@@ -6,7 +6,7 @@ import Foundation
 //TODO: sequence protocol implementation
 public class PersistentDictionary {
     
-    private var values = [String:Codable]()
+    private var values = [String:Any]()
     private let queue: DispatchQueue
     
     //private static var usedQueueIds = [String]() //generics doesn't support static
@@ -14,11 +14,11 @@ public class PersistentDictionary {
     public init(_ storageKey: String) {
         queue = DispatchQueue(label: storageKey)
         if let saved = UserDefaults.standard.dictionary(forKey: storageKey) {
-            values = saved as! [String : Codable]
+            values = saved
         }
     }
     
-    public subscript(key: String) -> Codable? {
+    public subscript(key: String) -> Any? {
         get {
             return queue.sync {
                 return values[key] ?? nil
@@ -35,7 +35,7 @@ public class PersistentDictionary {
         }
     }
     
-    public subscript(key: UUID) -> Codable? {
+    public subscript(key: UUID) -> Any? {
         get {
             return self[key.uuidString]
         } set {
@@ -43,7 +43,7 @@ public class PersistentDictionary {
         }
     }
     
-    public subscript(key: URL) -> Codable? {
+    public subscript(key: URL) -> Any? {
         get {
             return self[key.absoluteString]
         } set {

@@ -11,6 +11,18 @@ class Devices {
     private static var names = PersistentDictionary("saved_devices")
     
     
+    public static func debugForgetRmemberedDevices() {
+        Log.warning("DEBUG MODE - claning devices list to test again")
+        MetaWearScanner.shared.retrieveSavedMetaWearsAsync().continueWith { task in
+            guard task.error == nil else {
+                Log.error("failed forgetting: \(task.error!)")
+                return
+            }
+            task.result?.forEach({ $0.forget() })
+            Log.add("all devices forgotten")
+        }
+    }
+    
     private static var isLoadingSavedDevices: Bool = false //false means not yet, but started
     public static func loadSavedDevices() {
         guard !isLoadingSavedDevices else {
