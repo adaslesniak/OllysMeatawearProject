@@ -38,6 +38,9 @@ class InitialViewCtrl: UIViewController {
                 self?.scanForNearestDevice()
                 self?.placeholder.adjust(border: self?.pinkLight)
                 self?.confirmatioPanel.isHidden = true
+                print("checked device: \(self?.checkedDevice != nil)")
+                self?.checkedDevice?.stopFlashing()
+                self?.checkedDevice = nil
                 Log.printDevices(Devices.known, header: "known devices after returning from NamingViewCtrl")
             }
         }
@@ -45,8 +48,12 @@ class InitialViewCtrl: UIViewController {
     }
     
     private func scanForNearestDevice() {
+        guard checkedDevice == nil else {
+            Log.add("won't scan while checking: \(checkedDevice)")
+            ExecuteInBackground(after: 1, scanForNearestDevice)
+            return
+        }
         Log.printDevices(Devices.known, header: "scanning for nearest device, known before scan")
-        checkedDevice = nil
         Devices.scanArea { [weak self] result in
             Log.add(" -> got results from scan")
             do {
@@ -85,10 +92,13 @@ class InitialViewCtrl: UIViewController {
                 return
             }
             ctrl.startFlashing()
-            ExecuteInBackground(after: 5.7) {
+            /*ExecuteInBackground(after: 5.7) {
                 ctrl.stopFlashing()
-            }
+            }*/
             ExecuteOnMain {
+                if self?.checkedDevice !== ctrl {
+                    self?.checkedDevice?.stopFlashing() //that's just being overcautio
+                }
                 self?.checkedDevice = ctrl  //that is... ugly way to pass argument to anonymous method (assigned in view did load to yes button)
                 self?.confirmatioPanel.isHidden = false //TODO: that is unclear, it's far from obvious what happens next (new viewCtrl happens and when it finish block assigned to yes button in view did load). Refactor this!
             }

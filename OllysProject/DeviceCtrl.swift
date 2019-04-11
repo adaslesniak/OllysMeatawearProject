@@ -3,7 +3,7 @@ import MetaWear
 import Foundation
 
 
-class DeviceCtrl {
+class DeviceCtrl: CustomStringConvertible {
     
     public let device: MetaWear
     private var isFlashing = false
@@ -13,11 +13,13 @@ class DeviceCtrl {
     }
     
     func startFlashing() {
+        Log.add(">>>START<<< flashing")
         isFlashing = true
         continueFlashing()
     }
     
     func stopFlashing() {
+        Log.add(">>>STOP<<< flashing")
         isFlashing = false
     }
     
@@ -29,5 +31,17 @@ class DeviceCtrl {
         ExecuteInBackground(after: 0.96, continueFlashing)
     }
     
-    
+    var description: String {
+        return "[\(device.name): \(device.peripheral.identifier)]"
+    }
+}
+
+extension String.StringInterpolation {
+    mutating func appendInterpolation(_ value: DeviceCtrl?) {
+        if let theValue = value {
+            appendLiteral(theValue.description)
+        } else {
+            appendLiteral("nil")
+        }
+    }
 }

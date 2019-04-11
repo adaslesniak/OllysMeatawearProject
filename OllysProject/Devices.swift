@@ -27,6 +27,7 @@ class Devices {
     private static var isLoadingSavedDevices: Bool = false //false means not yet, but started
     public static func loadSavedDevices() {
         guard !isLoadingSavedDevices else {
+            Log.error("can't load saved devices while already loading them")
             return //initialisation already in progress
         }
         isLoadingSavedDevices = true
@@ -42,7 +43,9 @@ class Devices {
                     throw Exception.error("got no devices")
                 }
                 _known = result
+                Log.add("loaded: \(result.count) saved devices")
             } catch {
+                Log.add("didn't load saved devices because: \(error)")
                 _known = []
             }
         }
@@ -52,7 +55,7 @@ class Devices {
         var cards = [DeviceCard]()
         guard let devices = _known else {
             Log.error("can't prepare cards while there are no devices")
-            _known = []
+            loadSavedDevices()
             return
         }
         for thingie in devices {
@@ -71,25 +74,30 @@ class Devices {
         var nearby = [DeviceCard:MetaWear]()
         var requestPending = 0
         MetaWearScanner.shared.startScan(allowDuplicates: true) { device in
-            guard device.rssi > -80 else {
-                return //signal too weak
+            if nearby.keys.contains(device.createCard()) {
+                return
             }
             requestPending += 1
-            //TODO: refactor it - can be done synchronously and should be DeviceCard(about: device)
-            let info = device.createCard()
-            if let named = known.first(where: { $0 == info }) {
-                Log.add("found known device: \(named)", on: .bluetooth)
-                nearby[named] = device
+            if device.rssi < -80 {
+                Log.add("found some weak signal \(device.rssi) from: \(device.id)")
             } else {
-                Log.add("found new device: \(info)", on: .bluetooth)
-                nearby[info] = device
+                //TODO: refactor it - can be done synchronously and should be DeviceCard(about: device)
+                let info = device.createCard()
+                if let named = known.first(where: { $0 == info }) {
+                    Log.add("found known device: \(named)", on: .bluetooth)
+                    nearby[named] = device
+                } else {
+                    Log.add("found new device: \(info)", on: .bluetooth)
+                    nearby[info] = device
+                }
             }
-                
-            requestPending -= 1
-            if requestPending == 0 {
-                MetaWearScanner.shared.stopScan() //that is buggy name - scan is singular - should be startScanning and stopScanning if it's continuus process
-                Log.printDevices(Array(nearby.keys), header: "reachable devices")
-                whendDone(nearby)
+            ExecuteInBackground(after: 0.66) { //give  time to find other devices
+                requestPending -= 1
+                if requestPending == 0 {
+                    MetaWearScanner.shared.stopScan() //that is buggy name - scan is singular - should be startScanning and stopScanning if it's continuus process
+                    Log.printDevices(Array(nearby.keys), header: "\(nearby.count) reachable devices")
+                    whendDone(nearby)
+                }
             }
         }
     }
