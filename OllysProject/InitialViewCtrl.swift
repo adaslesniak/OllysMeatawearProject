@@ -38,13 +38,14 @@ class InitialViewCtrl: UIViewController {
                 self?.scanForNearestDevice()
                 self?.placeholder.adjust(border: self?.pinkLight)
                 self?.confirmatioPanel.isHidden = true
+                Log.printDevices(Devices.known, header: "known devices after returning from NamingViewCtrl")
             }
         }
         placeholder.adjust(border: pinkLight, center: .clear, borderSize01: 0.2)
     }
     
     private func scanForNearestDevice() {
-        print(" -> scanning for nearest device")
+        Log.printDevices(Devices.known, header: "scanning for nearest device, known before scan")
         checkedDevice = nil
         Devices.scanArea { [weak self] result in
             Log.add(" -> got results from scan")

@@ -45,8 +45,12 @@ public class Log {
     
     //FIXME: that is somehow ugly - Log is generic class, should not be depended on business logic implemntation
     static func printDevices(_ devices: [DeviceCard], header: String) {
-        var theString = header
-        devices.forEach({ theString += "[\($0.id):\($0.name)]" })
+        var theString = header + ":  "
+        if devices.count > 0 {
+            theString += #"none"#
+        } else {
+            devices.forEach({ theString += "[\($0.id): \($0.name)]; " })
+        }
         print(theString)
     }
     

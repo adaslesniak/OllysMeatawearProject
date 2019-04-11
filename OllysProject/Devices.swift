@@ -13,6 +13,7 @@ class Devices {
     
     public static func debugForgetRmemberedDevices() {
         Log.warning("DEBUG MODE - claning devices list to test again")
+        Log.printDevices(Devices.known, header: "known before debug forgetting")
         MetaWearScanner.shared.retrieveSavedMetaWearsAsync().continueWith { task in
             guard task.error == nil else {
                 Log.error("failed forgetting: \(task.error!)")
@@ -87,7 +88,7 @@ class Devices {
             requestPending -= 1
             if requestPending == 0 {
                 MetaWearScanner.shared.stopScan() //that is buggy name - scan is singular - should be startScanning and stopScanning if it's continuus process
-                Log.printDevices(Array(nearby.keys), header: "reachable devices: ")
+                Log.printDevices(Array(nearby.keys), header: "reachable devices")
                 whendDone(nearby)
             }
         }
