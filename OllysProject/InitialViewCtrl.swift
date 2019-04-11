@@ -54,7 +54,7 @@ class InitialViewCtrl: UIViewController {
                 guard let closest = result.keys.sorted(by: { $0.signal?.strength ?? -10000 > $1.signal?.strength ?? -10000 }).first else {
                     throw Exception.error("there is no closest from \(result.count) visible devices") //that should be zero
                 }
-                guard let rrsi = closest.signal?.strength, rrsi  > -80 else {
+                guard let rrsi = closest.signal?.strength, rrsi  > -40, rrsi < 0 else {
                     throw Exception.error("device signal too weak")
                 }
                 guard !Devices.known.contains(closest) else {
