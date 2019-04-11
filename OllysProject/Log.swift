@@ -43,6 +43,13 @@ public class Log {
         doLog("   Warning: \(message)", chnl: .debug, lvl: .warning)
     }
     
+    //FIXME: that is somehow ugly - Log is generic class, should not be depended on business logic implemntation
+    static func printDevices(_ devices: [DeviceCard], header: String) {
+        var theString = header
+        devices.forEach({ theString += "[\($0.id):\($0.name)]" })
+        print(theString)
+    }
+    
     private static func doLog(_ msg: String, chnl: Channel, lvl: Level) {
         let isChannelEnabled = enabledChannels.contains(.all) || enabledChannels.contains(chnl)
         guard isChannelEnabled || lvl.isHighPriority else {

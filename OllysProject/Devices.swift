@@ -87,6 +87,7 @@ class Devices {
             requestPending -= 1
             if requestPending == 0 {
                 MetaWearScanner.shared.stopScan() //that is buggy name - scan is singular - should be startScanning and stopScanning if it's continuus process
+                Log.printDevices(Array(nearby.keys), header: "reachable devices: ")
                 whendDone(nearby)
             }
         }

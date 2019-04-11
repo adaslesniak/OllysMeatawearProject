@@ -44,10 +44,10 @@ class InitialViewCtrl: UIViewController {
     }
     
     private func scanForNearestDevice() {
-        print(">>> scanning for nearest device <<<")
+        print(" -> scanning for nearest device")
         checkedDevice = nil
         Devices.scanArea { [weak self] result in
-            Log.add(" >>> got results from scan <<<")
+            Log.add(" -> got results from scan")
             do {
                 Log.add("scanned \(result.count) devices", on: .bluetooth)
                 guard let closest = result.keys.sorted(by: { $0.signal?.strength ?? -10000 > $1.signal?.strength ?? -10000 }).first else {
@@ -68,7 +68,7 @@ class InitialViewCtrl: UIViewController {
                 }
             } catch {
                 Log.warning("failed to find neareast new device: \(error)")
-                ExecuteInBackground(after: 0.5) {
+                ExecuteInBackground(after: 1.05) {
                     self?.scanForNearestDevice()
                 }
             }
