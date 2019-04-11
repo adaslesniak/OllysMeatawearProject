@@ -12,7 +12,7 @@ class InitialViewCtrl: UIViewController {
     @IBOutlet weak var confirmBtn: UIButton!
     @IBOutlet weak var denyBtn: UIButton!
     
-    private var checkedDevice: MetaWear?
+    private var checkedDevice: DeviceCtrl?
     
     static func instantiate() -> InitialViewCtrl {
         return InitialViewCtrl(nibName: "InitialView", bundle: nil)
@@ -34,7 +34,7 @@ class InitialViewCtrl: UIViewController {
                 return
             }
             NamingViewCtrl.presentOver(self) { [weak self] givenName in
-                Devices.remember(checked, as: givenName)
+                Devices.remember(checked.device, as: givenName)
                 self?.scanForNearestDevice()
                 self?.placeholder.adjust(border: self?.pinkLight)
                 self?.confirmatioPanel.isHidden = true
@@ -78,16 +78,19 @@ class InitialViewCtrl: UIViewController {
     
     
     private func learnDevice(_ device: MetaWear) {
-        
+        let ctrl = DeviceCtrl(device)
         device.connectAndSetup().continueWith { [weak self] task in
             guard task.error == nil else {
                 Log.error("could not connect with device: \(device)")
                 return
             }
-            device.flashLED(color: .green, intensity: 1.0, _repeat: 3)
+            ctrl.startFlashing()
+            ExecuteInBackground(after: 5.7) {
+                ctrl.stopFlashing()
+            }
             ExecuteOnMain {
-                self?.checkedDevice = device  //that is... ugly way to pass argument to anonymous method
-                self?.confirmatioPanel.isHidden = false //TODO: that is unclear way of launching view and continuing process, it's not clear what happens next (block assigned to yes buttond in view did load). Refactor this!x
+                self?.checkedDevice = ctrl  //that is... ugly way to pass argument to anonymous method (assigned in view did load to yes button)
+                self?.confirmatioPanel.isHidden = false //TODO: that is unclear, it's far from obvious what happens next (new viewCtrl happens and when it finish block assigned to yes button in view did load). Refactor this!
             }
         }
     }

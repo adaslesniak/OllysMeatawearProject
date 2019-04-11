@@ -11,6 +11,7 @@
 		81D8AD29225C017600C8815B /* Dictionary+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D8AD28225C017600C8815B /* Dictionary+.swift */; };
 		81D8AD2B225C01C600C8815B /* PersistentDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D8AD2A225C01C600C8815B /* PersistentDictionary.swift */; };
 		81D8AD2D225D096E00C8815B /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D8AD2C225D096E00C8815B /* CircleView.swift */; };
+		81D8AD2F225F502A00C8815B /* DeviceCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D8AD2E225F502A00C8815B /* DeviceCtrl.swift */; };
 		81E09C3622569CA200CE21EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E09C3522569CA200CE21EB /* AppDelegate.swift */; };
 		81E09C3822569CA200CE21EB /* InitialViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E09C3722569CA200CE21EB /* InitialViewCtrl.swift */; };
 		81E09C3B22569CA200CE21EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81E09C3922569CA200CE21EB /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 		81D8AD28225C017600C8815B /* Dictionary+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+.swift"; sourceTree = "<group>"; };
 		81D8AD2A225C01C600C8815B /* PersistentDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentDictionary.swift; sourceTree = "<group>"; };
 		81D8AD2C225D096E00C8815B /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		81D8AD2E225F502A00C8815B /* DeviceCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceCtrl.swift; sourceTree = "<group>"; };
 		81E09C3222569CA200CE21EB /* OllysProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OllysProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81E09C3522569CA200CE21EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81E09C3722569CA200CE21EB /* InitialViewCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewCtrl.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				81E09C502256CC0700CE21EB /* MetaWear+.swift */,
 				81E09C522256CC3000CE21EB /* DeviceCard.swift */,
 				81D8AD2C225D096E00C8815B /* CircleView.swift */,
+				81D8AD2E225F502A00C8815B /* DeviceCtrl.swift */,
 			);
 			path = OllysProject;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81D8AD2F225F502A00C8815B /* DeviceCtrl.swift in Sources */,
 				81E09C4D2256B1C000CE21EB /* Devices.swift in Sources */,
 				81E09C532256CC3000CE21EB /* DeviceCard.swift in Sources */,
 				81E09C5A2256DCF100CE21EB /* NamingViewCtrl.swift in Sources */,
