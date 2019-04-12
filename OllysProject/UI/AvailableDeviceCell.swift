@@ -8,11 +8,9 @@ class AvailableDeviceCell: UITableViewCell {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var id: UILabel!
     @IBOutlet weak var isRed: ToggleView!
-    /*@IBOutlet weak var id: UILabel!
-    @IBOutlet weak var isRed: ToggleView!
     @IBOutlet weak var isBlue: ToggleView!
     @IBOutlet weak var isSensorFusing: ToggleView!
-    @IBOutlet weak var isAccelerometering: ToggleView!*/
+    @IBOutlet weak var isAccelerometering: ToggleView!
     
     private var controlled: DeviceCtrl?
     
@@ -46,15 +44,15 @@ class AvailableDeviceCell: UITableViewCell {
         isRed.setAction { isOn in
             print("isRed?= \(isOn)")
         }
-        //TODO: setup can be called before view is ready
-        print("cell subviews: \(describeSubviews())")
-        ExecuteOnMain(after: 0.3) {
-            //print("is there title label?= \(self.title != nil) [\(self.describeSubviews())]")
-            //self.title?.text = withDevice.device.name
-            //self.id?.text = withDevice.device.id.description
-            //self.backgroundColor = UIColor.blue
+        isBlue.setAction { isOn in
+            print("isBlue: \(isOn)")
         }
-
+        isSensorFusing.setAction { isOn in
+            print("isSensorFusing: \(isOn)")
+        }
+        isAccelerometering.setAction { isOn in
+            print("isAccelerometering: \(isOn)")
+        }
     }
     
     
