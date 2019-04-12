@@ -19,7 +19,10 @@ class AvailableDevicesViewCtrl: UIViewController, UITableViewDataSource { //, UI
         super.viewDidLoad()
         //devicesTable.delegate = self
         devicesTable.dataSource = self
-        devicesTable.register(AvailableDeviceCell.self, forCellReuseIdentifier: AvailableDeviceCell.reuseId)
+        //devicesTable.register(AvailableDeviceCell.self, forCellReuseIdentifier: AvailableDeviceCell.reuseId)
+        let cellNib = UINib(nibName: "AvailableDeviceCell", bundle: nil)
+        print("cell nib: \(cellNib)")
+        devicesTable.register(cellNib, forCellReuseIdentifier: AvailableDeviceCell.reuseId)
         backBtn.addAction(.tap) { [weak self] in
             self?.dismiss(animated: true)
         }

@@ -104,7 +104,6 @@ class Devices {
             devices.forEach({ sensor in
                 nearby.append(DeviceCtrl(sensor))
             })
-            Log.error("DEBUG CALLBACK - REMOVE IT")
             tryCallback()
         }
         MetaWearScanner.shared.startScan(allowDuplicates: false) { found in
