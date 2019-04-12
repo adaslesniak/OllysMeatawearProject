@@ -37,8 +37,7 @@ class AvailableDeviceCell: UITableViewCell {
     
     private func clearDeviceConnection() {
         //TODO: make sure all light are off and... just leave device clean
-        controlled?.stopFlashing()
-        controlled?.device.turnOffLed()
+        controlled?.turnOffLed()
         controlled?.disconnect()
         controlled = nil
     }

@@ -27,7 +27,7 @@ class SetUpDeviceViewCtrl: UIViewController {
         confirmatioPanel.isHidden = true
         denyBtn.addAction(.tap) { [weak self] in
             self?.confirmatioPanel.isHidden = true
-            self?.checkedDevice?.stopFlashing()
+            self?.checkedDevice?.turnOffLed()
             self?.checkedDevice?.disconnect()
             self?.checkedDevice = nil
             self?.placeholder.adjust(border: self?.pinkLight)
@@ -43,13 +43,13 @@ class SetUpDeviceViewCtrl: UIViewController {
                 self?.placeholder.adjust(border: self?.pinkLight)
                 self?.confirmatioPanel.isHidden = true
                 print("checked device: \(self?.checkedDevice != nil)")
-                self?.checkedDevice?.stopFlashing()
+                self?.checkedDevice?.turnOffLed()
                 self?.checkedDevice = nil
                 Log.printDevices(Devices.known, header: "known devices \(Devices.known.count) after returning from NamingViewCtrl")
             }
         }
         backBtn.addAction(.tap) { [weak self] in
-            self?.checkedDevice?.stopFlashing()
+            self?.checkedDevice?.turnOffLed()
             self?.checkedDevice?.disconnect()
             self?.checkedDevice = nil
             self?.dismiss(animated: true)
@@ -98,7 +98,7 @@ class SetUpDeviceViewCtrl: UIViewController {
         let ctrl = DeviceCtrl(device)
         ExecuteOnMain {
             if self.checkedDevice !== ctrl {
-                self.checkedDevice?.stopFlashing() //that's just being overcautio
+                self.checkedDevice?.turnOffLed() //that's just being overcautio
             }
             self.checkedDevice = ctrl  //that is... ugly way to pass argument to anonymous method (assigned in view did load to yes button)
             self.confirmatioPanel.isHidden = false //TODO: that is unclear, it's far from obvious what happens next (new viewCtrl happens and when it finish block assigned to yes button in view did load). Refactor this!

@@ -57,28 +57,24 @@ class DeviceCtrl: CustomStringConvertible {
     }
     
     func connect(_ whenReady: Action? = nil) {
-        device.connectAndSetup().continueWith { [weak self] answer in
-            guard let self = self else {
-                return
-            }
-            guard answer.error == nil else {
-                Log.error("couldn't connect to device(\(self.name). error: \(answer.error!))")
-                return
-            }
+        if isConnected {
             whenReady?()
+        } else {
+            device.connectAndSetup().continueWith { [weak self] answer in
+                guard let self = self else {
+                    return
+                }
+                guard answer.error == nil else {
+                    Log.error("couldn't connect to device(\(self.name). error: \(answer.error!))")
+                    return
+                }
+                whenReady?()
+            }
         }
     }
     
     var isConnected: Bool { return device.isConnectedAndSetup }
-    
-    func stopFlashing(_ color: LedColor = .all) {
-        Log.debug("\(name) STOP flashing")
-        if color == .all {
-            flashing = []
-        } else if let iColor = flashing.firstIndex(of: color) {
-            flashing.remove(at: iColor)
-        }
-    }
+
     
     //those will collide with falshing
     var ledsOn = [LedColor]()
@@ -93,7 +89,7 @@ class DeviceCtrl: CustomStringConvertible {
             keepLedsOn() 
         }
     }
-    func turnOffLed(_ color: LedColor) {
+    func turnOffLed(_ color: LedColor = .all) {
         if color == .all {
             flashing = []
             ledsOn = []
@@ -106,7 +102,9 @@ class DeviceCtrl: CustomStringConvertible {
                 print("removed led: \(color) (left: \(ledsOn.count))")
             }
         }
-        
+        if flashing.count == 0 && ledsOn.count == 0 {
+            device.turnOffLed()
+        }
     }
     
     
@@ -125,14 +123,12 @@ class DeviceCtrl: CustomStringConvertible {
     
     //be carefull to not call it multiple times
     private func keepLedsOn() {
-        print("keeps \(ledsOn.count) leds on")
+        Log.debug("keeping \(ledsOn.count) leds on")
         if let theColor = combineColor(ledsOn) {
             device.flashLED(color: theColor, intensity: 0.6, _repeat: 1, onTime: 500)
             ExecuteOnMain(after: 0.52) { [weak self] in
                 self?.keepLedsOn()
             }
-        } else {
-            device.turnOffLed() //HACK: that is weird as heck
         }
     }
     
