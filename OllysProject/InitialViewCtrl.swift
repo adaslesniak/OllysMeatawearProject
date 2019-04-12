@@ -28,6 +28,7 @@ class InitialViewCtrl: UIViewController {
         denyBtn.addAction(.tap) { [weak self] in
             self?.confirmatioPanel.isHidden = true
             self?.checkedDevice?.stopFlashing()
+            self?.checkedDevice?.device.cancelConnection()
             self?.checkedDevice = nil
             self?.placeholder.adjust(border: self?.pinkLight)
             self?.scanForNearestDevice()
