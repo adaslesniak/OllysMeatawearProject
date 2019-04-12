@@ -13,10 +13,11 @@ class HomeViewCtrl: UIViewController {
     
     override func viewDidLoad() {
         connectBtn.addAction(.tap) { [weak self] in
-            
+            let connectionCtrl = SetUpDeviceViewCtrl.instantiate()
+            self?.present(connectionCtrl, animated: true)
         }
         manageBtn.addAction(.tap) { [weak self] in
-            
+            Log.error("NOT_IMPLEMENTED")
         }
     }
     

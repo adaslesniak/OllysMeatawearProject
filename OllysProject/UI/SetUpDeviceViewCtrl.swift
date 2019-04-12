@@ -10,6 +10,7 @@ class SetUpDeviceViewCtrl: UIViewController {
     @IBOutlet weak var confirmatioPanel: UIView!
     @IBOutlet weak var confirmBtn: UIButton!
     @IBOutlet weak var denyBtn: UIButton!
+    @IBOutlet weak var backBtn: UIButton!
     
     private var checkedDevice: DeviceCtrl?
     
@@ -27,7 +28,7 @@ class SetUpDeviceViewCtrl: UIViewController {
         denyBtn.addAction(.tap) { [weak self] in
             self?.confirmatioPanel.isHidden = true
             self?.checkedDevice?.stopFlashing()
-            self?.checkedDevice?.device.cancelConnection()
+            self?.checkedDevice?.disconnect()
             self?.checkedDevice = nil
             self?.placeholder.adjust(border: self?.pinkLight)
             self?.scanForNearestDevice()
@@ -46,6 +47,12 @@ class SetUpDeviceViewCtrl: UIViewController {
                 self?.checkedDevice = nil
                 Log.printDevices(Devices.known, header: "known devices \(Devices.known.count) after returning from NamingViewCtrl")
             }
+        }
+        backBtn.addAction(.tap) { [weak self] in
+            self?.checkedDevice?.stopFlashing()
+            self?.checkedDevice?.disconnect()
+            self?.checkedDevice = nil
+            self?.dismiss(animated: true)
         }
         placeholder.adjust(border: pinkLight, center: .clear, borderSize01: 0.2)
     }

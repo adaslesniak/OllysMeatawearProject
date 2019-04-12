@@ -18,6 +18,10 @@ class DeviceCtrl: CustomStringConvertible {
         continueFlashing()
     }
     
+    func disconnect() {
+        device.cancelConnection()
+    }
+    
     func stopFlashing() {
         Log.debug(">>>STOP<<< flashing")
         isFlashing = false
