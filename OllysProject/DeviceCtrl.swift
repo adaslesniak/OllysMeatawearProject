@@ -3,13 +3,19 @@ import MetaWear
 import Foundation
 
 
+//wrapper around MetaWear with api limited to this project functionality
 class DeviceCtrl: CustomStringConvertible {
     
     public let device: MetaWear
     private var isFlashing = false
+    internal private(set) var name: String
     
-    init(_ device: MetaWear) {
+    var id: UUID { return device.peripheral.identifier }
+    
+    
+    init(_ device: MetaWear, name: String? = nil) {
         self.device = device
+        self.name = name ?? device.name
     }
     
     func startFlashing() {

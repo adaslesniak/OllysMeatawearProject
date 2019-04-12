@@ -39,8 +39,8 @@ class AvailableDeviceCell: UITableViewCell {
     func setup(_ withDevice: DeviceCtrl) {
         Log.debug("setting up cell for device: \(withDevice.device.name)")
         controlled = withDevice
-        title.text = withDevice.device.name
-        id.text = withDevice.device.id.description
+        title.text = withDevice.name
+        id.text = withDevice.id.description
         isRed.setAction { isOn in
             print("isRed?= \(isOn)")
         }

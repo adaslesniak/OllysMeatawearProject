@@ -110,11 +110,12 @@ class Devices {
             requestPending += 1
             if found.rssi < -80 {
                 Log.debug("found some weak(\(found.rssi)) signal from: \(found.id)")
-            } else if !known.contains(where: { $0.id == found.id }) {
-                Log.debug("found some unknown device while scanning for known ones")
-            } else {
-                nearby.append(DeviceCtrl(found))
             }
+            if let savedCard = known.first(where: { $0.id == found.id }) {
+                nearby.append(DeviceCtrl(found, name: savedCard.name))
+            } else {
+                Log.debug("found some unknown device while scanning for known ones")
+            } 
             guard timeout > 0 else {
                 Log.error("found device after timeout")
                 MetaWearScanner.shared.stopScan()
