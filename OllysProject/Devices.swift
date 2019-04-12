@@ -74,6 +74,7 @@ class Devices {
     public static func scanArea(_ whendDone: @escaping ([DeviceCard:MetaWear]) -> Void) {
         var nearby = [DeviceCard:MetaWear]()
         var requestPending = 0
+        var timeout = 2.0 //negative means it's too late
         MetaWearScanner.shared.startScan(allowDuplicates: true) { device in
             if nearby.keys.contains(device.createCard()) {
                 Log.debug("duplicated find in nearby devices: \(device.name)")
@@ -93,6 +94,12 @@ class Devices {
                     nearby[info] = device
                 }
             }
+            guard timeout > 0 else {
+                Log.error("weird... found device after timeout")
+                MetaWearScanner.shared.stopScan()
+                return //too late
+            }
+            timeout = -1 //ensure timeout code won't be called
             ExecuteInBackground(after: 0.66) { //give  time to find other devices
                 requestPending -= 1
                 if requestPending == 0 {
@@ -101,6 +108,13 @@ class Devices {
                     whendDone(nearby)
                 }
             }
+        }
+        ExecuteInBackground(after: timeout) {
+            guard timeout > 0 else {
+                return
+            }
+            timeout = -1
+            whendDone(nearby)
         }
     }
     
