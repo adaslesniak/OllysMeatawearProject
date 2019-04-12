@@ -89,19 +89,19 @@ class InitialViewCtrl: UIViewController {
     
     private func learnDevice(_ device: MetaWear) {
         let ctrl = DeviceCtrl(device)
-        device.connectAndSetup().continueWith { [weak self] task in
+        ExecuteOnMain {
+            if self.checkedDevice !== ctrl {
+                self.checkedDevice?.stopFlashing() //that's just being overcautio
+            }
+            self.checkedDevice = ctrl  //that is... ugly way to pass argument to anonymous method (assigned in view did load to yes button)
+            self.confirmatioPanel.isHidden = false //TODO: that is unclear, it's far from obvious what happens next (new viewCtrl happens and when it finish block assigned to yes button in view did load). Refactor this!
+        }
+        device.connectAndSetup().continueWith { task in
             guard task.error == nil else {
                 Log.error("could not connect with device: \(device)")
                 return
             }
             ctrl.startFlashing()
-            ExecuteOnMain {
-                if self?.checkedDevice !== ctrl {
-                    self?.checkedDevice?.stopFlashing() //that's just being overcautio
-                }
-                self?.checkedDevice = ctrl  //that is... ugly way to pass argument to anonymous method (assigned in view did load to yes button)
-                self?.confirmatioPanel.isHidden = false //TODO: that is unclear, it's far from obvious what happens next (new viewCtrl happens and when it finish block assigned to yes button in view did load). Refactor this!
-            }
         }
     }
 
