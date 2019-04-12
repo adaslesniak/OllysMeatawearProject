@@ -6,10 +6,10 @@ import Foundation
 class Devices {
 
     static private(set) var known: [DeviceCard] = []
+    public private(set) static var available = [DeviceCtrl]()
     private static var _known: [MetaWear]?
     private static var listeners = [() -> Void]()
     private static var names = PersistentDictionary("saved_devices")
-    
     
     public static func debugForgetRmemberedDevices() {
         Log.warning("DEBUG MODE - claning devices list to test again")
@@ -20,6 +20,8 @@ class Devices {
                 return
             }
             task.result?.forEach({ $0.forget() })
+            known = []
+            available = []
             Log.debug("all devices forgotten")
         }
     }
@@ -70,11 +72,46 @@ class Devices {
         isLoadingSavedDevices = false
     }
     
+    public static func scanForNewDevices(_ whenDone: @escaping ([DeviceCard:MetaWear]) -> Void) {
+        scanArea(whenDone)
+    }
+    
+    //TODO: refactor:
+    public static func scanForKnownDevices(_ whenDone: @escaping ([DeviceCtrl]) -> Void) {
+        var nearby = [DeviceCtrl]()
+        
+        var isDoneWithOtherThing = false //TODO: find better name - it means that we have 2 async queries and if both returns then only we are done and good to call back
+        func tryCallback() {
+            
+        }
+        
+        var requestPending = 0
+        var timeout = 1.7
+        MetaWearScanner.shared.retrieveConnectedMetaWearsAsync().continueWith { result in
+            guard result.error == nil else {
+                Log.error("failed to retrive connected devices: \(result.error!)")
+                return
+            }
+            guard let devices = result.result else {
+                Log.error("failed when retriving connected devices")
+                return
+            }
+            devices.forEach({ sensor in
+                nearby.append(DeviceCtrl(sensor))
+            })
+            Log.error("DEBUG CALLBACK - REMOVE IT")
+            whenDone(nearby)
+        }
+        /*MetaWearScanner.shared.startScan(allowDuplicates: true) { found in
+            guard found
+        }*/
+        Log.error("NOT_IMPLEMENTED")
+    }
     
     public static func scanArea(_ whendDone: @escaping ([DeviceCard:MetaWear]) -> Void) {
         var nearby = [DeviceCard:MetaWear]()
         var requestPending = 0
-        var timeout = 2.0 //negative means it's too late
+        var timeout = 1.9 //negative means it's too late
         MetaWearScanner.shared.startScan(allowDuplicates: true) { device in
             if nearby.keys.contains(device.createCard()) {
                 Log.debug("duplicated find in nearby devices: \(device.name)")

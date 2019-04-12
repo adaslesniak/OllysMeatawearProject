@@ -12,24 +12,20 @@ class AvailableDeviceCell: UITableViewCell {
     @IBOutlet weak var isSensorFusing: ToggleView!
     @IBOutlet weak var isAccelerometering: ToggleView!
     
+    private var controlled: DeviceCtrl?
+    
     static let reuseId = "available_device_cell"
     
     
-    static func nib() -> UINib {
-        return UINib(nibName: "AvailableDeviceCell", bundle: nil)
+    func setup(_ withDevice: DeviceCtrl) {
+        Log.debug("setting up cell for device: \(withDevice.device.name)")
+        controlled = withDevice
+        //TODO: setup can be called before view is ready
+        title?.text = withDevice.device.name
+        id?.text = withDevice.device.id.description
+
     }
     
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-    
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+    //TODO: clean up connection whe prepparing for reuse
     
 }
