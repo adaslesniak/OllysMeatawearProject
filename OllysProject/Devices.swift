@@ -93,6 +93,7 @@ class Devices {
         var requestPending = 0
         var timeout = 1.7
         MetaWearScanner.shared.retrieveConnectedMetaWearsAsync().continueWith { result in
+            //Task<MetaWear>
             guard result.error == nil else {
                 Log.error("failed to retrive connected devices: \(result.error!)")
                 return
@@ -102,13 +103,16 @@ class Devices {
                 return
             }
             devices.forEach({ sensor in
-                nearby.append(DeviceCtrl(sensor))
+                let savedName = known.first(where: {$0.id == sensor.id })?.name
+                nearby.append(DeviceCtrl(sensor, name: savedName))
             })
+            Log.debug("there were \(devices.count) connected devices")
             tryCallback()
         }
         MetaWearScanner.shared.startScan(allowDuplicates: false) { found in
+            
             requestPending += 1
-            if found.rssi < -80 {
+            if found.rssi < -96 {
                 Log.debug("found some weak(\(found.rssi)) signal from: \(found.id)")
             }
             if let savedCard = known.first(where: { $0.id == found.id }) {
@@ -121,13 +125,13 @@ class Devices {
                 MetaWearScanner.shared.stopScan()
                 return
             }
-            timeout = -1
             ExecuteInBackground(after: 0.66) { //delay finish so other can be found
                 requestPending -= 1
                 if requestPending == 0 {
+                    timeout = -1
                     MetaWearScanner.shared.stopScan()
+                    tryCallback()
                 }
-                tryCallback()
             }
         }
     }
@@ -156,8 +160,9 @@ class Devices {
                 }
             }
             guard timeout > 0 else {
-                Log.error("weird... found device after timeout")
+                Log.debug("weird... found device after timeout") //can happen when user move device late
                 MetaWearScanner.shared.stopScan()
+                whendDone(nearby)
                 return //too late
             }
             timeout = -1 //ensure timeout code won't be called

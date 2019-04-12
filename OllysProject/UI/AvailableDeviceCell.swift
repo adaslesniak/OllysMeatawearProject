@@ -27,32 +27,54 @@ class AvailableDeviceCell: UITableViewCell {
     }
     
     override func prepareForReuse() {
-        print("preparing device cell for reuse")
-        //backgroundColor = UIColor.gray
+        clearDeviceConnection()
     }
     
-    override func awakeFromNib() {
-        print("\n >>> CELL AWOKEN <<< \n   [subviews: \(subviews.count)]\n")
+    deinit {
+        clearDeviceConnection()
     }
     
+    
+    private func clearDeviceConnection() {
+        //TODO: make sure all light are off and... just leave device clean
+        controlled?.stopFlashing()
+        controlled?.device.turnOffLed()
+        controlled?.disconnect()
+        controlled = nil
+    }
     
     func setup(_ withDevice: DeviceCtrl) {
         Log.debug("setting up cell for device: \(withDevice.device.name)")
         controlled = withDevice
         title.text = withDevice.name
         id.text = withDevice.id.description
-        isRed.setAction { isOn in
+        isRed.setAction { [weak self] isOn in
+            self?.controlled?.connect {
+                if isOn {
+                    self?.controlled?.startFlashing(.red)
+                } else {
+                    self?.controlled?.stopFlashing(.red)
+                }
+            }
             print("isRed?= \(isOn)")
         }
-        isBlue.setAction { isOn in
+        isBlue.setAction { [weak self] isOn in
+            self?.controlled?.connect {
+                if isOn {
+                    self?.controlled?.startFlashing(.blue)
+                } else {
+                    self?.controlled?.stopFlashing(.blue)
+                }
+            }
             print("isBlue: \(isOn)")
         }
-        isSensorFusing.setAction { isOn in
+        isSensorFusing.setAction { [weak self] isOn in
             print("isSensorFusing: \(isOn)")
         }
-        isAccelerometering.setAction { isOn in
+        isAccelerometering.setAction { [weak self] isOn in
             print("isAccelerometering: \(isOn)")
         }
+        withDevice.connect()
     }
     
     
