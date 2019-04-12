@@ -13,13 +13,13 @@ class DeviceCtrl: CustomStringConvertible {
     }
     
     func startFlashing() {
-        Log.add(">>>START<<< flashing")
+        Log.debug(">>>START<<< flashing")
         isFlashing = true
         continueFlashing()
     }
     
     func stopFlashing() {
-        Log.add(">>>STOP<<< flashing")
+        Log.debug(">>>STOP<<< flashing")
         isFlashing = false
     }
     

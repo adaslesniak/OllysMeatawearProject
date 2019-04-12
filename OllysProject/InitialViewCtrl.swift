@@ -52,15 +52,15 @@ class InitialViewCtrl: UIViewController {
     
     private func scanForNearestDevice() {
         guard checkedDevice == nil else {
-            Log.add("won't scan while checking: \(checkedDevice)")
+            Log.debug("won't scan while checking: \(checkedDevice)")
             ExecuteInBackground(after: 1, scanForNearestDevice)
             return
         }
         Log.printDevices(Devices.known, header: "scanning for nearest device, known before scan")
         Devices.scanArea { [weak self] result in
-            Log.add(" -> got results from scan")
+            Log.debug(" -> got results from scan")
             do {
-                Log.add("scanned \(result.count) devices", on: .bluetooth)
+                Log.debug("scanned \(result.count) devices", on: .bluetooth)
                 guard let closest = result.keys.sorted(by: { $0.signal?.strength ?? -10000 > $1.signal?.strength ?? -10000 }).first else {
                     throw Exception.error("there is no closest from \(result.count) visible devices") //that should be zero
                 }
@@ -78,7 +78,7 @@ class InitialViewCtrl: UIViewController {
                     self?.learnDevice(closestDevice)
                 }
             } catch {
-                Log.warning("failed to find neareast new device: \(error)")
+                Log.debug("no nearest new device: \(error)")
                 ExecuteInBackground(after: 1.05) {
                     self?.scanForNearestDevice()
                 }
@@ -95,9 +95,6 @@ class InitialViewCtrl: UIViewController {
                 return
             }
             ctrl.startFlashing()
-            /*ExecuteInBackground(after: 5.7) {
-                ctrl.stopFlashing()
-            }*/
             ExecuteOnMain {
                 if self?.checkedDevice !== ctrl {
                     self?.checkedDevice?.stopFlashing() //that's just being overcautio

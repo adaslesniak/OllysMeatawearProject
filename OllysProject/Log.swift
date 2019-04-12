@@ -31,7 +31,7 @@ public class Log {
     
     static var enabledChannels: [Channel] = [.all]
     
-    static func add(_ message: String, on channel: Channel = .debug) {
+    static func debug(_ message: String, on channel: Channel = .debug) {
         doLog(message, chnl: channel, lvl: .debug)
     }
     
@@ -46,23 +46,26 @@ public class Log {
     //FIXME: that is somehow ugly - Log is generic class, should not be depended on business logic implemntation
     static func printDevices(_ devices: [DeviceCard], header: String) {
         var theString = header + ":  "
-        if devices.count > 0 {
+        if devices.count == 0 {
             theString += #"none"#
         } else {
             devices.forEach({ theString += "[\($0.id): \($0.name)]; " })
         }
-        print(theString)
+       doLog(theString, chnl: .bluetooth, lvl: .debug)
     }
     
+    private static var logQueue = DispatchQueue(label: "log", qos: .background)
     private static func doLog(_ msg: String, chnl: Channel, lvl: Level) {
-        let isChannelEnabled = enabledChannels.contains(.all) || enabledChannels.contains(chnl)
-        guard isChannelEnabled || lvl.isHighPriority else {
-            return
-        }
-        if chnl == .debug {
-            print(" - \(msg)")
-        } else {
-            print("[\(chnl)]: \(msg)")
+        logQueue.async {
+            let isChannelEnabled = enabledChannels.contains(.all) || enabledChannels.contains(chnl)
+            guard isChannelEnabled || lvl.isHighPriority else {
+                return
+            }
+            if chnl == .debug {
+                print(" - \(msg)")
+            } else {
+                print("[\(chnl)]: \(msg)")
+            }
         }
     }
     

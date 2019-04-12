@@ -20,7 +20,7 @@ class Devices {
                 return
             }
             task.result?.forEach({ $0.forget() })
-            Log.add("all devices forgotten")
+            Log.debug("all devices forgotten")
         }
     }
     
@@ -43,9 +43,9 @@ class Devices {
                     throw Exception.error("got no devices")
                 }
                 _known = result
-                Log.add("loaded: \(result.count) saved devices")
+                Log.debug("loaded: \(result.count) saved devices")
             } catch {
-                Log.add("didn't load saved devices because: \(error)")
+                Log.debug("didn't load saved devices because: \(error)")
                 _known = []
             }
         }
@@ -75,19 +75,20 @@ class Devices {
         var requestPending = 0
         MetaWearScanner.shared.startScan(allowDuplicates: true) { device in
             if nearby.keys.contains(device.createCard()) {
+                Log.debug("duplicated find in nearby devices: \(device.name)")
                 return
             }
             requestPending += 1
             if device.rssi < -80 {
-                Log.add("found some weak signal \(device.rssi) from: \(device.id)")
+                Log.debug("found some weak signal \(device.rssi) from: \(device.id)")
             } else {
                 //TODO: refactor it - can be done synchronously and should be DeviceCard(about: device)
                 let info = device.createCard()
                 if let named = known.first(where: { $0 == info }) {
-                    Log.add("found known device: \(named)", on: .bluetooth)
+                    Log.debug("found known device: \(named)", on: .bluetooth)
                     nearby[named] = device
                 } else {
-                    Log.add("found new device: \(info)", on: .bluetooth)
+                    Log.debug("found new device: \(info)", on: .bluetooth)
                     nearby[info] = device
                 }
             }
@@ -106,7 +107,7 @@ class Devices {
     public static func remember(_ toBeRemembered: MetaWear, as givenName: String) {
         toBeRemembered.remember() //that is stupid - it should never be called on device
         names[toBeRemembered.peripheral.identifier.uuidString] = givenName
-        prepareCardsOfKnownDevices()
+        //prepareCardsOfKnownDevices()
     }
     
 }
