@@ -2,7 +2,7 @@
 import UIKit
 
 
-class AvailableDevicesViewCtrl: UIViewController {//, UITableViewDelegate, UITableViewDataSource {
+class AvailableDevicesViewCtrl: UIViewController, UITableViewDelegate {//, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var devicesTable: UITableView!
@@ -13,11 +13,14 @@ class AvailableDevicesViewCtrl: UIViewController {//, UITableViewDelegate, UITab
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //devicesTable.delegate = self
+        devicesTable.delegate = self
         //devicesTable.dataSource = self
-        //devicesTable.register(, forCellReuseIdentifier: )
+        devicesTable.register(AvailableDeviceCell.self, forCellReuseIdentifier: AvailableDeviceCell.reuseId)
         backBtn.addAction(.tap) { [weak self] in
             self?.dismiss(animated: true)
         }
     }
+    
+    
+    
 }

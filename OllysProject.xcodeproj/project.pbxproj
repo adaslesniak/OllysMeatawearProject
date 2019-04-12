@@ -17,6 +17,9 @@
 		81D8AD3622609C1700C8815B /* SetUpDeviceViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D8AD3522609C1700C8815B /* SetUpDeviceViewCtrl.swift */; };
 		81D8AD3822609E9700C8815B /* AvailableDevicesViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D8AD3722609E9700C8815B /* AvailableDevicesViewCtrl.swift */; };
 		81D8AD3A22609EB800C8815B /* AvailableDevicesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81D8AD3922609EB800C8815B /* AvailableDevicesView.xib */; };
+		81D8AD412260B26A00C8815B /* AvailableDeviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D8AD3F2260B26A00C8815B /* AvailableDeviceCell.swift */; };
+		81D8AD422260B26A00C8815B /* AvailableDeviceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81D8AD402260B26A00C8815B /* AvailableDeviceCell.xib */; };
+		81D8AD442260B61F00C8815B /* ToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D8AD432260B61F00C8815B /* ToggleView.swift */; };
 		81E09C3622569CA200CE21EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E09C3522569CA200CE21EB /* AppDelegate.swift */; };
 		81E09C3B22569CA200CE21EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81E09C3922569CA200CE21EB /* Main.storyboard */; };
 		81E09C3D22569CA300CE21EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81E09C3C22569CA300CE21EB /* Assets.xcassets */; };
@@ -44,6 +47,9 @@
 		81D8AD3522609C1700C8815B /* SetUpDeviceViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetUpDeviceViewCtrl.swift; sourceTree = "<group>"; };
 		81D8AD3722609E9700C8815B /* AvailableDevicesViewCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableDevicesViewCtrl.swift; sourceTree = "<group>"; };
 		81D8AD3922609EB800C8815B /* AvailableDevicesView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AvailableDevicesView.xib; sourceTree = "<group>"; };
+		81D8AD3F2260B26A00C8815B /* AvailableDeviceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableDeviceCell.swift; sourceTree = "<group>"; };
+		81D8AD402260B26A00C8815B /* AvailableDeviceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AvailableDeviceCell.xib; sourceTree = "<group>"; };
+		81D8AD432260B61F00C8815B /* ToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleView.swift; sourceTree = "<group>"; };
 		81E09C3222569CA200CE21EB /* OllysProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OllysProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81E09C3522569CA200CE21EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81E09C3A22569CA200CE21EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -97,6 +103,10 @@
 				81D8AD322260982700C8815B /* HomeView.xib */,
 				81D8AD3722609E9700C8815B /* AvailableDevicesViewCtrl.swift */,
 				81D8AD3922609EB800C8815B /* AvailableDevicesView.xib */,
+				81D8AD3F2260B26A00C8815B /* AvailableDeviceCell.swift */,
+				81D8AD402260B26A00C8815B /* AvailableDeviceCell.xib */,
+				81D8AD432260B61F00C8815B /* ToggleView.swift */,
+				81D8AD2C225D096E00C8815B /* CircleView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -132,7 +142,6 @@
 				81E09C4E2256B5CC00CE21EB /* Log.swift */,
 				81E09C502256CC0700CE21EB /* MetaWear+.swift */,
 				81E09C522256CC3000CE21EB /* DeviceCard.swift */,
-				81D8AD2C225D096E00C8815B /* CircleView.swift */,
 				81D8AD2E225F502A00C8815B /* DeviceCtrl.swift */,
 			);
 			path = OllysProject;
@@ -225,6 +234,7 @@
 				81E09C5C2256DD0A00CE21EB /* NamingView.xib in Resources */,
 				81E09C3B22569CA200CE21EB /* Main.storyboard in Resources */,
 				81D8AD332260982700C8815B /* HomeView.xib in Resources */,
+				81D8AD422260B26A00C8815B /* AvailableDeviceCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +302,8 @@
 				81D8AD312260977100C8815B /* HomeViewCtrl.swift in Sources */,
 				81D8AD2B225C01C600C8815B /* PersistentDictionary.swift in Sources */,
 				81E09C3622569CA200CE21EB /* AppDelegate.swift in Sources */,
+				81D8AD442260B61F00C8815B /* ToggleView.swift in Sources */,
+				81D8AD412260B26A00C8815B /* AvailableDeviceCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
