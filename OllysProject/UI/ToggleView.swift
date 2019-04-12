@@ -33,7 +33,6 @@ class ToggleView: UILabel {
     }
     
     private func setView() {
-        //TODO: implement this thing
         //not TODO: this is slow, some of this could be done only once on viewDidLoad, but... it's not crucial
         layer.cornerRadius = frame.height * 0.25
         layer.masksToBounds = true

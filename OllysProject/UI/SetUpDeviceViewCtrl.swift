@@ -42,7 +42,6 @@ class SetUpDeviceViewCtrl: UIViewController {
                 self?.scanForNearestDevice()
                 self?.placeholder.adjust(border: self?.pinkLight)
                 self?.confirmatioPanel.isHidden = true
-                print("checked device: \(self?.checkedDevice != nil)")
                 self?.checkedDevice?.turnOffLed()
                 self?.checkedDevice = nil
                 Log.printDevices(Devices.known, header: "known devices \(Devices.known.count) after returning from NamingViewCtrl")
@@ -63,15 +62,14 @@ class SetUpDeviceViewCtrl: UIViewController {
             ExecuteInBackground(after: 1, scanForNearestDevice)
             return
         }
-        Log.printDevices(Devices.known, header: "scanning for nearest device, known before scan")
-        Devices.scanArea { [weak self] result in
-            Log.debug(" -> got results from scan")
+        Log.printDevices(Devices.known, header: "devices known before scan for new device")
+        Devices.scanForNewDevices { [weak self] result in
             do {
-                Log.debug("scanned \(result.count) devices", on: .bluetooth)
+                Log.debug("scanned \(result.count) new devices", on: .bluetooth)
                 guard let closest = result.keys.sorted(by: { $0.signal?.strength ?? -10000 > $1.signal?.strength ?? -10000 }).first else {
                     throw Exception.error("there is no closest from \(result.count) visible devices") //that should be zero
                 }
-                guard let rrsi = closest.signal?.strength, rrsi  > -40, rrsi < 0 else {
+                guard let rrsi = closest.signal?.strength, rrsi  > -39, rrsi < 0 else {
                     throw Exception.error("device signal too weak")
                 }
                 guard !Devices.known.contains(closest) else {
@@ -85,7 +83,7 @@ class SetUpDeviceViewCtrl: UIViewController {
                     self?.learnDevice(closestDevice)
                 }
             } catch {
-                Log.debug("no nearest new device: \(error)")
+                Log.debug("no new device in close range: \(error.localizedDescription)")
                 ExecuteInBackground(after: 1.05) {
                     self?.scanForNearestDevice()
                 }

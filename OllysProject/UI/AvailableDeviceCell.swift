@@ -16,30 +16,17 @@ class AvailableDeviceCell: UITableViewCell {
     
     static let reuseId = "available_device_cell"
     
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        //backgroundColor = UIColor.red
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        //backgroundColor = UIColor.yellow
+    static func nib() -> UINib {
+        return UINib(nibName: "AvailableDeviceCell", bundle: nil)
     }
     
     override func prepareForReuse() {
+        resetToggles()
         clearDeviceConnection()
     }
     
     deinit {
         clearDeviceConnection()
-    }
-    
-    
-    private func clearDeviceConnection() {
-        //TODO: make sure all light are off and... just leave device clean
-        controlled?.turnOffLed()
-        controlled?.disconnect()
-        controlled = nil
     }
     
     func setup(_ withDevice: DeviceCtrl) {
@@ -73,29 +60,35 @@ class AvailableDeviceCell: UITableViewCell {
         isAccelerometering.setAction { [weak self] isOn in
             print("isAccelerometering: \(isOn)")
         }
-        withDevice.connect()
+        withDevice.connect { [weak self] in
+            self?.keepCheckingDevice()
+        }
     }
     
-    
-    func describeSubviews() -> String {
-        var dscr = "subviews: "
-        func viewDscr(_ uiView: UIView, address: [Int]) -> String {
-            var name = ""
-            address.forEach({name += "\($0)-" })
-            return "[\(name) \(type(of: uiView))]"
-        }
-        for sub in subviews.enumerated() {
-            let subName = viewDscr(sub.element, address: [sub.offset])
-            dscr.append(subName)
-            for ssub in sub.element.subviews.enumerated() {
-                let ssubName = viewDscr(ssub.element, address: [sub.offset, ssub.offset])
-                dscr.append(ssubName)
+    private func keepCheckingDevice() {
+        if controlled?.isConnected == false {
+            Log.warning("device from cell isn't connected")
+            ExecuteOnMain {
+                self.resetToggles()
             }
         }
-        return dscr
+        ExecuteOnMain(after: 0.7) { [weak self] in
+            self?.keepCheckingDevice()
+        }
     }
     
+    private func resetToggles() {
+        isAccelerometering.toggle(to: false)
+        isSensorFusing.toggle(to: false)
+        isRed.toggle(to: false)
+        isBlue.toggle(to: false)
+    }
     
-    //TODO: clean up connection whe prepparing for reuse
+    private func clearDeviceConnection() {
+        //TODO: stop streams
+        controlled?.turnOffLed()
+        controlled?.disconnect()
+        controlled = nil
+    }
     
 }

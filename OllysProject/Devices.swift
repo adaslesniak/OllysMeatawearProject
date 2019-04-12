@@ -35,7 +35,7 @@ class Devices {
         isLoadingSavedDevices = true
         MetaWearScanner.shared.retrieveSavedMetaWearsAsync().continueWith { callback in
             defer {
-                prepareCardsOfKnownDevices()
+                updateCardsOfKnownDevices()
             }
             do {
                 guard callback.error == nil else {
@@ -53,7 +53,7 @@ class Devices {
         }
     }
 
-    private static func prepareCardsOfKnownDevices() {
+    private static func updateCardsOfKnownDevices() {
         var cards = [DeviceCard]()
         guard let devices = _known else {
             Log.error("can't prepare cards while there are no devices")
@@ -72,13 +72,11 @@ class Devices {
         isLoadingSavedDevices = false
     }
     
-    public static func scanForNewDevices(_ whenDone: @escaping ([DeviceCard:MetaWear]) -> Void) {
-        scanArea(whenDone)
-    }
     
     //TODO: refactor:
     public static func scanForKnownDevices(_ whenDone: @escaping ([DeviceCtrl]) -> Void) {
-        var nearby = [DeviceCtrl]()
+        
+        var accessible = [DeviceCtrl]()
         
         var isDoneWithOtherThing = false //TODO: find better name - it means that we have 2 async queries and if both returns then only we are done and good to call back
         func tryCallback() {
@@ -86,12 +84,10 @@ class Devices {
                 isDoneWithOtherThing = true
                 return
             }
-            Log.debug("scanned \(nearby.count) devices (connected or available for connection)")
-            whenDone(nearby)
+            Log.debug("scanned \(accessible.count) devices (connected or available for connection)")
+            whenDone(accessible)
         }
         
-        var requestPending = 0
-        var timeout = 1.7
         MetaWearScanner.shared.retrieveConnectedMetaWearsAsync().continueWith { result in
             //Task<MetaWear>
             guard result.error == nil else {
@@ -104,74 +100,49 @@ class Devices {
             }
             devices.forEach({ sensor in
                 let savedName = known.first(where: {$0.id == sensor.id })?.name
-                nearby.append(DeviceCtrl(sensor, name: savedName))
+                accessible.append(DeviceCtrl(sensor, as: savedName))
             })
             Log.debug("there were \(devices.count) connected devices")
             tryCallback()
         }
-        MetaWearScanner.shared.startScan(allowDuplicates: false) { found in
-            
-            requestPending += 1
-            if found.rssi < -96 {
-                Log.debug("found some weak(\(found.rssi)) signal from: \(found.id)")
-            }
-            if let savedCard = known.first(where: { $0.id == found.id }) {
-                nearby.append(DeviceCtrl(found, name: savedCard.name))
-            } else {
-                Log.debug("found some unknown device while scanning for known ones")
-            } 
-            guard timeout > 0 else {
-                Log.error("found device after timeout")
-                MetaWearScanner.shared.stopScan()
-                return
-            }
-            ExecuteInBackground(after: 0.66) { //delay finish so other can be found
-                requestPending -= 1
-                if requestPending == 0 {
-                    timeout = -1
-                    MetaWearScanner.shared.stopScan()
-                    tryCallback()
+        scanForNearbyDevices { nearby in
+            for found in nearby {
+                if let info = known.first(where: {$0.id == found.id}) {
+                    accessible.append(DeviceCtrl(found, as: info.name))
+                } else {
+                    Log.debug("found some unknown device while scanning for known ones")
                 }
             }
+            tryCallback()
         }
     }
     
-    public static func scanArea(_ whendDone: @escaping ([DeviceCard:MetaWear]) -> Void) {
-        var nearby = [DeviceCard:MetaWear]()
-        var requestPending = 0
-        var timeout = 1.9 //negative means it's too late
-        MetaWearScanner.shared.startScan(allowDuplicates: true) { device in
-            if nearby.keys.contains(device.createCard()) {
-                Log.debug("duplicated find in nearby devices: \(device.name)")
+    private static func scanForNearbyDevices(_ whenDone: @escaping ([MetaWear]) -> Void) {
+        var nearby = [MetaWear]()
+        var requestsPending = 0
+        var timeout = 1.9
+        func finishScan() {
+            MetaWearScanner.shared.stopScan()
+            whenDone(nearby)
+            timeout = -1 //invalid
+        }
+        MetaWearScanner.shared.startScan(allowDuplicates: false) { found in
+            if nearby.contains(found) {
                 return
             }
-            requestPending += 1
-            if device.rssi < -80 {
-                Log.debug("found some weak signal \(device.rssi) from: \(device.id)")
+            requestsPending += 1
+            if found.rssi < -88 {
+                Log.debug("found weak(\(found.rssi)) signal from: \(found.id.description)")
             } else {
-                //TODO: refactor it - can be done synchronously and should be DeviceCard(about: device)
-                let info = device.createCard()
-                if let named = known.first(where: { $0 == info }) {
-                    Log.debug("found known device: \(named)", on: .bluetooth)
-                    nearby[named] = device
-                } else {
-                    Log.debug("found new device: \(info)", on: .bluetooth)
-                    nearby[info] = device
-                }
+                nearby.append(found)
             }
             guard timeout > 0 else {
-                Log.debug("weird... found device after timeout") //can happen when user move device late
-                MetaWearScanner.shared.stopScan()
-                whendDone(nearby)
-                return //too late
+                return
             }
-            timeout = -1 //ensure timeout code won't be called
-            ExecuteInBackground(after: 0.66) { //give  time to find other devices
-                requestPending -= 1
-                if requestPending == 0 {
-                    MetaWearScanner.shared.stopScan() //that is buggy name - scan is singular - should be startScanning and stopScanning if it's continuus process
-                    Log.printDevices(Array(nearby.keys), header: "\(nearby.count) reachable devices")
-                    whendDone(nearby)
+            ExecuteInBackground(after: 0.56) {
+                requestsPending -= 1
+                if requestsPending == 0 {
+                    finishScan()
                 }
             }
         }
@@ -179,8 +150,21 @@ class Devices {
             guard timeout > 0 else {
                 return
             }
-            timeout = -1
-            whendDone(nearby)
+            finishScan()
+        }
+        
+    }
+    
+    public static func scanForNewDevices(_ whendDone: @escaping ([DeviceCard:MetaWear]) -> Void) {
+        scanForNearbyDevices { nearby in
+            var newDevices = [DeviceCard:MetaWear]()
+            for found in nearby {
+                if !known.contains(where: { $0.id == found.id }) {
+                    let info = found.createCard()
+                    newDevices[info] = found
+                }
+            }
+            whendDone(newDevices)
         }
     }
     
@@ -189,8 +173,8 @@ class Devices {
         toBeRemembered.remember() //that is stupid - it should never be called on device
         names[toBeRemembered.peripheral.identifier.uuidString] = givenName
         _known?.append(toBeRemembered)
-        prepareCardsOfKnownDevices()
-        print("rememered device: \(toBeRemembered.id)")
+        updateCardsOfKnownDevices()
+        Log.debug("rememered device: \(givenName) [id: \(toBeRemembered.id)]")
     }
     
 }

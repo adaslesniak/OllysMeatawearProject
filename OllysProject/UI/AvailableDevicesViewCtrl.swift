@@ -17,12 +17,8 @@ class AvailableDevicesViewCtrl: UIViewController, UITableViewDataSource { //, UI
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //devicesTable.delegate = self
         devicesTable.dataSource = self
-        //devicesTable.register(AvailableDeviceCell.self, forCellReuseIdentifier: AvailableDeviceCell.reuseId)
-        let cellNib = UINib(nibName: "AvailableDeviceCell", bundle: nil)
-        print("cell nib: \(cellNib)")
-        devicesTable.register(cellNib, forCellReuseIdentifier: AvailableDeviceCell.reuseId)
+        devicesTable.register(AvailableDeviceCell.nib(), forCellReuseIdentifier: AvailableDeviceCell.reuseId)
         backBtn.addAction(.tap) { [weak self] in
             self?.dismiss(animated: true)
         }
@@ -31,6 +27,7 @@ class AvailableDevicesViewCtrl: UIViewController, UITableViewDataSource { //, UI
     func refresh() {
         Devices.scanForKnownDevices { [weak self] result in
             ExecuteOnMain {
+                Log.debug("found \(result.count) accessible devices")
                 //TODO: compare available and result - only if different, then apply and reload
                 self?.available = result
                 self?.devicesTable?.reloadData()

@@ -34,7 +34,7 @@ class DeviceCtrl: CustomStringConvertible {
     var id: UUID { return device.peripheral.identifier }
     
     
-    init(_ device: MetaWear, name: String? = nil) {
+    init(_ device: MetaWear, as name: String? = nil) {
         self.device = device
         self.name = name ?? device.name
     }
