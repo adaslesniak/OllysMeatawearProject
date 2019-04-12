@@ -5,7 +5,7 @@ import Foundation
 
 class Devices {
 
-    static var known: [DeviceCard] { return [] }
+    static private(set) var known: [DeviceCard] = []
     private static var _known: [MetaWear]?
     private static var listeners = [() -> Void]()
     private static var names = PersistentDictionary("saved_devices")
@@ -66,6 +66,7 @@ class Devices {
                 cards.append(thingie.createCard())
             }
         }
+        known = cards
         isLoadingSavedDevices = false
     }
     
@@ -107,7 +108,9 @@ class Devices {
     public static func remember(_ toBeRemembered: MetaWear, as givenName: String) {
         toBeRemembered.remember() //that is stupid - it should never be called on device
         names[toBeRemembered.peripheral.identifier.uuidString] = givenName
-        //prepareCardsOfKnownDevices()
+        _known?.append(toBeRemembered)
+        prepareCardsOfKnownDevices()
+        print("rememered device: \(toBeRemembered.id)")
     }
     
 }

@@ -44,7 +44,7 @@ class InitialViewCtrl: UIViewController {
                 print("checked device: \(self?.checkedDevice != nil)")
                 self?.checkedDevice?.stopFlashing()
                 self?.checkedDevice = nil
-                Log.printDevices(Devices.known, header: "known devices after returning from NamingViewCtrl")
+                Log.printDevices(Devices.known, header: "known devices \(Devices.known.count) after returning from NamingViewCtrl")
             }
         }
         placeholder.adjust(border: pinkLight, center: .clear, borderSize01: 0.2)
