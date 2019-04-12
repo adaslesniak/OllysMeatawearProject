@@ -51,9 +51,9 @@ class AvailableDeviceCell: UITableViewCell {
         isRed.setAction { [weak self] isOn in
             self?.controlled?.connect {
                 if isOn {
-                    self?.controlled?.startFlashing(.red)
+                    self?.controlled?.turnOnLed(.red)
                 } else {
-                    self?.controlled?.stopFlashing(.red)
+                    self?.controlled?.turnOfLed(.red)
                 }
             }
             print("isRed?= \(isOn)")

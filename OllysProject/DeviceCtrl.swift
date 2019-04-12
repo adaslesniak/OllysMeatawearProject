@@ -6,13 +6,14 @@ import Foundation
 //wrapper around MetaWear with api limited to this project functionality
 class DeviceCtrl: CustomStringConvertible {
     
+    typealias ColorComponents = (r: CGFloat, g: CGFloat, b: CGFloat)
     enum LedColor {
         case red
         case green
         case blue
         case all
         
-        var components: (r: CGFloat, g: CGFloat, b: CGFloat) {
+        var components: ColorComponents {
             switch self {
             case .red:
                 return (1, 0, 0)
@@ -39,6 +40,7 @@ class DeviceCtrl: CustomStringConvertible {
     }
     
     func startFlashing(_ color: LedColor = .green) {
+        ledsOn = [] //sorry can't combine
         guard !flashing.contains(color) else {
             return
         }
@@ -46,7 +48,7 @@ class DeviceCtrl: CustomStringConvertible {
         let wasFlashing = flashing.count > 0
         flashing.append(color)
         if !wasFlashing {
-            continueFlashing() //TODO: fix name - it means start and continue falshing...
+            keepFlashing() 
         }
     }
     
@@ -78,19 +80,66 @@ class DeviceCtrl: CustomStringConvertible {
         }
     }
     
-    private func continueFlashing() {
-        guard flashing.count > 0 else {
+    //those will collide with falshing
+    var ledsOn = [LedColor]()
+    func turnOnLed(_ color: LedColor) {
+        flashing = [] //sorry or flash or "constant"
+        guard !ledsOn.contains(color) else {
             return
         }
-        var fullColor: (r: CGFloat, g: CGFloat, b: CGFloat) = (0, 0, 0)
-        for color in flashing {
-            fullColor.r += color.components.r
-            fullColor.g += color.components.g
-            fullColor.b += color.components.b
+        let wasKeepingLedsOn = ledsOn.count > 0
+        ledsOn.append(color)
+        if !wasKeepingLedsOn {
+            keepLedsOn() 
         }
-        let theColor = UIColor(red: fullColor.r, green: fullColor.g, blue: fullColor.b, alpha: 1)
-        device.flashLED(color: theColor, intensity: 1.0, _repeat: 1)
-        ExecuteInBackground(after: 0.96, continueFlashing)
+    }
+    func turnOfLed(_ color: LedColor) {
+        if color == .all {
+            flashing = []
+            ledsOn = []
+        } else {
+            if let iFlash = flashing.firstIndex(of: color) {
+                flashing.remove(at: iFlash)
+            }
+            if let iLed = ledsOn.firstIndex(of: color) {
+                ledsOn.remove(at: iLed)
+            }
+        }
+        
+    }
+    
+    
+    private func combineColor(_ components: [LedColor]) -> UIColor? {
+        guard components.count > 0 else {
+            return nil
+        }
+        var full = ColorComponents(0, 0, 0)
+        for color in components {
+            full.r += color.components.r
+            full.g += color.components.g
+            full.b += color.components.b
+        }
+        return UIColor(red: full.r, green: full.g, blue: full.b, alpha: 1)
+    }
+    
+    //be carefull to not call it multiple times
+    private func keepLedsOn() {
+        if let theColor = combineColor(ledsOn) {
+            device.flashLED(color: theColor, intensity: 0.9, _repeat: 1, onTime: 700)
+            ExecuteOnMain(after: 0.71) { [weak self] in
+                self?.keepLedsOn()
+            }
+        }
+    }
+    
+    //be carefull to not call it multiple times
+    private func keepFlashing() {
+        if let theColor = combineColor(flashing) {
+            device.flashLED(color: theColor, intensity: 0.9, _repeat: 1)
+            ExecuteInBackground(after: 0.96) { [weak self] in
+                self?.keepFlashing()
+            }
+        }
     }
     
     var description: String {
