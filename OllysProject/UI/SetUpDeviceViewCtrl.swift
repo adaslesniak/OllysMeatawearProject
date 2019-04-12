@@ -1,10 +1,9 @@
-// ViewController.swift [] created by: Adas Lesniak on: 04/04/2019
+//created by: Adas Lesniak on: 04/04/2019
 import UIKit
 import MetaWear
-import MetaWearCpp
 
 
-class InitialViewCtrl: UIViewController {
+class SetUpDeviceViewCtrl: UIViewController {
 
     @IBOutlet weak var instruction: UILabel!
     @IBOutlet weak var placeholder: CircleView! //FIXME: that's bad name - put device area marker would be too long
@@ -14,8 +13,8 @@ class InitialViewCtrl: UIViewController {
     
     private var checkedDevice: DeviceCtrl?
     
-    static func instantiate() -> InitialViewCtrl {
-        return InitialViewCtrl(nibName: "InitialView", bundle: nil)
+    static func instantiate() -> SetUpDeviceViewCtrl {
+        return SetUpDeviceViewCtrl(nibName: "SetUpDeviceView", bundle: nil)
     }
     
     let pinkLight = UIColor(red: 255/255, green: 192/255, blue: 203/255, alpha: 0.5)

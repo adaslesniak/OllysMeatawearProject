@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Devices.debugForgetRmemberedDevices()
         Devices.loadSavedDevices() //that is important
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = InitialViewCtrl.instantiate()
+        window?.rootViewController = HomeViewCtrl.instantiate()
         window?.makeKeyAndVisible()
         return true
     }
