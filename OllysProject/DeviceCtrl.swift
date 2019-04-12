@@ -93,7 +93,7 @@ class DeviceCtrl: CustomStringConvertible {
             keepLedsOn() 
         }
     }
-    func turnOfLed(_ color: LedColor) {
+    func turnOffLed(_ color: LedColor) {
         if color == .all {
             flashing = []
             ledsOn = []
@@ -103,6 +103,7 @@ class DeviceCtrl: CustomStringConvertible {
             }
             if let iLed = ledsOn.firstIndex(of: color) {
                 ledsOn.remove(at: iLed)
+                print("removed led: \(color) (left: \(ledsOn.count))")
             }
         }
         
@@ -124,11 +125,14 @@ class DeviceCtrl: CustomStringConvertible {
     
     //be carefull to not call it multiple times
     private func keepLedsOn() {
+        print("keeps \(ledsOn.count) leds on")
         if let theColor = combineColor(ledsOn) {
-            device.flashLED(color: theColor, intensity: 0.9, _repeat: 1, onTime: 700)
-            ExecuteOnMain(after: 0.71) { [weak self] in
+            device.flashLED(color: theColor, intensity: 0.6, _repeat: 1, onTime: 500)
+            ExecuteOnMain(after: 0.52) { [weak self] in
                 self?.keepLedsOn()
             }
+        } else {
+            device.turnOffLed() //HACK: that is weird as heck
         }
     }
     
