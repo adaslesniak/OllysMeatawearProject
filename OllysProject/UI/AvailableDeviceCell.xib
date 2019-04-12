@@ -25,9 +25,28 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Device Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ajc-FV-Rba" userLabel="Id">
+                        <rect key="frame" x="7" y="25" width="135" height="16"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Blue LED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqO-2n-ISQ" customClass="ToggleView" customModule="OllysProject" customModuleProvider="target">
+                        <rect key="frame" x="175" y="3" width="72" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <color key="backgroundColor" red="0.98878632479999995" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="id" destination="Ajc-FV-Rba" id="M2w-rE-LhO"/>
+                <outlet property="isRed" destination="gqO-2n-ISQ" id="g6f-qB-hzg"/>
+                <outlet property="title" destination="Bwm-WD-D5h" id="vyh-KV-pDJ"/>
+            </connections>
             <point key="canvasLocation" x="47.826086956521742" y="37.5"/>
         </tableViewCell>
     </objects>

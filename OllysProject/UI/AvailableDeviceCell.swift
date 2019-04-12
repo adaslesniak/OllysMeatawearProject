@@ -5,8 +5,10 @@ import UIKit
 
 class AvailableDeviceCell: UITableViewCell {
     
-    /*@IBOutlet weak var title: UILabel!
+    @IBOutlet weak var title: UILabel!
     @IBOutlet weak var id: UILabel!
+    @IBOutlet weak var isRed: ToggleView!
+    /*@IBOutlet weak var id: UILabel!
     @IBOutlet weak var isRed: ToggleView!
     @IBOutlet weak var isBlue: ToggleView!
     @IBOutlet weak var isSensorFusing: ToggleView!
@@ -39,6 +41,11 @@ class AvailableDeviceCell: UITableViewCell {
     func setup(_ withDevice: DeviceCtrl) {
         Log.debug("setting up cell for device: \(withDevice.device.name)")
         controlled = withDevice
+        title.text = withDevice.device.name
+        id.text = withDevice.device.id.description
+        isRed.setAction { isOn in
+            print("isRed?= \(isOn)")
+        }
         //TODO: setup can be called before view is ready
         print("cell subviews: \(describeSubviews())")
         ExecuteOnMain(after: 0.3) {
