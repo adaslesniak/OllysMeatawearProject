@@ -39,9 +39,15 @@ class DeviceCtrl: CustomStringConvertible {
     }
     
     func startFlashing(_ color: LedColor = .green) {
+        guard !flashing.contains(color) else {
+            return
+        }
         Log.debug("\(name) START flashing")
+        let wasFlashing = flashing.count > 0
         flashing.append(color)
-        continueFlashing()
+        if !wasFlashing {
+            continueFlashing() //TODO: fix name - it means start and continue falshing...
+        }
     }
     
     func disconnect() {
@@ -65,7 +71,11 @@ class DeviceCtrl: CustomStringConvertible {
     
     func stopFlashing(_ color: LedColor = .all) {
         Log.debug("\(name) STOP flashing")
-        flashing = []
+        if color == .all {
+            flashing = []
+        } else if let iColor = flashing.firstIndex(of: color) {
+            flashing.remove(at: iColor)
+        }
     }
     
     private func continueFlashing() {
