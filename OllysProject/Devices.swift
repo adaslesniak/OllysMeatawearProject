@@ -82,7 +82,12 @@ class Devices {
         
         var isDoneWithOtherThing = false //TODO: find better name - it means that we have 2 async queries and if both returns then only we are done and good to call back
         func tryCallback() {
-            
+            if !isDoneWithOtherThing {
+                isDoneWithOtherThing = true
+                return
+            }
+            Log.debug("scanned \(nearby.count) devices (connected or available for connection)")
+            whenDone(nearby)
         }
         
         var requestPending = 0
@@ -100,12 +105,31 @@ class Devices {
                 nearby.append(DeviceCtrl(sensor))
             })
             Log.error("DEBUG CALLBACK - REMOVE IT")
-            whenDone(nearby)
+            tryCallback()
         }
-        /*MetaWearScanner.shared.startScan(allowDuplicates: true) { found in
-            guard found
-        }*/
-        Log.error("NOT_IMPLEMENTED")
+        MetaWearScanner.shared.startScan(allowDuplicates: false) { found in
+            requestPending += 1
+            if found.rssi < -80 {
+                Log.debug("found some weak(\(found.rssi)) signal from: \(found.id)")
+            } else if !known.contains(where: { $0.id == found.id }) {
+                Log.debug("found some unknown device while scanning for known ones")
+            } else {
+                nearby.append(DeviceCtrl(found))
+            }
+            guard timeout > 0 else {
+                Log.error("found device after timeout")
+                MetaWearScanner.shared.stopScan()
+                return
+            }
+            timeout = -1
+            ExecuteInBackground(after: 0.66) { //delay finish so other can be found
+                requestPending -= 1
+                if requestPending == 0 {
+                    MetaWearScanner.shared.stopScan()
+                }
+                tryCallback()
+            }
+        }
     }
     
     public static func scanArea(_ whendDone: @escaping ([DeviceCard:MetaWear]) -> Void) {

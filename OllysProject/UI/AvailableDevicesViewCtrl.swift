@@ -11,10 +11,7 @@ class AvailableDevicesViewCtrl: UIViewController, UITableViewDataSource { //, UI
     
     static func instantiate() -> AvailableDevicesViewCtrl {
         let ctrl = AvailableDevicesViewCtrl(nibName: "AvailableDevicesView", bundle: nil)
-        Devices.scanForKnownDevices { result in
-            ctrl.available = result
-            ctrl.devicesTable?.reloadData()
-        }
+        ctrl.refresh()
         return ctrl
     }
     
@@ -25,6 +22,19 @@ class AvailableDevicesViewCtrl: UIViewController, UITableViewDataSource { //, UI
         devicesTable.register(AvailableDeviceCell.self, forCellReuseIdentifier: AvailableDeviceCell.reuseId)
         backBtn.addAction(.tap) { [weak self] in
             self?.dismiss(animated: true)
+        }
+    }
+    
+    func refresh() {
+        Devices.scanForKnownDevices { [weak self] result in
+            ExecuteOnMain {
+                //TODO: compare available and result - only if different, then apply and reload
+                self?.available = result
+                self?.devicesTable?.reloadData()
+            }
+            ExecuteInBackground(after: 1.7) {
+                self?.refresh() //constant refreshing so table is in sync
+            }
         }
     }
     
