@@ -48,23 +48,19 @@ class DeviceCtrl: CustomStringConvertible {
         mbl_mw_acc_write_acceleration_config(device.board)
         accelerometerSignal = mbl_mw_acc_get_acceleration_data_signal(device.board)
         
-        /*mbl_mw_datasignal_subscribe(accSignal, device.board, MetaWear.FnVoid_VoidP_DataP.toPointer(function gotTimer(context, dataPtr) {
-            
-        }));*/
-        //mbl_mw_datasignal_subscribe(accSignal, <#T##context: UnsafeMutableRawPointer!##UnsafeMutableRawPointer!#>, <#T##received_data: MblMwFnData!##MblMwFnData!##(UnsafeMutableRawPointer?, UnsafePointer<MblMwData>?) -> Void#>)
-        /*accSignal?.read().continueWith { something in
-            guard something.error == nil else {
-                Log.error("something error, we are lost: \(something.error!.localizedDescription)")
-                return
-            }
-            
-            print("what is this [MetaWearData]: \(something.result)")
-        }*/
-        let taskCompletion = TaskCompletionSource<String>()
+        let taskCompletion = TaskCompletionSource<String>() //that is something wrong - it's probably wrong type.. not a <String> it seems
         mbl_mw_datasignal_subscribe(accelerometerSignal!, bridgeRetained(obj: taskCompletion)) { (context, dataPtr) in
             print("frick...")
+            //let callback: TaskCompletionSource<String> = bridgeTransfer(ptr: context!)
+            if let data = dataPtr?.pointee {
+                print("result of accelerometer: \(data)")
+                //callback.set(result: data.valueAs()) //data.valueAs is breaking sassertiong at MetaWearData.swift line 88
+            } else {
+                print("error in accelerometer)")
+                //callback.set(error: MetaWearError.operationFailed(message: "failed not read mac"))
+            }
         }
-        mbl_mw_acc_enable_acceleration_sampling(device.board);
+        mbl_mw_acc_enable_acceleration_sampling(device.board)
         mbl_mw_acc_start(device.board)
         
     }
