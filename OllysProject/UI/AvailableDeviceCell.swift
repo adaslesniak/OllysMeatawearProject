@@ -3,6 +3,8 @@
 
 import UIKit
 
+
+//FIXME: this name sucks, it isn't clear
 class AvailableDeviceCell: UITableViewCell {
     
     @IBOutlet weak var title: UILabel!
@@ -42,7 +44,7 @@ class AvailableDeviceCell: UITableViewCell {
                     self?.controlled?.turnOffLed(.red)
                 }
             }
-            print("isRed?= \(isOn)")
+            Log.debug("toggled red led on \(self?.controlled?.name ?? "nil") to \(self?.isRed.isOn.description ?? "nil")", on: .userAction)
         }
         isBlue.setAction { [weak self] isOn in
             self?.controlled?.connect {
@@ -52,13 +54,20 @@ class AvailableDeviceCell: UITableViewCell {
                     self?.controlled?.turnOffLed(.blue)
                 }
             }
-            print("isBlue: \(isOn)")
+            Log.debug("toggled blue led on \(self?.controlled?.name ?? "nil") to \(self?.isBlue.isOn.description ?? "nil")", on: .userAction)
         }
         isSensorFusing.setAction { [weak self] isOn in
             print("isSensorFusing: \(isOn)")
         }
         isAccelerometering.setAction { [weak self] isOn in
-            print("isAccelerometering: \(isOn)")
+            self?.controlled?.connect {
+                if isOn {
+                    self?.controlled?.startAccelerometering()
+                } else {
+                    self?.controlled?.stopAccelrometering()
+                }
+            }
+            Log.debug("toggled accelerometer on \(self?.controlled?.name ?? "nil") to \(self?.isAccelerometering.isOn.description ?? "nil")", on: .userAction)
         }
         withDevice.connect { [weak self] in
             self?.keepCheckingDevice()

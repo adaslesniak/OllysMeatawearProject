@@ -1,5 +1,6 @@
 // DeviceCtrl.swift [OllysProject] created by: Adas Lesniak on: 11/04/2019 
 import MetaWear
+import MetaWearCpp
 import Foundation
 
 
@@ -37,6 +38,36 @@ class DeviceCtrl: CustomStringConvertible {
     init(_ device: MetaWear, as name: String? = nil) {
         self.device = device
         self.name = name ?? device.name
+    }
+    
+    private var accelerometerSignal: OpaquePointer? = nil
+    var isAccelerometering: Bool { return accelerometerSignal != nil }
+    func startAccelerometering() {
+        mbl_mw_acc_set_range(device.board, 8.0)
+        mbl_mw_acc_write_acceleration_config(device.board)
+        accelerometerSignal = mbl_mw_acc_get_acceleration_data_signal(device.board)
+        
+        /*mbl_mw_datasignal_subscribe(accSignal, device.board, MetaWear.FnVoid_VoidP_DataP.toPointer(function gotTimer(context, dataPtr) {
+            
+        }));*/
+        //mbl_mw_datasignal_subscribe(accSignal, <#T##context: UnsafeMutableRawPointer!##UnsafeMutableRawPointer!#>, <#T##received_data: MblMwFnData!##MblMwFnData!##(UnsafeMutableRawPointer?, UnsafePointer<MblMwData>?) -> Void#>)
+        /*accSignal?.read().continueWith { something in
+            guard something.error == nil else {
+                Log.error("something error, we are lost: \(something.error!.localizedDescription)")
+                return
+            }
+            
+            print("what is this [MetaWearData]: \(something.result)")
+        }*/
+        mbl_mw_acc_enable_acceleration_sampling(device.board);
+        mbl_mw_acc_start(device.board)
+        
+    }
+    func stopAccelrometering() {
+        mbl_mw_acc_stop(device.board)
+        mbl_mw_acc_disable_acceleration_sampling(device.board);
+        mbl_mw_datasignal_unsubscribe(accelerometerSignal)
+        accelerometerSignal = nil
     }
     
     func startFlashing(_ color: LedColor = .green) {
