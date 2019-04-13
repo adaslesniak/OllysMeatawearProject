@@ -33,7 +33,7 @@ class AvailableDevicesViewCtrl: UIViewController, UITableViewDataSource { //, UI
                 self?.devicesTable?.reloadData()
             }
             ExecuteInBackground(after: 1.7) {
-                self?.refresh() //constant refreshing so table is in sync
+                //self?.refresh() //constant refreshing so table is in sync
             }
         }
     }

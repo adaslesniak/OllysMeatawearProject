@@ -75,6 +75,7 @@ class AvailableDeviceCell: UITableViewCell {
     }
     
     private func keepCheckingDevice() {
+        return
         if controlled?.isConnected == false {
             Log.warning("device from cell isn't connected")
             ExecuteOnMain {

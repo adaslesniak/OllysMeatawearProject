@@ -1,6 +1,7 @@
 // DeviceCtrl.swift [OllysProject] created by: Adas Lesniak on: 11/04/2019 
 import MetaWear
 import MetaWearCpp
+import BoltsSwift
 import Foundation
 
 
@@ -59,6 +60,10 @@ class DeviceCtrl: CustomStringConvertible {
             
             print("what is this [MetaWearData]: \(something.result)")
         }*/
+        let taskCompletion = TaskCompletionSource<String>()
+        mbl_mw_datasignal_subscribe(accelerometerSignal!, bridgeRetained(obj: taskCompletion)) { (context, dataPtr) in
+            print("frick...")
+        }
         mbl_mw_acc_enable_acceleration_sampling(device.board);
         mbl_mw_acc_start(device.board)
         
