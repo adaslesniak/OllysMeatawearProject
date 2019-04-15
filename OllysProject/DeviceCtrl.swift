@@ -42,31 +42,35 @@ class DeviceCtrl: CustomStringConvertible {
         self.name = name ?? device.name
     }
     
-    private class ACH : Any {
-        public var value: AccelerometerCallback = { _ in }
+    private class AccelerometerListenerObj : Any {
+        var signal: OpaquePointer
+        var callback: (UnsafePointer<MblMwData>?) -> Void
+        init(_ withSinal: OpaquePointer, withCallback: @escaping (UnsafePointer<MblMwData>?) -> Void) {
+            signal = withSinal
+            callback = withCallback
+        }
     }
-    private var accelerometerListener: ACH? = nil
-    private var accelerometerSignal: OpaquePointer? = nil
-    var isAccelerometering: Bool { return accelerometerSignal != nil }
-    private var accelerometeringTask: TaskCompletionSource<AccelerometerMeasurment>? = nil
+    private var accelerometerListener: AccelerometerListenerObj? = nil
+    //private var accelerometerSignal: OpaquePointer? = nil
+    var isAccelerometering: Bool { return accelerometerListener != nil }
+    //private var accelerometeringTask: TaskCompletionSource<AccelerometerMeasurment>? = nil
     func startAccelerometering(_ listener: @escaping (AccelerometerMeasurment) -> Void) {
+        guard !isAccelerometering else {
+            return
+        }
         mbl_mw_acc_set_range(device.board, 8.0)
         mbl_mw_acc_write_acceleration_config(device.board)
-        accelerometerSignal = mbl_mw_acc_get_acceleration_data_signal(device.board)
-        
-        accelerometerListener = ACH()
-        accelerometerListener?.value = { result in
-            print("FUCK YEAH")
-            listener(result)
-        }
-        
-        mbl_mw_datasignal_subscribe(accelerometerSignal!, bridge(obj: accelerometerListener!)) { (context, dataPtr) in
-            guard let data = AccelerometerMeasurment(dataPtr) else {
+        let signal: OpaquePointer = mbl_mw_acc_get_acceleration_data_signal(device.board)
+        accelerometerListener = AccelerometerListenerObj(signal) { [weak self] dataPtr in
+            guard let self = self, let data = AccelerometerMeasurment(dataPtr, device: self.device) else {
                 return
             }
-            let callback: ACH = bridge(ptr: context!)
-            callback.value(data)
-            print("success methink, callback: \(callback)")
+            listener(data)
+        }
+        
+        mbl_mw_datasignal_subscribe(signal, bridge(obj: accelerometerListener!)) { (context, dataPtr) in
+            let listener: AccelerometerListenerObj = bridge(ptr: context!)
+            listener.callback(dataPtr)
         }
         mbl_mw_acc_enable_acceleration_sampling(device.board)
         mbl_mw_acc_start(device.board)
@@ -75,8 +79,8 @@ class DeviceCtrl: CustomStringConvertible {
     func stopAccelrometering() {
         mbl_mw_acc_stop(device.board)
         mbl_mw_acc_disable_acceleration_sampling(device.board);
-        mbl_mw_datasignal_unsubscribe(accelerometerSignal)
-        accelerometerSignal = nil
+        mbl_mw_datasignal_unsubscribe(accelerometerListener?.signal)
+        accelerometerListener = nil
     }
     
     func startFlashing(_ color: LedColor = .green) {

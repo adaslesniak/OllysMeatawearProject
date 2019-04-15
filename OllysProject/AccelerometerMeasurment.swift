@@ -15,7 +15,7 @@ struct AccelerometerMeasurment : CustomStringConvertible {
         return Devices.known.first(where: {$0.id == source})?.name ?? "unknown"
     }
     
-    init?(_ dataPtr: UnsafePointer<MblMwData>?) {
+    init?(_ dataPtr: UnsafePointer<MblMwData>?, device: MetaWear) {
         do {
             guard let data = dataPtr?.pointee else {
                 throw Exception.error("no data")
@@ -27,8 +27,8 @@ struct AccelerometerMeasurment : CustomStringConvertible {
             self.xAcceleration = cartesian.x
             self.yAcceleration = cartesian.y
             self.zAcceleration = cartesian.z
-            self.source = UUID()
-            //self.source = device.peripheral.identifier
+            //self.source = UUID()
+            self.source = device.peripheral.identifier
             self.when = data.timestamp
         } catch {
             Log.error("couldn't create AccelerometerMeasurment, error: \(error)")
