@@ -21,6 +21,7 @@
 		81D8AD442260B61F00C8815B /* ToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D8AD432260B61F00C8815B /* ToggleView.swift */; };
 		81D8AD462261052F00C8815B /* AvailableDeviceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81D8AD452261052F00C8815B /* AvailableDeviceCell.xib */; };
 		81D8AD4822648EB400C8815B /* AccelerometerMeasurment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D8AD4722648EB400C8815B /* AccelerometerMeasurment.swift */; };
+		81D8AD4A2264CC2400C8815B /* LedCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D8AD492264CC2400C8815B /* LedCtrl.swift */; };
 		81E09C3622569CA200CE21EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E09C3522569CA200CE21EB /* AppDelegate.swift */; };
 		81E09C3B22569CA200CE21EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81E09C3922569CA200CE21EB /* Main.storyboard */; };
 		81E09C3D22569CA300CE21EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81E09C3C22569CA300CE21EB /* Assets.xcassets */; };
@@ -52,6 +53,7 @@
 		81D8AD432260B61F00C8815B /* ToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleView.swift; sourceTree = "<group>"; };
 		81D8AD452261052F00C8815B /* AvailableDeviceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AvailableDeviceCell.xib; sourceTree = "<group>"; };
 		81D8AD4722648EB400C8815B /* AccelerometerMeasurment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelerometerMeasurment.swift; sourceTree = "<group>"; };
+		81D8AD492264CC2400C8815B /* LedCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LedCtrl.swift; sourceTree = "<group>"; };
 		81E09C3222569CA200CE21EB /* OllysProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OllysProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81E09C3522569CA200CE21EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81E09C3A22569CA200CE21EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				81E09C522256CC3000CE21EB /* DeviceCard.swift */,
 				81D8AD2E225F502A00C8815B /* DeviceCtrl.swift */,
 				81D8AD4722648EB400C8815B /* AccelerometerMeasurment.swift */,
+				81D8AD492264CC2400C8815B /* LedCtrl.swift */,
 			);
 			path = OllysProject;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				81E09C532256CC3000CE21EB /* DeviceCard.swift in Sources */,
 				81E09C5A2256DCF100CE21EB /* NamingViewCtrl.swift in Sources */,
 				81D8AD3622609C1700C8815B /* SetUpDeviceViewCtrl.swift in Sources */,
+				81D8AD4A2264CC2400C8815B /* LedCtrl.swift in Sources */,
 				81E09C562256D40300CE21EB /* Typealiases.swift in Sources */,
 				81D8AD29225C017600C8815B /* Dictionary+.swift in Sources */,
 				81E09C512256CC0700CE21EB /* MetaWear+.swift in Sources */,

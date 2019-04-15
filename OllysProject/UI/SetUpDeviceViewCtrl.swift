@@ -106,7 +106,7 @@ class SetUpDeviceViewCtrl: UIViewController {
                 Log.error("could not connect with device: \(device)")
                 return
             }
-            ctrl.startFlashing()
+            ctrl.startFlashing(.green)
         }
     }
 
