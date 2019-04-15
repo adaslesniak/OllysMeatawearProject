@@ -43,18 +43,26 @@ class DeviceCtrl: CustomStringConvertible {
     
     private var accelerometerSignal: OpaquePointer? = nil
     var isAccelerometering: Bool { return accelerometerSignal != nil }
+    private var accelerometeringTask: TaskCompletionSource<AccelerometerMeasurment>? = nil
     func startAccelerometering() {
         mbl_mw_acc_set_range(device.board, 8.0)
         mbl_mw_acc_write_acceleration_config(device.board)
         accelerometerSignal = mbl_mw_acc_get_acceleration_data_signal(device.board)
         
-        let taskCompletion = TaskCompletionSource<MblMwCartesianFloat>() //that is something wrong - it's probably wrong type.. not a <String> it seems
-        mbl_mw_datasignal_subscribe(accelerometerSignal!, bridgeRetained(obj: taskCompletion)) { (context, dataPtr) in
-            //let callback: TaskCompletionSource<MblMwData> = bridgeTransfer(ptr: context!)
+        accelerometeringTask = TaskCompletionSource<AccelerometerMeasurment>() //something wrong - it's probably wrong type.. not a <String> it seems
+        mbl_mw_datasignal_subscribe(accelerometerSignal!, bridge(obj: accelerometeringTask!)) { (context, dataPtr) in
             guard let data = AccelerometerMeasurment(dataPtr) else {
                 return
             }
-            print("data ok, but callback NOT_IMPLEMENTED: \(data)")
+            //print("data ok: \(data)")
+            print("data[\(data != nil)],  context\(context != nil)")
+            print("trying to bridge transfer context - whatever that means :D")
+            let callback: TaskCompletionSource<AccelerometerMeasurment> = bridge(ptr: context!)
+            print("success methink, callback: \(callback)")
+            let isMoreBetter = callback.trySet(result: data)
+            //callback.set(result: data)
+            //print("even more success: \(isMoreBetter)")
+            
         }
         mbl_mw_acc_enable_acceleration_sampling(device.board)
         mbl_mw_acc_start(device.board)
