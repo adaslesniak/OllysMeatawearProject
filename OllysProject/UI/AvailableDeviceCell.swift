@@ -63,10 +63,10 @@ class AvailableDeviceCell: UITableViewCell {
             self?.controlled?.connect {
                 if isOn {
                     self?.controlled?.startAccelerometering { measurment in
-                        print("HURRAY...: \(measurment)")
+                        Log.debug("acceleration: \(measurment)")
                     }
                 } else {
-                    self?.controlled?.stopAccelrometering()
+                    self?.controlled?.stopAccelerometering()
                 }
             }
             Log.debug("toggled accelerometer on \(self?.controlled?.name ?? "nil") to \(self?.isAccelerometering.isOn.description ?? "nil")", on: .userAction)
@@ -77,15 +77,30 @@ class AvailableDeviceCell: UITableViewCell {
     }
     
     private func keepCheckingDevice() {
-        return
-        if controlled?.isConnected == false {
-            Log.warning("device from cell isn't connected")
-            ExecuteOnMain {
-                self.resetToggles()
+        func resume(after delay: Double) {
+            ExecuteOnMain(after: delay) { [weak self] in
+                self?.keepCheckingDevice()
             }
         }
-        ExecuteOnMain(after: 0.7) { [weak self] in
-            self?.keepCheckingDevice()
+        guard controlled?.isConnected != true else {
+            resume(after: 0.66)
+            return //all is fine
+        }
+        if controlled == nil {
+            Log.error("how that can be?!")
+            self.resetToggles() //that is not possible
+            resume(after: 0.9)
+            return
+        }
+        var didConnect = false
+        controlled?.connect() {
+            didConnect = true
+        }
+        let timeout = 1.88
+        ExecuteOnMain(after: timeout) { [weak self] in
+            if !didConnect {
+                self?.resetToggles()
+            }
         }
     }
     

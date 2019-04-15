@@ -11,6 +11,7 @@ class DeviceCtrl: CustomStringConvertible {
     public let device: MetaWear
     internal private(set) var name: String
     private var ledsCtrl: LedCtrl! //should be let, but can't initialize properly then
+    private var accelerometerCtrl: AccelerometerCtrl!
     
     var id: UUID { return device.peripheral.identifier }
     
@@ -19,45 +20,11 @@ class DeviceCtrl: CustomStringConvertible {
         self.device = device
         self.name = name ?? device.name
         self.ledsCtrl = LedCtrl(self)
+        self.accelerometerCtrl = AccelerometerCtrl(self)
     }
     
-    private class AccelerometerListenerObj : Any {
-        var signal: OpaquePointer
-        var callback: (UnsafePointer<MblMwData>?) -> Void
-        init(_ withSinal: OpaquePointer, withCallback: @escaping (UnsafePointer<MblMwData>?) -> Void) {
-            signal = withSinal
-            callback = withCallback
-        }
-    }
     
-    private var accelerometerListener: AccelerometerListenerObj? = nil
-    var isAccelerometering: Bool { return accelerometerListener != nil }
-    func startAccelerometering(_ listener: @escaping (AccelerometerMeasurment) -> Void) {
-        guard !isAccelerometering else {
-            return
-        }
-        mbl_mw_acc_set_range(device.board, 8.0)
-        mbl_mw_acc_write_acceleration_config(device.board)
-        let signal: OpaquePointer = mbl_mw_acc_get_acceleration_data_signal(device.board)
-        accelerometerListener = AccelerometerListenerObj(signal) { [weak self] dataPtr in
-            guard let self = self, let data = AccelerometerMeasurment(dataPtr, device: self.device) else {
-                return
-            }
-            listener(data)
-        }
-        mbl_mw_datasignal_subscribe(signal, bridge(obj: accelerometerListener!)) { (context, dataPtr) in
-            let listener: AccelerometerListenerObj = bridge(ptr: context!)
-            listener.callback(dataPtr)
-        }
-        mbl_mw_acc_enable_acceleration_sampling(device.board)
-        mbl_mw_acc_start(device.board)
-    }
-    func stopAccelrometering() {
-        mbl_mw_acc_stop(device.board)
-        mbl_mw_acc_disable_acceleration_sampling(device.board);
-        mbl_mw_datasignal_unsubscribe(accelerometerListener?.signal)
-        accelerometerListener = nil
-    }
+    
     
     func disconnect() {
         device.cancelConnection()
@@ -84,13 +51,31 @@ class DeviceCtrl: CustomStringConvertible {
 
     
     func startFlashing(_ color: LedColor) {
-        ledsCtrl.startFlashing(color)
+        connect { [weak self] in
+            self?.ledsCtrl.startFlashing(color)
+        }
     }
     func turnOnLed(_ color: LedColor) {
-        ledsCtrl.turnOnLed(color)
+        connect { [weak self] in
+            self?.ledsCtrl.turnOnLed(color)
+        }
     }
     func turnOffLed(_ color: LedColor = .all) {
-        ledsCtrl.turnOffLed(color)
+        connect { [weak self] in //TODO: consider if in this case there should be no strong self, but deinit calls it, so it would never deinit?
+            self?.ledsCtrl.turnOffLed(color)
+        }
+    }
+    
+    
+    func startAccelerometering(_ listener: @escaping (AccelerometerMeasurment) -> Void) {
+        connect { [weak self] in
+            self?.accelerometerCtrl.startAccelerometering(listener)
+        }
+    }
+    func stopAccelerometering() {
+        connect { [weak self] in
+            self?.accelerometerCtrl.stopAccelrometering()
+        }
     }
     
     

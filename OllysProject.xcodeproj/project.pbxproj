@@ -22,6 +22,7 @@
 		81D8AD462261052F00C8815B /* AvailableDeviceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81D8AD452261052F00C8815B /* AvailableDeviceCell.xib */; };
 		81D8AD4822648EB400C8815B /* AccelerometerMeasurment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D8AD4722648EB400C8815B /* AccelerometerMeasurment.swift */; };
 		81D8AD4A2264CC2400C8815B /* LedCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D8AD492264CC2400C8815B /* LedCtrl.swift */; };
+		81D8AD4C2264D08000C8815B /* AccelerometerCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D8AD4B2264D08000C8815B /* AccelerometerCtrl.swift */; };
 		81E09C3622569CA200CE21EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E09C3522569CA200CE21EB /* AppDelegate.swift */; };
 		81E09C3B22569CA200CE21EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81E09C3922569CA200CE21EB /* Main.storyboard */; };
 		81E09C3D22569CA300CE21EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81E09C3C22569CA300CE21EB /* Assets.xcassets */; };
@@ -54,6 +55,7 @@
 		81D8AD452261052F00C8815B /* AvailableDeviceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AvailableDeviceCell.xib; sourceTree = "<group>"; };
 		81D8AD4722648EB400C8815B /* AccelerometerMeasurment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelerometerMeasurment.swift; sourceTree = "<group>"; };
 		81D8AD492264CC2400C8815B /* LedCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LedCtrl.swift; sourceTree = "<group>"; };
+		81D8AD4B2264D08000C8815B /* AccelerometerCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelerometerCtrl.swift; sourceTree = "<group>"; };
 		81E09C3222569CA200CE21EB /* OllysProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OllysProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81E09C3522569CA200CE21EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81E09C3A22569CA200CE21EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				81E09C522256CC3000CE21EB /* DeviceCard.swift */,
 				81D8AD2E225F502A00C8815B /* DeviceCtrl.swift */,
 				81D8AD4722648EB400C8815B /* AccelerometerMeasurment.swift */,
+				81D8AD4B2264D08000C8815B /* AccelerometerCtrl.swift */,
 				81D8AD492264CC2400C8815B /* LedCtrl.swift */,
 			);
 			path = OllysProject;
@@ -310,6 +313,7 @@
 				81D8AD312260977100C8815B /* HomeViewCtrl.swift in Sources */,
 				81D8AD2B225C01C600C8815B /* PersistentDictionary.swift in Sources */,
 				81E09C3622569CA200CE21EB /* AppDelegate.swift in Sources */,
+				81D8AD4C2264D08000C8815B /* AccelerometerCtrl.swift in Sources */,
 				81D8AD442260B61F00C8815B /* ToggleView.swift in Sources */,
 				81D8AD412260B26A00C8815B /* AvailableDeviceCell.swift in Sources */,
 			);
