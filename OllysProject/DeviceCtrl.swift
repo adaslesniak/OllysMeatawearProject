@@ -48,17 +48,13 @@ class DeviceCtrl: CustomStringConvertible {
         mbl_mw_acc_write_acceleration_config(device.board)
         accelerometerSignal = mbl_mw_acc_get_acceleration_data_signal(device.board)
         
-        let taskCompletion = TaskCompletionSource<String>() //that is something wrong - it's probably wrong type.. not a <String> it seems
+        let taskCompletion = TaskCompletionSource<MblMwCartesianFloat>() //that is something wrong - it's probably wrong type.. not a <String> it seems
         mbl_mw_datasignal_subscribe(accelerometerSignal!, bridgeRetained(obj: taskCompletion)) { (context, dataPtr) in
-            print("frick...")
-            //let callback: TaskCompletionSource<String> = bridgeTransfer(ptr: context!)
-            if let data = dataPtr?.pointee {
-                print("result of accelerometer: \(data)")
-                //callback.set(result: data.valueAs()) //data.valueAs is breaking sassertiong at MetaWearData.swift line 88
-            } else {
-                print("error in accelerometer)")
-                //callback.set(error: MetaWearError.operationFailed(message: "failed not read mac"))
+            //let callback: TaskCompletionSource<MblMwData> = bridgeTransfer(ptr: context!)
+            guard let data = AccelerometerMeasurment(dataPtr) else {
+                return
             }
+            print("data ok, but callback NOT_IMPLEMENTED: \(data)")
         }
         mbl_mw_acc_enable_acceleration_sampling(device.board)
         mbl_mw_acc_start(device.board)
