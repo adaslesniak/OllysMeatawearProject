@@ -4,6 +4,7 @@ import MetaWearCpp
 import BoltsSwift
 import Foundation
 
+typealias AccelerometerCallback = (AccelerometerMeasurment) -> Void
 
 //wrapper around MetaWear with api limited to this project functionality
 class DeviceCtrl: CustomStringConvertible {
@@ -41,28 +42,31 @@ class DeviceCtrl: CustomStringConvertible {
         self.name = name ?? device.name
     }
     
+    private class ACH : Any {
+        public var value: AccelerometerCallback = { _ in }
+    }
+    private var accelerometerListener: ACH? = nil
     private var accelerometerSignal: OpaquePointer? = nil
     var isAccelerometering: Bool { return accelerometerSignal != nil }
     private var accelerometeringTask: TaskCompletionSource<AccelerometerMeasurment>? = nil
-    func startAccelerometering() {
+    func startAccelerometering(_ listener: @escaping (AccelerometerMeasurment) -> Void) {
         mbl_mw_acc_set_range(device.board, 8.0)
         mbl_mw_acc_write_acceleration_config(device.board)
         accelerometerSignal = mbl_mw_acc_get_acceleration_data_signal(device.board)
         
-        accelerometeringTask = TaskCompletionSource<AccelerometerMeasurment>() //something wrong - it's probably wrong type.. not a <String> it seems
-        mbl_mw_datasignal_subscribe(accelerometerSignal!, bridge(obj: accelerometeringTask!)) { (context, dataPtr) in
+        accelerometerListener = ACH()
+        accelerometerListener?.value = { result in
+            print("FUCK YEAH")
+            listener(result)
+        }
+        
+        mbl_mw_datasignal_subscribe(accelerometerSignal!, bridge(obj: accelerometerListener!)) { (context, dataPtr) in
             guard let data = AccelerometerMeasurment(dataPtr) else {
                 return
             }
-            //print("data ok: \(data)")
-            print("data[\(data != nil)],  context\(context != nil)")
-            print("trying to bridge transfer context - whatever that means :D")
-            let callback: TaskCompletionSource<AccelerometerMeasurment> = bridge(ptr: context!)
+            let callback: ACH = bridge(ptr: context!)
+            callback.value(data)
             print("success methink, callback: \(callback)")
-            let isMoreBetter = callback.trySet(result: data)
-            //callback.set(result: data)
-            //print("even more success: \(isMoreBetter)")
-            
         }
         mbl_mw_acc_enable_acceleration_sampling(device.board)
         mbl_mw_acc_start(device.board)

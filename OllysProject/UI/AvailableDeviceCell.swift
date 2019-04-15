@@ -62,7 +62,9 @@ class AvailableDeviceCell: UITableViewCell {
         isAccelerometering.setAction { [weak self] isOn in
             self?.controlled?.connect {
                 if isOn {
-                    self?.controlled?.startAccelerometering()
+                    self?.controlled?.startAccelerometering { measurment in
+                        print("HURRAY...: \(measurment)")
+                    }
                 } else {
                     self?.controlled?.stopAccelrometering()
                 }
