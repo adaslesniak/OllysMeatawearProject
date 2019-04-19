@@ -2,7 +2,7 @@
 import UIKit
 
 
-class AvailableDevicesViewCtrl: UIViewController, UITableViewDataSource { //, UITableViewDelegate {//, UITableViewDelegate, UITableViewDataSource {
+class AvailableDevicesViewCtrl: UIViewController, UITableViewDataSource {
     
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var devicesTable: UITableView!
@@ -27,13 +27,37 @@ class AvailableDevicesViewCtrl: UIViewController, UITableViewDataSource { //, UI
     func refresh() {
         Devices.scanForKnownDevices { [weak self] result in
             ExecuteOnMain {
+                guard let self = self else {
+                    return
+                }
+                //FIXME: don't reload valid cells - just remove invalid ones, fix valid ones... hmmm
+                //that means implement DeviceCtrl which is stored independently from cell? or at init of cell figure out state of led/streams
                 Log.debug("found \(result.count) accessible devices")
-                //TODO: compare available and result - only if different, then apply and reload
-                self?.available = result
-                self?.devicesTable?.reloadData()
+                var isChanged = self.available.count != result.count
+                //TODO: find || implement abstract method which does compare two arrays of T where T is equatable
+                if !isChanged {
+                    for element in result {
+                        if !self.available.contains(where: { $0.id == element.id }) {
+                            isChanged = true
+                            break
+                        }
+                    }
+                }
+                if !isChanged {
+                    for element in self.available {
+                        if !result.contains(where: { $0.id == element.id }) {
+                            isChanged = true
+                            break
+                        }
+                    }
+                }
+                if isChanged {
+                    self.available = result
+                    self.devicesTable?.reloadData()
+                }
             }
             ExecuteInBackground(after: 1.7) {
-                //self?.refresh() //constant refreshing so table is in sync
+                self?.refresh() //constant refreshing so table is in sync
             }
         }
     }
