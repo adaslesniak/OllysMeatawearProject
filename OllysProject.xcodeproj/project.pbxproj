@@ -37,7 +37,18 @@
 		81E09C5A2256DCF100CE21EB /* NamingViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E09C592256DCF100CE21EB /* NamingViewCtrl.swift */; };
 		81E09C5C2256DD0A00CE21EB /* NamingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81E09C5B2256DD0A00CE21EB /* NamingView.xib */; };
 		81E09C6022581B1B00CE21EB /* Thread+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E09C5F22581B1A00CE21EB /* Thread+.swift */; };
+		81E8FF47226B3D2B00708DD0 /* OllysLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81E8FF46226B3CBC00708DD0 /* OllysLibrary.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		81E8FF45226B3CBC00708DD0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 81E8FF41226B3CBC00708DD0 /* OllysLibrary.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 819E6796226B2AB10021BBA8;
+			remoteInfo = OllysLibrary;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		6FED26A07F1C7A857897D524 /* Pods_OllysProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OllysProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +83,7 @@
 		81E09C592256DCF100CE21EB /* NamingViewCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamingViewCtrl.swift; sourceTree = "<group>"; };
 		81E09C5B2256DD0A00CE21EB /* NamingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NamingView.xib; sourceTree = "<group>"; };
 		81E09C5F22581B1A00CE21EB /* Thread+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Thread+.swift"; sourceTree = "<group>"; };
+		81E8FF41226B3CBC00708DD0 /* OllysLibrary.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OllysLibrary.xcodeproj; path = OllysLibrary/OllysLibrary.xcodeproj; sourceTree = "<group>"; };
 		89FFC2ABBB881D0E48E7E92A /* Pods-OllysProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OllysProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-OllysProject/Pods-OllysProject.release.xcconfig"; sourceTree = "<group>"; };
 		EE8BBB570C2BD6F902C7E9F0 /* Pods-OllysProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OllysProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OllysProject/Pods-OllysProject.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81E8FF47226B3D2B00708DD0 /* OllysLibrary.framework in Frameworks */,
 				6BC5CC1993C63369A7B68C78 /* Pods_OllysProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -120,6 +133,7 @@
 		81E09C2922569CA200CE21EB = {
 			isa = PBXGroup;
 			children = (
+				81E8FF41226B3CBC00708DD0 /* OllysLibrary.xcodeproj */,
 				81E09C542256D3AF00CE21EB /* SwiftSugar */,
 				81E09C3422569CA200CE21EB /* OllysProject */,
 				81E09C3322569CA200CE21EB /* Products */,
@@ -166,6 +180,14 @@
 				81E09C552256D40300CE21EB /* Typealiases.swift */,
 			);
 			path = SwiftSugar;
+			sourceTree = "<group>";
+		};
+		81E8FF42226B3CBC00708DD0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				81E8FF46226B3CBC00708DD0 /* OllysLibrary.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		FE8AF19B2AE2F577F7AEA8CD /* Frameworks */ = {
@@ -224,12 +246,28 @@
 			mainGroup = 81E09C2922569CA200CE21EB;
 			productRefGroup = 81E09C3322569CA200CE21EB /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 81E8FF42226B3CBC00708DD0 /* Products */;
+					ProjectRef = 81E8FF41226B3CBC00708DD0 /* OllysLibrary.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				81E09C3122569CA200CE21EB /* OllysProject */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		81E8FF46226B3CBC00708DD0 /* OllysLibrary.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OllysLibrary.framework;
+			remoteRef = 81E8FF45226B3CBC00708DD0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		81E09C3022569CA200CE21EB /* Resources */ = {
