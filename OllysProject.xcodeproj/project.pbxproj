@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8170888D226B8AD300DDA658 /* OllysLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81E8FF46226B3CBC00708DD0 /* OllysLibrary.framework */; };
+		8170888E226B8AD300DDA658 /* OllysLibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 81E8FF46226B3CBC00708DD0 /* OllysLibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		81D8AD2D225D096E00C8815B /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D8AD2C225D096E00C8815B /* CircleView.swift */; };
 		81D8AD312260977100C8815B /* HomeViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D8AD302260977100C8815B /* HomeViewCtrl.swift */; };
 		81D8AD332260982700C8815B /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81D8AD322260982700C8815B /* HomeView.xib */; };
@@ -23,10 +25,16 @@
 		81E09C4B2256AE2B00CE21EB /* SetUpDeviceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81E09C4A2256AE2B00CE21EB /* SetUpDeviceView.xib */; };
 		81E09C5A2256DCF100CE21EB /* NamingViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E09C592256DCF100CE21EB /* NamingViewCtrl.swift */; };
 		81E09C5C2256DD0A00CE21EB /* NamingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81E09C5B2256DD0A00CE21EB /* NamingView.xib */; };
-		81E8FF47226B3D2B00708DD0 /* OllysLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81E8FF46226B3CBC00708DD0 /* OllysLibrary.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		8170888F226B8AD300DDA658 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 81E8FF41226B3CBC00708DD0 /* OllysLibrary.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 819E6795226B2AB10021BBA8;
+			remoteInfo = OllysLibrary;
+		};
 		81E8FF45226B3CBC00708DD0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 81E8FF41226B3CBC00708DD0 /* OllysLibrary.xcodeproj */;
@@ -35,6 +43,20 @@
 			remoteInfo = OllysLibrary;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		81708891226B8AD300DDA658 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8170888E226B8AD300DDA658 /* OllysLibrary.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		81D8AD2C225D096E00C8815B /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
@@ -56,8 +78,6 @@
 		81E09C592256DCF100CE21EB /* NamingViewCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamingViewCtrl.swift; sourceTree = "<group>"; };
 		81E09C5B2256DD0A00CE21EB /* NamingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NamingView.xib; sourceTree = "<group>"; };
 		81E8FF41226B3CBC00708DD0 /* OllysLibrary.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OllysLibrary.xcodeproj; path = OllysLibrary/OllysLibrary.xcodeproj; sourceTree = "<group>"; };
-		81EA1400226B613400D962E2 /* BoltsSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BoltsSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		81EA1402226B613C00D962E2 /* MetaWear.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MetaWear.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81E8FF47226B3D2B00708DD0 /* OllysLibrary.framework in Frameworks */,
+				8170888D226B8AD300DDA658 /* OllysLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,8 +153,6 @@
 		81EA13FF226B613400D962E2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				81EA1402226B613C00D962E2 /* MetaWear.framework */,
-				81EA1400226B613400D962E2 /* BoltsSwift.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -149,10 +167,12 @@
 				81E09C2E22569CA200CE21EB /* Sources */,
 				81E09C2F22569CA200CE21EB /* Frameworks */,
 				81E09C3022569CA200CE21EB /* Resources */,
+				81708891226B8AD300DDA658 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				81708890226B8AD300DDA658 /* PBXTargetDependency */,
 			);
 			name = OllysProject;
 			productName = OllysProject;
@@ -243,6 +263,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		81708890226B8AD300DDA658 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OllysLibrary;
+			targetProxy = 8170888F226B8AD300DDA658 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		81E09C3922569CA200CE21EB /* Main.storyboard */ = {
@@ -383,6 +411,7 @@
 		81E09C4522569CA300CE21EB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z683BMN45B;
@@ -406,6 +435,7 @@
 		81E09C4622569CA300CE21EB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z683BMN45B;

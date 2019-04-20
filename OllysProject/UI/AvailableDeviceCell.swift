@@ -31,7 +31,7 @@ class AvailableDeviceCell: UITableViewCell {
     }
     
     func setup(_ withDevice: DeviceCtrl) {
-        Log.debug("setting up cell for device: \(withDevice.device.name)")
+        Log.debug("setting up cell for device: \(withDevice.name)")
         controlled = withDevice
         title.text = withDevice.name
         id.text = withDevice.id.description

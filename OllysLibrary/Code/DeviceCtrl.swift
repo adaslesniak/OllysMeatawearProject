@@ -1,37 +1,35 @@
 // DeviceCtrl.swift [OllysProject] created by: Adas Lesniak on: 11/04/2019 
-import MetaWear
-import MetaWearCpp
-import BoltsSwift
+//import MetaWear
 import Foundation
 
 
 //wrapper around MetaWear with api limited to this project functionality
 public class DeviceCtrl: CustomStringConvertible {
     
-    public let device: MetaWear
-    public private(set) var name: String
+    //let device: MetaWear
+    public private(set) var name: String = "unnamed"
     private var ledsCtrl: LedCtrl! //should be let, but can't initialize properly then
     private var accelerometerCtrl: AccelerometerCtrl!
     
-    public var id: UUID { return device.peripheral.identifier }
+    public var id: UUID { return UUID() } //return device.peripheral.identifier }
     
     
-    public init(_ device: MetaWear, as name: String? = nil) {
+    /*init(_ device: MetaWear, as name: String? = nil) {
         self.device = device
         self.name = name ?? device.name
         self.ledsCtrl = LedCtrl(self)
         self.accelerometerCtrl = AccelerometerCtrl(self)
-    }
+    }*/
     
     public func disconnect() {
-        device.cancelConnection()
+        //device.cancelConnection()
     }
     
     public func connect(_ whenReady: Action? = nil) {
         if isConnected {
             whenReady?()
         } else {
-            device.connectAndSetup().continueWith { [weak self] answer in
+            /*device.connectAndSetup().continueWith { [weak self] answer in
                 guard let self = self else {
                     return
                 }
@@ -40,44 +38,45 @@ public class DeviceCtrl: CustomStringConvertible {
                     return
                 }
                 whenReady?()
-            }
+            }*/
         }
     }
     
-    public var isConnected: Bool { return device.isConnectedAndSetup }
+    public var isConnected: Bool { return false } //device.isConnectedAndSetup }
 
     
     public func startFlashing(_ color: LedColor) {
         connect { [weak self] in
-            self?.ledsCtrl.startFlashing(color)
+            //self?.ledsCtrl.startFlashing(color)
         }
     }
     public func turnOnLed(_ color: LedColor) {
         connect { [weak self] in
-            self?.ledsCtrl.turnOnLed(color)
+            //self?.ledsCtrl.turnOnLed(color)
         }
     }
     public func turnOffLed(_ color: LedColor = .all) {
         connect { [weak self] in //TODO: consider if in this case there should be no strong self, but deinit calls it, so it would never deinit?
-            self?.ledsCtrl.turnOffLed(color)
+            //self?.ledsCtrl.turnOffLed(color)
         }
     }
     
     
     public func startAccelerometering(_ listener: @escaping (AccelerometerMeasurment) -> Void) {
         connect { [weak self] in
-            self?.accelerometerCtrl.startAccelerometering(listener)
+            //self?.accelerometerCtrl.startAccelerometering(listener)
         }
     }
     public func stopAccelerometering() {
         connect { [weak self] in
-            self?.accelerometerCtrl.stopAccelrometering()
+            //self?.accelerometerCtrl.stopAccelrometering()
         }
     }
     
     
     public var description: String {
-        return "[\(device.name): \(device.peripheral.identifier)]"
+        return "disabled_code"
+        //return "[\(device.name): \(device.peripheral.identifier)]"
     }
 }
 

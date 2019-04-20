@@ -1,6 +1,5 @@
 // MetaWear+.swift [OllysProject] created by: Adas Lesniak on: 05/04/2019 
-import MetaWear
-import MetaWearCpp
+/*import MetaWear
 import Foundation
 
 
@@ -14,4 +13,4 @@ extension MetaWear {
     
     var id: UUID { return peripheral.identifier }
     
-}
+}*/

@@ -38,7 +38,7 @@ class SetUpDeviceViewCtrl: UIViewController {
                 return
             }
             NamingViewCtrl.presentOver(self) { [weak self] givenName in
-                Devices.remember(checked.device, as: givenName)
+                Devices.remember(checked, as: givenName)
                 self?.scanForNearestDevice()
                 self?.placeholder.adjust(border: self?.pinkLight)
                 self?.confirmatioPanel.isHidden = true
