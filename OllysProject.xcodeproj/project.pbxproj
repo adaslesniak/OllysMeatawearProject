@@ -7,11 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6BC5CC1993C63369A7B68C78 /* Pods_OllysProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FED26A07F1C7A857897D524 /* Pods_OllysProject.framework */; };
-		81D8AD29225C017600C8815B /* Dictionary+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D8AD28225C017600C8815B /* Dictionary+.swift */; };
-		81D8AD2B225C01C600C8815B /* PersistentDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D8AD2A225C01C600C8815B /* PersistentDictionary.swift */; };
 		81D8AD2D225D096E00C8815B /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D8AD2C225D096E00C8815B /* CircleView.swift */; };
-		81D8AD2F225F502A00C8815B /* DeviceCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D8AD2E225F502A00C8815B /* DeviceCtrl.swift */; };
 		81D8AD312260977100C8815B /* HomeViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D8AD302260977100C8815B /* HomeViewCtrl.swift */; };
 		81D8AD332260982700C8815B /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81D8AD322260982700C8815B /* HomeView.xib */; };
 		81D8AD3622609C1700C8815B /* SetUpDeviceViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D8AD3522609C1700C8815B /* SetUpDeviceViewCtrl.swift */; };
@@ -20,23 +16,13 @@
 		81D8AD412260B26A00C8815B /* AvailableDeviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D8AD3F2260B26A00C8815B /* AvailableDeviceCell.swift */; };
 		81D8AD442260B61F00C8815B /* ToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D8AD432260B61F00C8815B /* ToggleView.swift */; };
 		81D8AD462261052F00C8815B /* AvailableDeviceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81D8AD452261052F00C8815B /* AvailableDeviceCell.xib */; };
-		81D8AD4822648EB400C8815B /* AccelerometerMeasurment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D8AD4722648EB400C8815B /* AccelerometerMeasurment.swift */; };
-		81D8AD4A2264CC2400C8815B /* LedCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D8AD492264CC2400C8815B /* LedCtrl.swift */; };
-		81D8AD4C2264D08000C8815B /* AccelerometerCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D8AD4B2264D08000C8815B /* AccelerometerCtrl.swift */; };
 		81E09C3622569CA200CE21EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E09C3522569CA200CE21EB /* AppDelegate.swift */; };
 		81E09C3B22569CA200CE21EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81E09C3922569CA200CE21EB /* Main.storyboard */; };
 		81E09C3D22569CA300CE21EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81E09C3C22569CA300CE21EB /* Assets.xcassets */; };
 		81E09C4022569CA300CE21EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81E09C3E22569CA300CE21EB /* LaunchScreen.storyboard */; };
 		81E09C4B2256AE2B00CE21EB /* SetUpDeviceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81E09C4A2256AE2B00CE21EB /* SetUpDeviceView.xib */; };
-		81E09C4D2256B1C000CE21EB /* Devices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E09C4C2256B1C000CE21EB /* Devices.swift */; };
-		81E09C4F2256B5CC00CE21EB /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E09C4E2256B5CC00CE21EB /* Log.swift */; };
-		81E09C512256CC0700CE21EB /* MetaWear+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E09C502256CC0700CE21EB /* MetaWear+.swift */; };
-		81E09C532256CC3000CE21EB /* DeviceCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E09C522256CC3000CE21EB /* DeviceCard.swift */; };
-		81E09C562256D40300CE21EB /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E09C552256D40300CE21EB /* Typealiases.swift */; };
-		81E09C582256DBF200CE21EB /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E09C572256DBF200CE21EB /* UIView+.swift */; };
 		81E09C5A2256DCF100CE21EB /* NamingViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E09C592256DCF100CE21EB /* NamingViewCtrl.swift */; };
 		81E09C5C2256DD0A00CE21EB /* NamingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81E09C5B2256DD0A00CE21EB /* NamingView.xib */; };
-		81E09C6022581B1B00CE21EB /* Thread+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E09C5F22581B1A00CE21EB /* Thread+.swift */; };
 		81E8FF47226B3D2B00708DD0 /* OllysLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81E8FF46226B3CBC00708DD0 /* OllysLibrary.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,11 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6FED26A07F1C7A857897D524 /* Pods_OllysProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OllysProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		81D8AD28225C017600C8815B /* Dictionary+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+.swift"; sourceTree = "<group>"; };
-		81D8AD2A225C01C600C8815B /* PersistentDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentDictionary.swift; sourceTree = "<group>"; };
 		81D8AD2C225D096E00C8815B /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
-		81D8AD2E225F502A00C8815B /* DeviceCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceCtrl.swift; sourceTree = "<group>"; };
 		81D8AD302260977100C8815B /* HomeViewCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCtrl.swift; sourceTree = "<group>"; };
 		81D8AD322260982700C8815B /* HomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeView.xib; sourceTree = "<group>"; };
 		81D8AD3522609C1700C8815B /* SetUpDeviceViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetUpDeviceViewCtrl.swift; sourceTree = "<group>"; };
@@ -64,9 +46,6 @@
 		81D8AD3F2260B26A00C8815B /* AvailableDeviceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableDeviceCell.swift; sourceTree = "<group>"; };
 		81D8AD432260B61F00C8815B /* ToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleView.swift; sourceTree = "<group>"; };
 		81D8AD452261052F00C8815B /* AvailableDeviceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AvailableDeviceCell.xib; sourceTree = "<group>"; };
-		81D8AD4722648EB400C8815B /* AccelerometerMeasurment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelerometerMeasurment.swift; sourceTree = "<group>"; };
-		81D8AD492264CC2400C8815B /* LedCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LedCtrl.swift; sourceTree = "<group>"; };
-		81D8AD4B2264D08000C8815B /* AccelerometerCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelerometerCtrl.swift; sourceTree = "<group>"; };
 		81E09C3222569CA200CE21EB /* OllysProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OllysProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81E09C3522569CA200CE21EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81E09C3A22569CA200CE21EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -74,18 +53,11 @@
 		81E09C3F22569CA300CE21EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81E09C4122569CA300CE21EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81E09C4A2256AE2B00CE21EB /* SetUpDeviceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetUpDeviceView.xib; sourceTree = "<group>"; };
-		81E09C4C2256B1C000CE21EB /* Devices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Devices.swift; sourceTree = "<group>"; };
-		81E09C4E2256B5CC00CE21EB /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
-		81E09C502256CC0700CE21EB /* MetaWear+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MetaWear+.swift"; sourceTree = "<group>"; };
-		81E09C522256CC3000CE21EB /* DeviceCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceCard.swift; sourceTree = "<group>"; };
-		81E09C552256D40300CE21EB /* Typealiases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
-		81E09C572256DBF200CE21EB /* UIView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		81E09C592256DCF100CE21EB /* NamingViewCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamingViewCtrl.swift; sourceTree = "<group>"; };
 		81E09C5B2256DD0A00CE21EB /* NamingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NamingView.xib; sourceTree = "<group>"; };
-		81E09C5F22581B1A00CE21EB /* Thread+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Thread+.swift"; sourceTree = "<group>"; };
 		81E8FF41226B3CBC00708DD0 /* OllysLibrary.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OllysLibrary.xcodeproj; path = OllysLibrary/OllysLibrary.xcodeproj; sourceTree = "<group>"; };
-		89FFC2ABBB881D0E48E7E92A /* Pods-OllysProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OllysProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-OllysProject/Pods-OllysProject.release.xcconfig"; sourceTree = "<group>"; };
-		EE8BBB570C2BD6F902C7E9F0 /* Pods-OllysProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OllysProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OllysProject/Pods-OllysProject.debug.xcconfig"; sourceTree = "<group>"; };
+		81EA1400226B613400D962E2 /* BoltsSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BoltsSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		81EA1402226B613C00D962E2 /* MetaWear.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MetaWear.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,22 +66,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				81E8FF47226B3D2B00708DD0 /* OllysLibrary.framework in Frameworks */,
-				6BC5CC1993C63369A7B68C78 /* Pods_OllysProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		637BFB7D9B898C6935553CA1 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				EE8BBB570C2BD6F902C7E9F0 /* Pods-OllysProject.debug.xcconfig */,
-				89FFC2ABBB881D0E48E7E92A /* Pods-OllysProject.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		81D8AD342260984B00C8815B /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,11 +96,9 @@
 			isa = PBXGroup;
 			children = (
 				81E8FF41226B3CBC00708DD0 /* OllysLibrary.xcodeproj */,
-				81E09C542256D3AF00CE21EB /* SwiftSugar */,
 				81E09C3422569CA200CE21EB /* OllysProject */,
 				81E09C3322569CA200CE21EB /* Products */,
-				637BFB7D9B898C6935553CA1 /* Pods */,
-				FE8AF19B2AE2F577F7AEA8CD /* Frameworks */,
+				81EA13FF226B613400D962E2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -158,28 +118,8 @@
 				81E09C4122569CA300CE21EB /* Info.plist */,
 				81E09C3922569CA200CE21EB /* Main.storyboard */,
 				81E09C3E22569CA300CE21EB /* LaunchScreen.storyboard */,
-				81E09C4C2256B1C000CE21EB /* Devices.swift */,
-				81E09C4E2256B5CC00CE21EB /* Log.swift */,
-				81E09C502256CC0700CE21EB /* MetaWear+.swift */,
-				81E09C522256CC3000CE21EB /* DeviceCard.swift */,
-				81D8AD2E225F502A00C8815B /* DeviceCtrl.swift */,
-				81D8AD4722648EB400C8815B /* AccelerometerMeasurment.swift */,
-				81D8AD4B2264D08000C8815B /* AccelerometerCtrl.swift */,
-				81D8AD492264CC2400C8815B /* LedCtrl.swift */,
 			);
 			path = OllysProject;
-			sourceTree = "<group>";
-		};
-		81E09C542256D3AF00CE21EB /* SwiftSugar */ = {
-			isa = PBXGroup;
-			children = (
-				81D8AD2A225C01C600C8815B /* PersistentDictionary.swift */,
-				81D8AD28225C017600C8815B /* Dictionary+.swift */,
-				81E09C5F22581B1A00CE21EB /* Thread+.swift */,
-				81E09C572256DBF200CE21EB /* UIView+.swift */,
-				81E09C552256D40300CE21EB /* Typealiases.swift */,
-			);
-			path = SwiftSugar;
 			sourceTree = "<group>";
 		};
 		81E8FF42226B3CBC00708DD0 /* Products */ = {
@@ -190,10 +130,11 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FE8AF19B2AE2F577F7AEA8CD /* Frameworks */ = {
+		81EA13FF226B613400D962E2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6FED26A07F1C7A857897D524 /* Pods_OllysProject.framework */,
+				81EA1402226B613C00D962E2 /* MetaWear.framework */,
+				81EA1400226B613400D962E2 /* BoltsSwift.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -205,11 +146,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 81E09C4422569CA300CE21EB /* Build configuration list for PBXNativeTarget "OllysProject" */;
 			buildPhases = (
-				8B9750AAF84671A705E16319 /* [CP] Check Pods Manifest.lock */,
 				81E09C2E22569CA200CE21EB /* Sources */,
 				81E09C2F22569CA200CE21EB /* Frameworks */,
 				81E09C3022569CA200CE21EB /* Resources */,
-				E6A488D3F9A04CD9B354EB2F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -287,71 +226,17 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		8B9750AAF84671A705E16319 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-OllysProject-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E6A488D3F9A04CD9B354EB2F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-OllysProject/Pods-OllysProject-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Bolts-Swift/BoltsSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/MetaWear/MetaWear.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BoltsSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MetaWear.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OllysProject/Pods-OllysProject-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		81E09C2E22569CA200CE21EB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81D8AD4822648EB400C8815B /* AccelerometerMeasurment.swift in Sources */,
-				81D8AD2F225F502A00C8815B /* DeviceCtrl.swift in Sources */,
-				81E09C4D2256B1C000CE21EB /* Devices.swift in Sources */,
-				81E09C532256CC3000CE21EB /* DeviceCard.swift in Sources */,
 				81E09C5A2256DCF100CE21EB /* NamingViewCtrl.swift in Sources */,
 				81D8AD3622609C1700C8815B /* SetUpDeviceViewCtrl.swift in Sources */,
-				81D8AD4A2264CC2400C8815B /* LedCtrl.swift in Sources */,
-				81E09C562256D40300CE21EB /* Typealiases.swift in Sources */,
-				81D8AD29225C017600C8815B /* Dictionary+.swift in Sources */,
-				81E09C512256CC0700CE21EB /* MetaWear+.swift in Sources */,
-				81E09C582256DBF200CE21EB /* UIView+.swift in Sources */,
-				81E09C6022581B1B00CE21EB /* Thread+.swift in Sources */,
 				81D8AD3822609E9700C8815B /* AvailableDevicesViewCtrl.swift in Sources */,
-				81E09C4F2256B5CC00CE21EB /* Log.swift in Sources */,
 				81D8AD2D225D096E00C8815B /* CircleView.swift in Sources */,
 				81D8AD312260977100C8815B /* HomeViewCtrl.swift in Sources */,
-				81D8AD2B225C01C600C8815B /* PersistentDictionary.swift in Sources */,
 				81E09C3622569CA200CE21EB /* AppDelegate.swift in Sources */,
-				81D8AD4C2264D08000C8815B /* AccelerometerCtrl.swift in Sources */,
 				81D8AD442260B61F00C8815B /* ToggleView.swift in Sources */,
 				81D8AD412260B26A00C8815B /* AvailableDeviceCell.swift in Sources */,
 			);
@@ -497,11 +382,14 @@
 		};
 		81E09C4522569CA300CE21EB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EE8BBB570C2BD6F902C7E9F0 /* Pods-OllysProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z683BMN45B;
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)//OllysLibrary/Pods",
+				);
 				INFOPLIST_FILE = OllysProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -517,11 +405,14 @@
 		};
 		81E09C4622569CA300CE21EB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89FFC2ABBB881D0E48E7E92A /* Pods-OllysProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z683BMN45B;
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)//OllysLibrary/Pods",
+				);
 				INFOPLIST_FILE = OllysProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (

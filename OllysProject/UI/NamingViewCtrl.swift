@@ -1,5 +1,6 @@
 // NamingViewCtrl.swift [OllysProject] created by: Adas Lesniak on: 05/04/2019
 import UIKit
+import OllysLibrary
 
 
 class NamingViewCtrl: UIViewController, UITextFieldDelegate {

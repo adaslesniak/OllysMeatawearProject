@@ -1,7 +1,6 @@
 // AvailableDeviceCellTableViewCell.swift [OllysProject] created by: Adas Lesniak on: 12/04/2019 
-// Copyright ©Aulendil   All rights reserved.
-
 import UIKit
+import OllysLibrary
 
 
 //FIXME: this name sucks, it isn't clear

@@ -1,6 +1,6 @@
 //created by: Adas Lesniak on: 04/04/2019
 import UIKit
-import MetaWear
+import OllysLibrary
 
 
 class SetUpDeviceViewCtrl: UIViewController {
@@ -63,7 +63,7 @@ class SetUpDeviceViewCtrl: UIViewController {
             return
         }
         Log.printDevices(Devices.known, header: "devices known before scan for new device")
-        Devices.scanForNewDevices { [weak self] result in
+        /*Devices.scanForNewDevices { [weak self] result in
             do {
                 Log.debug("scanned \(result.count) new devices", on: .bluetooth)
                 guard let closest = result.keys.sorted(by: { $0.signal?.strength ?? -10000 > $1.signal?.strength ?? -10000 }).first else {
@@ -80,7 +80,7 @@ class SetUpDeviceViewCtrl: UIViewController {
                 }
                 ExecuteOnMain {
                     self?.placeholder.adjust(border: self?.pinkIntensive)
-                    self?.learnDevice(closestDevice)
+                    self?.learnDevice(DeviceCtrl(closestDevice))
                 }
             } catch {
                 Log.debug("no new device in close range: \(error.localizedDescription)")
@@ -88,27 +88,26 @@ class SetUpDeviceViewCtrl: UIViewController {
                     self?.scanForNearestDevice()
                 }
             }
-        }
+        }*/
     }
     
     
-    private func learnDevice(_ device: MetaWear) {
-        let ctrl = DeviceCtrl(device)
+    /*private func learnDevice(_ device: DeviceCtrl) {
         ExecuteOnMain {
-            if self.checkedDevice !== ctrl {
+            if self.checkedDevice !== device {
                 self.checkedDevice?.turnOffLed() //that's just being overcautio
             }
-            self.checkedDevice = ctrl  //that is... ugly way to pass argument to anonymous method (assigned in view did load to yes button)
+            self.checkedDevice = device  //that is... ugly way to pass argument to anonymous method (assigned in view did load to yes button)
             self.confirmatioPanel.isHidden = false //TODO: that is unclear, it's far from obvious what happens next (new viewCtrl happens and when it finish block assigned to yes button in view did load). Refactor this!
         }
-        device.connectAndSetup().continueWith { task in
+        device.device.connectAndSetup().continueWith { task in
             guard task.error == nil else {
                 Log.error("could not connect with device: \(device)")
                 return
             }
-            ctrl.startFlashing(.green)
+            device.startFlashing(.green)
         }
-    }
+    }*/
 
 
 }

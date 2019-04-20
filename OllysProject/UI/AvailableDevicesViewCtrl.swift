@@ -1,5 +1,6 @@
 // AvailableDevicesViewCtrl.swift [OllysProject] created by: Adas Lesniak on: 12/04/2019
 import UIKit
+import OllysLibrary
 
 
 class AvailableDevicesViewCtrl: UIViewController, UITableViewDataSource {

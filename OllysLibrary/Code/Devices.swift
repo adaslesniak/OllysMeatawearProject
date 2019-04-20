@@ -3,9 +3,9 @@ import MetaWear
 import Foundation
 
 
-class Devices {
+public class Devices {
 
-    static private(set) var known: [DeviceCard] = []
+    public static private(set) var known: [DeviceCard] = []
     public private(set) static var available = [DeviceCtrl]()
     private static var _known: [MetaWear]?
     private static var listeners = [() -> Void]()

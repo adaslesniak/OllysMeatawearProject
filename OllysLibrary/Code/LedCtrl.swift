@@ -3,8 +3,8 @@ import Foundation
 import MetaWear
 
 
-typealias ColorComponents = (r: CGFloat, g: CGFloat, b: CGFloat)
-enum LedColor {
+public typealias ColorComponents = (r: CGFloat, g: CGFloat, b: CGFloat)
+public enum LedColor {
     case red
     case green
     case blue

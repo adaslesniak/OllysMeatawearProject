@@ -1,7 +1,6 @@
-// AppDelegate.swift [] created by: Adas Lesniak on: 04/04/2019 
-// Copyright ©Aulendil   All rights reserved.
-
+// AppDelegate.swift [] created by: Adas Lesniak on: 04/04/2019
 import UIKit
+import OllysLibrary
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

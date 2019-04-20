@@ -6,7 +6,7 @@ import Foundation
 public class Log {
     
     //channels are here so we can later disable some channels to have a clearel log - especially for debug
-    enum Channel {
+    public enum Channel {
         case bluetooth
         case viewNavigation
         case userAction
@@ -15,7 +15,7 @@ public class Log {
     }
     
     static var isIgnoringWarnings = false
-    enum Level : Int {
+    public enum Level : Int {
         case debug = 0
         case warning = 1
         case error = 2
@@ -29,22 +29,22 @@ public class Log {
         }
     }
     
-    static var enabledChannels: [Channel] = [.all]
+    public static var enabledChannels: [Channel] = [.all]
     
-    static func debug(_ message: String, on channel: Channel = .debug) {
+    public static func debug(_ message: String, on channel: Channel = .debug) {
         doLog(message, chnl: channel, lvl: .debug)
     }
     
-    static func error(_ message: String) {
+    public static func error(_ message: String) {
         doLog("\nERROR: \(message)", chnl: .debug, lvl: .error)
     }
     
-    static func warning(_ message: String) {
+    public static func warning(_ message: String) {
         doLog("   Warning: \(message)", chnl: .debug, lvl: .warning)
     }
     
     //FIXME: that is somehow ugly - Log is generic class, should not be depended on business logic implemntation
-    static func printDevices(_ devices: [DeviceCard], header: String) {
+    public static func printDevices(_ devices: [DeviceCard], header: String) {
         var theString = header + ":  "
         if devices.count == 0 {
             theString += #"none"#

@@ -6,7 +6,7 @@ import Foundation
 
 
 //wrapper around MetaWear with api limited to this project functionality
-class DeviceCtrl: CustomStringConvertible {
+public class DeviceCtrl: CustomStringConvertible {
     
     public let device: MetaWear
     public private(set) var name: String

@@ -22,8 +22,31 @@
 		81E8FF33226B2CE800708DD0 /* AccelerometerMeasurment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E8FF2B226B2CE800708DD0 /* AccelerometerMeasurment.swift */; };
 		81E8FF34226B2CE800708DD0 /* LedCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E8FF2C226B2CE800708DD0 /* LedCtrl.swift */; };
 		81E8FF36226B340400708DD0 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 81E8FF35226B340400708DD0 /* Podfile */; };
-		84EEA7BC9C5506EC20386EFA /* Pods_OllysLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA9E7BA3780CF241D1EA86F /* Pods_OllysLibrary.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		81DECEAB226B429F00D9F8E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 81DECEA5226B429F00D9F8E9 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E332C0517659C72C52B17B84250FF203;
+			remoteInfo = "Bolts-Swift";
+		};
+		81DECEAD226B429F00D9F8E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 81DECEA5226B429F00D9F8E9 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5A2FA4F8206FC61674A0C35C085A8F44;
+			remoteInfo = MetaWear;
+		};
+		81DECEAF226B429F00D9F8E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 81DECEA5226B429F00D9F8E9 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2B6A6C3BF628B8C79BF669038CA7A1FE;
+			remoteInfo = "Pods-OllysLibrary";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		4D8CC2A5ADF153A216BAB538 /* Pods-OllysLibrary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OllysLibrary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OllysLibrary/Pods-OllysLibrary.debug.xcconfig"; sourceTree = "<group>"; };
@@ -33,6 +56,7 @@
 		815F8509226B402B00D17B4E /* PersistentDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentDictionary.swift; sourceTree = "<group>"; };
 		815F850A226B402B00D17B4E /* UIView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		819E6796226B2AB10021BBA8 /* OllysLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OllysLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		81DECEA5226B429F00D9F8E9 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 		81E8FF1F226B2C5B00708DD0 /* OllysLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OllysLibrary.h; sourceTree = "<group>"; };
 		81E8FF20226B2C5B00708DD0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81E8FF25226B2CE800708DD0 /* DeviceCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceCard.swift; sourceTree = "<group>"; };
@@ -44,7 +68,6 @@
 		81E8FF2B226B2CE800708DD0 /* AccelerometerMeasurment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccelerometerMeasurment.swift; sourceTree = "<group>"; };
 		81E8FF2C226B2CE800708DD0 /* LedCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LedCtrl.swift; sourceTree = "<group>"; };
 		81E8FF35226B340400708DD0 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
-		8AA9E7BA3780CF241D1EA86F /* Pods_OllysLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OllysLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5ABC9350EE03EF2B9C68EA4 /* Pods-OllysLibrary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OllysLibrary.release.xcconfig"; path = "Pods/Target Support Files/Pods-OllysLibrary/Pods-OllysLibrary.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -53,7 +76,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84EEA7BC9C5506EC20386EFA /* Pods_OllysLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,7 +85,7 @@
 		70BD353234AEEDF5008E8EF9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8AA9E7BA3780CF241D1EA86F /* Pods_OllysLibrary.framework */,
+				81DECEA5226B429F00D9F8E9 /* Pods.xcodeproj */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -96,6 +118,16 @@
 			isa = PBXGroup;
 			children = (
 				819E6796226B2AB10021BBA8 /* OllysLibrary.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		81DECEA6226B429F00D9F8E9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				81DECEAC226B429F00D9F8E9 /* BoltsSwift.framework */,
+				81DECEAE226B429F00D9F8E9 /* MetaWear.framework */,
+				81DECEB0226B429F00D9F8E9 /* Pods_OllysLibrary.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -192,12 +224,42 @@
 			mainGroup = 819E678C226B2AB10021BBA8;
 			productRefGroup = 819E6797226B2AB10021BBA8 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 81DECEA6226B429F00D9F8E9 /* Products */;
+					ProjectRef = 81DECEA5226B429F00D9F8E9 /* Pods.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				819E6795226B2AB10021BBA8 /* OllysLibrary */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		81DECEAC226B429F00D9F8E9 /* BoltsSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = BoltsSwift.framework;
+			remoteRef = 81DECEAB226B429F00D9F8E9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		81DECEAE226B429F00D9F8E9 /* MetaWear.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MetaWear.framework;
+			remoteRef = 81DECEAD226B429F00D9F8E9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		81DECEB0226B429F00D9F8E9 /* Pods_OllysLibrary.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pods_OllysLibrary.framework;
+			remoteRef = 81DECEAF226B429F00D9F8E9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		819E6794226B2AB10021BBA8 /* Resources */ = {
