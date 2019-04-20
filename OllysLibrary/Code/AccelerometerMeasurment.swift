@@ -4,7 +4,7 @@ import MetaWear
 import MetaWearCpp
 
 
-@objc public struct AccelerometerMeasurment : CustomStringConvertible {
+public struct AccelerometerMeasurment : CustomStringConvertible {
     public var xAcceleration: Float
     public var yAcceleration: Float
     public var zAcceleration: Float

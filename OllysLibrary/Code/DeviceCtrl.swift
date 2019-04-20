@@ -81,7 +81,7 @@ class DeviceCtrl: CustomStringConvertible {
     }
 }
 
-public extension String.StringInterpolation {
+extension String.StringInterpolation {
     mutating func appendInterpolation(_ value: DeviceCtrl?) {
         if let theValue = value {
             appendLiteral(theValue.description)
