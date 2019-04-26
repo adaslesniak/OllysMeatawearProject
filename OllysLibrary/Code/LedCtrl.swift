@@ -1,6 +1,6 @@
 // LedLight.swift [OllysProject] created by: Adas Lesniak on: 15/04/2019
 import Foundation
-//import MetaWear
+import MetaWear
 
 
 public typealias ColorComponents = (r: Float, g: Float, b: Float)
@@ -35,7 +35,7 @@ class LedCtrl {
         ctrl = device
     }
     
-    /*deinit {
+    deinit {
         turnOffLed(.all)
     }
     
@@ -91,7 +91,7 @@ class LedCtrl {
             full.g += color.components.g
             full.b += color.components.b
         }
-        return UIColor(red: full.r, green: full.g, blue: full.b, alpha: 1)
+        return UIColor(red: CGFloat(full.r), green: CGFloat(full.g), blue: CGFloat(full.b), alpha: 1)
     }
     
     //be carefull to not call it multiple times
@@ -114,7 +114,7 @@ class LedCtrl {
                 self?.keepFlashing()
             }
         }
-    }*/
+    }
 }
 
 

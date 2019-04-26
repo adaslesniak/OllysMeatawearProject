@@ -1,7 +1,7 @@
 // AccelerometerCtrl.swift [OllysProject] created by: Adas Lesniak on: 15/04/2019 
 import Foundation
-//import MetaWear
-//import MetaWearCpp
+import MetaWear
+import MetaWearCpp
 
 class AccelerometerCtrl: NSObject {
     
@@ -10,7 +10,7 @@ class AccelerometerCtrl: NSObject {
     public init(_ device: DeviceCtrl) {
         ctrl = device
     }
-    /*deinit {
+    deinit {
         stopAccelrometering()
     }
     
@@ -52,5 +52,5 @@ class AccelerometerCtrl: NSObject {
         mbl_mw_acc_disable_acceleration_sampling(ctrl.device.board);
         mbl_mw_datasignal_unsubscribe(accelerometerListener?.signal)
         accelerometerListener = nil
-    }*/
+    }
 }

@@ -1,5 +1,5 @@
 // DevicesScanner.swift [OllysProject] created by: Adas Lesniak on: 04/04/2019
-//import MetaWear
+import MetaWear
 import Foundation
 
 
@@ -7,12 +7,12 @@ import Foundation
 
     @objc public static private(set) var known: [DeviceCard] = []
     @objc public private(set) static var available = [DeviceCtrl]()
-    /*private static var _known: [MetaWear]?
+    private static var _known: [MetaWear]?
     private static var listeners = [() -> Void]()
-    private static var names = PersistentDictionary("saved_devices")*/
+    private static var names = PersistentDictionary("saved_devices")
     
     public static func debugForgetRmemberedDevices() {
-        /*Log.warning("DEBUG MODE - claning devices list to test again")
+        Log.warning("DEBUG MODE - claning devices list to test again")
         Log.printDevices(Devices.known, header: "known before debug forgetting")
         MetaWearScanner.shared.retrieveSavedMetaWearsAsync().continueWith { task in
             guard task.error == nil else {
@@ -23,12 +23,12 @@ import Foundation
             known = []
             available = []
             Log.debug("all devices forgotten")
-        }*/
+        }
     }
     
     private static var isLoadingSavedDevices: Bool = false //false means not yet, but started
     @objc public static func loadSavedDevices() {
-        /*guard !isLoadingSavedDevices else {
+        guard !isLoadingSavedDevices else {
             Log.error("can't load saved devices while already loading them")
             return //initialisation already in progress
         }
@@ -50,11 +50,11 @@ import Foundation
                 Log.debug("didn't load saved devices because: \(error)")
                 _known = []
             }
-        }*/
+        }
     }
 
     private static func updateCardsOfKnownDevices() {
-        /*var cards = [DeviceCard]()
+        var cards = [DeviceCard]()
         guard let devices = _known else {
             Log.error("can't prepare cards while there are no devices")
             loadSavedDevices()
@@ -69,14 +69,14 @@ import Foundation
             }
         }
         known = cards
-        isLoadingSavedDevices = false*/
+        isLoadingSavedDevices = false
     }
     
     
     //TODO: refactor:
     public static func scanForKnownDevices(_ whenDone: @escaping ([DeviceCtrl]) -> Void) {
         
-        /*var accessible = [DeviceCtrl]()
+        var accessible = [DeviceCtrl]()
         
         var isDoneWithOtherThing = false //TODO: find better name - it means that we have 2 async queries and if both returns then only we are done and good to call back
         func tryCallback() {
@@ -108,22 +108,23 @@ import Foundation
         scanForNearbyDevices { nearby in
             for found in nearby {
                 if let info = known.first(where: {$0.id == found.id}) {
-                    accessible.append(DeviceCtrl(found, as: info.name))
+                    accessible.append(DeviceCtrl(found.device, as: info.name))
                 } else {
                     Log.debug("found some unknown device while scanning for known ones")
                 }
             }
             tryCallback()
-        }*/
+        }
     }
     
     private static func scanForNearbyDevices(_ whenDone: @escaping ([DeviceCtrl]) -> Void) {
-        /*var nearby = [MetaWear]()
+        var nearby = [MetaWear]()
         var requestsPending = 0
         var timeout = 1.9
         func finishScan() {
             MetaWearScanner.shared.stopScan()
-            whenDone(nearby)
+            //let ctrl = DeviceCtrl(nearby)
+            whenDone(nearby.map({ return DeviceCtrl($0) }))
             timeout = -1 //invalid
         }
         MetaWearScanner.shared.startScan(allowDuplicates: false) { found in
@@ -151,29 +152,29 @@ import Foundation
                 return
             }
             finishScan()
-        }*/
+        }
     }
     
     public static func scanForNewDevices(_ whendDone: @escaping ([DeviceCard:DeviceCtrl]) -> Void) {
-        /*scanForNearbyDevices { nearby in
-            var newDevices = [DeviceCard:MetaWear]()
+        scanForNearbyDevices { nearby in
+            var newDevices = [DeviceCard:DeviceCtrl]()
             for found in nearby {
                 if !known.contains(where: { $0.id == found.id }) {
-                    let info = found.createCard()
+                    let info = found.device.createCard()
                     newDevices[info] = found
                 }
             }
             whendDone(newDevices)
-        }*/
+        }
     }
     
     
     public static func remember(_ toBeRemembered: DeviceCtrl, as givenName: String) {
-        /*toBeRemembered.remember() //that is stupid - it should never be called on device
-        names[toBeRemembered.peripheral.identifier.uuidString] = givenName
-        _known?.append(toBeRemembered)
+        toBeRemembered.device.remember() //that is stupid - it should never be called on device
+        names[toBeRemembered.device.peripheral.identifier.uuidString] = givenName
+        _known?.append(toBeRemembered.device)
         updateCardsOfKnownDevices()
-        Log.debug("rememered device: \(givenName) [id: \(toBeRemembered.id)]")*/
+        Log.debug("rememered device: \(givenName) [id: \(toBeRemembered.id)]")
     }
     
 }
