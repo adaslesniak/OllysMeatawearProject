@@ -4,13 +4,13 @@ import Foundation
 //import MetaWearCpp
 
 
-public struct AccelerometerMeasurment : CustomStringConvertible {
-    public var xAcceleration: Float
-    public var yAcceleration: Float
-    public var zAcceleration: Float
+@objc public class AccelerometerMeasurment : NSObject {
+    public var xAcceleration: Float = 0
+    public var yAcceleration: Float = 0
+    public var zAcceleration: Float = 0
     
-    public var when: Date
-    public var source: UUID //device
+    public var when = Date()
+    public var source = UUID() //device
     public func sourceName() -> String {
         return "not_implemented"
         //return Devices.known.first(where: {$0.id == source})?.name ?? "unknown"
@@ -41,7 +41,7 @@ public struct AccelerometerMeasurment : CustomStringConvertible {
         return rhv.source == lhv.source && rhv.when == lhv.when
     }
     
-    public var description: String {
+    public override var description: String {
         let formatter = DateFormatter()
         formatter.dateFormat = "HH:mm:ss:mmm"
         return "\(sourceName()) at: \(formatter.string(from: when)) = [\(xAcceleration);  \(yAcceleration);  \(zAcceleration)]"

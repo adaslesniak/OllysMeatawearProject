@@ -4,14 +4,14 @@ import Foundation
 
 
 //wrapper around MetaWear with api limited to this project functionality
-public class DeviceCtrl: CustomStringConvertible {
+@objc public class DeviceCtrl: NSObject {
     
     //let device: MetaWear
-    public private(set) var name: String = "unnamed"
+    @objc public private(set) var name: String = "unnamed"
     private var ledsCtrl: LedCtrl! //should be let, but can't initialize properly then
     private var accelerometerCtrl: AccelerometerCtrl!
     
-    public var id: UUID { return UUID() } //return device.peripheral.identifier }
+    @objc public var id: UUID { return UUID() } //return device.peripheral.identifier }
     
     
     /*init(_ device: MetaWear, as name: String? = nil) {
@@ -21,11 +21,11 @@ public class DeviceCtrl: CustomStringConvertible {
         self.accelerometerCtrl = AccelerometerCtrl(self)
     }*/
     
-    public func disconnect() {
+    @objc public func disconnect() {
         //device.cancelConnection()
     }
     
-    public func connect(_ whenReady: Action? = nil) {
+    @objc public func connect(_ whenReady: Action? = nil) {
         if isConnected {
             whenReady?()
         } else {
@@ -42,39 +42,39 @@ public class DeviceCtrl: CustomStringConvertible {
         }
     }
     
-    public var isConnected: Bool { return false } //device.isConnectedAndSetup }
+    @objc public var isConnected: Bool { return false } //device.isConnectedAndSetup }
 
     
-    public func startFlashing(_ color: LedColor) {
+    @objc public func startFlashing(_ color: LedColor) {
         connect { [weak self] in
             //self?.ledsCtrl.startFlashing(color)
         }
     }
-    public func turnOnLed(_ color: LedColor) {
+    @objc public func turnOnLed(_ color: LedColor) {
         connect { [weak self] in
             //self?.ledsCtrl.turnOnLed(color)
         }
     }
-    public func turnOffLed(_ color: LedColor = .all) {
+    @objc public func turnOffLed(_ color: LedColor = .all) {
         connect { [weak self] in //TODO: consider if in this case there should be no strong self, but deinit calls it, so it would never deinit?
             //self?.ledsCtrl.turnOffLed(color)
         }
     }
     
     
-    public func startAccelerometering(_ listener: @escaping (AccelerometerMeasurment) -> Void) {
+    @objc public func startAccelerometering(_ listener: @escaping (AccelerometerMeasurment) -> Void) {
         connect { [weak self] in
             //self?.accelerometerCtrl.startAccelerometering(listener)
         }
     }
-    public func stopAccelerometering() {
+    @objc public func stopAccelerometering() {
         connect { [weak self] in
             //self?.accelerometerCtrl.stopAccelrometering()
         }
     }
     
     
-    public var description: String {
+    @objc public override var description: String {
         return "disabled_code"
         //return "[\(device.name): \(device.peripheral.identifier)]"
     }

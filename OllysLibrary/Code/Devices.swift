@@ -3,10 +3,10 @@
 import Foundation
 
 
-public class Devices {
+@objc public class Devices: NSObject {
 
-    public static private(set) var known: [DeviceCard] = []
-    public private(set) static var available = [DeviceCtrl]()
+    @objc public static private(set) var known: [DeviceCard] = []
+    @objc public private(set) static var available = [DeviceCtrl]()
     /*private static var _known: [MetaWear]?
     private static var listeners = [() -> Void]()
     private static var names = PersistentDictionary("saved_devices")*/
@@ -27,7 +27,7 @@ public class Devices {
     }
     
     private static var isLoadingSavedDevices: Bool = false //false means not yet, but started
-    public static func loadSavedDevices() {
+    @objc public static func loadSavedDevices() {
         /*guard !isLoadingSavedDevices else {
             Log.error("can't load saved devices while already loading them")
             return //initialisation already in progress
