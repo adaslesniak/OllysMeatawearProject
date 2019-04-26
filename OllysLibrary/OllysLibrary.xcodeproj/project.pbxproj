@@ -26,20 +26,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		81DECEAB226B429F00D9F8E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 81DECEA5226B429F00D9F8E9 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E332C0517659C72C52B17B84250FF203;
-			remoteInfo = "Bolts-Swift";
-		};
-		81DECEAD226B429F00D9F8E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 81DECEA5226B429F00D9F8E9 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 5A2FA4F8206FC61674A0C35C085A8F44;
-			remoteInfo = MetaWear;
-		};
 		81DECEAF226B429F00D9F8E9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 81DECEA5226B429F00D9F8E9 /* Pods.xcodeproj */;
@@ -129,8 +115,6 @@
 		81DECEA6226B429F00D9F8E9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				81DECEAC226B429F00D9F8E9 /* BoltsSwift.framework */,
-				81DECEAE226B429F00D9F8E9 /* MetaWear.framework */,
 				81DECEB0226B429F00D9F8E9 /* Pods_OllysLibrary.framework */,
 			);
 			name = Products;
@@ -242,20 +226,6 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		81DECEAC226B429F00D9F8E9 /* BoltsSwift.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = BoltsSwift.framework;
-			remoteRef = 81DECEAB226B429F00D9F8E9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		81DECEAE226B429F00D9F8E9 /* MetaWear.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = MetaWear.framework;
-			remoteRef = 81DECEAD226B429F00D9F8E9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		81DECEB0226B429F00D9F8E9 /* Pods_OllysLibrary.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -376,7 +346,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";

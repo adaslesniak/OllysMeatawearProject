@@ -7,42 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8170888D226B8AD300DDA658 /* OllysLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81E8FF46226B3CBC00708DD0 /* OllysLibrary.framework */; };
-		8170888E226B8AD300DDA658 /* OllysLibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 81E8FF46226B3CBC00708DD0 /* OllysLibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		81D8AD2D225D096E00C8815B /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D8AD2C225D096E00C8815B /* CircleView.swift */; };
-		81D8AD312260977100C8815B /* HomeViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D8AD302260977100C8815B /* HomeViewCtrl.swift */; };
-		81D8AD332260982700C8815B /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81D8AD322260982700C8815B /* HomeView.xib */; };
-		81D8AD3622609C1700C8815B /* SetUpDeviceViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D8AD3522609C1700C8815B /* SetUpDeviceViewCtrl.swift */; };
-		81D8AD3822609E9700C8815B /* AvailableDevicesViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D8AD3722609E9700C8815B /* AvailableDevicesViewCtrl.swift */; };
-		81D8AD3A22609EB800C8815B /* AvailableDevicesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81D8AD3922609EB800C8815B /* AvailableDevicesView.xib */; };
-		81D8AD412260B26A00C8815B /* AvailableDeviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D8AD3F2260B26A00C8815B /* AvailableDeviceCell.swift */; };
-		81D8AD442260B61F00C8815B /* ToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D8AD432260B61F00C8815B /* ToggleView.swift */; };
-		81D8AD462261052F00C8815B /* AvailableDeviceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81D8AD452261052F00C8815B /* AvailableDeviceCell.xib */; };
-		81E09C3622569CA200CE21EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E09C3522569CA200CE21EB /* AppDelegate.swift */; };
-		81E09C3B22569CA200CE21EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81E09C3922569CA200CE21EB /* Main.storyboard */; };
-		81E09C3D22569CA300CE21EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81E09C3C22569CA300CE21EB /* Assets.xcassets */; };
-		81E09C4022569CA300CE21EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81E09C3E22569CA300CE21EB /* LaunchScreen.storyboard */; };
-		81E09C4B2256AE2B00CE21EB /* SetUpDeviceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81E09C4A2256AE2B00CE21EB /* SetUpDeviceView.xib */; };
-		81E09C5A2256DCF100CE21EB /* NamingViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E09C592256DCF100CE21EB /* NamingViewCtrl.swift */; };
-		81E09C5C2256DD0A00CE21EB /* NamingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81E09C5B2256DD0A00CE21EB /* NamingView.xib */; };
+		8123AED022732C67000DB2C3 /* OllysLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8123AECF22732C67000DB2C3 /* OllysLibrary.framework */; };
+		8123AEDF22732C8F000DB2C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8123AED222732C8F000DB2C3 /* Assets.xcassets */; };
+		8123AEE022732C8F000DB2C3 /* HomeViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8123AED322732C8F000DB2C3 /* HomeViewCtrl.swift */; };
+		8123AEE122732C8F000DB2C3 /* NamingViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8123AED422732C8F000DB2C3 /* NamingViewCtrl.swift */; };
+		8123AEE222732C8F000DB2C3 /* SetUpDeviceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8123AED522732C8F000DB2C3 /* SetUpDeviceView.xib */; };
+		8123AEE322732C8F000DB2C3 /* AvailableDevicesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8123AED622732C8F000DB2C3 /* AvailableDevicesView.xib */; };
+		8123AEE422732C8F000DB2C3 /* AvailableDeviceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8123AED722732C8F000DB2C3 /* AvailableDeviceCell.xib */; };
+		8123AEE522732C8F000DB2C3 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8123AED822732C8F000DB2C3 /* CircleView.swift */; };
+		8123AEE622732C8F000DB2C3 /* SetUpDeviceViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8123AED922732C8F000DB2C3 /* SetUpDeviceViewCtrl.swift */; };
+		8123AEE722732C8F000DB2C3 /* ToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8123AEDA22732C8F000DB2C3 /* ToggleView.swift */; };
+		8123AEE822732C8F000DB2C3 /* AvailableDevicesViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8123AEDB22732C8F000DB2C3 /* AvailableDevicesViewCtrl.swift */; };
+		8123AEE922732C8F000DB2C3 /* NamingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8123AEDC22732C8F000DB2C3 /* NamingView.xib */; };
+		8123AEEA22732C8F000DB2C3 /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8123AEDD22732C8F000DB2C3 /* HomeView.xib */; };
+		8123AEEB22732C8F000DB2C3 /* AvailableDeviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8123AEDE22732C8F000DB2C3 /* AvailableDeviceCell.swift */; };
+		8123AEEE22732CB6000DB2C3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8123AEEC22732CB6000DB2C3 /* Info.plist */; };
+		8123AEEF22732CB6000DB2C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8123AEED22732CB6000DB2C3 /* AppDelegate.swift */; };
+		8123AEF422732CC8000DB2C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8123AEF022732CC7000DB2C3 /* Main.storyboard */; };
+		8123AEF522732CC8000DB2C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8123AEF222732CC7000DB2C3 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		8170888F226B8AD300DDA658 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 81E8FF41226B3CBC00708DD0 /* OllysLibrary.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 819E6795226B2AB10021BBA8;
-			remoteInfo = OllysLibrary;
-		};
-		81E8FF45226B3CBC00708DD0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 81E8FF41226B3CBC00708DD0 /* OllysLibrary.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 819E6796226B2AB10021BBA8;
-			remoteInfo = OllysLibrary;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		81708891226B8AD300DDA658 /* Embed Frameworks */ = {
@@ -51,7 +34,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				8170888E226B8AD300DDA658 /* OllysLibrary.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -59,25 +41,25 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		81D8AD2C225D096E00C8815B /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
-		81D8AD302260977100C8815B /* HomeViewCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCtrl.swift; sourceTree = "<group>"; };
-		81D8AD322260982700C8815B /* HomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeView.xib; sourceTree = "<group>"; };
-		81D8AD3522609C1700C8815B /* SetUpDeviceViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetUpDeviceViewCtrl.swift; sourceTree = "<group>"; };
-		81D8AD3722609E9700C8815B /* AvailableDevicesViewCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableDevicesViewCtrl.swift; sourceTree = "<group>"; };
-		81D8AD3922609EB800C8815B /* AvailableDevicesView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AvailableDevicesView.xib; sourceTree = "<group>"; };
-		81D8AD3F2260B26A00C8815B /* AvailableDeviceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableDeviceCell.swift; sourceTree = "<group>"; };
-		81D8AD432260B61F00C8815B /* ToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleView.swift; sourceTree = "<group>"; };
-		81D8AD452261052F00C8815B /* AvailableDeviceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AvailableDeviceCell.xib; sourceTree = "<group>"; };
+		8123AECF22732C67000DB2C3 /* OllysLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OllysLibrary.framework; sourceTree = SOURCE_ROOT; };
+		8123AED222732C8F000DB2C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = UI/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		8123AED322732C8F000DB2C3 /* HomeViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewCtrl.swift; path = UI/HomeViewCtrl.swift; sourceTree = SOURCE_ROOT; };
+		8123AED422732C8F000DB2C3 /* NamingViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NamingViewCtrl.swift; path = UI/NamingViewCtrl.swift; sourceTree = SOURCE_ROOT; };
+		8123AED522732C8F000DB2C3 /* SetUpDeviceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SetUpDeviceView.xib; path = UI/SetUpDeviceView.xib; sourceTree = SOURCE_ROOT; };
+		8123AED622732C8F000DB2C3 /* AvailableDevicesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AvailableDevicesView.xib; path = UI/AvailableDevicesView.xib; sourceTree = SOURCE_ROOT; };
+		8123AED722732C8F000DB2C3 /* AvailableDeviceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AvailableDeviceCell.xib; path = UI/AvailableDeviceCell.xib; sourceTree = SOURCE_ROOT; };
+		8123AED822732C8F000DB2C3 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircleView.swift; path = UI/CircleView.swift; sourceTree = SOURCE_ROOT; };
+		8123AED922732C8F000DB2C3 /* SetUpDeviceViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SetUpDeviceViewCtrl.swift; path = UI/SetUpDeviceViewCtrl.swift; sourceTree = SOURCE_ROOT; };
+		8123AEDA22732C8F000DB2C3 /* ToggleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ToggleView.swift; path = UI/ToggleView.swift; sourceTree = SOURCE_ROOT; };
+		8123AEDB22732C8F000DB2C3 /* AvailableDevicesViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AvailableDevicesViewCtrl.swift; path = UI/AvailableDevicesViewCtrl.swift; sourceTree = SOURCE_ROOT; };
+		8123AEDC22732C8F000DB2C3 /* NamingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NamingView.xib; path = UI/NamingView.xib; sourceTree = SOURCE_ROOT; };
+		8123AEDD22732C8F000DB2C3 /* HomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeView.xib; path = UI/HomeView.xib; sourceTree = SOURCE_ROOT; };
+		8123AEDE22732C8F000DB2C3 /* AvailableDeviceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AvailableDeviceCell.swift; path = UI/AvailableDeviceCell.swift; sourceTree = SOURCE_ROOT; };
+		8123AEEC22732CB6000DB2C3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
+		8123AEED22732CB6000DB2C3 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = SOURCE_ROOT; };
+		8123AEF122732CC7000DB2C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
+		8123AEF322732CC7000DB2C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		81E09C3222569CA200CE21EB /* OllysProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OllysProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		81E09C3522569CA200CE21EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		81E09C3A22569CA200CE21EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		81E09C3C22569CA300CE21EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		81E09C3F22569CA300CE21EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		81E09C4122569CA300CE21EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		81E09C4A2256AE2B00CE21EB /* SetUpDeviceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetUpDeviceView.xib; sourceTree = "<group>"; };
-		81E09C592256DCF100CE21EB /* NamingViewCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamingViewCtrl.swift; sourceTree = "<group>"; };
-		81E09C5B2256DD0A00CE21EB /* NamingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NamingView.xib; sourceTree = "<group>"; };
-		81E8FF41226B3CBC00708DD0 /* OllysLibrary.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OllysLibrary.xcodeproj; path = OllysLibrary/OllysLibrary.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,29 +67,42 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8170888D226B8AD300DDA658 /* OllysLibrary.framework in Frameworks */,
+				8123AED022732C67000DB2C3 /* OllysLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		81D8AD342260984B00C8815B /* UI */ = {
+		8123AECE22732C43000DB2C3 /* Project */ = {
 			isa = PBXGroup;
 			children = (
-				81E09C3C22569CA300CE21EB /* Assets.xcassets */,
-				81D8AD3522609C1700C8815B /* SetUpDeviceViewCtrl.swift */,
-				81E09C4A2256AE2B00CE21EB /* SetUpDeviceView.xib */,
-				81E09C592256DCF100CE21EB /* NamingViewCtrl.swift */,
-				81E09C5B2256DD0A00CE21EB /* NamingView.xib */,
-				81D8AD302260977100C8815B /* HomeViewCtrl.swift */,
-				81D8AD322260982700C8815B /* HomeView.xib */,
-				81D8AD3722609E9700C8815B /* AvailableDevicesViewCtrl.swift */,
-				81D8AD3922609EB800C8815B /* AvailableDevicesView.xib */,
-				81D8AD3F2260B26A00C8815B /* AvailableDeviceCell.swift */,
-				81D8AD452261052F00C8815B /* AvailableDeviceCell.xib */,
-				81D8AD432260B61F00C8815B /* ToggleView.swift */,
-				81D8AD2C225D096E00C8815B /* CircleView.swift */,
+				8123AEF222732CC7000DB2C3 /* LaunchScreen.storyboard */,
+				8123AEF022732CC7000DB2C3 /* Main.storyboard */,
+				8123AEED22732CB6000DB2C3 /* AppDelegate.swift */,
+				8123AEEC22732CB6000DB2C3 /* Info.plist */,
+				8123AED122732C78000DB2C3 /* UI */,
+				8123AECF22732C67000DB2C3 /* OllysLibrary.framework */,
+			);
+			path = Project;
+			sourceTree = "<group>";
+		};
+		8123AED122732C78000DB2C3 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				8123AED222732C8F000DB2C3 /* Assets.xcassets */,
+				8123AEDE22732C8F000DB2C3 /* AvailableDeviceCell.swift */,
+				8123AED722732C8F000DB2C3 /* AvailableDeviceCell.xib */,
+				8123AED622732C8F000DB2C3 /* AvailableDevicesView.xib */,
+				8123AEDB22732C8F000DB2C3 /* AvailableDevicesViewCtrl.swift */,
+				8123AED822732C8F000DB2C3 /* CircleView.swift */,
+				8123AEDD22732C8F000DB2C3 /* HomeView.xib */,
+				8123AED322732C8F000DB2C3 /* HomeViewCtrl.swift */,
+				8123AEDC22732C8F000DB2C3 /* NamingView.xib */,
+				8123AED422732C8F000DB2C3 /* NamingViewCtrl.swift */,
+				8123AED522732C8F000DB2C3 /* SetUpDeviceView.xib */,
+				8123AED922732C8F000DB2C3 /* SetUpDeviceViewCtrl.swift */,
+				8123AEDA22732C8F000DB2C3 /* ToggleView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -115,8 +110,7 @@
 		81E09C2922569CA200CE21EB = {
 			isa = PBXGroup;
 			children = (
-				81E8FF41226B3CBC00708DD0 /* OllysLibrary.xcodeproj */,
-				81E09C3422569CA200CE21EB /* OllysProject */,
+				8123AECE22732C43000DB2C3 /* Project */,
 				81E09C3322569CA200CE21EB /* Products */,
 				81EA13FF226B613400D962E2 /* Frameworks */,
 			);
@@ -126,26 +120,6 @@
 			isa = PBXGroup;
 			children = (
 				81E09C3222569CA200CE21EB /* OllysProject.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		81E09C3422569CA200CE21EB /* OllysProject */ = {
-			isa = PBXGroup;
-			children = (
-				81D8AD342260984B00C8815B /* UI */,
-				81E09C3522569CA200CE21EB /* AppDelegate.swift */,
-				81E09C4122569CA300CE21EB /* Info.plist */,
-				81E09C3922569CA200CE21EB /* Main.storyboard */,
-				81E09C3E22569CA300CE21EB /* LaunchScreen.storyboard */,
-			);
-			path = OllysProject;
-			sourceTree = "<group>";
-		};
-		81E8FF42226B3CBC00708DD0 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				81E8FF46226B3CBC00708DD0 /* OllysLibrary.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -172,7 +146,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				81708890226B8AD300DDA658 /* PBXTargetDependency */,
 			);
 			name = OllysProject;
 			productName = OllysProject;
@@ -205,12 +178,6 @@
 			mainGroup = 81E09C2922569CA200CE21EB;
 			productRefGroup = 81E09C3322569CA200CE21EB /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 81E8FF42226B3CBC00708DD0 /* Products */;
-					ProjectRef = 81E8FF41226B3CBC00708DD0 /* OllysLibrary.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				81E09C3122569CA200CE21EB /* OllysProject */,
@@ -218,29 +185,20 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXReferenceProxy section */
-		81E8FF46226B3CBC00708DD0 /* OllysLibrary.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = OllysLibrary.framework;
-			remoteRef = 81E8FF45226B3CBC00708DD0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
-
 /* Begin PBXResourcesBuildPhase section */
 		81E09C3022569CA200CE21EB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81E09C4022569CA300CE21EB /* LaunchScreen.storyboard in Resources */,
-				81E09C4B2256AE2B00CE21EB /* SetUpDeviceView.xib in Resources */,
-				81D8AD3A22609EB800C8815B /* AvailableDevicesView.xib in Resources */,
-				81E09C3D22569CA300CE21EB /* Assets.xcassets in Resources */,
-				81E09C5C2256DD0A00CE21EB /* NamingView.xib in Resources */,
-				81D8AD462261052F00C8815B /* AvailableDeviceCell.xib in Resources */,
-				81E09C3B22569CA200CE21EB /* Main.storyboard in Resources */,
-				81D8AD332260982700C8815B /* HomeView.xib in Resources */,
+				8123AEF522732CC8000DB2C3 /* LaunchScreen.storyboard in Resources */,
+				8123AEE922732C8F000DB2C3 /* NamingView.xib in Resources */,
+				8123AEEA22732C8F000DB2C3 /* HomeView.xib in Resources */,
+				8123AEE322732C8F000DB2C3 /* AvailableDevicesView.xib in Resources */,
+				8123AEF422732CC8000DB2C3 /* Main.storyboard in Resources */,
+				8123AEE222732C8F000DB2C3 /* SetUpDeviceView.xib in Resources */,
+				8123AEDF22732C8F000DB2C3 /* Assets.xcassets in Resources */,
+				8123AEE422732C8F000DB2C3 /* AvailableDeviceCell.xib in Resources */,
+				8123AEEE22732CB6000DB2C3 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,40 +209,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81E09C5A2256DCF100CE21EB /* NamingViewCtrl.swift in Sources */,
-				81D8AD3622609C1700C8815B /* SetUpDeviceViewCtrl.swift in Sources */,
-				81D8AD3822609E9700C8815B /* AvailableDevicesViewCtrl.swift in Sources */,
-				81D8AD2D225D096E00C8815B /* CircleView.swift in Sources */,
-				81D8AD312260977100C8815B /* HomeViewCtrl.swift in Sources */,
-				81E09C3622569CA200CE21EB /* AppDelegate.swift in Sources */,
-				81D8AD442260B61F00C8815B /* ToggleView.swift in Sources */,
-				81D8AD412260B26A00C8815B /* AvailableDeviceCell.swift in Sources */,
+				8123AEEF22732CB6000DB2C3 /* AppDelegate.swift in Sources */,
+				8123AEE522732C8F000DB2C3 /* CircleView.swift in Sources */,
+				8123AEE022732C8F000DB2C3 /* HomeViewCtrl.swift in Sources */,
+				8123AEE822732C8F000DB2C3 /* AvailableDevicesViewCtrl.swift in Sources */,
+				8123AEE122732C8F000DB2C3 /* NamingViewCtrl.swift in Sources */,
+				8123AEEB22732C8F000DB2C3 /* AvailableDeviceCell.swift in Sources */,
+				8123AEE722732C8F000DB2C3 /* ToggleView.swift in Sources */,
+				8123AEE622732C8F000DB2C3 /* SetUpDeviceViewCtrl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		81708890226B8AD300DDA658 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = OllysLibrary;
-			targetProxy = 8170888F226B8AD300DDA658 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		81E09C3922569CA200CE21EB /* Main.storyboard */ = {
+		8123AEF022732CC7000DB2C3 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				81E09C3A22569CA200CE21EB /* Base */,
+				8123AEF122732CC7000DB2C3 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		81E09C3E22569CA300CE21EB /* LaunchScreen.storyboard */ = {
+		8123AEF222732CC7000DB2C3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				81E09C3F22569CA300CE21EB /* Base */,
+				8123AEF322732CC7000DB2C3 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -415,6 +365,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z683BMN45B;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
 					"$(inherited)",
 					"$(PROJECT_DIR)//OllysLibrary/Pods",
@@ -439,6 +393,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z683BMN45B;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
 					"$(inherited)",
 					"$(PROJECT_DIR)//OllysLibrary/Pods",
