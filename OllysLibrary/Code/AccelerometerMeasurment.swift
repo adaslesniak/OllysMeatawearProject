@@ -1,7 +1,7 @@
 // AccelerometerMeasurment.swift [OllysProject] created by: Adas Lesniak on: 15/04/2019
 import Foundation
-import MetaWear
-import MetaWearCpp
+//import MetaWear
+//import MetaWearCpp
 
 
 @objc public class AccelerometerMeasurment : NSObject {
@@ -15,7 +15,7 @@ import MetaWearCpp
         return Devices.known.first(where: {$0.id == source})?.name ?? "unknown"
     }
     
-    init?(_ dataPtr: UnsafePointer<MblMwData>?, device: MetaWear) {
+    /*init?(_ dataPtr: UnsafePointer<MblMwData>?, device: MetaWear) {
         do {
             guard let data = dataPtr?.pointee else {
                 throw Exception.error("no data")
@@ -33,7 +33,7 @@ import MetaWearCpp
             Log.error("couldn't create AccelerometerMeasurment, error: \(error)")
             return nil
         }
-    }
+    }*/
     
     public static func ==(lhv: AccelerometerMeasurment, rhv:AccelerometerMeasurment) -> Bool {
         return rhv.source == lhv.source && rhv.when == lhv.when

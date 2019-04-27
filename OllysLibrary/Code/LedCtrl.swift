@@ -1,6 +1,6 @@
 // LedLight.swift [OllysProject] created by: Adas Lesniak on: 15/04/2019
 import Foundation
-import MetaWear
+//import MetaWear
 
 
 public typealias ColorComponents = (r: Float, g: Float, b: Float)
@@ -64,7 +64,7 @@ class LedCtrl {
         }
     }
     func turnOffLed(_ color: LedColor = .all) {
-        if color == .all {
+        /*if color == .all {
             flashing = []
             ledsOn = []
         } else {
@@ -78,7 +78,7 @@ class LedCtrl {
         }
         if flashing.count == 0 && ledsOn.count == 0 {
             ctrl.device.turnOffLed()
-        }
+        }*/
     }
     
     private func combineColor(_ components: [LedColor]) -> UIColor? {
@@ -96,24 +96,24 @@ class LedCtrl {
     
     //be carefull to not call it multiple times
     private func keepLedsOn() {
-        Log.debug("keeping \(ledsOn.count) leds on")
+        /*Log.debug("keeping \(ledsOn.count) leds on")
         if let theColor = combineColor(ledsOn) {
             ctrl.device.flashLED(color: theColor, intensity: 0.6, _repeat: 1, onTime: 500)
             ExecuteOnMain(after: 0.52) { [weak self] in
                 self?.keepLedsOn()
             }
-        }
+        }*/
     }
     
     //be carefull to not call it multiple times
     private func keepFlashing() {
-        Log.debug("keeping \(flashing.count) leds flashing")
+        /*Log.debug("keeping \(flashing.count) leds flashing")
         if let theColor = combineColor(flashing) {
             ctrl.device.flashLED(color: theColor, intensity: 0.9, _repeat: 1)
             ExecuteInBackground(after: 0.96) { [weak self] in
                 self?.keepFlashing()
             }
-        }
+        }*/
     }
 }
 

@@ -1,12 +1,12 @@
 // DeviceCtrl.swift [OllysProject] created by: Adas Lesniak on: 11/04/2019 
-import MetaWear
+//import MetaWear
 import Foundation
 
 
 //wrapper around MetaWear with api limited to this project functionality
 @objc public class DeviceCtrl: NSObject {
     
-    let device: MetaWear
+    //let device: MetaWear
     @objc public private(set) var name: String = "unnamed"
     private var ledsCtrl: LedCtrl! //should be let, but can't initialize properly then
     private var accelerometerCtrl: AccelerometerCtrl!
@@ -14,23 +14,23 @@ import Foundation
     @objc public var id: UUID { return UUID() } //return device.peripheral.identifier }
     
     
-    init(_ theDevice: MetaWear, as theName: String? = nil) {
+    /*init(_ theDevice: MetaWear, as theName: String? = nil) {
         device = theDevice
         name = theName ?? theDevice.name
         super.init()
         self.ledsCtrl = LedCtrl(self)
         self.accelerometerCtrl = AccelerometerCtrl(self)
-    }
+    }*/
     
     @objc public func disconnect() {
-        device.cancelConnection()
+        //device.cancelConnection()
     }
     
     @objc public func connect(_ whenReady: Action? = nil) {
         if isConnected {
             whenReady?()
         } else {
-            device.connectAndSetup().continueWith { [weak self] answer in
+            /*device.connectAndSetup().continueWith { [weak self] answer in
                 guard let self = self else {
                     return
                 }
@@ -39,7 +39,7 @@ import Foundation
                     return
                 }
                 whenReady?()
-            }
+            }*/
         }
     }
     
@@ -76,7 +76,8 @@ import Foundation
     
     
     @objc public override var description: String {
-        return "[\(device.name): \(device.peripheral.identifier)]"
+        return "disabled_functionality"
+        //return "[\(device.name): \(device.peripheral.identifier)]"
     }
 }
 
