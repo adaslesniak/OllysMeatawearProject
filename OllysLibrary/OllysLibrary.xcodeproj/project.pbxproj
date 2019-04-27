@@ -11,6 +11,10 @@
 		811556C32274C74A00096198 /* iOSDFULibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 811556BB2274C72000096198 /* iOSDFULibrary.framework */; };
 		811556C42274C74C00096198 /* MetaWear.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 811556BA2274C72000096198 /* MetaWear.framework */; };
 		811556C52274C74F00096198 /* Zip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 811556BC2274C72000096198 /* Zip.framework */; };
+		811556C62274C9BB00096198 /* BoltsSwift.framework in Resources */ = {isa = PBXBuildFile; fileRef = 811556BD2274C72000096198 /* BoltsSwift.framework */; };
+		811556C72274C9C400096198 /* iOSDFULibrary.framework in Resources */ = {isa = PBXBuildFile; fileRef = 811556BB2274C72000096198 /* iOSDFULibrary.framework */; };
+		811556C82274C9C800096198 /* MetaWear.framework in Resources */ = {isa = PBXBuildFile; fileRef = 811556BA2274C72000096198 /* MetaWear.framework */; };
+		811556C92274C9CE00096198 /* Zip.framework in Resources */ = {isa = PBXBuildFile; fileRef = 811556BC2274C72000096198 /* Zip.framework */; };
 		815F850B226B402B00D17B4E /* Dictionary+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815F8506226B402B00D17B4E /* Dictionary+.swift */; };
 		815F850C226B402B00D17B4E /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815F8507226B402B00D17B4E /* Typealiases.swift */; };
 		815F850D226B402B00D17B4E /* Thread+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815F8508226B402B00D17B4E /* Thread+.swift */; };
@@ -25,36 +29,10 @@
 		81E8FF32226B2CE800708DD0 /* AccelerometerCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E8FF2A226B2CE800708DD0 /* AccelerometerCtrl.swift */; };
 		81E8FF33226B2CE800708DD0 /* AccelerometerMeasurment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E8FF2B226B2CE800708DD0 /* AccelerometerMeasurment.swift */; };
 		81E8FF34226B2CE800708DD0 /* LedCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E8FF2C226B2CE800708DD0 /* LedCtrl.swift */; };
-		81E8FF36226B340400708DD0 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 81E8FF35226B340400708DD0 /* Podfile */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		811554DF22747E7300096198 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 81DECEA5226B429F00D9F8E9 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E332C0517659C72C52B17B84250FF203;
-			remoteInfo = "Bolts-Swift";
-		};
-		811554E122747E7300096198 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 81DECEA5226B429F00D9F8E9 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 5A2FA4F8206FC61674A0C35C085A8F44;
-			remoteInfo = MetaWear;
-		};
-		81DECEAF226B429F00D9F8E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 81DECEA5226B429F00D9F8E9 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 2B6A6C3BF628B8C79BF669038CA7A1FE;
-			remoteInfo = "Pods-OllysLibrary";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		4D8CC2A5ADF153A216BAB538 /* Pods-OllysLibrary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OllysLibrary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OllysLibrary/Pods-OllysLibrary.debug.xcconfig"; sourceTree = "<group>"; };
-		5CE2F2DFDFCF28665A3C48B3 /* Pods_OllysLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OllysLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		811556BA2274C72000096198 /* MetaWear.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetaWear.framework; path = Frameworks/MetaWear.framework; sourceTree = "<group>"; };
 		811556BB2274C72000096198 /* iOSDFULibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iOSDFULibrary.framework; path = Frameworks/iOSDFULibrary.framework; sourceTree = "<group>"; };
 		811556BC2274C72000096198 /* Zip.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Zip.framework; path = Frameworks/Zip.framework; sourceTree = "<group>"; };
@@ -65,7 +43,6 @@
 		815F8509226B402B00D17B4E /* PersistentDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentDictionary.swift; sourceTree = "<group>"; };
 		815F850A226B402B00D17B4E /* UIView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		819E6796226B2AB10021BBA8 /* OllysLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OllysLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		81DECEA5226B429F00D9F8E9 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 		81E8FF1F226B2C5B00708DD0 /* OllysLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OllysLibrary.h; sourceTree = "<group>"; };
 		81E8FF20226B2C5B00708DD0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81E8FF25226B2CE800708DD0 /* DeviceCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceCard.swift; sourceTree = "<group>"; };
@@ -76,7 +53,6 @@
 		81E8FF2A226B2CE800708DD0 /* AccelerometerCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccelerometerCtrl.swift; sourceTree = "<group>"; };
 		81E8FF2B226B2CE800708DD0 /* AccelerometerMeasurment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccelerometerMeasurment.swift; sourceTree = "<group>"; };
 		81E8FF2C226B2CE800708DD0 /* LedCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LedCtrl.swift; sourceTree = "<group>"; };
-		81E8FF35226B340400708DD0 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B5ABC9350EE03EF2B9C68EA4 /* Pods-OllysLibrary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OllysLibrary.release.xcconfig"; path = "Pods/Target Support Files/Pods-OllysLibrary/Pods-OllysLibrary.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,8 +78,6 @@
 				811556BB2274C72000096198 /* iOSDFULibrary.framework */,
 				811556BA2274C72000096198 /* MetaWear.framework */,
 				811556BC2274C72000096198 /* Zip.framework */,
-				81DECEA5226B429F00D9F8E9 /* Pods.xcodeproj */,
-				5CE2F2DFDFCF28665A3C48B3 /* Pods_OllysLibrary.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -140,16 +114,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		81DECEA6226B429F00D9F8E9 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				811554E022747E7300096198 /* BoltsSwift.framework */,
-				811554E222747E7300096198 /* MetaWear.framework */,
-				81DECEB0226B429F00D9F8E9 /* Pods_OllysLibrary.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		81E8FF1C226B2C0D00708DD0 /* Code */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,7 +132,6 @@
 		81E8FF1E226B2C3200708DD0 /* LibrarySettings */ = {
 			isa = PBXGroup;
 			children = (
-				81E8FF35226B340400708DD0 /* Podfile */,
 				81E8FF20226B2C5B00708DD0 /* Info.plist */,
 				81E8FF1F226B2C5B00708DD0 /* OllysLibrary.h */,
 			);
@@ -242,12 +205,6 @@
 			mainGroup = 819E678C226B2AB10021BBA8;
 			productRefGroup = 819E6797226B2AB10021BBA8 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 81DECEA6226B429F00D9F8E9 /* Products */;
-					ProjectRef = 81DECEA5226B429F00D9F8E9 /* Pods.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				819E6795226B2AB10021BBA8 /* OllysLibrary */,
@@ -255,36 +212,15 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXReferenceProxy section */
-		811554E022747E7300096198 /* BoltsSwift.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = BoltsSwift.framework;
-			remoteRef = 811554DF22747E7300096198 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		811554E222747E7300096198 /* MetaWear.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = MetaWear.framework;
-			remoteRef = 811554E122747E7300096198 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		81DECEB0226B429F00D9F8E9 /* Pods_OllysLibrary.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Pods_OllysLibrary.framework;
-			remoteRef = 81DECEAF226B429F00D9F8E9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
-
 /* Begin PBXResourcesBuildPhase section */
 		819E6794226B2AB10021BBA8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81E8FF36226B340400708DD0 /* Podfile in Resources */,
+				811556C62274C9BB00096198 /* BoltsSwift.framework in Resources */,
+				811556C72274C9C400096198 /* iOSDFULibrary.framework in Resources */,
+				811556C82274C9C800096198 /* MetaWear.framework in Resources */,
+				811556C92274C9CE00096198 /* Zip.framework in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,13 +407,10 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"${PODS_CONFIGURATION_BUILD_DIR}/Bolts-Swift\"",
-					"\"${PODS_CONFIGURATION_BUILD_DIR}/MetaWear\"",
-					"MetaWear/**",
-					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)/Frameworks/**",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				INSTALL_PATH = "@executable_path/../Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -486,7 +419,9 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"MetaWear/**",
+					"@executable_path/Frameworks",
+					"/**",
+					"@loader_path/Frameworks",
 				);
 				"MODULEMAP_PRIVATE_FILE[sdk=*]" = "";
 				PRODUCT_BUNDLE_IDENTIFIER = Aulendil.OllysLibrary;
@@ -515,7 +450,7 @@
 					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				INSTALL_PATH = "@executable_path/../Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -524,7 +459,9 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"MetaWear/**",
+					"@executable_path/Frameworks",
+					"/**",
+					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Aulendil.OllysLibrary;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
