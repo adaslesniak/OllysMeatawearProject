@@ -1,7 +1,6 @@
 // MetaWear+.swift [OllysProject] created by: Adas Lesniak on: 05/04/2019 
-import MetaWear
 import Foundation
-
+import MetaWear
 
 extension MetaWear {
     

@@ -7,15 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7141A79EC6B326D8DBFA97F0 /* Pods_OllysLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CE2F2DFDFCF28665A3C48B3 /* Pods_OllysLibrary.framework */; };
-		811554EC22747ED800096198 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811554E422747ED800096198 /* Errors.swift */; };
-		811554ED22747ED800096198 /* Task+Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811554E522747ED800096198 /* Task+Delay.swift */; };
-		811554EE22747ED800096198 /* Task+WhenAll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811554E622747ED800096198 /* Task+WhenAll.swift */; };
-		811554EF22747ED800096198 /* TaskCompletionSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811554E722747ED800096198 /* TaskCompletionSource.swift */; };
-		811554F022747ED800096198 /* Task+ContinueWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811554E822747ED800096198 /* Task+ContinueWith.swift */; };
-		811554F122747ED800096198 /* Executor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811554E922747ED800096198 /* Executor.swift */; };
-		811554F222747ED800096198 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811554EA22747ED800096198 /* Task.swift */; };
-		811554F322747ED800096198 /* Task+WhenAny.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811554EB22747ED800096198 /* Task+WhenAny.swift */; };
+		811556C22274C74600096198 /* BoltsSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 811556BD2274C72000096198 /* BoltsSwift.framework */; };
+		811556C32274C74A00096198 /* iOSDFULibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 811556BB2274C72000096198 /* iOSDFULibrary.framework */; };
+		811556C42274C74C00096198 /* MetaWear.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 811556BA2274C72000096198 /* MetaWear.framework */; };
+		811556C52274C74F00096198 /* Zip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 811556BC2274C72000096198 /* Zip.framework */; };
 		815F850B226B402B00D17B4E /* Dictionary+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815F8506226B402B00D17B4E /* Dictionary+.swift */; };
 		815F850C226B402B00D17B4E /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815F8507226B402B00D17B4E /* Typealiases.swift */; };
 		815F850D226B402B00D17B4E /* Thread+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815F8508226B402B00D17B4E /* Thread+.swift */; };
@@ -60,14 +55,10 @@
 /* Begin PBXFileReference section */
 		4D8CC2A5ADF153A216BAB538 /* Pods-OllysLibrary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OllysLibrary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OllysLibrary/Pods-OllysLibrary.debug.xcconfig"; sourceTree = "<group>"; };
 		5CE2F2DFDFCF28665A3C48B3 /* Pods_OllysLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OllysLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		811554E422747ED800096198 /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
-		811554E522747ED800096198 /* Task+Delay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Task+Delay.swift"; sourceTree = "<group>"; };
-		811554E622747ED800096198 /* Task+WhenAll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Task+WhenAll.swift"; sourceTree = "<group>"; };
-		811554E722747ED800096198 /* TaskCompletionSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskCompletionSource.swift; sourceTree = "<group>"; };
-		811554E822747ED800096198 /* Task+ContinueWith.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Task+ContinueWith.swift"; sourceTree = "<group>"; };
-		811554E922747ED800096198 /* Executor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Executor.swift; sourceTree = "<group>"; };
-		811554EA22747ED800096198 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
-		811554EB22747ED800096198 /* Task+WhenAny.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Task+WhenAny.swift"; sourceTree = "<group>"; };
+		811556BA2274C72000096198 /* MetaWear.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetaWear.framework; path = Frameworks/MetaWear.framework; sourceTree = "<group>"; };
+		811556BB2274C72000096198 /* iOSDFULibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iOSDFULibrary.framework; path = Frameworks/iOSDFULibrary.framework; sourceTree = "<group>"; };
+		811556BC2274C72000096198 /* Zip.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Zip.framework; path = Frameworks/Zip.framework; sourceTree = "<group>"; };
+		811556BD2274C72000096198 /* BoltsSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BoltsSwift.framework; path = Frameworks/BoltsSwift.framework; sourceTree = "<group>"; };
 		815F8506226B402B00D17B4E /* Dictionary+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+.swift"; sourceTree = "<group>"; };
 		815F8507226B402B00D17B4E /* Typealiases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
 		815F8508226B402B00D17B4E /* Thread+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Thread+.swift"; sourceTree = "<group>"; };
@@ -94,7 +85,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7141A79EC6B326D8DBFA97F0 /* Pods_OllysLibrary.framework in Frameworks */,
+				811556C32274C74A00096198 /* iOSDFULibrary.framework in Frameworks */,
+				811556C42274C74C00096198 /* MetaWear.framework in Frameworks */,
+				811556C52274C74F00096198 /* Zip.framework in Frameworks */,
+				811556C22274C74600096198 /* BoltsSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,25 +98,14 @@
 		70BD353234AEEDF5008E8EF9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				811556BD2274C72000096198 /* BoltsSwift.framework */,
+				811556BB2274C72000096198 /* iOSDFULibrary.framework */,
+				811556BA2274C72000096198 /* MetaWear.framework */,
+				811556BC2274C72000096198 /* Zip.framework */,
 				81DECEA5226B429F00D9F8E9 /* Pods.xcodeproj */,
 				5CE2F2DFDFCF28665A3C48B3 /* Pods_OllysLibrary.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		811554E322747E8F00096198 /* Bolts-Swift */ = {
-			isa = PBXGroup;
-			children = (
-				811554E422747ED800096198 /* Errors.swift */,
-				811554E922747ED800096198 /* Executor.swift */,
-				811554EA22747ED800096198 /* Task.swift */,
-				811554E822747ED800096198 /* Task+ContinueWith.swift */,
-				811554E522747ED800096198 /* Task+Delay.swift */,
-				811554E622747ED800096198 /* Task+WhenAll.swift */,
-				811554EB22747ED800096198 /* Task+WhenAny.swift */,
-				811554E722747ED800096198 /* TaskCompletionSource.swift */,
-			);
-			path = "Bolts-Swift";
 			sourceTree = "<group>";
 		};
 		815F8505226B400800D17B4E /* SwiftSugar */ = {
@@ -140,7 +123,6 @@
 		819E678C226B2AB10021BBA8 = {
 			isa = PBXGroup;
 			children = (
-				811554E322747E8F00096198 /* Bolts-Swift */,
 				815F8505226B400800D17B4E /* SwiftSugar */,
 				81E8FF1C226B2C0D00708DD0 /* Code */,
 				81E8FF1E226B2C3200708DD0 /* LibrarySettings */,
@@ -337,17 +319,9 @@
 				815F850D226B402B00D17B4E /* Thread+.swift in Sources */,
 				81E8FF32226B2CE800708DD0 /* AccelerometerCtrl.swift in Sources */,
 				81E8FF2E226B2CE800708DD0 /* Log.swift in Sources */,
-				811554EF22747ED800096198 /* TaskCompletionSource.swift in Sources */,
 				815F850C226B402B00D17B4E /* Typealiases.swift in Sources */,
 				815F850B226B402B00D17B4E /* Dictionary+.swift in Sources */,
-				811554F122747ED800096198 /* Executor.swift in Sources */,
-				811554ED22747ED800096198 /* Task+Delay.swift in Sources */,
-				811554EE22747ED800096198 /* Task+WhenAll.swift in Sources */,
 				81E8FF34226B2CE800708DD0 /* LedCtrl.swift in Sources */,
-				811554F022747ED800096198 /* Task+ContinueWith.swift in Sources */,
-				811554EC22747ED800096198 /* Errors.swift in Sources */,
-				811554F222747ED800096198 /* Task.swift in Sources */,
-				811554F322747ED800096198 /* Task+WhenAny.swift in Sources */,
 				81E8FF2D226B2CE800708DD0 /* DeviceCard.swift in Sources */,
 				81E8FF31226B2CE800708DD0 /* Devices.swift in Sources */,
 				815F850E226B402B00D17B4E /* PersistentDictionary.swift in Sources */,
@@ -495,6 +469,13 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Bolts-Swift\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MetaWear\"",
+					"MetaWear/**",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -503,6 +484,11 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"MetaWear/**",
+				);
+				"MODULEMAP_PRIVATE_FILE[sdk=*]" = "";
 				PRODUCT_BUNDLE_IDENTIFIER = Aulendil.OllysLibrary;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -524,6 +510,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -531,6 +521,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"MetaWear/**",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Aulendil.OllysLibrary;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";

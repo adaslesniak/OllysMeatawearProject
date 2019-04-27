@@ -1,7 +1,6 @@
-// Log.swift [OllysProject] created by: Adas Lesniak on: 04/04/2019 
-// Copyright ©Aulendil   All rights reserved.
-
+// Log.swift [OllysProject] created by: Adas Lesniak on: 04/04/2019
 import Foundation
+
 
 public class Log {
     

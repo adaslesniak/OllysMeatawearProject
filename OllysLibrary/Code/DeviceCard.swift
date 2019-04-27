@@ -11,7 +11,7 @@ import Foundation
     }
 }
 
-//IMPORTANT NOTE: this card will look differnt for the same device on different phones, as apple generates different uuid's (but on the same phone works fine)
+//NOTE: this card will look differnt for the same device on different phones, as apple generates different uuid's (but on the same phone works fine)
 @objc public class DeviceCard : NSObject {
     @objc public let name: String
     @objc public let id: UUID
@@ -22,7 +22,6 @@ import Foundation
         self.id = id
     }
     
-    //326A9000-85CB-9195-D9DD-464CFBBAE75A - that is my device thing
     public static func == (_ lhv: DeviceCard, _ rhv: DeviceCard) -> Bool {
         return lhv.id == rhv.id
     }
