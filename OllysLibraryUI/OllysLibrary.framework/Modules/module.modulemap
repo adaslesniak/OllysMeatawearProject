@@ -1,0 +1,11 @@
+framework module OllysLibrary {
+  umbrella header "OllysLibrary.h"
+
+  export *
+  module * { export * }
+}
+
+module OllysLibrary.Swift {
+    header "OllysLibrary-Swift.h"
+    requires objc
+}
