@@ -1,6 +1,0 @@
-framework module Pods_OllysLibrary {
-  umbrella header "Pods-OllysLibrary-umbrella.h"
-
-  export *
-  module * { export * }
-}

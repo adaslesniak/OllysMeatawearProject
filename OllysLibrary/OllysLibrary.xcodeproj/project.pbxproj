@@ -11,10 +11,6 @@
 		811556C32274C74A00096198 /* iOSDFULibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 811556BB2274C72000096198 /* iOSDFULibrary.framework */; };
 		811556C42274C74C00096198 /* MetaWear.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 811556BA2274C72000096198 /* MetaWear.framework */; };
 		811556C52274C74F00096198 /* Zip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 811556BC2274C72000096198 /* Zip.framework */; };
-		811556C62274C9BB00096198 /* BoltsSwift.framework in Resources */ = {isa = PBXBuildFile; fileRef = 811556BD2274C72000096198 /* BoltsSwift.framework */; };
-		811556C72274C9C400096198 /* iOSDFULibrary.framework in Resources */ = {isa = PBXBuildFile; fileRef = 811556BB2274C72000096198 /* iOSDFULibrary.framework */; };
-		811556C82274C9C800096198 /* MetaWear.framework in Resources */ = {isa = PBXBuildFile; fileRef = 811556BA2274C72000096198 /* MetaWear.framework */; };
-		811556C92274C9CE00096198 /* Zip.framework in Resources */ = {isa = PBXBuildFile; fileRef = 811556BC2274C72000096198 /* Zip.framework */; };
 		815F850B226B402B00D17B4E /* Dictionary+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815F8506226B402B00D17B4E /* Dictionary+.swift */; };
 		815F850C226B402B00D17B4E /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815F8507226B402B00D17B4E /* Typealiases.swift */; };
 		815F850D226B402B00D17B4E /* Thread+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815F8508226B402B00D17B4E /* Thread+.swift */; };
@@ -32,7 +28,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4D8CC2A5ADF153A216BAB538 /* Pods-OllysLibrary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OllysLibrary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OllysLibrary/Pods-OllysLibrary.debug.xcconfig"; sourceTree = "<group>"; };
 		811556BA2274C72000096198 /* MetaWear.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetaWear.framework; path = Frameworks/MetaWear.framework; sourceTree = "<group>"; };
 		811556BB2274C72000096198 /* iOSDFULibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iOSDFULibrary.framework; path = Frameworks/iOSDFULibrary.framework; sourceTree = "<group>"; };
 		811556BC2274C72000096198 /* Zip.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Zip.framework; path = Frameworks/Zip.framework; sourceTree = "<group>"; };
@@ -53,7 +48,6 @@
 		81E8FF2A226B2CE800708DD0 /* AccelerometerCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccelerometerCtrl.swift; sourceTree = "<group>"; };
 		81E8FF2B226B2CE800708DD0 /* AccelerometerMeasurment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccelerometerMeasurment.swift; sourceTree = "<group>"; };
 		81E8FF2C226B2CE800708DD0 /* LedCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LedCtrl.swift; sourceTree = "<group>"; };
-		B5ABC9350EE03EF2B9C68EA4 /* Pods-OllysLibrary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OllysLibrary.release.xcconfig"; path = "Pods/Target Support Files/Pods-OllysLibrary/Pods-OllysLibrary.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +95,6 @@
 				81E8FF1C226B2C0D00708DD0 /* Code */,
 				81E8FF1E226B2C3200708DD0 /* LibrarySettings */,
 				819E6797226B2AB10021BBA8 /* Products */,
-				F76CE049472934B300AF197B /* Pods */,
 				70BD353234AEEDF5008E8EF9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -138,15 +131,6 @@
 			name = LibrarySettings;
 			sourceTree = "<group>";
 		};
-		F76CE049472934B300AF197B /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				4D8CC2A5ADF153A216BAB538 /* Pods-OllysLibrary.debug.xcconfig */,
-				B5ABC9350EE03EF2B9C68EA4 /* Pods-OllysLibrary.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -165,7 +149,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 819E679E226B2AB10021BBA8 /* Build configuration list for PBXNativeTarget "OllysLibrary" */;
 			buildPhases = (
-				28BD4429D4C04FA1D864DBE1 /* [CP] Check Pods Manifest.lock */,
 				819E6791226B2AB10021BBA8 /* Headers */,
 				819E6792226B2AB10021BBA8 /* Sources */,
 				819E6793226B2AB10021BBA8 /* Frameworks */,
@@ -217,35 +200,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				811556C62274C9BB00096198 /* BoltsSwift.framework in Resources */,
-				811556C72274C9C400096198 /* iOSDFULibrary.framework in Resources */,
-				811556C82274C9C800096198 /* MetaWear.framework in Resources */,
-				811556C92274C9CE00096198 /* Zip.framework in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		28BD4429D4C04FA1D864DBE1 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-OllysLibrary-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		819E6792226B2AB10021BBA8 /* Sources */ = {
@@ -395,7 +353,6 @@
 		};
 		819E679F226B2AB10021BBA8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D8CC2A5ADF153A216BAB538 /* Pods-OllysLibrary.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -410,19 +367,8 @@
 					"$(PROJECT_DIR)/Frameworks/**",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
-				INSTALL_PATH = "@executable_path/../Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"/**",
-					"@loader_path/Frameworks",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				"MODULEMAP_PRIVATE_FILE[sdk=*]" = "";
 				PRODUCT_BUNDLE_IDENTIFIER = Aulendil.OllysLibrary;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -435,7 +381,6 @@
 		};
 		819E67A0226B2AB10021BBA8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B5ABC9350EE03EF2B9C68EA4 /* Pods-OllysLibrary.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -450,19 +395,8 @@
 					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
-				INSTALL_PATH = "@executable_path/../Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"/**",
-					"@loader_path/Frameworks",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = Aulendil.OllysLibrary;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
