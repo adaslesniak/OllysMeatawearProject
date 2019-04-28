@@ -11,7 +11,7 @@ import Foundation
     private var ledsCtrl: LedCtrl! //should be let, but can't initialize properly then
     private var accelerometerCtrl: AccelerometerCtrl!
     
-    @objc public var id: UUID { return UUID() } //return device.peripheral.identifier }
+    @objc public var id: UUID { return device.peripheral.identifier }
     
     
     init(_ theDevice: MetaWear, as theName: String? = nil) {

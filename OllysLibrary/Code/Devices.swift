@@ -86,7 +86,6 @@ import Foundation
         }
         
         MetaWearScanner.shared.retrieveConnectedMetaWearsAsync().continueWith { result in
-            //Task<MetaWear>
             guard result.error == nil else {
                 Log.error("failed to retrive connected devices: \(result.error!)")
                 return
@@ -107,7 +106,9 @@ import Foundation
                 if let info = known.first(where: {$0.id == found.id}) {
                     accessible.append(DeviceCtrl(found.device, as: info.name))
                 } else {
-                    Log.debug("found some unknown device while scanning for known ones")
+                    var knownDscr = "known id's: "
+                    known.forEach({ knownDscr += "\($0.id); " })
+                    Log.debug("found some unknown device (\(found.id)) while scanning for \(known.count) known ones: [\(knownDscr)]")
                 }
             }
             tryCallback()
@@ -120,7 +121,6 @@ import Foundation
         var timeout = 1.9
         func finishScan() {
             MetaWearScanner.shared.stopScan()
-            //let ctrl = DeviceCtrl(nearby)
             whenDone(nearby.map({ return DeviceCtrl($0) }))
             timeout = -1 //invalid
         }
