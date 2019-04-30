@@ -7,16 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		811556D02274ECD600096198 /* BoltsSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 811556CC2274ECD600096198 /* BoltsSwift.framework */; };
-		811556D12274ECD600096198 /* iOSDFULibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 811556CD2274ECD600096198 /* iOSDFULibrary.framework */; };
-		811556D22274ECD600096198 /* Zip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 811556CE2274ECD600096198 /* Zip.framework */; };
-		811556D32274ECD600096198 /* MetaWear.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 811556CF2274ECD600096198 /* MetaWear.framework */; };
-		811556D42274ECDC00096198 /* BoltsSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 811556CC2274ECD600096198 /* BoltsSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		811556D52274ECE000096198 /* iOSDFULibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 811556CD2274ECD600096198 /* iOSDFULibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		811556D62274ECE500096198 /* MetaWear.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 811556CF2274ECD600096198 /* MetaWear.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		811556D72274ECEA00096198 /* Zip.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 811556CE2274ECD600096198 /* Zip.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		812AA01722732FD5002878AD /* OllysLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 812AA01622732FD5002878AD /* OllysLibrary.framework */; };
-		812AA0192273301B002878AD /* OllysLibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 812AA01622732FD5002878AD /* OllysLibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8114330E22772AB5001B9226 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8114330D22772AB5001B9226 /* test.swift */; };
+		8114332022774EDA001B9226 /* minizip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8114330B22772A55001B9226 /* minizip.framework */; };
+		8114332122774EDA001B9226 /* minizip.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8114330B22772A55001B9226 /* minizip.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		812AA02A22733447002878AD /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 812AA01E22733446002878AD /* HomeView.xib */; };
 		812AA02B22733447002878AD /* ToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812AA01F22733446002878AD /* ToggleView.swift */; };
 		812AA02C22733447002878AD /* AvailableDeviceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 812AA02022733446002878AD /* AvailableDeviceCell.xib */; };
@@ -29,6 +22,16 @@
 		812AA03322733447002878AD /* SetUpDeviceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 812AA02722733447002878AD /* SetUpDeviceView.xib */; };
 		812AA03422733447002878AD /* NamingViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812AA02822733447002878AD /* NamingViewCtrl.swift */; };
 		812AA03522733447002878AD /* NamingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 812AA02922733447002878AD /* NamingView.xib */; };
+		81A7D8182275CAD300742946 /* Zip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81A7D8132275CAD200742946 /* Zip.framework */; };
+		81A7D81A2275CAD300742946 /* BoltsSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81A7D8152275CAD300742946 /* BoltsSwift.framework */; };
+		81A9E28E2275CD11009531E0 /* Zip.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 81A7D8132275CAD200742946 /* Zip.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		81A9E2922275CD39009531E0 /* BoltsSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 81A7D8152275CAD300742946 /* BoltsSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		81A9E2932275CEC8009531E0 /* MetaWear.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81A7D8162275CAD300742946 /* MetaWear.framework */; };
+		81A9E2942275CEC8009531E0 /* MetaWear.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 81A7D8162275CAD300742946 /* MetaWear.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		81A9E2952275CEDA009531E0 /* OllysLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81A7D8142275CAD300742946 /* OllysLibrary.framework */; };
+		81A9E2962275CEDA009531E0 /* OllysLibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 81A7D8142275CAD300742946 /* OllysLibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		81A9E2972275CEE7009531E0 /* iOSDFULibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81A9E28B2275CC65009531E0 /* iOSDFULibrary.framework */; };
+		81A9E2982275CEE7009531E0 /* iOSDFULibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 81A9E28B2275CC65009531E0 /* iOSDFULibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		81E5326822732F6B00EE3631 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E5326722732F6B00EE3631 /* AppDelegate.swift */; };
 		81E5326F22732F6C00EE3631 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81E5326E22732F6C00EE3631 /* Assets.xcassets */; };
 		81E5327222732F6C00EE3631 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81E5327022732F6C00EE3631 /* LaunchScreen.storyboard */; };
@@ -41,11 +44,12 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				812AA0192273301B002878AD /* OllysLibrary.framework in Embed Frameworks */,
-				811556D42274ECDC00096198 /* BoltsSwift.framework in Embed Frameworks */,
-				811556D52274ECE000096198 /* iOSDFULibrary.framework in Embed Frameworks */,
-				811556D62274ECE500096198 /* MetaWear.framework in Embed Frameworks */,
-				811556D72274ECEA00096198 /* Zip.framework in Embed Frameworks */,
+				81A9E2942275CEC8009531E0 /* MetaWear.framework in Embed Frameworks */,
+				81A9E2922275CD39009531E0 /* BoltsSwift.framework in Embed Frameworks */,
+				81A9E28E2275CD11009531E0 /* Zip.framework in Embed Frameworks */,
+				8114332122774EDA001B9226 /* minizip.framework in Embed Frameworks */,
+				81A9E2982275CEE7009531E0 /* iOSDFULibrary.framework in Embed Frameworks */,
+				81A9E2962275CEDA009531E0 /* OllysLibrary.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -53,11 +57,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		811556CC2274ECD600096198 /* BoltsSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BoltsSwift.framework; sourceTree = "<group>"; };
-		811556CD2274ECD600096198 /* iOSDFULibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iOSDFULibrary.framework; sourceTree = "<group>"; };
-		811556CE2274ECD600096198 /* Zip.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Zip.framework; sourceTree = "<group>"; };
-		811556CF2274ECD600096198 /* MetaWear.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MetaWear.framework; sourceTree = "<group>"; };
-		812AA01622732FD5002878AD /* OllysLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OllysLibrary.framework; sourceTree = "<group>"; };
+		8114330B22772A55001B9226 /* minizip.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = minizip.framework; path = Frameworks/minizip.framework; sourceTree = "<group>"; };
+		8114330D22772AB5001B9226 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		812AA01E22733446002878AD /* HomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeView.xib; sourceTree = "<group>"; };
 		812AA01F22733446002878AD /* ToggleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToggleView.swift; sourceTree = "<group>"; };
 		812AA02022733446002878AD /* AvailableDeviceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AvailableDeviceCell.xib; sourceTree = "<group>"; };
@@ -70,6 +71,11 @@
 		812AA02722733447002878AD /* SetUpDeviceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetUpDeviceView.xib; sourceTree = "<group>"; };
 		812AA02822733447002878AD /* NamingViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamingViewCtrl.swift; sourceTree = "<group>"; };
 		812AA02922733447002878AD /* NamingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NamingView.xib; sourceTree = "<group>"; };
+		81A7D8132275CAD200742946 /* Zip.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Zip.framework; path = Frameworks/Zip.framework; sourceTree = "<group>"; };
+		81A7D8142275CAD300742946 /* OllysLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OllysLibrary.framework; path = Frameworks/OllysLibrary.framework; sourceTree = "<group>"; };
+		81A7D8152275CAD300742946 /* BoltsSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BoltsSwift.framework; path = Frameworks/BoltsSwift.framework; sourceTree = "<group>"; };
+		81A7D8162275CAD300742946 /* MetaWear.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetaWear.framework; path = Frameworks/MetaWear.framework; sourceTree = "<group>"; };
+		81A9E28B2275CC65009531E0 /* iOSDFULibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iOSDFULibrary.framework; path = Frameworks/iOSDFULibrary.framework; sourceTree = "<group>"; };
 		81E5326422732F6B00EE3631 /* OllysLibraryUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OllysLibraryUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81E5326722732F6B00EE3631 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81E5326E22732F6C00EE3631 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -82,25 +88,35 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				811556D22274ECD600096198 /* Zip.framework in Frameworks */,
-				811556D32274ECD600096198 /* MetaWear.framework in Frameworks */,
-				811556D12274ECD600096198 /* iOSDFULibrary.framework in Frameworks */,
-				812AA01722732FD5002878AD /* OllysLibrary.framework in Frameworks */,
-				811556D02274ECD600096198 /* BoltsSwift.framework in Frameworks */,
+				81A9E2932275CEC8009531E0 /* MetaWear.framework in Frameworks */,
+				81A7D81A2275CAD300742946 /* BoltsSwift.framework in Frameworks */,
+				81A7D8182275CAD300742946 /* Zip.framework in Frameworks */,
+				8114332022774EDA001B9226 /* minizip.framework in Frameworks */,
+				81A9E2972275CEE7009531E0 /* iOSDFULibrary.framework in Frameworks */,
+				81A9E2952275CEDA009531E0 /* OllysLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		81A7D8122275CAC100742946 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8114330B22772A55001B9226 /* minizip.framework */,
+				81A9E28B2275CC65009531E0 /* iOSDFULibrary.framework */,
+				81A7D8152275CAD300742946 /* BoltsSwift.framework */,
+				81A7D8162275CAD300742946 /* MetaWear.framework */,
+				81A7D8142275CAD300742946 /* OllysLibrary.framework */,
+				81A7D8132275CAD200742946 /* Zip.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		81E5325B22732F6B00EE3631 = {
 			isa = PBXGroup;
 			children = (
-				811556CC2274ECD600096198 /* BoltsSwift.framework */,
-				811556CD2274ECD600096198 /* iOSDFULibrary.framework */,
-				811556CF2274ECD600096198 /* MetaWear.framework */,
-				811556CE2274ECD600096198 /* Zip.framework */,
-				812AA01622732FD5002878AD /* OllysLibrary.framework */,
+				81A7D8122275CAC100742946 /* Frameworks */,
 				81E5326622732F6B00EE3631 /* OllysLibraryUI */,
 				81E5326522732F6B00EE3631 /* Products */,
 			);
@@ -133,6 +149,7 @@
 				81E5327322732F6C00EE3631 /* Info.plist */,
 				81E5326722732F6B00EE3631 /* AppDelegate.swift */,
 				81E5327022732F6C00EE3631 /* LaunchScreen.storyboard */,
+				8114330D22772AB5001B9226 /* test.swift */,
 			);
 			path = OllysLibraryUI;
 			sourceTree = "<group>";
@@ -217,6 +234,7 @@
 				812AA03422733447002878AD /* NamingViewCtrl.swift in Sources */,
 				812AA03122733447002878AD /* SetUpDeviceViewCtrl.swift in Sources */,
 				812AA02E22733447002878AD /* AvailableDevicesViewCtrl.swift in Sources */,
+				8114330E22772AB5001B9226 /* test.swift in Sources */,
 				812AA03022733447002878AD /* AvailableDeviceCell.swift in Sources */,
 				812AA02B22733447002878AD /* ToggleView.swift in Sources */,
 				812AA03222733447002878AD /* CircleView.swift in Sources */,
@@ -363,16 +381,21 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = OllysLibraryUI/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = Aulendil.OllysLibraryUI;
@@ -391,12 +414,17 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = OllysLibraryUI/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = Aulendil.OllysLibraryUI;
