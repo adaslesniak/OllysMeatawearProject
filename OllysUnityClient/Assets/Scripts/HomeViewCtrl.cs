@@ -17,8 +17,9 @@ public class HomeViewCtrl : MonoBehaviour {
             return;
         }
         setUpDeviceBtn.onClick.AddListener(() => {
-            Debug.Log("executing code for setup device button");
+            print("executing code for setup device button");
             BringInView(setupView.transform);
+            setupView.StartScanningForNearestDevice();
         });
 
         var devicesView = FindObjectOfType<AvailableDevicesViewCtrl>();
@@ -27,7 +28,7 @@ public class HomeViewCtrl : MonoBehaviour {
             return;
         }
         listDevicesBtn.onClick.AddListener(() => {
-            Debug.Log("executing code for list devices button");
+            print("executing code for list devices button");
             BringInView(devicesView.transform);
         });
     }
@@ -61,14 +62,12 @@ public class HomeViewCtrl : MonoBehaviour {
 
 
     IEnumerator MovingView(ViewTransition details) {
-        Debug.Log("starting coroutine...");
         details.view.position = details.startPosition;
-        var transitionTime = 0.37f;
+        var transitionTime = 0.21f;
         var transitionTimer = 0f;
         while(transitionTimer < transitionTime) {
             transitionTimer += Time.deltaTime;
             var advancement = transitionTimer / transitionTime;
-            Debug.Log("...coroutine is running (" + advancement + ")...");
             details.view.position = Vector3.Lerp(details.startPosition, details.finalPosition, advancement);
             yield return null;
         }

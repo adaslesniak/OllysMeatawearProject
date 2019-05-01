@@ -249,6 +249,8 @@ struct PlayableBindingU5BU5D_t7EB322901D51EAB67BA4F711C87F3AC1CF5D89AB;
 struct Sprite_tCA09498D612D08DE668653AF1E9C12BF53434198;
 // UnityEngine.Texture2D
 struct Texture2D_tBBF96AC337723E2EF156DF17E09D4379FD05DE1C;
+// UnityEngine.Transform
+struct Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA;
 // UnityEngine.UI.CoroutineTween.ColorTween/ColorTweenCallback
 struct ColorTweenCallback_tA2357F5ECB0BB12F303C2D6EE5A628CFD14C91C0;
 // UnityEngine.UI.CoroutineTween.FloatTween/FloatTweenCallback
@@ -8767,6 +8769,59 @@ public:
 	}
 };
 
+
+// HomeViewCtrl_ViewTransition
+struct  ViewTransition_tC3AB02645A81DA0582DDD6F9FB22C33E8191D5D8 
+{
+public:
+	// UnityEngine.Transform HomeViewCtrl_ViewTransition::view
+	Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * ___view_0;
+	// UnityEngine.Vector3 HomeViewCtrl_ViewTransition::startPosition
+	Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  ___startPosition_1;
+	// UnityEngine.Vector3 HomeViewCtrl_ViewTransition::finalPosition
+	Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  ___finalPosition_2;
+
+public:
+	inline static int32_t get_offset_of_view_0() { return static_cast<int32_t>(offsetof(ViewTransition_tC3AB02645A81DA0582DDD6F9FB22C33E8191D5D8, ___view_0)); }
+	inline Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * get_view_0() const { return ___view_0; }
+	inline Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA ** get_address_of_view_0() { return &___view_0; }
+	inline void set_view_0(Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * value)
+	{
+		___view_0 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___view_0), (void*)value);
+	}
+
+	inline static int32_t get_offset_of_startPosition_1() { return static_cast<int32_t>(offsetof(ViewTransition_tC3AB02645A81DA0582DDD6F9FB22C33E8191D5D8, ___startPosition_1)); }
+	inline Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  get_startPosition_1() const { return ___startPosition_1; }
+	inline Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 * get_address_of_startPosition_1() { return &___startPosition_1; }
+	inline void set_startPosition_1(Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  value)
+	{
+		___startPosition_1 = value;
+	}
+
+	inline static int32_t get_offset_of_finalPosition_2() { return static_cast<int32_t>(offsetof(ViewTransition_tC3AB02645A81DA0582DDD6F9FB22C33E8191D5D8, ___finalPosition_2)); }
+	inline Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  get_finalPosition_2() const { return ___finalPosition_2; }
+	inline Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 * get_address_of_finalPosition_2() { return &___finalPosition_2; }
+	inline void set_finalPosition_2(Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  value)
+	{
+		___finalPosition_2 = value;
+	}
+};
+
+// Native definition for P/Invoke marshalling of HomeViewCtrl/ViewTransition
+struct ViewTransition_tC3AB02645A81DA0582DDD6F9FB22C33E8191D5D8_marshaled_pinvoke
+{
+	Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * ___view_0;
+	Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  ___startPosition_1;
+	Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  ___finalPosition_2;
+};
+// Native definition for COM marshalling of HomeViewCtrl/ViewTransition
+struct ViewTransition_tC3AB02645A81DA0582DDD6F9FB22C33E8191D5D8_marshaled_com
+{
+	Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * ___view_0;
+	Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  ___startPosition_1;
+	Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  ___finalPosition_2;
+};
 
 // Mono.Net.CFRange
 struct  CFRange_tCBCC6F79A6F227524C32B7915AFB36756FAC01DA 
@@ -31470,6 +31525,13 @@ void* RuntimeInvoker_TrueVoid_t22962CB4C05B1D89B55A6E1139F0E87A90987017_RuntimeO
 	return NULL;
 }
 
+void* RuntimeInvoker_TrueRuntimeObject_ViewTransition_tC3AB02645A81DA0582DDD6F9FB22C33E8191D5D8 (Il2CppMethodPointer methodPointer, const RuntimeMethod* methodMetadata, void* obj, void** args)
+{
+	typedef RuntimeObject * (*Func)(void* obj, ViewTransition_tC3AB02645A81DA0582DDD6F9FB22C33E8191D5D8  p1, const RuntimeMethod* method);
+	RuntimeObject * ret = ((Func)methodPointer)(obj, *((ViewTransition_tC3AB02645A81DA0582DDD6F9FB22C33E8191D5D8 *)args[0]), methodMetadata);
+	return ret;
+}
+
 void* RuntimeInvoker_TrueSByte_t9070AEA2966184235653CB9B4D33B149CDA831DF_ValueTuple_2_tD870A19E4522EBDF165C22F9F2B7251A228D8ACE (Il2CppMethodPointer methodPointer, const RuntimeMethod* methodMetadata, void* obj, void** args)
 {
 	typedef int8_t (*Func)(void* obj, ValueTuple_2_tD870A19E4522EBDF165C22F9F2B7251A228D8ACE  p1, const RuntimeMethod* method);
@@ -38002,7 +38064,7 @@ void* RuntimeInvoker_FalseRuntimeObject_FloatTween_tF6BB24C266F36BD80E20C91AED45
 }
 
 extern const InvokerMethod g_Il2CppInvokerPointers[];
-const InvokerMethod g_Il2CppInvokerPointers[2786] = 
+const InvokerMethod g_Il2CppInvokerPointers[2787] = 
 {
 	RuntimeInvoker_FalseRuntimeObject_RuntimeObject,
 	RuntimeInvoker_FalseRuntimeObject_RuntimeObject_RuntimeObject,
@@ -39857,6 +39919,7 @@ const InvokerMethod g_Il2CppInvokerPointers[2786] =
 	RuntimeInvoker_TrueVoid_t22962CB4C05B1D89B55A6E1139F0E87A90987017_Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720_Color32_t23ABC4AE0E0BDFD2E22EE1FA0DA3904FFE5F6E23_Vector2_tA85D2DD88578276CA8A8796756458277E72D073D,
 	RuntimeInvoker_TrueVoid_t22962CB4C05B1D89B55A6E1139F0E87A90987017_UIVertex_t0583C35B730B218B542E80203F5F4BC6F1E9E577,
 	RuntimeInvoker_TrueVoid_t22962CB4C05B1D89B55A6E1139F0E87A90987017_RuntimeObject_Color32_t23ABC4AE0E0BDFD2E22EE1FA0DA3904FFE5F6E23_Int32_t585191389E07734F19F3156FF88FB3EF4800D102_Int32_t585191389E07734F19F3156FF88FB3EF4800D102_Single_tDDDA9169C4E4E308AC6D7A824F9B28DC82204AE1_Single_tDDDA9169C4E4E308AC6D7A824F9B28DC82204AE1,
+	RuntimeInvoker_TrueRuntimeObject_ViewTransition_tC3AB02645A81DA0582DDD6F9FB22C33E8191D5D8,
 	RuntimeInvoker_TrueSByte_t9070AEA2966184235653CB9B4D33B149CDA831DF_ValueTuple_2_tD870A19E4522EBDF165C22F9F2B7251A228D8ACE,
 	RuntimeInvoker_TrueInt32_t585191389E07734F19F3156FF88FB3EF4800D102_ValueTuple_2_tD870A19E4522EBDF165C22F9F2B7251A228D8ACE,
 	RuntimeInvoker_TrueSByte_t9070AEA2966184235653CB9B4D33B149CDA831DF_ArraySegment_1_t3FAE2F820CF6E5129A176448DE04BCB4265A58A6,

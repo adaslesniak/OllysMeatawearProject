@@ -5,9 +5,14 @@ using System.Runtime.InteropServices;
 using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
 
-
 //FIXME: that should be MetaWearNative and all if ios should be followed by else if android
 public class MetaWeariOSUnity : MonoBehaviour {
+
+
+    public delegate void VoidWithDeviceCards(List<DeviceCard> devices);
+    public static event VoidWithDeviceCards onNewDevicesScaned;
+    public static event VoidWithDeviceCards onKnowDevicesScaned;
+
 
     //NOTE: ensure this are exactly as on iOS side
     class MessageSubjects {
@@ -36,6 +41,7 @@ public class MetaWeariOSUnity : MonoBehaviour {
 
 
     public static void ScanForNewDevices() {
+        print("MetaWeariOSUnity.ScanForNewDevices - calling C code");
         #if UNITY_IOS && !UNITY_EDITOR 
         ios_scanForNewDevices();
         #endif
@@ -54,10 +60,8 @@ public class MetaWeariOSUnity : MonoBehaviour {
     }
 
     static MetaWeariOSUnity() {
-        /*var messageReceiver = new MessageReceiver((msg) => {
-            print(">>> got message inside unity: \n   " + msg);
-        });
-        var cPointer = Marshal.GetFunctionPointerForDelegate(messageReceiver);*/
+        Application.SetStackTraceLogType(LogType.Log, StackTraceLogType.None);
+        Application.SetStackTraceLogType(LogType.Warning, StackTraceLogType.None);
         #if UNITY_IOS && !UNITY_EDITOR 
         ios_setCallbackReceiver(ProcessIosMessage);
         #endif
@@ -75,50 +79,19 @@ public class MetaWeariOSUnity : MonoBehaviour {
             var jsonData = jsonContent["data"] as JArray;
 
             var anything = jsonData.First;
-            print("ehmmm.... [" + anything.GetType() + "]: " + anything);
+            //print("ehmmm.... [" + anything.GetType() + "]: " + anything);
             foreach (var thingie in jsonData) {
                 devices.Add(DeviceCard.fromIosSerialised(thingie as JObject));
             }
-
-            
+            print("deserialised " + devices.Count + " cards at ProcessIosMessage<"+subject+">");
+            if (subject == MessageSubjects.foundNewDevices) {
+                onNewDevicesScaned?.Invoke(devices);
+            } else if(subject == MessageSubjects.foundKnownDevices) {
+                onKnowDevicesScaned?.Invoke(devices);
+            }
         } else {
             print(">>> got [" + subject + "] message from iOS inside unity: \n   " + content);
         }
     }
 
-
-    //urghmm... why writing this manuallly?!
-    private static List<string> ListFromJson(string data, string listFieldName = null) {
-
-
-
-        var theList = new List<string>();
-        return theList;
-    }
-}
-
-public class DeviceCard {
-    public string id { get; private set; }
-    public string name { get; private set; }
-    public int signalStrength { get; private set; }
-    public System.DateTime signalTime { get; private set; }
-
-    public static DeviceCard fromIosSerialised(JObject serialised) {
-        var self = new DeviceCard();
-        /*Newtonsoft.Json.Linq.JObject]: {
-            "signalStrength": -68,
-            "signalTime": "unimplemented",
-            "id": "7B3B7ECA-BF7C-C5E7-5FC5-51EC7DD9670F",
-            "name": "MetaWear"
-        }*/
-        self.id = serialised["id"].Value<string>();
-        Debug.Log("got id: " +self.id);
-        self.name = serialised["name"].Value<string>();
-        Debug.Log("got name: " + self.name);
-        self.signalStrength = serialised["signalStrength"].Value<int>();
-        Debug.Log("got signalStrength: " + self.signalStrength);
-        self.signalTime = System.DateTime.Now; //FIXME: that is not implemented
-        Debug.Log("WARNING: correct deserialisation of signal time not implemented");
-        return self;
-    }
 }

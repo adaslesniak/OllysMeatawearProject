@@ -42,7 +42,11 @@
 		<type fullname="iOSMessageReceiver" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Assembly-CSharp">
+		<type fullname="AvailableDevicesViewCtrl" preserve="nothing"/>
 		<type fullname="ExecuteIosCode" preserve="nothing"/>
+		<type fullname="HomeViewCtrl" preserve="nothing"/>
+		<type fullname="SetpuViewConfirmationPanel" preserve="nothing"/>
+		<type fullname="SetupDeviceViewCtrl" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="UnityEditor.Graphs">
 		<type fullname="UnityEditor.Graphs.AnimationBlendTree.Graph" preserve="nothing"/>
