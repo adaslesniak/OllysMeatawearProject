@@ -1,5 +1,6 @@
 ﻿/* crated by Adas Lesniak on Apr 30 2019 */
 using UnityEngine;
+using AOT;
 using System.Runtime.InteropServices;
 
 
@@ -7,7 +8,8 @@ using System.Runtime.InteropServices;
 public class MetaWeariOSUnity : MonoBehaviour {
 
     #region EXTERNAL_DECLARATIONS
-#if UNITY_IOS && !UNITY_EDITOR
+        delegate void MessageReceiver(string message);
+//#if UNITY_IOS && !UNITY_EDITOR
         [DllImport("__Internal")]
         private static extern void ios_scanForNewDevices();
 
@@ -16,7 +18,10 @@ public class MetaWeariOSUnity : MonoBehaviour {
 
         [DllImport("__Internal")]
         private static extern void ios_startFlashingDevice([MarshalAs( UnmanagedType.LPStr )]string deviceId);
-#endif
+
+        [DllImport("__Internal")]
+        private static extern void ios_setCallbackReceiver(MessageReceiver listener);
+//#endif
     #endregion EXTERNAL_DECLARATIONS
 
 
@@ -36,5 +41,20 @@ public class MetaWeariOSUnity : MonoBehaviour {
         #if UNITY_IOS && !UNITY_EDITOR
         ios_startFlashingDevice(deviceId);
         #endif
+    }
+
+    static MetaWeariOSUnity() {
+        /*var messageReceiver = new MessageReceiver((msg) => {
+            print(">>> got message inside unity: \n   " + msg);
+        });
+        var cPointer = Marshal.GetFunctionPointerForDelegate(messageReceiver);*/
+        #if UNITY_IOS && !UNITY_EDITOR 
+        ios_setCallbackReceiver(ProcessIosMessage);
+        #endif
+    }
+
+    [MonoPInvokeCallback(typeof(MessageReceiver))]
+    private static void ProcessIosMessage(string message) {
+        print(">>> got message from iOS inside unity: \n   " + message);
     }
 }
