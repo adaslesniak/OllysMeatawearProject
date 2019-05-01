@@ -249,7 +249,6 @@ struct Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0;
 struct iOSMessageReceiver_t66DDFDF4CD60A2626BC57AB5C4E2D359EE8C2654;
 
 IL2CPP_EXTERN_C RuntimeClass* DateTime_t349B7449FBAAFF4192636E2B7A07694DA9236132_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeClass* Debug_t7B5FCB117E2FD63B6838BC52821B252E2BFB61C4_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* DeviceCard_t82A8F9A320CB17DAFEED5F5176B8BE78F792DD16_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* IDisposable_t7218B22548186B208D65EA5B7870503810A2D15A_il2cpp_TypeInfo_var;
@@ -266,7 +265,6 @@ IL2CPP_EXTERN_C RuntimeClass* Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0_i
 IL2CPP_EXTERN_C RuntimeClass* VoidWithDeviceCards_tD7512A169299DE84910156239E43886F85FD32B0_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* iOSMessageReceiver_t66DDFDF4CD60A2626BC57AB5C4E2D359EE8C2654_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C String_t* _stringLiteral08978886DEFAF5ABA2F28E11E2378BDC5BE800E6;
-IL2CPP_EXTERN_C String_t* _stringLiteral08F136FF693AE6B2F0AD340E220C4B7BCC7ABA0E;
 IL2CPP_EXTERN_C String_t* _stringLiteral091385BE99B45F459A231582D583EC9F3FA3D194;
 IL2CPP_EXTERN_C String_t* _stringLiteral4C10E261F4AFB978699EB377C823EB45CBEB0365;
 IL2CPP_EXTERN_C String_t* _stringLiteral4ED7EAAD395DD81505888EBCD0BD63416D407B38;
@@ -1526,8 +1524,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* DeviceCard_get_id_m9AC5D3AB4ED36D0E
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaWeariOSUnity_ios_startFlashingDevice_mA72791C03DC9B62B755CB0F09ADE9428E85BFC0A (String_t* ___deviceId0, const RuntimeMethod* method);
 // System.Void MetaWeariOSUnity::ios_stopDeviceLeds(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaWeariOSUnity_ios_stopDeviceLeds_m1C31B66EAEA3E669393EC5C76853160847FC1649 (String_t* ___deviceId0, const RuntimeMethod* method);
-// System.Void UnityEngine.Debug::LogError(System.Object)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_LogError_m3BCF9B78263152261565DCA9DB7D55F0C391ED29 (RuntimeObject * p0, const RuntimeMethod* method);
+// System.Void MetaWeariOSUnity::ios_rememberDevice(System.String,System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaWeariOSUnity_ios_rememberDevice_mE17B3CCFD3517761E3F493601D12FE6F25A8C054 (String_t* ___deviceId0, String_t* ___name1, const RuntimeMethod* method);
 // System.Void UnityEngine.Application::SetStackTraceLogType(UnityEngine.LogType,UnityEngine.StackTraceLogType)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Application_SetStackTraceLogType_m0E7F71F07C77A92CD88DD0F4A0BFD881AE4F1692 (int32_t p0, int32_t p1, const RuntimeMethod* method);
 // System.Void MetaWeariOSUnity/MessageReceiver::.ctor(System.Object,System.IntPtr)
@@ -1986,6 +1984,34 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaWeariOSUnity_ios_stopDeviceLeds_m1C3
 	____deviceId0_marshaled = NULL;
 
 }
+#if !FORCE_PINVOKE_INTERNAL
+IL2CPP_EXTERN_C void DEFAULT_CALL ios_rememberDevice(char*, char*);
+#endif
+// System.Void MetaWeariOSUnity::ios_rememberDevice(System.String,System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaWeariOSUnity_ios_rememberDevice_mE17B3CCFD3517761E3F493601D12FE6F25A8C054 (String_t* ___deviceId0, String_t* ___name1, const RuntimeMethod* method)
+{
+	typedef void (DEFAULT_CALL *PInvokeFunc) (char*, char*);
+
+	// Marshaling of parameter U27___deviceId0U27 to native representation
+	char* ____deviceId0_marshaled = NULL;
+	____deviceId0_marshaled = il2cpp_codegen_marshal_string(___deviceId0);
+
+	// Marshaling of parameter U27___name1U27 to native representation
+	char* ____name1_marshaled = NULL;
+	____name1_marshaled = il2cpp_codegen_marshal_string(___name1);
+
+	// Native function invocation
+	reinterpret_cast<PInvokeFunc>(ios_rememberDevice)(____deviceId0_marshaled, ____name1_marshaled);
+
+	// Marshaling cleanup of parameter U27___deviceId0U27 native representation
+	il2cpp_codegen_marshal_free(____deviceId0_marshaled);
+	____deviceId0_marshaled = NULL;
+
+	// Marshaling cleanup of parameter U27___name1U27 native representation
+	il2cpp_codegen_marshal_free(____name1_marshaled);
+	____name1_marshaled = NULL;
+
+}
 // System.Void MetaWeariOSUnity::ScanForNewDevices()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaWeariOSUnity_ScanForNewDevices_m038D996FE97ABDF71F2DDC1CEA4ABC316707A231 (const RuntimeMethod* method)
 {
@@ -2063,8 +2089,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaWeariOSUnity_RememberDevice_m8D3E264
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		IL2CPP_RUNTIME_CLASS_INIT(Debug_t7B5FCB117E2FD63B6838BC52821B252E2BFB61C4_il2cpp_TypeInfo_var);
-		Debug_LogError_m3BCF9B78263152261565DCA9DB7D55F0C391ED29(_stringLiteral08F136FF693AE6B2F0AD340E220C4B7BCC7ABA0E, /*hidden argument*/NULL);
+		DeviceCard_t82A8F9A320CB17DAFEED5F5176B8BE78F792DD16 * L_0 = ___device0;
+		NullCheck(L_0);
+		String_t* L_1 = DeviceCard_get_id_m9AC5D3AB4ED36D0EDC7BD94A7ACDEF3595CCCA3F(L_0, /*hidden argument*/NULL);
+		String_t* L_2 = ___withName1;
+		IL2CPP_RUNTIME_CLASS_INIT(MetaWeariOSUnity_tE0EA63F75413E24C17D5204F83B18B6C1F58FC8D_il2cpp_TypeInfo_var);
+		MetaWeariOSUnity_ios_rememberDevice_mE17B3CCFD3517761E3F493601D12FE6F25A8C054(L_1, L_2, /*hidden argument*/NULL);
 		return;
 	}
 }

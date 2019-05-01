@@ -49,6 +49,14 @@ import Foundation
         deviceCtrl(deviceId)?.turnOffLed()
     }
     
+    @objc public static func rememberDevice(_ deviceId: String, as givenName: String) {
+        guard let ctrl = deviceCtrl(deviceId) else {
+            Log.error("can't remember this device as it's not more anywhere")
+            return
+        }
+        Devices.remember(ctrl, as: givenName)
+    }
+    
     private static func deviceCtrl(_ withId: String) -> DeviceCtrl? {
         guard let theDevice = Devices.nearby.first(where: { $0.id.uuidString == withId }) else {
             Log.error("can't start flashing, device not found among \(Devices.nearby.count)  nearby devices")

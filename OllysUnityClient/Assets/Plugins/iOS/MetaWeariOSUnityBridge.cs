@@ -40,6 +40,9 @@ public class MetaWeariOSUnity : MonoBehaviour {
 
     [DllImport(DLL_LOCATION)]
     private static extern void ios_stopDeviceLeds([MarshalAs(UnmanagedType.LPStr)]string deviceId);
+
+    [DllImport(DLL_LOCATION)]
+    private static extern void ios_rememberDevice([MarshalAs(UnmanagedType.LPStr)]string deviceId, [MarshalAs(UnmanagedType.LPStr)]string name);
     //#endif
     #endregion EXTERNAL_DECLARATIONS
 
@@ -70,7 +73,7 @@ public class MetaWeariOSUnity : MonoBehaviour {
     }
 
     public static void RememberDevice(DeviceCard device, string withName) {
-        Debug.LogError("NOT_IMPLEMENTED");
+        ios_rememberDevice(device.id, withName);
     }
 
     static MetaWeariOSUnity() {

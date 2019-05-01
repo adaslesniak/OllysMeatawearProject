@@ -26,6 +26,12 @@ extern "C" {
         [MetaWearUnity stopLeds:deviceIdString];
     }
     
+    void ios_rememberDevice(const char* deviceId, const char* name) {
+        NSString* deviceIdString = [NSString stringWithCString:deviceId encoding:NSUTF8StringEncoding];
+        NSString* newName = [NSString stringWithCString:name encoding:NSUTF8StringEncoding];
+        [MetaWearUnity rememberDevice:deviceIdString as:newName];
+    }
+    
     typedef void (*CallbackListener)(const char* topic, const char* message);
     void ios_setCallbackReceiver(CallbackListener listener) {
         [MetaWearUnity setUnityListener: ^(NSString* topic, NSString* message) {

@@ -264,6 +264,7 @@ SWIFT_CLASS("_TtC12OllysLibrary13MetaWearUnity")
 + (void)setUnityListener:(void (^ _Nonnull)(NSString * _Nonnull, NSString * _Nonnull))code;
 + (void)startFlashing:(NSString * _Nonnull)deviceId;
 + (void)stopLeds:(NSString * _Nonnull)deviceId;
++ (void)rememberDevice:(NSString * _Nonnull)deviceId as:(NSString * _Nonnull)givenName;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 

@@ -101,6 +101,7 @@ public class SetupDeviceViewCtrl : MonoBehaviour
                 Debug.LogError("ups... that should be solved");
                 return;
             }
+            print("stop device leds is called from unity viewCtrl");
             MetaWeariOSUnity.StopDeviceLeds(touchedDevice);
             MetaWeariOSUnity.RememberDevice(touchedDevice, name);
             touchedDevice = null;
