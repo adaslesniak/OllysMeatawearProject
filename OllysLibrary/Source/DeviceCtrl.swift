@@ -11,6 +11,10 @@ import Foundation
     private var ledsCtrl: LedCtrl! //should be let, but can't initialize properly then
     private var accelerometerCtrl: AccelerometerCtrl!
     
+    func card() -> DeviceCard {
+        return DeviceCard(name: name, id: id)
+    }
+    
     @objc public var id: UUID { return device.peripheral.identifier }
     
     

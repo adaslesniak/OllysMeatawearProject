@@ -30,6 +30,10 @@ import Foundation
         return "\(name)(\(id)) RRSI: \(signal?.strength.description ?? "unknown")"
     }
     
+    func serialise() -> [String:Any] {
+        return ["name":name, "id":id.uuidString, "signalStrength": signal?.strength ?? -255, "signalTime": "unimplemented"]
+    }
+    
     /* damn crap wiht those objective-c requriements for exporting something
     public override func hash(into hasher: inout Hasher) {
         hasher.combine(id)

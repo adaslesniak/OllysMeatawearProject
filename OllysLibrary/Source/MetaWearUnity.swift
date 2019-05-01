@@ -20,16 +20,18 @@ import Foundation
     @objc public static func scanForNewDevices() {
         print("MetaWearUnity.scanForNewDevices executing...")
         Devices.scanForNewDevices { newOnes in
-            print("...MeataWearUnity...")
-            send2Unity(.newDevicesFound, msg: "hey - this message is received by unity [callback from scanForNewDevices -> \(newOnes.count)]")
+            let data = newOnes.map({ $0.key.serialise() })
+            sendObj2Unity(["data":data], topic: .newDevicesFound)
+            //send2Unity(.newDevicesFound, msg: "hey - this message is received by unity [callback from scanForNewDevices -> \(newOnes.count)]")
         }
     }
     
     @objc public static func scanForKnownDevices() {
         print("MetaWearUnity.scanForKnownDevices executing...")
         Devices.scanForKnownDevices { knownOnes in
-            print("...inside MetaWearUunity.swift...")
-            send2Unity(.knownDevicesFound, msg: "hey - this message is received by unity [callback from scanForKnownDevices -> \(knownOnes.count)]")
+            let data = knownOnes.map({ $0.card().serialise() })
+            sendObj2Unity(["data" : data], topic: .knownDevicesFound)
+            //send2Unity(.knownDevicesFound, msg: "hey - this message is received by unity [callback from scanForKnownDevices -> \(knownOnes.count)]")
         }
     }
     
