@@ -10,6 +10,7 @@ import Foundation
     private static var _known: [MetaWear]?
     private static var listeners = [() -> Void]()
     private static var names = PersistentDictionary("saved_devices")
+    static private(set) var nearby = [DeviceCtrl]()
     
     public static func forgetRmemberedDevices() {
         Log.printDevices(Devices.known, header: "devices known before forgetting")
@@ -116,23 +117,25 @@ import Foundation
     }
     
     private static func scanForNearbyDevices(_ whenDone: @escaping ([DeviceCtrl]) -> Void) {
-        var nearby = [MetaWear]()
+        var actualNeraby = [MetaWear]()
         var requestsPending = 0
         var timeout = 1.9
         func finishScan() {
             MetaWearScanner.shared.stopScan()
-            whenDone(nearby.map({ return DeviceCtrl($0) }))
+            let neigborhood = actualNeraby.map({ return DeviceCtrl($0) })
+            nearby = neigborhood //keeping reference to self, but then it's static class
+            whenDone(neigborhood)
             timeout = -1 //invalid
         }
         MetaWearScanner.shared.startScan(allowDuplicates: false) { found in
-            if nearby.contains(found) {
+            if actualNeraby.contains(found) {
                 return
             }
             requestsPending += 1
             if found.rssi < -88 {
                 Log.debug("found weak(\(found.rssi)) signal from: \(found.id.description)")
             } else {
-                nearby.append(found)
+                actualNeraby.append(found)
             }
             guard timeout > 0 else {
                 return

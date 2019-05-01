@@ -40,7 +40,7 @@ public class HomeViewCtrl : MonoBehaviour {
     }
 
     //assumption: whole screen view
-    private void BringInView(Transform view) {
+    public void BringInView(Transform view) {
         var transition = new ViewTransition {
             view = view,
             startPosition = new Vector3(Screen.width * 1.5f, Screen.height * 0.5f, 0),

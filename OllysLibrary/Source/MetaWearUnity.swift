@@ -40,6 +40,24 @@ import Foundation
     }
     
     
+    //could add color here but that would be too darn hard
+    @objc public static func startFlashing(_ deviceId: String) {
+        deviceCtrl(deviceId)?.startFlashing(.green)
+    }
+    
+    @objc public static func stopLeds(_ deviceId: String) {
+        deviceCtrl(deviceId)?.turnOffLed()
+    }
+    
+    private static func deviceCtrl(_ withId: String) -> DeviceCtrl? {
+        guard let theDevice = Devices.nearby.first(where: { $0.id.uuidString == withId }) else {
+            Log.error("can't start flashing, device not found among \(Devices.nearby.count)  nearby devices")
+            return nil
+        }
+        return theDevice
+    }
+    
+    
     
     public static func sendAccelerometerData(_ measurment: AccelerometerMeasurment) {
         var json = [String:Any]()

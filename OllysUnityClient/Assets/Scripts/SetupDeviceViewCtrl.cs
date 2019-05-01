@@ -12,6 +12,7 @@ public class SetupDeviceViewCtrl : MonoBehaviour
 
     DeviceCard touchedDevice;
     SetpuViewConfirmationPanel confirmationPanel;
+    NameDeviceViewCtrl namingView;
 
 
     void Start() {
@@ -22,6 +23,7 @@ public class SetupDeviceViewCtrl : MonoBehaviour
         });
         confirmationPanel = FindObjectOfType<SetpuViewConfirmationPanel>();
         MetaWeariOSUnity.onNewDevicesScaned += OnNewDevicesFound;
+        namingView = FindObjectOfType<NameDeviceViewCtrl>();
     }
 
     bool isToScan = false;
@@ -38,11 +40,19 @@ public class SetupDeviceViewCtrl : MonoBehaviour
 
     //refactor - it's ugly with all those returns of which some are lambdas and others are real returns from this method
     private void OnNewDevicesFound(List<DeviceCard> found) {
-        Invoke("Scan", 1.34f);
+
         print("Unity viewCtrl is processing event: SetupDeviceViewCtrl.OnNewDevicesFound");
+        void finishWithoutTouchedDevice() {
+            if(touchedDevice != null) {
+                MetaWeariOSUnity.StopDeviceLeds(touchedDevice);
+                touchedDevice = null;
+            }
+            EnableSetupUI(false);
+            Invoke("Scan", 1.34f);
+        }
         if (found.Count == 0) {
             print("ups... nothing new under the sky");
-            EnableSetupUI(false);
+            finishWithoutTouchedDevice();
             return;
         }
         found.Sort((d1, d2) => {
@@ -51,23 +61,49 @@ public class SetupDeviceViewCtrl : MonoBehaviour
         var nearest = found.First((device) => {
             return device.signalStrength <= 0;
         });
-        if(nearest.signalStrength < -55) { //FIXME: should be -39
+        if(nearest.signalStrength < -44) { //FIXME: should be -39
             print("there is new device but too far away (signal= ("+nearest.signalStrength+ "); " +
             	" last is: " + found.Last().signalStrength +
             	" first is: " + found.First().signalStrength);
-            EnableSetupUI(false);
+            finishWithoutTouchedDevice();
             return;
         }
+        if(touchedDevice == nearest) {
+            return; 
+        }
+        if(touchedDevice != null) {
+            MetaWeariOSUnity.StopDeviceLeds(touchedDevice);
+        }
         touchedDevice = nearest;
+        MetaWeariOSUnity.StartFlashingDevice(touchedDevice);
         EnableSetupUI(true);
+        Invoke("Scan", 1.66f); //to check if dissapeared from range
     }
 
     private void EnableSetupUI(bool isToBeHighlighted) {
-        print("YEAHHHH!!!!");
-        confirmationPanel.Show((isCOnfrimed) => {
-            print("NOT_IMPLENTED");
-        });
         placeHighlighted.enabled = isToBeHighlighted; //yeah... could be nicer
         placeInactive.enabled = !isToBeHighlighted;
+        if (isToBeHighlighted) {
+            confirmationPanel.Show((isConfrimed) => {
+                EnableSetupUI(false);
+                if (isConfrimed) {
+                    LearnTouchedDevice();
+                } else if (touchedDevice != null) {
+                    MetaWeariOSUnity.StopDeviceLeds(touchedDevice);
+                }
+            });
+        }
+    }
+
+    private void LearnTouchedDevice() {
+        namingView.Show((name) => {
+            if(touchedDevice == null) {
+                Debug.LogError("ups... that should be solved");
+                return;
+            }
+            MetaWeariOSUnity.StopDeviceLeds(touchedDevice);
+            MetaWeariOSUnity.RememberDevice(touchedDevice, name);
+            touchedDevice = null;
+        });
     }
 }

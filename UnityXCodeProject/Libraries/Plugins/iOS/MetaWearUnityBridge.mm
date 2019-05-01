@@ -18,7 +18,12 @@ extern "C" {
     
     void ios_startFlashingDevice(const char* deviceId) {
         NSString* deviceIdString = [NSString stringWithCString:deviceId encoding:NSUTF8StringEncoding];
-        printf("should start flashing device: %s", [deviceIdString cStringUsingEncoding:NSUTF8StringEncoding]);
+        [MetaWearUnity startFlashing:deviceIdString];
+    }
+    
+    void ios_stopDeviceLeds(const char* deviceId) {
+        NSString* deviceIdString = [NSString stringWithCString:deviceId encoding:NSUTF8StringEncoding];
+        [MetaWearUnity stopLeds:deviceIdString];
     }
     
     typedef void (*CallbackListener)(const char* topic, const char* message);

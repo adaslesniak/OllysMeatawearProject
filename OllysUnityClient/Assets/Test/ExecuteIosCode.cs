@@ -6,8 +6,11 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Button))]
 public class ExecuteIosCode : MonoBehaviour
 {
-    public bool isScanForNew = false;
-    public string deviceIdToFlash = "";
+
+    public enum DebugFunction {
+        SCAN_NEW, SCAN_KNOWN, FORGET_KNOWN
+    }
+    public DebugFunction function;
     private int iDebug = 0;
 
     // Start is called before the first frame update
@@ -16,15 +19,14 @@ public class ExecuteIosCode : MonoBehaviour
         var metawearHanlder = FindObjectOfType<MetaWeariOSUnity>();
         var theBtn = GetComponent<Button>();
         theBtn.onClick.AddListener(() => {
-            if (!string.IsNullOrEmpty(deviceIdToFlash)) {
-                print("inside c# -> start flashing: " + deviceIdToFlash);
-                MetaWeariOSUnity.StartFlashingDevice(deviceIdToFlash);
-            } else if (isScanForNew) {
-                print("inside unity -> calling iOS to scan for new devices " + isScanForNew);
+            if (function == DebugFunction.SCAN_NEW) {
+                print("inside unity -> calling iOS to scan for new devices ");
                 MetaWeariOSUnity.ScanForNewDevices();
-            } else {
-                print("inside unity -> calling iOS to scan for known devices" + !isScanForNew);
+            } else if(function == DebugFunction.SCAN_KNOWN) {
+                print("inside unity -> calling iOS to scan for known devices");
                 MetaWeariOSUnity.ScanForKnownDevices();
+            } else if(function == DebugFunction.FORGET_KNOWN) {
+                Debug.LogError("NOT_IMPLEMENTED");
             }
         });
         var label = theBtn.GetComponentInChildren<Text>();

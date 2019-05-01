@@ -23,20 +23,24 @@ public class MetaWeariOSUnity : MonoBehaviour {
     }
 
     #region EXTERNAL_DECLARATIONS
-        delegate void MessageReceiver(string topic, string message);
+    delegate void MessageReceiver(string topic, string message);
+    const string DLL_LOCATION = "__Internal";
 //#if UNITY_IOS && !UNITY_EDITOR
-        [DllImport("__Internal")]
-        private static extern void ios_scanForNewDevices();
+    [DllImport(DLL_LOCATION)]
+    private static extern void ios_scanForNewDevices();
 
-        [DllImport("__Internal")]
-        private static extern void ios_scanForKnownDevices();
+    [DllImport(DLL_LOCATION)]
+    private static extern void ios_scanForKnownDevices();
 
-        [DllImport("__Internal")]
-        private static extern void ios_startFlashingDevice([MarshalAs( UnmanagedType.LPStr )]string deviceId);
+    [DllImport(DLL_LOCATION)]
+    private static extern void ios_startFlashingDevice([MarshalAs( UnmanagedType.LPStr )]string deviceId);
 
-        [DllImport("__Internal")]
-        private static extern void ios_setCallbackReceiver(MessageReceiver listener);
-//#endif
+    [DllImport(DLL_LOCATION)]
+    private static extern void ios_setCallbackReceiver(MessageReceiver listener);
+
+    [DllImport(DLL_LOCATION)]
+    private static extern void ios_stopDeviceLeds([MarshalAs(UnmanagedType.LPStr)]string deviceId);
+    //#endif
     #endregion EXTERNAL_DECLARATIONS
 
 
@@ -53,10 +57,20 @@ public class MetaWeariOSUnity : MonoBehaviour {
         #endif
     }
 
-    public static void StartFlashingDevice(string deviceId) {
+    public static void StartFlashingDevice(DeviceCard device) {
         #if UNITY_IOS && !UNITY_EDITOR
-        ios_startFlashingDevice(deviceId);
+        ios_startFlashingDevice(device.id);
         #endif
+    }
+
+    public static void StopDeviceLeds(DeviceCard device) {
+        #if UNITY_IOS && !UNITY_EDITOR
+        ios_stopDeviceLeds(device.id);
+        #endif
+    }
+
+    public static void RememberDevice(DeviceCard device, string withName) {
+        Debug.LogError("NOT_IMPLEMENTED");
     }
 
     static MetaWeariOSUnity() {
