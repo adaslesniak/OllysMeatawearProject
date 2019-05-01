@@ -39,6 +39,10 @@ import Foundation
         unityListener = code
     }
     
+    @objc public static func forgetAllDevices() {
+        Devices.forgetRmemberedDevices()
+    }
+    
     
     //could add color here but that would be too darn hard
     @objc public static func startFlashing(_ deviceId: String) {
@@ -46,6 +50,7 @@ import Foundation
     }
     
     @objc public static func stopLeds(_ deviceId: String) {
+        print("MetaWearUnity.stopDeviceLeds (is there device?= \(deviceCtrl(deviceId) != nil))")
         deviceCtrl(deviceId)?.turnOffLed()
     }
     

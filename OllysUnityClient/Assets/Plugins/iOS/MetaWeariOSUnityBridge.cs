@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
 
 //FIXME: that should be MetaWearNative and all if ios should be followed by else if android
-public class MetaWeariOSUnity : MonoBehaviour {
+public class MetaWearNative : MonoBehaviour {
 
 
     public delegate void VoidWithDeviceCards(List<DeviceCard> devices);
@@ -43,6 +43,9 @@ public class MetaWeariOSUnity : MonoBehaviour {
 
     [DllImport(DLL_LOCATION)]
     private static extern void ios_rememberDevice([MarshalAs(UnmanagedType.LPStr)]string deviceId, [MarshalAs(UnmanagedType.LPStr)]string name);
+
+    [DllImport(DLL_LOCATION)]
+    private static extern void ios_forgetRememberedDevices();
     //#endif
     #endregion EXTERNAL_DECLARATIONS
 
@@ -73,15 +76,23 @@ public class MetaWeariOSUnity : MonoBehaviour {
     }
 
     public static void RememberDevice(DeviceCard device, string withName) {
+        #if UNITY_IOS && !UNITY_EDITOR
         ios_rememberDevice(device.id, withName);
+        #endif
     }
 
-    static MetaWeariOSUnity() {
+    public static void ForgetAllRememberdDevices() {
+        #if UNITY_IOS && !UNITY_EDITOR
+        ios_forgetRememberedDevices();
+        #endif
+    }
+
+    static MetaWearNative() {
         Application.SetStackTraceLogType(LogType.Log, StackTraceLogType.None);
         Application.SetStackTraceLogType(LogType.Warning, StackTraceLogType.None);
-        #if UNITY_IOS && !UNITY_EDITOR 
+#if UNITY_IOS && !UNITY_EDITOR
         ios_setCallbackReceiver(ProcessIosMessage);
-        #endif
+#endif
     }
 
 

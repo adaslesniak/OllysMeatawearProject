@@ -3118,7 +3118,7 @@ const Il2CppMethodSpec g_Il2CppMethodSpecTable[12854] =
 	{ 10464, 894, -1 } /* System.Int32 System.Collections.Generic.List`1<DeviceCard>::get_Count() */,
 	{ 19073, -1, 1373 } /* !!0 UnityEngine.GameObject::AddComponent<iOSMessageReceiver>() */,
 	{ 19169, -1, 1374 } /* !!0 UnityEngine.Object::FindObjectOfType<HomeViewCtrl>() */,
-	{ 19169, -1, 1375 } /* !!0 UnityEngine.Object::FindObjectOfType<MetaWeariOSUnity>() */,
+	{ 19169, -1, 1375 } /* !!0 UnityEngine.Object::FindObjectOfType<MetaWearNative>() */,
 	{ 19029, -1, 1343 } /* !!0 UnityEngine.Component::GetComponent<UnityEngine.UI.Button>() */,
 	{ 19031, -1, 842 } /* !!0 UnityEngine.Component::GetComponentInChildren<UnityEngine.UI.Text>() */,
 	{ 19169, -1, 1376 } /* !!0 UnityEngine.Object::FindObjectOfType<SetupDeviceViewCtrl>() */,

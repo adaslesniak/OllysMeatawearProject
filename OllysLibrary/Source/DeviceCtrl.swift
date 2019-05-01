@@ -61,7 +61,9 @@ import Foundation
         }
     }
     @objc public func turnOffLed(_ color: LedColor = .all) {
+        print("connecting to turn off leds...")
         connect { [weak self] in //TODO: consider if in this case there should be no strong self, but deinit calls it, so it would never deinit?
+            print("...connection callback...")
             self?.ledsCtrl.turnOffLed(color)
         }
     }

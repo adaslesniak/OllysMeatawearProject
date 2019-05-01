@@ -22,6 +22,7 @@ extern "C" {
     }
     
     void ios_stopDeviceLeds(const char* deviceId) {
+        printf("ios_stopDeviceLeds executed");
         NSString* deviceIdString = [NSString stringWithCString:deviceId encoding:NSUTF8StringEncoding];
         [MetaWearUnity stopLeds:deviceIdString];
     }
@@ -39,5 +40,9 @@ extern "C" {
             const char* messageCString = [message cStringUsingEncoding:NSUTF8StringEncoding];
             listener(topicCString, messageCString);
         }];
+    }
+    
+    void ios_forgetRememberedDevices() {
+        [MetaWearUnity forgetAllDevices];
     }
 }

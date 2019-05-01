@@ -64,6 +64,7 @@ class LedCtrl {
         }
     }
     func turnOffLed(_ color: LedColor = .all) {
+        print("LedCtrl.turnOffLed - that needs to work")
         if color == .all {
             flashing = []
             ledsOn = []

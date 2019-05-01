@@ -22,7 +22,7 @@ public class SetupDeviceViewCtrl : MonoBehaviour
             isToScan = false;
         });
         confirmationPanel = FindObjectOfType<SetpuViewConfirmationPanel>();
-        MetaWeariOSUnity.onNewDevicesScaned += OnNewDevicesFound;
+        MetaWearNative.onNewDevicesScaned += OnNewDevicesFound;
         namingView = FindObjectOfType<NameDeviceViewCtrl>();
     }
 
@@ -34,7 +34,7 @@ public class SetupDeviceViewCtrl : MonoBehaviour
     private void Scan() {
         print("will call scan  (" + isToScan+")");
         if(isToScan) {
-            MetaWeariOSUnity.ScanForNewDevices();
+            MetaWearNative.ScanForNewDevices();
         }
     }
 
@@ -44,7 +44,7 @@ public class SetupDeviceViewCtrl : MonoBehaviour
         print("Unity viewCtrl is processing event: SetupDeviceViewCtrl.OnNewDevicesFound");
         void finishWithoutTouchedDevice() {
             if(touchedDevice != null) {
-                MetaWeariOSUnity.StopDeviceLeds(touchedDevice);
+                MetaWearNative.StopDeviceLeds(touchedDevice);
                 touchedDevice = null;
             }
             EnableSetupUI(false);
@@ -72,12 +72,12 @@ public class SetupDeviceViewCtrl : MonoBehaviour
             return; 
         }
         if(touchedDevice != null) {
-            MetaWeariOSUnity.StopDeviceLeds(touchedDevice);
+            MetaWearNative.StopDeviceLeds(touchedDevice);
         }
         touchedDevice = nearest;
-        MetaWeariOSUnity.StartFlashingDevice(touchedDevice);
+        MetaWearNative.StartFlashingDevice(touchedDevice);
         EnableSetupUI(true);
-        Invoke("Scan", 1.66f); //to check if dissapeared from range
+        //Invoke("Scan", 1.66f); //to check if dissapeared from range
     }
 
     private void EnableSetupUI(bool isToBeHighlighted) {
@@ -89,7 +89,7 @@ public class SetupDeviceViewCtrl : MonoBehaviour
                 if (isConfrimed) {
                     LearnTouchedDevice();
                 } else if (touchedDevice != null) {
-                    MetaWeariOSUnity.StopDeviceLeds(touchedDevice);
+                    MetaWearNative.StopDeviceLeds(touchedDevice);
                 }
             });
         }
@@ -98,13 +98,15 @@ public class SetupDeviceViewCtrl : MonoBehaviour
     private void LearnTouchedDevice() {
         namingView.Show((name) => {
             if(touchedDevice == null) {
+                //that is the case
                 Debug.LogError("ups... that should be solved");
                 return;
             }
             print("stop device leds is called from unity viewCtrl");
-            MetaWeariOSUnity.StopDeviceLeds(touchedDevice);
-            MetaWeariOSUnity.RememberDevice(touchedDevice, name);
+            MetaWearNative.StopDeviceLeds(touchedDevice);
+            MetaWearNative.RememberDevice(touchedDevice, name);
             touchedDevice = null;
+            Invoke("Scan", 0.5f);
         });
     }
 }

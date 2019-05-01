@@ -16,17 +16,18 @@ public class ExecuteIosCode : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        var metawearHanlder = FindObjectOfType<MetaWeariOSUnity>();
+        var metawearHanlder = FindObjectOfType<MetaWearNative>();
         var theBtn = GetComponent<Button>();
         theBtn.onClick.AddListener(() => {
             if (function == DebugFunction.SCAN_NEW) {
                 print("inside unity -> calling iOS to scan for new devices ");
-                MetaWeariOSUnity.ScanForNewDevices();
+                MetaWearNative.ScanForNewDevices();
             } else if(function == DebugFunction.SCAN_KNOWN) {
                 print("inside unity -> calling iOS to scan for known devices");
-                MetaWeariOSUnity.ScanForKnownDevices();
+                MetaWearNative.ScanForKnownDevices();
             } else if(function == DebugFunction.FORGET_KNOWN) {
-                Debug.LogError("NOT_IMPLEMENTED");
+                print("inside unity -> calling iOS to forget all remembered devices");
+                MetaWearNative.ForgetAllRememberdDevices();
             }
         });
         var label = theBtn.GetComponentInChildren<Text>();
