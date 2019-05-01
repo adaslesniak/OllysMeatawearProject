@@ -46,19 +46,41 @@ extern void MetaWeariOSUnity_StartFlashingDevice_m0DAF67A557CC36F0D0927DA67953E9
 extern void MetaWeariOSUnity__cctor_m98ACD84C71D930ADD9BBDE6844189DBC1F9EED62 ();
 // 0x0000000D System.Void MetaWeariOSUnity::ProcessIosMessage(System.String,System.String)
 extern void MetaWeariOSUnity_ProcessIosMessage_m70BA4887E6C603C8BD442CA1B21D63ED85E32AF0 ();
-// 0x0000000E System.Void MetaWeariOSUnity::.ctor()
+// 0x0000000E System.Collections.Generic.List`1<System.String> MetaWeariOSUnity::ListFromJson(System.String,System.String)
+extern void MetaWeariOSUnity_ListFromJson_mB40B3B79A096839B1F2A8A9C9EA27A3C4352E2AF ();
+// 0x0000000F System.Void MetaWeariOSUnity::.ctor()
 extern void MetaWeariOSUnity__ctor_m1448265D85BE85D22D429574E57FC0ED1647880C ();
-// 0x0000000F System.Void MetaWeariOSUnity_MessageSubjects::.ctor()
+// 0x00000010 System.String DeviceCard::get_id()
+extern void DeviceCard_get_id_m9AC5D3AB4ED36D0EDC7BD94A7ACDEF3595CCCA3F ();
+// 0x00000011 System.Void DeviceCard::set_id(System.String)
+extern void DeviceCard_set_id_m282E354CF4A4A0E3407F1EFDEBAD60046BD10037 ();
+// 0x00000012 System.String DeviceCard::get_name()
+extern void DeviceCard_get_name_m2AFA16EEAB98AD52727AB6715A20755CDB266273 ();
+// 0x00000013 System.Void DeviceCard::set_name(System.String)
+extern void DeviceCard_set_name_m65C2AD7E6F2AC88B85702FE2777F6BE22A34C798 ();
+// 0x00000014 System.Int32 DeviceCard::get_signalStrength()
+extern void DeviceCard_get_signalStrength_m135E549CDB0FFD60CA3D57204514632F837F2F49 ();
+// 0x00000015 System.Void DeviceCard::set_signalStrength(System.Int32)
+extern void DeviceCard_set_signalStrength_m1020D38875C5B8ADC5FA4A95588EFCEB1232A7BB ();
+// 0x00000016 System.DateTime DeviceCard::get_signalTime()
+extern void DeviceCard_get_signalTime_m2B05E0A3A2C7201820B958233D657AE2CEF86FC0 ();
+// 0x00000017 System.Void DeviceCard::set_signalTime(System.DateTime)
+extern void DeviceCard_set_signalTime_m1C1628C977CAF0FC3AA405D7FA888B2EA8EA80AE ();
+// 0x00000018 DeviceCard DeviceCard::fromIosSerialised(Newtonsoft.Json.Linq.JObject)
+extern void DeviceCard_fromIosSerialised_m6D17407CEE070BA9579EF91BAF320C36B66AA94D ();
+// 0x00000019 System.Void DeviceCard::.ctor()
+extern void DeviceCard__ctor_mB95AE5C5BFB661A4AEF8D725AEEAC0C3305E3182 ();
+// 0x0000001A System.Void MetaWeariOSUnity_MessageSubjects::.ctor()
 extern void MessageSubjects__ctor_m5E39EC85FF218317DCB48B348E8EFFC15D3FC9DE ();
-// 0x00000010 System.Void MetaWeariOSUnity_MessageReceiver::.ctor(System.Object,System.IntPtr)
+// 0x0000001B System.Void MetaWeariOSUnity_MessageReceiver::.ctor(System.Object,System.IntPtr)
 extern void MessageReceiver__ctor_m81331F60979C5940A551A168B1D6B522F431AF59 ();
-// 0x00000011 System.Void MetaWeariOSUnity_MessageReceiver::Invoke(System.String,System.String)
+// 0x0000001C System.Void MetaWeariOSUnity_MessageReceiver::Invoke(System.String,System.String)
 extern void MessageReceiver_Invoke_mE4E51823126288122D4A76D2AED853D71139CBD9 ();
-// 0x00000012 System.IAsyncResult MetaWeariOSUnity_MessageReceiver::BeginInvoke(System.String,System.String,System.AsyncCallback,System.Object)
+// 0x0000001D System.IAsyncResult MetaWeariOSUnity_MessageReceiver::BeginInvoke(System.String,System.String,System.AsyncCallback,System.Object)
 extern void MessageReceiver_BeginInvoke_mA421B1980C47A05CA054F5A29E706F4E80FBC08E ();
-// 0x00000013 System.Void MetaWeariOSUnity_MessageReceiver::EndInvoke(System.IAsyncResult)
+// 0x0000001E System.Void MetaWeariOSUnity_MessageReceiver::EndInvoke(System.IAsyncResult)
 extern void MessageReceiver_EndInvoke_mFE58B0C88B7312BC87E44C8B64C6D6DDF2121C62 ();
-static Il2CppMethodPointer s_methodPointers[19] = 
+static Il2CppMethodPointer s_methodPointers[30] = 
 {
 	iOSMessageReceiver_get_instance_m68D3B5B648CE2B772D449B7B2C2EF6626F66F8F3,
 	iOSMessageReceiver_Awake_m0E78739D5E9876B702D0219CD83179FF8C89889C,
@@ -73,14 +95,25 @@ static Il2CppMethodPointer s_methodPointers[19] =
 	MetaWeariOSUnity_StartFlashingDevice_m0DAF67A557CC36F0D0927DA67953E9E9C0EA01BC,
 	MetaWeariOSUnity__cctor_m98ACD84C71D930ADD9BBDE6844189DBC1F9EED62,
 	MetaWeariOSUnity_ProcessIosMessage_m70BA4887E6C603C8BD442CA1B21D63ED85E32AF0,
+	MetaWeariOSUnity_ListFromJson_mB40B3B79A096839B1F2A8A9C9EA27A3C4352E2AF,
 	MetaWeariOSUnity__ctor_m1448265D85BE85D22D429574E57FC0ED1647880C,
+	DeviceCard_get_id_m9AC5D3AB4ED36D0EDC7BD94A7ACDEF3595CCCA3F,
+	DeviceCard_set_id_m282E354CF4A4A0E3407F1EFDEBAD60046BD10037,
+	DeviceCard_get_name_m2AFA16EEAB98AD52727AB6715A20755CDB266273,
+	DeviceCard_set_name_m65C2AD7E6F2AC88B85702FE2777F6BE22A34C798,
+	DeviceCard_get_signalStrength_m135E549CDB0FFD60CA3D57204514632F837F2F49,
+	DeviceCard_set_signalStrength_m1020D38875C5B8ADC5FA4A95588EFCEB1232A7BB,
+	DeviceCard_get_signalTime_m2B05E0A3A2C7201820B958233D657AE2CEF86FC0,
+	DeviceCard_set_signalTime_m1C1628C977CAF0FC3AA405D7FA888B2EA8EA80AE,
+	DeviceCard_fromIosSerialised_m6D17407CEE070BA9579EF91BAF320C36B66AA94D,
+	DeviceCard__ctor_mB95AE5C5BFB661A4AEF8D725AEEAC0C3305E3182,
 	MessageSubjects__ctor_m5E39EC85FF218317DCB48B348E8EFFC15D3FC9DE,
 	MessageReceiver__ctor_m81331F60979C5940A551A168B1D6B522F431AF59,
 	MessageReceiver_Invoke_mE4E51823126288122D4A76D2AED853D71139CBD9,
 	MessageReceiver_BeginInvoke_mA421B1980C47A05CA054F5A29E706F4E80FBC08E,
 	MessageReceiver_EndInvoke_mFE58B0C88B7312BC87E44C8B64C6D6DDF2121C62,
 };
-static const int32_t s_InvokerIndices[19] = 
+static const int32_t s_InvokerIndices[30] = 
 {
 	19,
 	13,
@@ -94,23 +127,34 @@ static const int32_t s_InvokerIndices[19] =
 	8,
 	30,
 	8,
-	156,
+	158,
+	1,
+	13,
+	14,
+	4,
+	14,
+	4,
+	18,
+	9,
+	134,
+	325,
+	0,
 	13,
 	13,
-	144,
+	146,
 	23,
-	145,
+	147,
 	4,
 };
 static const Il2CppTokenIndexPair s_reversePInvokeIndices[1] = 
 {
-	{ 0x0600000D, 0 },
+	{ 0x0600000D, 6 },
 };
 extern const Il2CppCodeGenModule g_AssemblyU2DCSharpU2DfirstpassCodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharpU2DfirstpassCodeGenModule = 
 {
 	"Assembly-CSharp-firstpass.dll",
-	19,
+	30,
 	s_methodPointers,
 	s_InvokerIndices,
 	1,
