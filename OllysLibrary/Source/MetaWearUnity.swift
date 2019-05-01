@@ -7,22 +7,29 @@ import Foundation
     static let kUnityMessageReceiver = "iOSMessageReceiver"
     static let kUnityMessageMethod = "onMessageFromiOS"
     
-    public typealias Listener = (String) -> Void
+    enum MessageSubject : String {
+        case accelerometerData = "accelerator_measurment"
+        case newDevicesFound = "new_devices"
+        case knownDevicesFound = "known_devices"
+        case simpleMessage = "unspecified"
+    }
+    
+    public typealias Listener = (String, String) -> Void
     private static var unityListener: Listener?
     
     @objc public static func scanForNewDevices() {
         print("MetaWearUnity.scanForNewDevices executing...")
         Devices.scanForNewDevices { newOnes in
-            print("meatawearUnity - don't know how to send answer to unity [\(newOnes.count) new devices]")
-            sendMsg2Unity("hey - this message is received by unity [callback from scanForNewDevices]")
+            print("...MeataWearUnity...")
+            send2Unity(.newDevicesFound, msg: "hey - this message is received by unity [callback from scanForNewDevices -> \(newOnes.count)]")
         }
     }
     
     @objc public static func scanForKnownDevices() {
         print("MetaWearUnity.scanForKnownDevices executing...")
         Devices.scanForKnownDevices { knownOnes in
-            print("metawearUnity - don't know how to handle answer to unity [\(knownOnes.count) known devices]")
-            sendMsg2Unity("hey - this message is received by unity [callback from scanForKnownDevices]")
+            print("...inside MetaWearUunity.swift...")
+            send2Unity(.knownDevicesFound, msg: "hey - this message is received by unity [callback from scanForKnownDevices -> \(knownOnes.count)]")
         }
     }
     
@@ -42,27 +49,27 @@ import Foundation
         let formatter = DateFormatter()
         formatter.dateFormat = "HH:mm:ss.SSS"
         json["when"] = formatter.string(from: measurment.when)
-        sendObj2Unity(json)
+        sendObj2Unity(json, topic: .accelerometerData)
     }
     
-    private static func sendObj2Unity(_ object: [String:Any]) {
+    private static func sendObj2Unity(_ object: [String:Any], topic: MessageSubject) {
         do {
             let jsonData = try JSONSerialization.data(withJSONObject: object, options: .prettyPrinted)
             guard let serialised = String(data: jsonData, encoding: .utf8) else {
                 throw Exception.error("failed to serialised jsonData")
             }
-            sendMsg2Unity(serialised)
+            send2Unity(topic, msg: serialised)
         } catch {
             Log.error("failed to communicate with unity because: \(error)\n  message was: \(object)")
         }
         
     }
-    private static func sendMsg2Unity(_ message: String) {
+    private static func send2Unity(_ topic: MessageSubject, msg message: String) {
         guard let listener = unityListener else {
             Log.error("no listener set, can't comunicate with Unity code")
             return
         }
-        listener(message)
+        listener(topic.rawValue, message)
     }
     
     

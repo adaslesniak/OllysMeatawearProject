@@ -21,11 +21,12 @@ extern "C" {
         printf("should start flashing device: %s", [deviceIdString cStringUsingEncoding:NSUTF8StringEncoding]);
     }
     
-    
-    typedef void (*CallbackListener)(const char*);
+    typedef void (*CallbackListener)(const char* topic, const char* message);
     void ios_setCallbackReceiver(CallbackListener listener) {
-        [MetaWearUnity setUnityListener: ^(NSString* message) {
-            listener([message cStringUsingEncoding:NSUTF8StringEncoding]);
+        [MetaWearUnity setUnityListener: ^(NSString* topic, NSString* message) {
+            const char* topicCString = [topic cStringUsingEncoding:NSUTF8StringEncoding];
+            const char* messageCString = [message cStringUsingEncoding:NSUTF8StringEncoding];
+            listener(topicCString, messageCString);
         }];
     }
 }

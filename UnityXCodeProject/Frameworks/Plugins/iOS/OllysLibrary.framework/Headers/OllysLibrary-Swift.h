@@ -261,7 +261,7 @@ SWIFT_CLASS("_TtC12OllysLibrary13MetaWearUnity")
 @interface MetaWearUnity : NSObject
 + (void)scanForNewDevices;
 + (void)scanForKnownDevices;
-+ (void)setUnityListener:(void (^ _Nonnull)(NSString * _Nonnull))code;
++ (void)setUnityListener:(void (^ _Nonnull)(NSString * _Nonnull, NSString * _Nonnull))code;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 

@@ -44,19 +44,21 @@ extern void MetaWeariOSUnity_ScanForKnownDevices_m3996C5B38F5A4D017CB5E192793C94
 extern void MetaWeariOSUnity_StartFlashingDevice_m0DAF67A557CC36F0D0927DA67953E9E9C0EA01BC ();
 // 0x0000000C System.Void MetaWeariOSUnity::.cctor()
 extern void MetaWeariOSUnity__cctor_m98ACD84C71D930ADD9BBDE6844189DBC1F9EED62 ();
-// 0x0000000D System.Void MetaWeariOSUnity::ProcessIosMessage(System.String)
-extern void MetaWeariOSUnity_ProcessIosMessage_m297E475A98D2A643F42C4BA1C9451741CEE6252B ();
+// 0x0000000D System.Void MetaWeariOSUnity::ProcessIosMessage(System.String,System.String)
+extern void MetaWeariOSUnity_ProcessIosMessage_m70BA4887E6C603C8BD442CA1B21D63ED85E32AF0 ();
 // 0x0000000E System.Void MetaWeariOSUnity::.ctor()
 extern void MetaWeariOSUnity__ctor_m1448265D85BE85D22D429574E57FC0ED1647880C ();
-// 0x0000000F System.Void MetaWeariOSUnity_MessageReceiver::.ctor(System.Object,System.IntPtr)
+// 0x0000000F System.Void MetaWeariOSUnity_MessageSubjects::.ctor()
+extern void MessageSubjects__ctor_m5E39EC85FF218317DCB48B348E8EFFC15D3FC9DE ();
+// 0x00000010 System.Void MetaWeariOSUnity_MessageReceiver::.ctor(System.Object,System.IntPtr)
 extern void MessageReceiver__ctor_m81331F60979C5940A551A168B1D6B522F431AF59 ();
-// 0x00000010 System.Void MetaWeariOSUnity_MessageReceiver::Invoke(System.String)
-extern void MessageReceiver_Invoke_mC19CD78359F6322CB1A5A1B2F416CEDB17AD7F8F ();
-// 0x00000011 System.IAsyncResult MetaWeariOSUnity_MessageReceiver::BeginInvoke(System.String,System.AsyncCallback,System.Object)
-extern void MessageReceiver_BeginInvoke_mCD1EA6AB5F5771B9CCE9A51A836BA9CF78C36EE1 ();
-// 0x00000012 System.Void MetaWeariOSUnity_MessageReceiver::EndInvoke(System.IAsyncResult)
+// 0x00000011 System.Void MetaWeariOSUnity_MessageReceiver::Invoke(System.String,System.String)
+extern void MessageReceiver_Invoke_mE4E51823126288122D4A76D2AED853D71139CBD9 ();
+// 0x00000012 System.IAsyncResult MetaWeariOSUnity_MessageReceiver::BeginInvoke(System.String,System.String,System.AsyncCallback,System.Object)
+extern void MessageReceiver_BeginInvoke_mA421B1980C47A05CA054F5A29E706F4E80FBC08E ();
+// 0x00000013 System.Void MetaWeariOSUnity_MessageReceiver::EndInvoke(System.IAsyncResult)
 extern void MessageReceiver_EndInvoke_mFE58B0C88B7312BC87E44C8B64C6D6DDF2121C62 ();
-static Il2CppMethodPointer s_methodPointers[18] = 
+static Il2CppMethodPointer s_methodPointers[19] = 
 {
 	iOSMessageReceiver_get_instance_m68D3B5B648CE2B772D449B7B2C2EF6626F66F8F3,
 	iOSMessageReceiver_Awake_m0E78739D5E9876B702D0219CD83179FF8C89889C,
@@ -70,14 +72,15 @@ static Il2CppMethodPointer s_methodPointers[18] =
 	MetaWeariOSUnity_ScanForKnownDevices_m3996C5B38F5A4D017CB5E192793C94686871D290,
 	MetaWeariOSUnity_StartFlashingDevice_m0DAF67A557CC36F0D0927DA67953E9E9C0EA01BC,
 	MetaWeariOSUnity__cctor_m98ACD84C71D930ADD9BBDE6844189DBC1F9EED62,
-	MetaWeariOSUnity_ProcessIosMessage_m297E475A98D2A643F42C4BA1C9451741CEE6252B,
+	MetaWeariOSUnity_ProcessIosMessage_m70BA4887E6C603C8BD442CA1B21D63ED85E32AF0,
 	MetaWeariOSUnity__ctor_m1448265D85BE85D22D429574E57FC0ED1647880C,
+	MessageSubjects__ctor_m5E39EC85FF218317DCB48B348E8EFFC15D3FC9DE,
 	MessageReceiver__ctor_m81331F60979C5940A551A168B1D6B522F431AF59,
-	MessageReceiver_Invoke_mC19CD78359F6322CB1A5A1B2F416CEDB17AD7F8F,
-	MessageReceiver_BeginInvoke_mCD1EA6AB5F5771B9CCE9A51A836BA9CF78C36EE1,
+	MessageReceiver_Invoke_mE4E51823126288122D4A76D2AED853D71139CBD9,
+	MessageReceiver_BeginInvoke_mA421B1980C47A05CA054F5A29E706F4E80FBC08E,
 	MessageReceiver_EndInvoke_mFE58B0C88B7312BC87E44C8B64C6D6DDF2121C62,
 };
-static const int32_t s_InvokerIndices[18] = 
+static const int32_t s_InvokerIndices[19] = 
 {
 	19,
 	13,
@@ -91,11 +94,12 @@ static const int32_t s_InvokerIndices[18] =
 	8,
 	30,
 	8,
-	30,
+	156,
+	13,
 	13,
 	144,
-	4,
-	203,
+	23,
+	145,
 	4,
 };
 static const Il2CppTokenIndexPair s_reversePInvokeIndices[1] = 
@@ -106,7 +110,7 @@ extern const Il2CppCodeGenModule g_AssemblyU2DCSharpU2DfirstpassCodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharpU2DfirstpassCodeGenModule = 
 {
 	"Assembly-CSharp-firstpass.dll",
-	18,
+	19,
 	s_methodPointers,
 	s_InvokerIndices,
 	1,

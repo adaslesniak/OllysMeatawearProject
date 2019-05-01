@@ -21,10 +21,10 @@ public class ExecuteIosCode : MonoBehaviour
                 print("inside c# -> start flashing: " + deviceIdToFlash);
                 MetaWeariOSUnity.StartFlashingDevice(deviceIdToFlash);
             } else if (isScanForNew) {
-                Debug.Log("inside unity -> calling iOS to scan for new devices " + isScanForNew);
+                print("inside unity -> calling iOS to scan for new devices " + isScanForNew);
                 MetaWeariOSUnity.ScanForNewDevices();
             } else {
-                Debug.Log("inside unity -> calling iOS to scan for known devices" + !isScanForNew);
+                print("inside unity -> calling iOS to scan for known devices" + !isScanForNew);
                 MetaWeariOSUnity.ScanForKnownDevices();
             }
         });

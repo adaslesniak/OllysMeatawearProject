@@ -24,6 +24,6 @@ public class iOSMessageReceiver : MonoBehaviour {
     }
 
     void onMessageFromiOS(string json) {
-        Debug.Log("got message from ios: " + json);
+        print(">>>> ERROR, ERROR - this class isn't used -  got message from ios: \n    " + json);
     }
 }

@@ -7,8 +7,16 @@ using System.Runtime.InteropServices;
 //FIXME: that should be MetaWearNative and all if ios should be followed by else if android
 public class MetaWeariOSUnity : MonoBehaviour {
 
+    //NOTE: ensure this are exactly as on iOS side
+    private class MessageSubjects {
+        const string acceleratorData = "accelerator_measurment";
+        const string foundKnownDevices = "known_devices";
+        const string foundNewDevices = "new_devices";
+        const string unspecified = "unspecified";
+    }
+
     #region EXTERNAL_DECLARATIONS
-        delegate void MessageReceiver(string message);
+        delegate void MessageReceiver(string topic, string message);
 //#if UNITY_IOS && !UNITY_EDITOR
         [DllImport("__Internal")]
         private static extern void ios_scanForNewDevices();
@@ -54,7 +62,7 @@ public class MetaWeariOSUnity : MonoBehaviour {
     }
 
     [MonoPInvokeCallback(typeof(MessageReceiver))]
-    private static void ProcessIosMessage(string message) {
-        print(">>> got message from iOS inside unity: \n   " + message);
+    private static void ProcessIosMessage(string subject, string message) {
+        print(">>> got [" + subject + "] message from iOS inside unity: \n   " + message);
     }
 }

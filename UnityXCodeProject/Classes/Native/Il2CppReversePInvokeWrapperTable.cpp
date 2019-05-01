@@ -64,11 +64,11 @@ public:
 #pragma clang diagnostic pop
 #endif
 
-extern "C" void DEFAULT_CALL ReversePInvokeWrapper_MetaWeariOSUnity_ProcessIosMessage_m297E475A98D2A643F42C4BA1C9451741CEE6252B(char* ___message0);
+extern "C" void DEFAULT_CALL ReversePInvokeWrapper_MetaWeariOSUnity_ProcessIosMessage_m70BA4887E6C603C8BD442CA1B21D63ED85E32AF0(char* ___subject0, char* ___message1);
 
 
 extern const Il2CppMethodPointer g_ReversePInvokeWrapperPointers[];
 const Il2CppMethodPointer g_ReversePInvokeWrapperPointers[1] = 
 {
-	reinterpret_cast<Il2CppMethodPointer>(ReversePInvokeWrapper_MetaWeariOSUnity_ProcessIosMessage_m297E475A98D2A643F42C4BA1C9451741CEE6252B),
+	reinterpret_cast<Il2CppMethodPointer>(ReversePInvokeWrapper_MetaWeariOSUnity_ProcessIosMessage_m70BA4887E6C603C8BD442CA1B21D63ED85E32AF0),
 };

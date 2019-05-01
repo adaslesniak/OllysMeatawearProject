@@ -18,16 +18,6 @@
 #include "codegen/il2cpp-codegen.h"
 #include "il2cpp-object-internals.h"
 
-struct VirtActionInvoker0
-{
-	typedef void (*Action)(void*, const RuntimeMethod*);
-
-	static inline void Invoke (Il2CppMethodSlot slot, RuntimeObject* obj)
-	{
-		const VirtualInvokeData& invokeData = il2cpp_codegen_get_virtual_invoke_data(slot, obj);
-		((Action)invokeData.methodPtr)(obj, invokeData.method);
-	}
-};
 template <typename T1>
 struct VirtActionInvoker1
 {
@@ -39,15 +29,15 @@ struct VirtActionInvoker1
 		((Action)invokeData.methodPtr)(obj, p1, invokeData.method);
 	}
 };
-struct GenericVirtActionInvoker0
+template <typename T1, typename T2>
+struct VirtActionInvoker2
 {
-	typedef void (*Action)(void*, const RuntimeMethod*);
+	typedef void (*Action)(void*, T1, T2, const RuntimeMethod*);
 
-	static inline void Invoke (const RuntimeMethod* method, RuntimeObject* obj)
+	static inline void Invoke (Il2CppMethodSlot slot, RuntimeObject* obj, T1 p1, T2 p2)
 	{
-		VirtualInvokeData invokeData;
-		il2cpp_codegen_get_generic_virtual_invoke_data(method, obj, &invokeData);
-		((Action)invokeData.methodPtr)(obj, invokeData.method);
+		const VirtualInvokeData& invokeData = il2cpp_codegen_get_virtual_invoke_data(slot, obj);
+		((Action)invokeData.methodPtr)(obj, p1, p2, invokeData.method);
 	}
 };
 template <typename T1>
@@ -62,14 +52,16 @@ struct GenericVirtActionInvoker1
 		((Action)invokeData.methodPtr)(obj, p1, invokeData.method);
 	}
 };
-struct InterfaceActionInvoker0
+template <typename T1, typename T2>
+struct GenericVirtActionInvoker2
 {
-	typedef void (*Action)(void*, const RuntimeMethod*);
+	typedef void (*Action)(void*, T1, T2, const RuntimeMethod*);
 
-	static inline void Invoke (Il2CppMethodSlot slot, RuntimeClass* declaringInterface, RuntimeObject* obj)
+	static inline void Invoke (const RuntimeMethod* method, RuntimeObject* obj, T1 p1, T2 p2)
 	{
-		const VirtualInvokeData& invokeData = il2cpp_codegen_get_interface_invoke_data(slot, obj, declaringInterface);
-		((Action)invokeData.methodPtr)(obj, invokeData.method);
+		VirtualInvokeData invokeData;
+		il2cpp_codegen_get_generic_virtual_invoke_data(method, obj, &invokeData);
+		((Action)invokeData.methodPtr)(obj, p1, p2, invokeData.method);
 	}
 };
 template <typename T1>
@@ -83,15 +75,15 @@ struct InterfaceActionInvoker1
 		((Action)invokeData.methodPtr)(obj, p1, invokeData.method);
 	}
 };
-struct GenericInterfaceActionInvoker0
+template <typename T1, typename T2>
+struct InterfaceActionInvoker2
 {
-	typedef void (*Action)(void*, const RuntimeMethod*);
+	typedef void (*Action)(void*, T1, T2, const RuntimeMethod*);
 
-	static inline void Invoke (const RuntimeMethod* method, RuntimeObject* obj)
+	static inline void Invoke (Il2CppMethodSlot slot, RuntimeClass* declaringInterface, RuntimeObject* obj, T1 p1, T2 p2)
 	{
-		VirtualInvokeData invokeData;
-		il2cpp_codegen_get_generic_interface_invoke_data(method, obj, &invokeData);
-		((Action)invokeData.methodPtr)(obj, invokeData.method);
+		const VirtualInvokeData& invokeData = il2cpp_codegen_get_interface_invoke_data(slot, obj, declaringInterface);
+		((Action)invokeData.methodPtr)(obj, p1, p2, invokeData.method);
 	}
 };
 template <typename T1>
@@ -106,11 +98,25 @@ struct GenericInterfaceActionInvoker1
 		((Action)invokeData.methodPtr)(obj, p1, invokeData.method);
 	}
 };
+template <typename T1, typename T2>
+struct GenericInterfaceActionInvoker2
+{
+	typedef void (*Action)(void*, T1, T2, const RuntimeMethod*);
+
+	static inline void Invoke (const RuntimeMethod* method, RuntimeObject* obj, T1 p1, T2 p2)
+	{
+		VirtualInvokeData invokeData;
+		il2cpp_codegen_get_generic_interface_invoke_data(method, obj, &invokeData);
+		((Action)invokeData.methodPtr)(obj, p1, p2, invokeData.method);
+	}
+};
 
 // MetaWeariOSUnity
 struct MetaWeariOSUnity_tE0EA63F75413E24C17D5204F83B18B6C1F58FC8D;
 // MetaWeariOSUnity/MessageReceiver
 struct MessageReceiver_tC8A803E0FA2F91E7D30777642DE45CCB7426E954;
+// MetaWeariOSUnity/MessageSubjects
+struct MessageSubjects_t285C889FBD987EF10774ED1092003335ECC18556;
 // System.AsyncCallback
 struct AsyncCallback_t3F3DA3BEDAEE81DD1D24125DF8EB30E85EE14DA4;
 // System.Delegate
@@ -138,18 +144,18 @@ struct Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0;
 // iOSMessageReceiver
 struct iOSMessageReceiver_t66DDFDF4CD60A2626BC57AB5C4E2D359EE8C2654;
 
-IL2CPP_EXTERN_C RuntimeClass* Debug_t7B5FCB117E2FD63B6838BC52821B252E2BFB61C4_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* MessageReceiver_tC8A803E0FA2F91E7D30777642DE45CCB7426E954_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* MetaWeariOSUnity_tE0EA63F75413E24C17D5204F83B18B6C1F58FC8D_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* iOSMessageReceiver_t66DDFDF4CD60A2626BC57AB5C4E2D359EE8C2654_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C String_t* _stringLiteral1ED9F77916033422E5CB5F9157F9E3AA9E4EED45;
+IL2CPP_EXTERN_C String_t* _stringLiteral4F709C63FECB3A62B8C73714FBB1B98291B2BC53;
 IL2CPP_EXTERN_C String_t* _stringLiteralC32782643F86448DD0CF8F2A6E1B2A3F7AA0CCAB;
-IL2CPP_EXTERN_C String_t* _stringLiteralF51F8AFD7949579BD645FE1318287784436B1607;
+IL2CPP_EXTERN_C String_t* _stringLiteralD965050D70187FFF0BDFECDF3D67928DE5867AD7;
+IL2CPP_EXTERN_C String_t* _stringLiteralF0DB24E44F63002A7AF891222D783F3C0C9392BE;
 IL2CPP_EXTERN_C const RuntimeMethod* GameObject_AddComponent_TisiOSMessageReceiver_t66DDFDF4CD60A2626BC57AB5C4E2D359EE8C2654_m8B90E23F458A26FE94EBF513F7590DE8A17988BB_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* MetaWeariOSUnity_ProcessIosMessage_m297E475A98D2A643F42C4BA1C9451741CEE6252B_RuntimeMethod_var;
-IL2CPP_EXTERN_C const uint32_t MetaWeariOSUnity_ProcessIosMessage_m297E475A98D2A643F42C4BA1C9451741CEE6252B_MetadataUsageId;
+IL2CPP_EXTERN_C const RuntimeMethod* MetaWeariOSUnity_ProcessIosMessage_m70BA4887E6C603C8BD442CA1B21D63ED85E32AF0_RuntimeMethod_var;
+IL2CPP_EXTERN_C const uint32_t MetaWeariOSUnity_ProcessIosMessage_m70BA4887E6C603C8BD442CA1B21D63ED85E32AF0_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t MetaWeariOSUnity_ScanForKnownDevices_m3996C5B38F5A4D017CB5E192793C94686871D290_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t MetaWeariOSUnity_ScanForNewDevices_m038D996FE97ABDF71F2DDC1CEA4ABC316707A231_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t MetaWeariOSUnity_StartFlashingDevice_m0DAF67A557CC36F0D0927DA67953E9E9C0EA01BC_MetadataUsageId;
@@ -181,6 +187,15 @@ public:
 
 
 // System.Object
+
+
+// MetaWeariOSUnity_MessageSubjects
+struct  MessageSubjects_t285C889FBD987EF10774ED1092003335ECC18556  : public RuntimeObject
+{
+public:
+
+public:
+};
 
 struct Il2CppArrayBounds;
 
@@ -703,8 +718,8 @@ public:
 // !!0 UnityEngine.GameObject::AddComponent<System.Object>()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject * GameObject_AddComponent_TisRuntimeObject_mCB8164FB05F8DCF99E098ADC5E13E96FEF6FC4E9_gshared (GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F * __this, const RuntimeMethod* method);
 
-// System.Void MetaWeariOSUnity::ProcessIosMessage(System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaWeariOSUnity_ProcessIosMessage_m297E475A98D2A643F42C4BA1C9451741CEE6252B (String_t* ___message0, const RuntimeMethod* method);
+// System.Void MetaWeariOSUnity::ProcessIosMessage(System.String,System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaWeariOSUnity_ProcessIosMessage_m70BA4887E6C603C8BD442CA1B21D63ED85E32AF0 (String_t* ___subject0, String_t* ___message1, const RuntimeMethod* method);
 // System.Void MetaWeariOSUnity::ios_scanForNewDevices()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaWeariOSUnity_ios_scanForNewDevices_mA358E0B1966F02596FECA5D425282437A0B25287 (const RuntimeMethod* method);
 // System.Void MetaWeariOSUnity::ios_scanForKnownDevices()
@@ -715,12 +730,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaWeariOSUnity_ios_startFlashingDevice
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MessageReceiver__ctor_m81331F60979C5940A551A168B1D6B522F431AF59 (MessageReceiver_tC8A803E0FA2F91E7D30777642DE45CCB7426E954 * __this, RuntimeObject * ___object0, intptr_t ___method1, const RuntimeMethod* method);
 // System.Void MetaWeariOSUnity::ios_setCallbackReceiver(MetaWeariOSUnity/MessageReceiver)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaWeariOSUnity_ios_setCallbackReceiver_mD2989FC753FAFFE4943AC29DA768EE2CD0D5F7E3 (MessageReceiver_tC8A803E0FA2F91E7D30777642DE45CCB7426E954 * ___listener0, const RuntimeMethod* method);
-// System.String System.String::Concat(System.String,System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Concat_mB78D0094592718DA6D5DB6C712A9C225631666BE (String_t* p0, String_t* p1, const RuntimeMethod* method);
+// System.String System.String::Concat(System.String,System.String,System.String,System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Concat_mDD2E38332DED3A8C088D38D78A0E0BEB5091DA64 (String_t* p0, String_t* p1, String_t* p2, String_t* p3, const RuntimeMethod* method);
 // System.Void UnityEngine.MonoBehaviour::print(System.Object)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviour_print_m171D860AF3370C46648FE8F3EE3E0E6535E1C774 (RuntimeObject * p0, const RuntimeMethod* method);
 // System.Void UnityEngine.MonoBehaviour::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviour__ctor_mEAEC84B222C60319D593E456D769B3311DFCEF97 (MonoBehaviour_t4A60845CF505405AF8BE8C61CC07F75CADEF6429 * __this, const RuntimeMethod* method);
+// System.Void System.Object::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object__ctor_m925ECA5E85CA100E3FB86A4F9E15C120E9A184C0 (RuntimeObject * __this, const RuntimeMethod* method);
 // System.Boolean UnityEngine.Object::op_Equality(UnityEngine.Object,UnityEngine.Object)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Object_op_Equality_mBC2401774F3BE33E8CF6F0A8148E66C95D6CFF1C (Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0 * p0, Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0 * p1, const RuntimeMethod* method);
 // System.Void UnityEngine.GameObject::.ctor(System.String)
@@ -738,8 +755,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5C
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object_Destroy_m23B4562495BA35A74266D4372D45368F8C05109A (Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0 * p0, const RuntimeMethod* method);
 // System.Void UnityEngine.Object::DontDestroyOnLoad(UnityEngine.Object)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object_DontDestroyOnLoad_m4DC90770AD6084E4B1B8489C6B41205DC020C207 (Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0 * p0, const RuntimeMethod* method);
-// System.Void UnityEngine.Debug::Log(System.Object)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_Log_m4B7C70BAFD477C6BDB59C88A0934F0B018D03708 (RuntimeObject * p0, const RuntimeMethod* method);
+// System.String System.String::Concat(System.String,System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Concat_mB78D0094592718DA6D5DB6C712A9C225631666BE (String_t* p0, String_t* p1, const RuntimeMethod* method);
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -753,16 +770,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_Log_m4B7C70BAFD477C6BDB59C88A0934F
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-extern "C" void DEFAULT_CALL ReversePInvokeWrapper_MetaWeariOSUnity_ProcessIosMessage_m297E475A98D2A643F42C4BA1C9451741CEE6252B(char* ___message0)
+extern "C" void DEFAULT_CALL ReversePInvokeWrapper_MetaWeariOSUnity_ProcessIosMessage_m70BA4887E6C603C8BD442CA1B21D63ED85E32AF0(char* ___subject0, char* ___message1)
 {
 	il2cpp::vm::ScopedThreadAttacher _vmThreadHelper;
 
-	// Marshaling of parameter U27___message0U27 to managed representation
-	String_t* ____message0_unmarshaled = NULL;
-	____message0_unmarshaled = il2cpp_codegen_marshal_string_result(___message0);
+	// Marshaling of parameter U27___subject0U27 to managed representation
+	String_t* ____subject0_unmarshaled = NULL;
+	____subject0_unmarshaled = il2cpp_codegen_marshal_string_result(___subject0);
+
+	// Marshaling of parameter U27___message1U27 to managed representation
+	String_t* ____message1_unmarshaled = NULL;
+	____message1_unmarshaled = il2cpp_codegen_marshal_string_result(___message1);
 
 	// Managed method invocation
-	MetaWeariOSUnity_ProcessIosMessage_m297E475A98D2A643F42C4BA1C9451741CEE6252B(____message0_unmarshaled, NULL);
+	MetaWeariOSUnity_ProcessIosMessage_m70BA4887E6C603C8BD442CA1B21D63ED85E32AF0(____subject0_unmarshaled, ____message1_unmarshaled, NULL);
 
 }
 #if !FORCE_PINVOKE_INTERNAL
@@ -882,24 +903,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaWeariOSUnity__cctor_m98ACD84C71D930A
 	}
 	{
 		MessageReceiver_tC8A803E0FA2F91E7D30777642DE45CCB7426E954 * L_0 = (MessageReceiver_tC8A803E0FA2F91E7D30777642DE45CCB7426E954 *)il2cpp_codegen_object_new(MessageReceiver_tC8A803E0FA2F91E7D30777642DE45CCB7426E954_il2cpp_TypeInfo_var);
-		MessageReceiver__ctor_m81331F60979C5940A551A168B1D6B522F431AF59(L_0, NULL, (intptr_t)((intptr_t)MetaWeariOSUnity_ProcessIosMessage_m297E475A98D2A643F42C4BA1C9451741CEE6252B_RuntimeMethod_var), /*hidden argument*/NULL);
+		MessageReceiver__ctor_m81331F60979C5940A551A168B1D6B522F431AF59(L_0, NULL, (intptr_t)((intptr_t)MetaWeariOSUnity_ProcessIosMessage_m70BA4887E6C603C8BD442CA1B21D63ED85E32AF0_RuntimeMethod_var), /*hidden argument*/NULL);
 		MetaWeariOSUnity_ios_setCallbackReceiver_mD2989FC753FAFFE4943AC29DA768EE2CD0D5F7E3(L_0, /*hidden argument*/NULL);
 		return;
 	}
 }
-// System.Void MetaWeariOSUnity::ProcessIosMessage(System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaWeariOSUnity_ProcessIosMessage_m297E475A98D2A643F42C4BA1C9451741CEE6252B (String_t* ___message0, const RuntimeMethod* method)
+// System.Void MetaWeariOSUnity::ProcessIosMessage(System.String,System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaWeariOSUnity_ProcessIosMessage_m70BA4887E6C603C8BD442CA1B21D63ED85E32AF0 (String_t* ___subject0, String_t* ___message1, const RuntimeMethod* method)
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_method (MetaWeariOSUnity_ProcessIosMessage_m297E475A98D2A643F42C4BA1C9451741CEE6252B_MetadataUsageId);
+		il2cpp_codegen_initialize_method (MetaWeariOSUnity_ProcessIosMessage_m70BA4887E6C603C8BD442CA1B21D63ED85E32AF0_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		String_t* L_0 = ___message0;
-		String_t* L_1 = String_Concat_mB78D0094592718DA6D5DB6C712A9C225631666BE(_stringLiteralF51F8AFD7949579BD645FE1318287784436B1607, L_0, /*hidden argument*/NULL);
-		MonoBehaviour_print_m171D860AF3370C46648FE8F3EE3E0E6535E1C774(L_1, /*hidden argument*/NULL);
+		String_t* L_0 = ___subject0;
+		String_t* L_1 = ___message1;
+		String_t* L_2 = String_Concat_mDD2E38332DED3A8C088D38D78A0E0BEB5091DA64(_stringLiteralF0DB24E44F63002A7AF891222D783F3C0C9392BE, L_0, _stringLiteralD965050D70187FFF0BDFECDF3D67928DE5867AD7, L_1, /*hidden argument*/NULL);
+		MonoBehaviour_print_m171D860AF3370C46648FE8F3EE3E0E6535E1C774(L_2, /*hidden argument*/NULL);
 		return;
 	}
 }
@@ -919,21 +941,29 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaWeariOSUnity__ctor_m1448265D85BE85D2
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-IL2CPP_EXTERN_C  void DelegatePInvokeWrapper_MessageReceiver_tC8A803E0FA2F91E7D30777642DE45CCB7426E954 (MessageReceiver_tC8A803E0FA2F91E7D30777642DE45CCB7426E954 * __this, String_t* ___message0, const RuntimeMethod* method)
+IL2CPP_EXTERN_C  void DelegatePInvokeWrapper_MessageReceiver_tC8A803E0FA2F91E7D30777642DE45CCB7426E954 (MessageReceiver_tC8A803E0FA2F91E7D30777642DE45CCB7426E954 * __this, String_t* ___topic0, String_t* ___message1, const RuntimeMethod* method)
 {
-	typedef void (DEFAULT_CALL *PInvokeFunc)(char*);
+	typedef void (DEFAULT_CALL *PInvokeFunc)(char*, char*);
 	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(il2cpp_codegen_get_method_pointer(((RuntimeDelegate*)__this)->method));
 
-	// Marshaling of parameter U27___message0U27 to native representation
-	char* ____message0_marshaled = NULL;
-	____message0_marshaled = il2cpp_codegen_marshal_string(___message0);
+	// Marshaling of parameter U27___topic0U27 to native representation
+	char* ____topic0_marshaled = NULL;
+	____topic0_marshaled = il2cpp_codegen_marshal_string(___topic0);
+
+	// Marshaling of parameter U27___message1U27 to native representation
+	char* ____message1_marshaled = NULL;
+	____message1_marshaled = il2cpp_codegen_marshal_string(___message1);
 
 	// Native function invocation
-	il2cppPInvokeFunc(____message0_marshaled);
+	il2cppPInvokeFunc(____topic0_marshaled, ____message1_marshaled);
 
-	// Marshaling cleanup of parameter U27___message0U27 native representation
-	il2cpp_codegen_marshal_free(____message0_marshaled);
-	____message0_marshaled = NULL;
+	// Marshaling cleanup of parameter U27___topic0U27 native representation
+	il2cpp_codegen_marshal_free(____topic0_marshaled);
+	____topic0_marshaled = NULL;
+
+	// Marshaling cleanup of parameter U27___message1U27 native representation
+	il2cpp_codegen_marshal_free(____message1_marshaled);
+	____message1_marshaled = NULL;
 
 }
 // System.Void MetaWeariOSUnity_MessageReceiver::.ctor(System.Object,System.IntPtr)
@@ -943,8 +973,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MessageReceiver__ctor_m81331F60979C5940A
 	__this->set_method_3(___method1);
 	__this->set_m_target_2(___object0);
 }
-// System.Void MetaWeariOSUnity_MessageReceiver::Invoke(System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MessageReceiver_Invoke_mC19CD78359F6322CB1A5A1B2F416CEDB17AD7F8F (MessageReceiver_tC8A803E0FA2F91E7D30777642DE45CCB7426E954 * __this, String_t* ___message0, const RuntimeMethod* method)
+// System.Void MetaWeariOSUnity_MessageReceiver::Invoke(System.String,System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MessageReceiver_Invoke_mE4E51823126288122D4A76D2AED853D71139CBD9 (MessageReceiver_tC8A803E0FA2F91E7D30777642DE45CCB7426E954 * __this, String_t* ___topic0, String_t* ___message1, const RuntimeMethod* method)
 {
 	DelegateU5BU5D_tDFCDEE2A6322F96C0FE49AF47E9ADB8C4B294E86* delegateArrayToInvoke = __this->get_delegates_11();
 	Delegate_t** delegatesToInvoke;
@@ -974,20 +1004,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MessageReceiver_Invoke_mC19CD78359F6322C
 		int ___parameterCount = il2cpp_codegen_method_parameter_count(targetMethod);
 		if (___methodIsStatic)
 		{
-			if (___parameterCount == 1)
+			if (___parameterCount == 2)
 			{
 				// open
-				typedef void (*FunctionPointerType) (String_t*, const RuntimeMethod*);
-				((FunctionPointerType)targetMethodPointer)(___message0, targetMethod);
+				typedef void (*FunctionPointerType) (String_t*, String_t*, const RuntimeMethod*);
+				((FunctionPointerType)targetMethodPointer)(___topic0, ___message1, targetMethod);
 			}
 			else
 			{
 				// closed
-				typedef void (*FunctionPointerType) (void*, String_t*, const RuntimeMethod*);
-				((FunctionPointerType)targetMethodPointer)(targetThis, ___message0, targetMethod);
+				typedef void (*FunctionPointerType) (void*, String_t*, String_t*, const RuntimeMethod*);
+				((FunctionPointerType)targetMethodPointer)(targetThis, ___topic0, ___message1, targetMethod);
 			}
 		}
-		else if (___parameterCount != 1)
+		else if (___parameterCount != 2)
 		{
 			// open
 			if (il2cpp_codegen_method_is_virtual(targetMethod) && !il2cpp_codegen_object_is_of_sealed_type(targetThis) && il2cpp_codegen_delegate_has_invoker((Il2CppDelegate*)__this))
@@ -995,22 +1025,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MessageReceiver_Invoke_mC19CD78359F6322C
 				if (il2cpp_codegen_method_is_generic_instance(targetMethod))
 				{
 					if (il2cpp_codegen_method_is_interface_method(targetMethod))
-						GenericInterfaceActionInvoker0::Invoke(targetMethod, ___message0);
+						GenericInterfaceActionInvoker1< String_t* >::Invoke(targetMethod, ___topic0, ___message1);
 					else
-						GenericVirtActionInvoker0::Invoke(targetMethod, ___message0);
+						GenericVirtActionInvoker1< String_t* >::Invoke(targetMethod, ___topic0, ___message1);
 				}
 				else
 				{
 					if (il2cpp_codegen_method_is_interface_method(targetMethod))
-						InterfaceActionInvoker0::Invoke(il2cpp_codegen_method_get_slot(targetMethod), il2cpp_codegen_method_get_declaring_type(targetMethod), ___message0);
+						InterfaceActionInvoker1< String_t* >::Invoke(il2cpp_codegen_method_get_slot(targetMethod), il2cpp_codegen_method_get_declaring_type(targetMethod), ___topic0, ___message1);
 					else
-						VirtActionInvoker0::Invoke(il2cpp_codegen_method_get_slot(targetMethod), ___message0);
+						VirtActionInvoker1< String_t* >::Invoke(il2cpp_codegen_method_get_slot(targetMethod), ___topic0, ___message1);
 				}
 			}
 			else
 			{
-				typedef void (*FunctionPointerType) (String_t*, const RuntimeMethod*);
-				((FunctionPointerType)targetMethodPointer)(___message0, targetMethod);
+				typedef void (*FunctionPointerType) (String_t*, String_t*, const RuntimeMethod*);
+				((FunctionPointerType)targetMethodPointer)(___topic0, ___message1, targetMethod);
 			}
 		}
 		else
@@ -1020,43 +1050,60 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MessageReceiver_Invoke_mC19CD78359F6322C
 			{
 				if (targetThis == NULL)
 				{
-					typedef void (*FunctionPointerType) (String_t*, const RuntimeMethod*);
-					((FunctionPointerType)targetMethodPointer)(___message0, targetMethod);
+					typedef void (*FunctionPointerType) (String_t*, String_t*, const RuntimeMethod*);
+					((FunctionPointerType)targetMethodPointer)(___topic0, ___message1, targetMethod);
 				}
 				else if (il2cpp_codegen_method_is_generic_instance(targetMethod))
 				{
 					if (il2cpp_codegen_method_is_interface_method(targetMethod))
-						GenericInterfaceActionInvoker1< String_t* >::Invoke(targetMethod, targetThis, ___message0);
+						GenericInterfaceActionInvoker2< String_t*, String_t* >::Invoke(targetMethod, targetThis, ___topic0, ___message1);
 					else
-						GenericVirtActionInvoker1< String_t* >::Invoke(targetMethod, targetThis, ___message0);
+						GenericVirtActionInvoker2< String_t*, String_t* >::Invoke(targetMethod, targetThis, ___topic0, ___message1);
 				}
 				else
 				{
 					if (il2cpp_codegen_method_is_interface_method(targetMethod))
-						InterfaceActionInvoker1< String_t* >::Invoke(il2cpp_codegen_method_get_slot(targetMethod), il2cpp_codegen_method_get_declaring_type(targetMethod), targetThis, ___message0);
+						InterfaceActionInvoker2< String_t*, String_t* >::Invoke(il2cpp_codegen_method_get_slot(targetMethod), il2cpp_codegen_method_get_declaring_type(targetMethod), targetThis, ___topic0, ___message1);
 					else
-						VirtActionInvoker1< String_t* >::Invoke(il2cpp_codegen_method_get_slot(targetMethod), targetThis, ___message0);
+						VirtActionInvoker2< String_t*, String_t* >::Invoke(il2cpp_codegen_method_get_slot(targetMethod), targetThis, ___topic0, ___message1);
 				}
 			}
 			else
 			{
-				typedef void (*FunctionPointerType) (void*, String_t*, const RuntimeMethod*);
-				((FunctionPointerType)targetMethodPointer)(targetThis, ___message0, targetMethod);
+				typedef void (*FunctionPointerType) (void*, String_t*, String_t*, const RuntimeMethod*);
+				((FunctionPointerType)targetMethodPointer)(targetThis, ___topic0, ___message1, targetMethod);
 			}
 		}
 	}
 }
-// System.IAsyncResult MetaWeariOSUnity_MessageReceiver::BeginInvoke(System.String,System.AsyncCallback,System.Object)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* MessageReceiver_BeginInvoke_mCD1EA6AB5F5771B9CCE9A51A836BA9CF78C36EE1 (MessageReceiver_tC8A803E0FA2F91E7D30777642DE45CCB7426E954 * __this, String_t* ___message0, AsyncCallback_t3F3DA3BEDAEE81DD1D24125DF8EB30E85EE14DA4 * ___callback1, RuntimeObject * ___object2, const RuntimeMethod* method)
+// System.IAsyncResult MetaWeariOSUnity_MessageReceiver::BeginInvoke(System.String,System.String,System.AsyncCallback,System.Object)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* MessageReceiver_BeginInvoke_mA421B1980C47A05CA054F5A29E706F4E80FBC08E (MessageReceiver_tC8A803E0FA2F91E7D30777642DE45CCB7426E954 * __this, String_t* ___topic0, String_t* ___message1, AsyncCallback_t3F3DA3BEDAEE81DD1D24125DF8EB30E85EE14DA4 * ___callback2, RuntimeObject * ___object3, const RuntimeMethod* method)
 {
-	void *__d_args[2] = {0};
-	__d_args[0] = ___message0;
-	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___callback1, (RuntimeObject*)___object2);
+	void *__d_args[3] = {0};
+	__d_args[0] = ___topic0;
+	__d_args[1] = ___message1;
+	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___callback2, (RuntimeObject*)___object3);
 }
 // System.Void MetaWeariOSUnity_MessageReceiver::EndInvoke(System.IAsyncResult)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MessageReceiver_EndInvoke_mFE58B0C88B7312BC87E44C8B64C6D6DDF2121C62 (MessageReceiver_tC8A803E0FA2F91E7D30777642DE45CCB7426E954 * __this, RuntimeObject* ___result0, const RuntimeMethod* method)
 {
 	il2cpp_codegen_delegate_end_invoke((Il2CppAsyncResult*) ___result0, 0);
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void MetaWeariOSUnity_MessageSubjects::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MessageSubjects__ctor_m5E39EC85FF218317DCB48B348E8EFFC15D3FC9DE (MessageSubjects_t285C889FBD987EF10774ED1092003335ECC18556 * __this, const RuntimeMethod* method)
+{
+	{
+		Object__ctor_m925ECA5E85CA100E3FB86A4F9E15C120E9A184C0(__this, /*hidden argument*/NULL);
+		return;
+	}
 }
 #ifdef __clang__
 #pragma clang diagnostic pop
@@ -1142,9 +1189,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSMessageReceiver_onMessageFromiOS_m72A
 	}
 	{
 		String_t* L_0 = ___json0;
-		String_t* L_1 = String_Concat_mB78D0094592718DA6D5DB6C712A9C225631666BE(_stringLiteral1ED9F77916033422E5CB5F9157F9E3AA9E4EED45, L_0, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Debug_t7B5FCB117E2FD63B6838BC52821B252E2BFB61C4_il2cpp_TypeInfo_var);
-		Debug_Log_m4B7C70BAFD477C6BDB59C88A0934F0B018D03708(L_1, /*hidden argument*/NULL);
+		String_t* L_1 = String_Concat_mB78D0094592718DA6D5DB6C712A9C225631666BE(_stringLiteral4F709C63FECB3A62B8C73714FBB1B98291B2BC53, L_0, /*hidden argument*/NULL);
+		MonoBehaviour_print_m171D860AF3370C46648FE8F3EE3E0E6535E1C774(L_1, /*hidden argument*/NULL);
 		return;
 	}
 }

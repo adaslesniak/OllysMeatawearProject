@@ -433,15 +433,6 @@ IL2CPP_EXTERN_C_END
 #endif
 
 // <Module>
-struct  U3CModuleU3E_t6CDDDF959E7E18A6744E43B613F41CDAC780256A 
-{
-public:
-
-public:
-};
-
-
-// <Module>
 struct  U3CModuleU3E_t188571242096CC1D2BEFEA0CA619B862EF745D19 
 {
 public:
@@ -452,15 +443,6 @@ public:
 
 // <Module>
 struct  U3CModuleU3E_t76DD45B11E728799BA16B6E93B81827DD86E5AEE 
-{
-public:
-
-public:
-};
-
-
-// <Module>
-struct  U3CModuleU3E_tCE4B768174CDE0294B05DD8ED59A7763FF34E99B 
 {
 public:
 
@@ -487,7 +469,7 @@ public:
 
 
 // <Module>
-struct  U3CModuleU3E_tB308A2384DEB86F8845A4E61970976B8944B5DC4 
+struct  U3CModuleU3E_tCE4B768174CDE0294B05DD8ED59A7763FF34E99B 
 {
 public:
 
@@ -496,7 +478,7 @@ public:
 
 
 // <Module>
-struct  U3CModuleU3E_t2FBFFC67F8D6B1FA13284515F9BBD8C9333B5C86 
+struct  U3CModuleU3E_tB308A2384DEB86F8845A4E61970976B8944B5DC4 
 {
 public:
 
@@ -514,6 +496,15 @@ public:
 
 
 // <Module>
+struct  U3CModuleU3E_t2FBFFC67F8D6B1FA13284515F9BBD8C9333B5C86 
+{
+public:
+
+public:
+};
+
+
+// <Module>
 struct  U3CModuleU3E_t2E16431D825A5D233BFED659B3C516DAB0AC0286 
 {
 public:
@@ -523,7 +514,7 @@ public:
 
 
 // <Module>
-struct  U3CModuleU3E_tF157A75827DFDE1F9E89CA3CBB54B07FA9E227FC 
+struct  U3CModuleU3E_t79D7DE725655CFC1B063EA359E8D75692CF5DC2F 
 {
 public:
 
@@ -559,7 +550,7 @@ public:
 
 
 // <Module>
-struct  U3CModuleU3E_t79D7DE725655CFC1B063EA359E8D75692CF5DC2F 
+struct  U3CModuleU3E_tF157A75827DFDE1F9E89CA3CBB54B07FA9E227FC 
 {
 public:
 
@@ -576,7 +567,25 @@ public:
 };
 
 
+// <Module>
+struct  U3CModuleU3E_t6CDDDF959E7E18A6744E43B613F41CDAC780256A 
+{
+public:
+
+public:
+};
+
+
 // System.Object
+
+
+// MetaWeariOSUnity_MessageSubjects
+struct  MessageSubjects_t285C889FBD987EF10774ED1092003335ECC18556  : public RuntimeObject
+{
+public:
+
+public:
+};
 
 
 // System.Attribute
@@ -18243,12 +18252,21 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable2484[1] =
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2485;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize2485 = { sizeof (MetaWeariOSUnity_tE0EA63F75413E24C17D5204F83B18B6C1F58FC8D), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2486;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize2486 = { sizeof (MessageReceiver_tC8A803E0FA2F91E7D30777642DE45CCB7426E954), sizeof(Il2CppMethodPointer), 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize2486 = { sizeof (MessageSubjects_t285C889FBD987EF10774ED1092003335ECC18556), -1, 0, 0 };
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable2486[4] = 
+{
+	0,
+	0,
+	0,
+	0,
+};
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2487;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize2487 = { sizeof (U3CModuleU3E_t6CDDDF959E7E18A6744E43B613F41CDAC780256A), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize2487 = { sizeof (MessageReceiver_tC8A803E0FA2F91E7D30777642DE45CCB7426E954), sizeof(Il2CppMethodPointer), 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2488;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize2488 = { sizeof (ExecuteIosCode_t3E34056D85EC12022C53F8CFE0EE945D83F5EB7C), -1, 0, 0 };
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable2488[3] = 
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize2488 = { sizeof (U3CModuleU3E_t6CDDDF959E7E18A6744E43B613F41CDAC780256A), -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2489;
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize2489 = { sizeof (ExecuteIosCode_t3E34056D85EC12022C53F8CFE0EE945D83F5EB7C), -1, 0, 0 };
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable2489[3] = 
 {
 	ExecuteIosCode_t3E34056D85EC12022C53F8CFE0EE945D83F5EB7C::get_offset_of_isScanForNew_4(),
 	ExecuteIosCode_t3E34056D85EC12022C53F8CFE0EE945D83F5EB7C::get_offset_of_deviceIdToFlash_5(),
