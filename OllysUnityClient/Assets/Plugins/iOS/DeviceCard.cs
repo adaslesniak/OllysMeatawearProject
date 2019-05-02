@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿/* crated by Adas Lesniak on April 30 2019 */
 using Newtonsoft.Json.Linq;
 
 public class DeviceCard {

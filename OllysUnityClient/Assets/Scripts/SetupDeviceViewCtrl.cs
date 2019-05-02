@@ -11,7 +11,7 @@ public class SetupDeviceViewCtrl : MonoBehaviour
     [SerializeField] Image placeInactive;
 
     DeviceCard touchedDevice;
-    SetpuViewConfirmationPanel confirmationPanel;
+    SetupDeviceConfirmationPanel confirmationPanel;
     NameDeviceViewCtrl namingView;
 
 
@@ -21,7 +21,7 @@ public class SetupDeviceViewCtrl : MonoBehaviour
             homeCtrl.SendViewAway(this.transform);
             isToScan = false;
         });
-        confirmationPanel = FindObjectOfType<SetpuViewConfirmationPanel>();
+        confirmationPanel = FindObjectOfType<SetupDeviceConfirmationPanel>();
         MetaWearNative.onNewDevicesScaned += OnNewDevicesFound;
         namingView = FindObjectOfType<NameDeviceViewCtrl>();
     }

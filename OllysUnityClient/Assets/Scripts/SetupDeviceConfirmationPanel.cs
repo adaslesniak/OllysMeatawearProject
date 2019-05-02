@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public delegate void BoolAction(bool isIt);
 
-public class SetpuViewConfirmationPanel : MonoBehaviour {
+public class SetupDeviceConfirmationPanel : MonoBehaviour {
 
     [SerializeField] Button confirm;
     [SerializeField] Button deny;
