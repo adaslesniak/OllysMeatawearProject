@@ -17,11 +17,16 @@ public class AvailableDevicesViewCtrl : MonoBehaviour {
         isScanning = true;
         Scan();
     }
+    void StopScanning() {
+        isScanning = false;
+        CancelInvoke("Scan");
+    }
 
     // Start is called before the first frame update
     void Start() {
         var homeCtrl = FindObjectOfType<HomeViewCtrl>();
         backBtn.onClick.AddListener(() => {
+            StopScanning();
             homeCtrl.SendViewAway(this.transform);
         });
         prototypeCell = GetComponentInChildren<DeviceTableCell>();
@@ -73,7 +78,9 @@ public class AvailableDevicesViewCtrl : MonoBehaviour {
         foreach(var found in newOnes) {
             AddCell(found);
         }
-        Invoke("Scan", 1.05f);
+        if (isScanning) {
+            Invoke("Scan", 1.05f);
+        }
     }
 
 }

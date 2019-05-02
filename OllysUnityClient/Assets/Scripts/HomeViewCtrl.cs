@@ -30,6 +30,7 @@ public class HomeViewCtrl : MonoBehaviour {
         listDevicesBtn.onClick.AddListener(() => {
             print("executing code for list devices button");
             BringInView(devicesView.transform);
+            devicesView.StartScanning();
         });
     }
 

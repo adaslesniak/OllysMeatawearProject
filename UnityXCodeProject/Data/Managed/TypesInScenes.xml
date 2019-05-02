@@ -46,7 +46,6 @@
 		<type fullname="ExecuteIosCode" preserve="nothing"/>
 		<type fullname="HomeViewCtrl" preserve="nothing"/>
 		<type fullname="NameDeviceViewCtrl" preserve="nothing"/>
-		<type fullname="SetpuViewConfirmationPanel" preserve="nothing"/>
 		<type fullname="SetupDeviceViewCtrl" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="UnityEditor.Graphs">
@@ -67,6 +66,11 @@
 		<type fullname="UnityEngine.UI.GraphicRaycaster" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.Image" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.InputField" preserve="nothing"/>
+		<type fullname="UnityEngine.UI.Mask" preserve="nothing"/>
+		<type fullname="UnityEngine.UI.ScrollRect" preserve="nothing"/>
+		<type fullname="UnityEngine.UI.Scrollbar" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.Text" preserve="nothing"/>
+		<type fullname="UnityEngine.UI.Toggle" preserve="nothing"/>
+		<type fullname="UnityEngine.UI.VerticalLayoutGroup" preserve="nothing"/>
 	</assembly>
 </linker>

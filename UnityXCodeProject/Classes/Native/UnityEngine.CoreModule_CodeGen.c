@@ -1892,606 +1892,618 @@ extern void Object_GetCachedPtr_m8CCFA6D419ADFBA8F9EF83CB45DFD75C2704C4A0 ();
 extern void Object_get_name_mA2D400141CB3C991C87A2556429781DE961A83CE ();
 // 0x000003C9 System.Void UnityEngine.Object::set_name(System.String)
 extern void Object_set_name_m538711B144CDE30F929376BCF72D0DC8F85D0826 ();
-// 0x000003CA T UnityEngine.Object::Instantiate(T)
-// 0x000003CB System.Void UnityEngine.Object::Destroy(UnityEngine.Object,System.Single)
+// 0x000003CA UnityEngine.Object UnityEngine.Object::Instantiate(UnityEngine.Object)
+extern void Object_Instantiate_m17AA3123A55239124BC54A907AEEE509034F0830 ();
+// 0x000003CB UnityEngine.Object UnityEngine.Object::Instantiate(UnityEngine.Object,UnityEngine.Transform,System.Boolean)
+extern void Object_Instantiate_m674B3934708548332899CE953CA56BB696C1C887 ();
+// 0x000003CC T UnityEngine.Object::Instantiate(T)
+// 0x000003CD T UnityEngine.Object::Instantiate(T,UnityEngine.Transform)
+// 0x000003CE T UnityEngine.Object::Instantiate(T,UnityEngine.Transform,System.Boolean)
+// 0x000003CF System.Void UnityEngine.Object::Destroy(UnityEngine.Object,System.Single)
 extern void Object_Destroy_m09F51D8BDECFD2E8C618498EF7377029B669030D ();
-// 0x000003CC System.Void UnityEngine.Object::Destroy(UnityEngine.Object)
+// 0x000003D0 System.Void UnityEngine.Object::Destroy(UnityEngine.Object)
 extern void Object_Destroy_m23B4562495BA35A74266D4372D45368F8C05109A ();
-// 0x000003CD System.Void UnityEngine.Object::DestroyImmediate(UnityEngine.Object,System.Boolean)
+// 0x000003D1 System.Void UnityEngine.Object::DestroyImmediate(UnityEngine.Object,System.Boolean)
 extern void Object_DestroyImmediate_mFCE7947857C832BCBB366FCCE50072ACAD9A4C51 ();
-// 0x000003CE System.Void UnityEngine.Object::DestroyImmediate(UnityEngine.Object)
+// 0x000003D2 System.Void UnityEngine.Object::DestroyImmediate(UnityEngine.Object)
 extern void Object_DestroyImmediate_mF6F4415EF22249D6E650FAA40E403283F19B7446 ();
-// 0x000003CF UnityEngine.Object[] UnityEngine.Object::FindObjectsOfType(System.Type)
+// 0x000003D3 UnityEngine.Object[] UnityEngine.Object::FindObjectsOfType(System.Type)
 extern void Object_FindObjectsOfType_m3FC26FB3B36525BFBFCCCD1AEEE8A86712A12203 ();
-// 0x000003D0 System.Void UnityEngine.Object::DontDestroyOnLoad(UnityEngine.Object)
+// 0x000003D4 System.Void UnityEngine.Object::DontDestroyOnLoad(UnityEngine.Object)
 extern void Object_DontDestroyOnLoad_m4DC90770AD6084E4B1B8489C6B41205DC020C207 ();
-// 0x000003D1 System.Void UnityEngine.Object::set_hideFlags(UnityEngine.HideFlags)
+// 0x000003D5 System.Void UnityEngine.Object::set_hideFlags(UnityEngine.HideFlags)
 extern void Object_set_hideFlags_mB0B45A19A5871EF407D7B09E0EB76003496BA4F0 ();
-// 0x000003D2 T UnityEngine.Object::FindObjectOfType()
-// 0x000003D3 System.Void UnityEngine.Object::CheckNullArgument(System.Object,System.String)
+// 0x000003D6 T UnityEngine.Object::FindObjectOfType()
+// 0x000003D7 System.Void UnityEngine.Object::CheckNullArgument(System.Object,System.String)
 extern void Object_CheckNullArgument_m8D42F516655D770DFEEAA13CF86A2612214AAA9B ();
-// 0x000003D4 UnityEngine.Object UnityEngine.Object::FindObjectOfType(System.Type)
+// 0x000003D8 UnityEngine.Object UnityEngine.Object::FindObjectOfType(System.Type)
 extern void Object_FindObjectOfType_mCDF38E1667CF4502F60C59709D70B60EF7E408DA ();
-// 0x000003D5 System.String UnityEngine.Object::ToString()
+// 0x000003D9 System.String UnityEngine.Object::ToString()
 extern void Object_ToString_m4EBF621C98D5BFA9C0522C27953BB45AB2430FE1 ();
-// 0x000003D6 System.Boolean UnityEngine.Object::op_Equality(UnityEngine.Object,UnityEngine.Object)
+// 0x000003DA System.Boolean UnityEngine.Object::op_Equality(UnityEngine.Object,UnityEngine.Object)
 extern void Object_op_Equality_mBC2401774F3BE33E8CF6F0A8148E66C95D6CFF1C ();
-// 0x000003D7 System.Boolean UnityEngine.Object::op_Inequality(UnityEngine.Object,UnityEngine.Object)
+// 0x000003DB System.Boolean UnityEngine.Object::op_Inequality(UnityEngine.Object,UnityEngine.Object)
 extern void Object_op_Inequality_m31EF58E217E8F4BDD3E409DEF79E1AEE95874FC1 ();
-// 0x000003D8 UnityEngine.Object UnityEngine.Object::Internal_CloneSingle(UnityEngine.Object)
+// 0x000003DC UnityEngine.Object UnityEngine.Object::Internal_CloneSingle(UnityEngine.Object)
 extern void Object_Internal_CloneSingle_m4231A0B9138AC40B76655B772F687CC7E6160C06 ();
-// 0x000003D9 System.String UnityEngine.Object::ToString(UnityEngine.Object)
+// 0x000003DD UnityEngine.Object UnityEngine.Object::Internal_CloneSingleWithParent(UnityEngine.Object,UnityEngine.Transform,System.Boolean)
+extern void Object_Internal_CloneSingleWithParent_m32F1D681010B51B98CDBC82E3510FC260D2D1E17 ();
+// 0x000003DE System.String UnityEngine.Object::ToString(UnityEngine.Object)
 extern void Object_ToString_m7A4BBACD14901DD0181038A25BED62520D273EDC ();
-// 0x000003DA System.String UnityEngine.Object::GetName(UnityEngine.Object)
+// 0x000003DF System.String UnityEngine.Object::GetName(UnityEngine.Object)
 extern void Object_GetName_m1691C0D50AEBC1C86229AEAC2FBC1EE2DC6B67AF ();
-// 0x000003DB System.Void UnityEngine.Object::SetName(UnityEngine.Object,System.String)
+// 0x000003E0 System.Void UnityEngine.Object::SetName(UnityEngine.Object,System.String)
 extern void Object_SetName_m2CBABC30BA2B93EFF6A39B3295A7AB85901E60E8 ();
-// 0x000003DC UnityEngine.Object UnityEngine.Object::FindObjectFromInstanceID(System.Int32)
+// 0x000003E1 UnityEngine.Object UnityEngine.Object::FindObjectFromInstanceID(System.Int32)
 extern void Object_FindObjectFromInstanceID_m7594ED98F525AAE38FEC80052729ECAF3E821350 ();
-// 0x000003DD System.Void UnityEngine.Object::.cctor()
+// 0x000003E2 System.Void UnityEngine.Object::.cctor()
 extern void Object__cctor_m14515D6A9B514D3A8590E2CAE4372A0956E8976C ();
-// 0x000003DE System.Void UnityEngine.UnitySynchronizationContext::.ctor(System.Int32)
+// 0x000003E3 System.Void UnityEngine.UnitySynchronizationContext::.ctor(System.Int32)
 extern void UnitySynchronizationContext__ctor_mCABD0C784640450930DF24FAD73E8AD6D1B52037 ();
-// 0x000003DF System.Void UnityEngine.UnitySynchronizationContext::.ctor(System.Collections.Generic.List`1<UnityEngine.UnitySynchronizationContext_WorkRequest>,System.Int32)
+// 0x000003E4 System.Void UnityEngine.UnitySynchronizationContext::.ctor(System.Collections.Generic.List`1<UnityEngine.UnitySynchronizationContext_WorkRequest>,System.Int32)
 extern void UnitySynchronizationContext__ctor_m9D104656F4EAE96CB3A40DDA6EDCEBA752664612 ();
-// 0x000003E0 System.Void UnityEngine.UnitySynchronizationContext::Send(System.Threading.SendOrPostCallback,System.Object)
+// 0x000003E5 System.Void UnityEngine.UnitySynchronizationContext::Send(System.Threading.SendOrPostCallback,System.Object)
 extern void UnitySynchronizationContext_Send_m25CDC5B5ABF8D55B70EB314AA46923E3CF2AD4B9 ();
-// 0x000003E1 System.Void UnityEngine.UnitySynchronizationContext::Post(System.Threading.SendOrPostCallback,System.Object)
+// 0x000003E6 System.Void UnityEngine.UnitySynchronizationContext::Post(System.Threading.SendOrPostCallback,System.Object)
 extern void UnitySynchronizationContext_Post_mB4E900B6E9350E8E944011B6BF3D16C0657375FE ();
-// 0x000003E2 System.Threading.SynchronizationContext UnityEngine.UnitySynchronizationContext::CreateCopy()
+// 0x000003E7 System.Threading.SynchronizationContext UnityEngine.UnitySynchronizationContext::CreateCopy()
 extern void UnitySynchronizationContext_CreateCopy_mC20AC170E7947120E65ED75D71889CDAC957A5CD ();
-// 0x000003E3 System.Void UnityEngine.UnitySynchronizationContext::Exec()
+// 0x000003E8 System.Void UnityEngine.UnitySynchronizationContext::Exec()
 extern void UnitySynchronizationContext_Exec_m07342201E337E047B73C8B3259710820EFF75A9C ();
-// 0x000003E4 System.Void UnityEngine.UnitySynchronizationContext::InitializeSynchronizationContext()
+// 0x000003E9 System.Void UnityEngine.UnitySynchronizationContext::InitializeSynchronizationContext()
 extern void UnitySynchronizationContext_InitializeSynchronizationContext_m0F2A055040D6848FAD84A08DBC410E56B2D9E6A3 ();
-// 0x000003E5 System.Void UnityEngine.UnitySynchronizationContext::ExecuteTasks()
+// 0x000003EA System.Void UnityEngine.UnitySynchronizationContext::ExecuteTasks()
 extern void UnitySynchronizationContext_ExecuteTasks_m027AF329D90D6451B83A2EAF3528C9021800A962 ();
-// 0x000003E6 System.Void UnityEngine.UnitySynchronizationContext_WorkRequest::.ctor(System.Threading.SendOrPostCallback,System.Object,System.Threading.ManualResetEvent)
+// 0x000003EB System.Void UnityEngine.UnitySynchronizationContext_WorkRequest::.ctor(System.Threading.SendOrPostCallback,System.Object,System.Threading.ManualResetEvent)
 extern void WorkRequest__ctor_mE19AE1779B544378C8CB488F1576BDE618548599_AdjustorThunk ();
-// 0x000003E7 System.Void UnityEngine.UnitySynchronizationContext_WorkRequest::Invoke()
+// 0x000003EC System.Void UnityEngine.UnitySynchronizationContext_WorkRequest::Invoke()
 extern void WorkRequest_Invoke_m67D71A48794EEBB6B9793E6F1E015DE90C03C1ED_AdjustorThunk ();
-// 0x000003E8 System.Void UnityEngine.WaitForEndOfFrame::.ctor()
+// 0x000003ED System.Void UnityEngine.WaitForEndOfFrame::.ctor()
 extern void WaitForEndOfFrame__ctor_m6CDB79476A4A84CEC62947D36ADED96E907BA20B ();
-// 0x000003E9 System.Void UnityEngine.WaitForSecondsRealtime::.ctor(System.Single)
+// 0x000003EE System.Void UnityEngine.WaitForSecondsRealtime::.ctor(System.Single)
 extern void WaitForSecondsRealtime__ctor_m775503EC1F4963D8E5BBDD7989B40F6A000E0525 ();
-// 0x000003EA System.Single UnityEngine.WaitForSecondsRealtime::get_waitTime()
+// 0x000003EF System.Single UnityEngine.WaitForSecondsRealtime::get_waitTime()
 extern void WaitForSecondsRealtime_get_waitTime_m6D1B0EDEAFA3DBBBFE1A0CC2D372BAB8EA82E2FB ();
-// 0x000003EB System.Void UnityEngine.WaitForSecondsRealtime::set_waitTime(System.Single)
+// 0x000003F0 System.Void UnityEngine.WaitForSecondsRealtime::set_waitTime(System.Single)
 extern void WaitForSecondsRealtime_set_waitTime_m867F4482BEE354E33A6FD9191344D74B9CC8C790 ();
-// 0x000003EC System.Boolean UnityEngine.WaitForSecondsRealtime::get_keepWaiting()
+// 0x000003F1 System.Boolean UnityEngine.WaitForSecondsRealtime::get_keepWaiting()
 extern void WaitForSecondsRealtime_get_keepWaiting_mC257FFC53D5734250B919A8B6BE460A6D8A7CD99 ();
-// 0x000003ED System.Void UnityEngine.YieldInstruction::.ctor()
+// 0x000003F2 System.Void UnityEngine.YieldInstruction::.ctor()
 extern void YieldInstruction__ctor_mA72AD367FB081E0C2493649C6E8F7CFC592AB620 ();
-// 0x000003EE System.Void UnityEngine.Scripting.APIUpdating.MovedFromAttributeData::Set(System.Boolean,System.String,System.String,System.String)
+// 0x000003F3 System.Void UnityEngine.Scripting.APIUpdating.MovedFromAttributeData::Set(System.Boolean,System.String,System.String,System.String)
 extern void MovedFromAttributeData_Set_m244D6454BEA753FA4C7C3F2393A5DADCB3166B1C_AdjustorThunk ();
-// 0x000003EF System.Void UnityEngine.Scripting.APIUpdating.MovedFromAttribute::.ctor(System.String)
+// 0x000003F4 System.Void UnityEngine.Scripting.APIUpdating.MovedFromAttribute::.ctor(System.String)
 extern void MovedFromAttribute__ctor_mF87685F9D527910B31D3EF58F0EAA297E1944B42 ();
-// 0x000003F0 System.Void UnityEngine.Serialization.FormerlySerializedAsAttribute::.ctor(System.String)
+// 0x000003F5 System.Void UnityEngine.Serialization.FormerlySerializedAsAttribute::.ctor(System.String)
 extern void FormerlySerializedAsAttribute__ctor_m770651B828F499F804DB06A777E8A4103A3ED2BD ();
-// 0x000003F1 System.Void UnityEngine.SerializeField::.ctor()
+// 0x000003F6 System.Void UnityEngine.SerializeField::.ctor()
 extern void SerializeField__ctor_mEE7F6BB7A9643562D8CEF189848925B74F87DA27 ();
-// 0x000003F2 System.Void UnityEngine.ISerializationCallbackReceiver::OnBeforeSerialize()
-// 0x000003F3 System.Void UnityEngine.ISerializationCallbackReceiver::OnAfterDeserialize()
-// 0x000003F4 System.Int32 UnityEngine.ComputeShader::FindKernel(System.String)
+// 0x000003F7 System.Void UnityEngine.ISerializationCallbackReceiver::OnBeforeSerialize()
+// 0x000003F8 System.Void UnityEngine.ISerializationCallbackReceiver::OnAfterDeserialize()
+// 0x000003F9 System.Int32 UnityEngine.ComputeShader::FindKernel(System.String)
 extern void ComputeShader_FindKernel_m4CEBD37F96732810C4C370A6249CF460BE1F93A3 ();
-// 0x000003F5 System.Void UnityEngine.LowerResBlitTexture::LowerResBlitTextureDontStripMe()
+// 0x000003FA System.Void UnityEngine.LowerResBlitTexture::LowerResBlitTextureDontStripMe()
 extern void LowerResBlitTexture_LowerResBlitTextureDontStripMe_mC89EA382E4636DE8BC0E14D1BB024A80C65F5CAF ();
-// 0x000003F6 System.Void UnityEngine.PreloadData::PreloadDataDontStripMe()
+// 0x000003FB System.Void UnityEngine.PreloadData::PreloadDataDontStripMe()
 extern void PreloadData_PreloadDataDontStripMe_m68DF1A35E18F9FC43A63F2F990EA9970D4E4A78B ();
-// 0x000003F7 UnityEngine.OperatingSystemFamily UnityEngine.SystemInfo::get_operatingSystemFamily()
+// 0x000003FC UnityEngine.OperatingSystemFamily UnityEngine.SystemInfo::get_operatingSystemFamily()
 extern void SystemInfo_get_operatingSystemFamily_mA35FE1FF2DD6240B2880DC5F642D4A0CC2B58D8D ();
-// 0x000003F8 System.Boolean UnityEngine.SystemInfo::IsValidEnumValue(System.Enum)
+// 0x000003FD System.Boolean UnityEngine.SystemInfo::IsValidEnumValue(System.Enum)
 extern void SystemInfo_IsValidEnumValue_m112F964C57B2311EA910CCA5CE0FFABFFF906740 ();
-// 0x000003F9 System.Boolean UnityEngine.SystemInfo::SupportsTextureFormat(UnityEngine.TextureFormat)
+// 0x000003FE System.Boolean UnityEngine.SystemInfo::SupportsTextureFormat(UnityEngine.TextureFormat)
 extern void SystemInfo_SupportsTextureFormat_m1FCBD02367A45D11CAA6503715F3AAE24CA98B79 ();
-// 0x000003FA UnityEngine.OperatingSystemFamily UnityEngine.SystemInfo::GetOperatingSystemFamily()
+// 0x000003FF UnityEngine.OperatingSystemFamily UnityEngine.SystemInfo::GetOperatingSystemFamily()
 extern void SystemInfo_GetOperatingSystemFamily_mD20DAFF3A6E6649299A3BCFC845E7EB41BFA1D93 ();
-// 0x000003FB System.Boolean UnityEngine.SystemInfo::SupportsTextureFormatNative(UnityEngine.TextureFormat)
+// 0x00000400 System.Boolean UnityEngine.SystemInfo::SupportsTextureFormatNative(UnityEngine.TextureFormat)
 extern void SystemInfo_SupportsTextureFormatNative_mD028594492646D7AB78A4C2F51CA06F63E665210 ();
-// 0x000003FC System.Boolean UnityEngine.SystemInfo::IsFormatSupported(UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.Experimental.Rendering.FormatUsage)
+// 0x00000401 System.Boolean UnityEngine.SystemInfo::IsFormatSupported(UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.Experimental.Rendering.FormatUsage)
 extern void SystemInfo_IsFormatSupported_m6941B7C4566DEE1EFFD7F6DCB7BFA701ECF9C1D6 ();
-// 0x000003FD UnityEngine.Experimental.Rendering.GraphicsFormat UnityEngine.SystemInfo::GetGraphicsFormat(UnityEngine.Experimental.Rendering.DefaultFormat)
+// 0x00000402 UnityEngine.Experimental.Rendering.GraphicsFormat UnityEngine.SystemInfo::GetGraphicsFormat(UnityEngine.Experimental.Rendering.DefaultFormat)
 extern void SystemInfo_GetGraphicsFormat_m708339B9A94CEBC02A56629FE41F6809DE267F6C ();
-// 0x000003FE System.Single UnityEngine.Time::get_deltaTime()
+// 0x00000403 System.Single UnityEngine.Time::get_deltaTime()
 extern void Time_get_deltaTime_m16F98FC9BA931581236008C288E3B25CBCB7C81E ();
-// 0x000003FF System.Single UnityEngine.Time::get_unscaledTime()
+// 0x00000404 System.Single UnityEngine.Time::get_unscaledTime()
 extern void Time_get_unscaledTime_m57F78B855097C5BA632CF9BE60667A9DEBCAA472 ();
-// 0x00000400 System.Single UnityEngine.Time::get_unscaledDeltaTime()
+// 0x00000405 System.Single UnityEngine.Time::get_unscaledDeltaTime()
 extern void Time_get_unscaledDeltaTime_mA0AE7A144C88AE8AABB42DF17B0F3F0714BA06B2 ();
-// 0x00000401 System.Single UnityEngine.Time::get_realtimeSinceStartup()
+// 0x00000406 System.Single UnityEngine.Time::get_realtimeSinceStartup()
 extern void Time_get_realtimeSinceStartup_mCA1086EC9DFCF135F77BC46D3B7127711EA3DE03 ();
-// 0x00000402 System.Void UnityEngine.TouchScreenKeyboard::.ctor(System.String,UnityEngine.TouchScreenKeyboardType,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.String,System.Int32)
+// 0x00000407 System.Void UnityEngine.TouchScreenKeyboard::.ctor(System.String,UnityEngine.TouchScreenKeyboardType,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.String,System.Int32)
 extern void TouchScreenKeyboard__ctor_mDF71D45DC0F867825BEB1CDF728927FBB0E07F86 ();
-// 0x00000403 System.Void UnityEngine.TouchScreenKeyboard::Internal_Destroy(System.IntPtr)
+// 0x00000408 System.Void UnityEngine.TouchScreenKeyboard::Internal_Destroy(System.IntPtr)
 extern void TouchScreenKeyboard_Internal_Destroy_m6CD4E2343AB4FE54BC23DCFE62A50180CB3634E0 ();
-// 0x00000404 System.Void UnityEngine.TouchScreenKeyboard::Destroy()
+// 0x00000409 System.Void UnityEngine.TouchScreenKeyboard::Destroy()
 extern void TouchScreenKeyboard_Destroy_m916AE9DA740DBD435A5EDD93C6BC55CCEC8310C3 ();
-// 0x00000405 System.Void UnityEngine.TouchScreenKeyboard::Finalize()
+// 0x0000040A System.Void UnityEngine.TouchScreenKeyboard::Finalize()
 extern void TouchScreenKeyboard_Finalize_m684570CC561058F48B51F7E21A144299FBCE4C76 ();
-// 0x00000406 System.IntPtr UnityEngine.TouchScreenKeyboard::TouchScreenKeyboard_InternalConstructorHelper(UnityEngine.TouchScreenKeyboard_InternalConstructorHelperArgumentsU26,System.String,System.String)
+// 0x0000040B System.IntPtr UnityEngine.TouchScreenKeyboard::TouchScreenKeyboard_InternalConstructorHelper(UnityEngine.TouchScreenKeyboard_InternalConstructorHelperArgumentsU26,System.String,System.String)
 extern void TouchScreenKeyboard_TouchScreenKeyboard_InternalConstructorHelper_mD608B3B2A2159D17A8DF7961FA4EB1694A416973 ();
-// 0x00000407 System.Boolean UnityEngine.TouchScreenKeyboard::get_isSupported()
+// 0x0000040C System.Boolean UnityEngine.TouchScreenKeyboard::get_isSupported()
 extern void TouchScreenKeyboard_get_isSupported_m9163BAF0764DCDD9CB87E75A296D820D629D31CA ();
-// 0x00000408 System.Boolean UnityEngine.TouchScreenKeyboard::get_isInPlaceEditingAllowed()
+// 0x0000040D System.Boolean UnityEngine.TouchScreenKeyboard::get_isInPlaceEditingAllowed()
 extern void TouchScreenKeyboard_get_isInPlaceEditingAllowed_m503AB6CB0DFBD8E7D396C8E552C643F20E4A5D47 ();
-// 0x00000409 UnityEngine.TouchScreenKeyboard UnityEngine.TouchScreenKeyboard::Open(System.String,UnityEngine.TouchScreenKeyboardType,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.String,System.Int32)
+// 0x0000040E UnityEngine.TouchScreenKeyboard UnityEngine.TouchScreenKeyboard::Open(System.String,UnityEngine.TouchScreenKeyboardType,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.String,System.Int32)
 extern void TouchScreenKeyboard_Open_mF795EEBFEF7DF5E5418CF2BACA02D1C62291B93A ();
-// 0x0000040A System.String UnityEngine.TouchScreenKeyboard::get_text()
+// 0x0000040F System.String UnityEngine.TouchScreenKeyboard::get_text()
 extern void TouchScreenKeyboard_get_text_mC025B2F295D315E1A18E7AA54B013A8072A8FEB0 ();
-// 0x0000040B System.Void UnityEngine.TouchScreenKeyboard::set_text(System.String)
+// 0x00000410 System.Void UnityEngine.TouchScreenKeyboard::set_text(System.String)
 extern void TouchScreenKeyboard_set_text_mF72A794EEC3FC19A9701B61A70BCF392D53B0D38 ();
-// 0x0000040C System.Void UnityEngine.TouchScreenKeyboard::set_hideInput(System.Boolean)
+// 0x00000411 System.Void UnityEngine.TouchScreenKeyboard::set_hideInput(System.Boolean)
 extern void TouchScreenKeyboard_set_hideInput_mA9729B01B360BF98153F40B96DDED39534B94840 ();
-// 0x0000040D System.Boolean UnityEngine.TouchScreenKeyboard::get_active()
+// 0x00000412 System.Boolean UnityEngine.TouchScreenKeyboard::get_active()
 extern void TouchScreenKeyboard_get_active_m35A2928E54273BF16CB19D11665989D894D5C79D ();
-// 0x0000040E System.Void UnityEngine.TouchScreenKeyboard::set_active(System.Boolean)
+// 0x00000413 System.Void UnityEngine.TouchScreenKeyboard::set_active(System.Boolean)
 extern void TouchScreenKeyboard_set_active_m8D5FDCFA997C5EAD7896F7EB456165498727792D ();
-// 0x0000040F UnityEngine.TouchScreenKeyboard_Status UnityEngine.TouchScreenKeyboard::get_status()
+// 0x00000414 UnityEngine.TouchScreenKeyboard_Status UnityEngine.TouchScreenKeyboard::get_status()
 extern void TouchScreenKeyboard_get_status_m17CF606283E9BAF02D76ADC813F63F036FAE33F2 ();
-// 0x00000410 System.Void UnityEngine.TouchScreenKeyboard::set_characterLimit(System.Int32)
+// 0x00000415 System.Void UnityEngine.TouchScreenKeyboard::set_characterLimit(System.Int32)
 extern void TouchScreenKeyboard_set_characterLimit_m97F392EB376881A77F5210CFA6736F0A49F5D57B ();
-// 0x00000411 System.Boolean UnityEngine.TouchScreenKeyboard::get_canGetSelection()
+// 0x00000416 System.Boolean UnityEngine.TouchScreenKeyboard::get_canGetSelection()
 extern void TouchScreenKeyboard_get_canGetSelection_m8EEC32EA25638ACB54F698EA72450B51BEC9A362 ();
-// 0x00000412 System.Boolean UnityEngine.TouchScreenKeyboard::get_canSetSelection()
+// 0x00000417 System.Boolean UnityEngine.TouchScreenKeyboard::get_canSetSelection()
 extern void TouchScreenKeyboard_get_canSetSelection_m3C9574749CA28A6677C77B8FBE6292B80DF88A10 ();
-// 0x00000413 UnityEngine.RangeInt UnityEngine.TouchScreenKeyboard::get_selection()
+// 0x00000418 UnityEngine.RangeInt UnityEngine.TouchScreenKeyboard::get_selection()
 extern void TouchScreenKeyboard_get_selection_m9E2AB5FF388968D946B15A3ECDAE1C3C97115AAD ();
-// 0x00000414 System.Void UnityEngine.TouchScreenKeyboard::set_selection(UnityEngine.RangeInt)
+// 0x00000419 System.Void UnityEngine.TouchScreenKeyboard::set_selection(UnityEngine.RangeInt)
 extern void TouchScreenKeyboard_set_selection_m27C5DE6B9DBBBFE2CCA68FA80A600D94337215C7 ();
-// 0x00000415 System.Void UnityEngine.TouchScreenKeyboard::GetSelection(System.Int32U26,System.Int32U26)
+// 0x0000041A System.Void UnityEngine.TouchScreenKeyboard::GetSelection(System.Int32U26,System.Int32U26)
 extern void TouchScreenKeyboard_GetSelection_mED761F9161A43CC8E507EA27DB1BD11127C6C896 ();
-// 0x00000416 System.Void UnityEngine.TouchScreenKeyboard::SetSelection(System.Int32,System.Int32)
+// 0x0000041B System.Void UnityEngine.TouchScreenKeyboard::SetSelection(System.Int32,System.Int32)
 extern void TouchScreenKeyboard_SetSelection_mB728B6A7B07AC33987FB30F7950B3D31E3BA5FBF ();
-// 0x00000417 System.Void UnityEngineInternal.TypeInferenceRuleAttribute::.ctor(UnityEngineInternal.TypeInferenceRules)
+// 0x0000041C System.Void UnityEngineInternal.TypeInferenceRuleAttribute::.ctor(UnityEngineInternal.TypeInferenceRules)
 extern void TypeInferenceRuleAttribute__ctor_m389751AED6740F401AC8DFACD5914C13AB24D8A6 ();
-// 0x00000418 System.Void UnityEngineInternal.TypeInferenceRuleAttribute::.ctor(System.String)
+// 0x0000041D System.Void UnityEngineInternal.TypeInferenceRuleAttribute::.ctor(System.String)
 extern void TypeInferenceRuleAttribute__ctor_m34920F979AA071F4973CEEEF6F91B5B6A53E5765 ();
-// 0x00000419 System.String UnityEngineInternal.TypeInferenceRuleAttribute::ToString()
+// 0x0000041E System.String UnityEngineInternal.TypeInferenceRuleAttribute::ToString()
 extern void TypeInferenceRuleAttribute_ToString_m49343B52ED0F3E75B3E56E37CF523F63E5A746F6 ();
-// 0x0000041A System.Void UnityEngineInternal.GenericStack::.ctor()
+// 0x0000041F System.Void UnityEngineInternal.GenericStack::.ctor()
 extern void GenericStack__ctor_m0659B84DB6B093AF1F01F566686C510DDEEAE848 ();
-// 0x0000041B System.Void UnityEngine.Events.ArgumentCache::.ctor()
+// 0x00000420 System.Void UnityEngine.Events.ArgumentCache::.ctor()
 extern void ArgumentCache__ctor_m9618D660E40F991782873643F0FDCACA32A63541 ();
-// 0x0000041C UnityEngine.Object UnityEngine.Events.ArgumentCache::get_unityObjectArgument()
+// 0x00000421 UnityEngine.Object UnityEngine.Events.ArgumentCache::get_unityObjectArgument()
 extern void ArgumentCache_get_unityObjectArgument_m89597514712FB91B443B9FB1A44D099F021DCFA5 ();
-// 0x0000041D System.String UnityEngine.Events.ArgumentCache::get_unityObjectArgumentAssemblyTypeName()
+// 0x00000422 System.String UnityEngine.Events.ArgumentCache::get_unityObjectArgumentAssemblyTypeName()
 extern void ArgumentCache_get_unityObjectArgumentAssemblyTypeName_mD54EA1424879A2E07B179AE93D374100259FF534 ();
-// 0x0000041E System.Int32 UnityEngine.Events.ArgumentCache::get_intArgument()
+// 0x00000423 System.Int32 UnityEngine.Events.ArgumentCache::get_intArgument()
 extern void ArgumentCache_get_intArgument_mD9D072A7856D998847F159350EAD0D9AA552F76B ();
-// 0x0000041F System.Single UnityEngine.Events.ArgumentCache::get_floatArgument()
+// 0x00000424 System.Single UnityEngine.Events.ArgumentCache::get_floatArgument()
 extern void ArgumentCache_get_floatArgument_mDDAD91A992319CF1FFFDD4F0F87C5D162BFF187A ();
-// 0x00000420 System.String UnityEngine.Events.ArgumentCache::get_stringArgument()
+// 0x00000425 System.String UnityEngine.Events.ArgumentCache::get_stringArgument()
 extern void ArgumentCache_get_stringArgument_mCD1D05766E21EEFDFD03D4DE66C088CF29F84D00 ();
-// 0x00000421 System.Boolean UnityEngine.Events.ArgumentCache::get_boolArgument()
+// 0x00000426 System.Boolean UnityEngine.Events.ArgumentCache::get_boolArgument()
 extern void ArgumentCache_get_boolArgument_mCCAB5FB41B0F1C8C8A2C31FB3D46DF99A7A71BE2 ();
-// 0x00000422 System.Void UnityEngine.Events.ArgumentCache::TidyAssemblyTypeName()
+// 0x00000427 System.Void UnityEngine.Events.ArgumentCache::TidyAssemblyTypeName()
 extern void ArgumentCache_TidyAssemblyTypeName_m2D4AFE74BEB5F32B14165BB52F6AB29A75306936 ();
-// 0x00000423 System.Void UnityEngine.Events.ArgumentCache::OnBeforeSerialize()
+// 0x00000428 System.Void UnityEngine.Events.ArgumentCache::OnBeforeSerialize()
 extern void ArgumentCache_OnBeforeSerialize_mCBE8301FE0DDE2E516A18051BBE3DC983BC80FBC ();
-// 0x00000424 System.Void UnityEngine.Events.ArgumentCache::OnAfterDeserialize()
+// 0x00000429 System.Void UnityEngine.Events.ArgumentCache::OnAfterDeserialize()
 extern void ArgumentCache_OnAfterDeserialize_m59072D771A42C518FECECBE2CE7EE9E15F4BE55F ();
-// 0x00000425 System.Void UnityEngine.Events.BaseInvokableCall::.ctor()
+// 0x0000042A System.Void UnityEngine.Events.BaseInvokableCall::.ctor()
 extern void BaseInvokableCall__ctor_m232CE2068209113988BB35B50A2965FC03FC4A58 ();
-// 0x00000426 System.Void UnityEngine.Events.BaseInvokableCall::.ctor(System.Object,System.Reflection.MethodInfo)
+// 0x0000042B System.Void UnityEngine.Events.BaseInvokableCall::.ctor(System.Object,System.Reflection.MethodInfo)
 extern void BaseInvokableCall__ctor_m71AC21A8840CE45C2600FF784E8B0B556D7B2BA5 ();
-// 0x00000427 System.Void UnityEngine.Events.BaseInvokableCall::Invoke(System.Object[])
-// 0x00000428 System.Void UnityEngine.Events.BaseInvokableCall::ThrowOnInvalidArg(System.Object)
-// 0x00000429 System.Boolean UnityEngine.Events.BaseInvokableCall::AllowInvoke(System.Delegate)
+// 0x0000042C System.Void UnityEngine.Events.BaseInvokableCall::Invoke(System.Object[])
+// 0x0000042D System.Void UnityEngine.Events.BaseInvokableCall::ThrowOnInvalidArg(System.Object)
+// 0x0000042E System.Boolean UnityEngine.Events.BaseInvokableCall::AllowInvoke(System.Delegate)
 extern void BaseInvokableCall_AllowInvoke_m0B193EBF1EF138FC5354933974DD702D3D9FF091 ();
-// 0x0000042A System.Boolean UnityEngine.Events.BaseInvokableCall::Find(System.Object,System.Reflection.MethodInfo)
-// 0x0000042B System.Void UnityEngine.Events.InvokableCall::.ctor(System.Object,System.Reflection.MethodInfo)
+// 0x0000042F System.Boolean UnityEngine.Events.BaseInvokableCall::Find(System.Object,System.Reflection.MethodInfo)
+// 0x00000430 System.Void UnityEngine.Events.InvokableCall::.ctor(System.Object,System.Reflection.MethodInfo)
 extern void InvokableCall__ctor_m2F9F0CD09FCFFEBCBBA87EC75D9BA50058C5B873 ();
-// 0x0000042C System.Void UnityEngine.Events.InvokableCall::.ctor(UnityEngine.Events.UnityAction)
+// 0x00000431 System.Void UnityEngine.Events.InvokableCall::.ctor(UnityEngine.Events.UnityAction)
 extern void InvokableCall__ctor_m77F593E751D2119119A5F3FD39F8F5D3B653102B ();
-// 0x0000042D System.Void UnityEngine.Events.InvokableCall::add_Delegate(UnityEngine.Events.UnityAction)
+// 0x00000432 System.Void UnityEngine.Events.InvokableCall::add_Delegate(UnityEngine.Events.UnityAction)
 extern void InvokableCall_add_Delegate_mCE91CE04CF7A8B962FF566B018C8C516351AD0F3 ();
-// 0x0000042E System.Void UnityEngine.Events.InvokableCall::remove_Delegate(UnityEngine.Events.UnityAction)
+// 0x00000433 System.Void UnityEngine.Events.InvokableCall::remove_Delegate(UnityEngine.Events.UnityAction)
 extern void InvokableCall_remove_Delegate_m0CFD9A25842A757309236C500089752BF544E3C7 ();
-// 0x0000042F System.Void UnityEngine.Events.InvokableCall::Invoke(System.Object[])
+// 0x00000434 System.Void UnityEngine.Events.InvokableCall::Invoke(System.Object[])
 extern void InvokableCall_Invoke_mDB8C26B441658DDA48AC3AF259F4A0EBCF673FD0 ();
-// 0x00000430 System.Void UnityEngine.Events.InvokableCall::Invoke()
+// 0x00000435 System.Void UnityEngine.Events.InvokableCall::Invoke()
 extern void InvokableCall_Invoke_m0B9E7F14A2C67AB51F01745BD2C6C423114C9394 ();
-// 0x00000431 System.Boolean UnityEngine.Events.InvokableCall::Find(System.Object,System.Reflection.MethodInfo)
+// 0x00000436 System.Boolean UnityEngine.Events.InvokableCall::Find(System.Object,System.Reflection.MethodInfo)
 extern void InvokableCall_Find_mDC13296B10EFCD0A92E486CD5787E07890C7B8CC ();
-// 0x00000432 System.Void UnityEngine.Events.InvokableCall`1::.ctor(System.Object,System.Reflection.MethodInfo)
-// 0x00000433 System.Void UnityEngine.Events.InvokableCall`1::.ctor(UnityEngine.Events.UnityAction`1<T1>)
-// 0x00000434 System.Void UnityEngine.Events.InvokableCall`1::add_Delegate(UnityEngine.Events.UnityAction`1<T1>)
-// 0x00000435 System.Void UnityEngine.Events.InvokableCall`1::remove_Delegate(UnityEngine.Events.UnityAction`1<T1>)
-// 0x00000436 System.Void UnityEngine.Events.InvokableCall`1::Invoke(System.Object[])
-// 0x00000437 System.Void UnityEngine.Events.InvokableCall`1::Invoke(T1)
-// 0x00000438 System.Boolean UnityEngine.Events.InvokableCall`1::Find(System.Object,System.Reflection.MethodInfo)
-// 0x00000439 System.Void UnityEngine.Events.InvokableCall`2::.ctor(System.Object,System.Reflection.MethodInfo)
-// 0x0000043A System.Void UnityEngine.Events.InvokableCall`2::Invoke(System.Object[])
-// 0x0000043B System.Boolean UnityEngine.Events.InvokableCall`2::Find(System.Object,System.Reflection.MethodInfo)
-// 0x0000043C System.Void UnityEngine.Events.InvokableCall`3::.ctor(System.Object,System.Reflection.MethodInfo)
-// 0x0000043D System.Void UnityEngine.Events.InvokableCall`3::Invoke(System.Object[])
-// 0x0000043E System.Boolean UnityEngine.Events.InvokableCall`3::Find(System.Object,System.Reflection.MethodInfo)
-// 0x0000043F System.Void UnityEngine.Events.InvokableCall`4::.ctor(System.Object,System.Reflection.MethodInfo)
-// 0x00000440 System.Void UnityEngine.Events.InvokableCall`4::Invoke(System.Object[])
-// 0x00000441 System.Boolean UnityEngine.Events.InvokableCall`4::Find(System.Object,System.Reflection.MethodInfo)
-// 0x00000442 System.Void UnityEngine.Events.CachedInvokableCall`1::.ctor(UnityEngine.Object,System.Reflection.MethodInfo,T)
-// 0x00000443 System.Void UnityEngine.Events.CachedInvokableCall`1::Invoke(System.Object[])
-// 0x00000444 System.Void UnityEngine.Events.CachedInvokableCall`1::Invoke(T)
-// 0x00000445 System.Void UnityEngine.Events.PersistentCall::.ctor()
+// 0x00000437 System.Void UnityEngine.Events.InvokableCall`1::.ctor(System.Object,System.Reflection.MethodInfo)
+// 0x00000438 System.Void UnityEngine.Events.InvokableCall`1::.ctor(UnityEngine.Events.UnityAction`1<T1>)
+// 0x00000439 System.Void UnityEngine.Events.InvokableCall`1::add_Delegate(UnityEngine.Events.UnityAction`1<T1>)
+// 0x0000043A System.Void UnityEngine.Events.InvokableCall`1::remove_Delegate(UnityEngine.Events.UnityAction`1<T1>)
+// 0x0000043B System.Void UnityEngine.Events.InvokableCall`1::Invoke(System.Object[])
+// 0x0000043C System.Void UnityEngine.Events.InvokableCall`1::Invoke(T1)
+// 0x0000043D System.Boolean UnityEngine.Events.InvokableCall`1::Find(System.Object,System.Reflection.MethodInfo)
+// 0x0000043E System.Void UnityEngine.Events.InvokableCall`2::.ctor(System.Object,System.Reflection.MethodInfo)
+// 0x0000043F System.Void UnityEngine.Events.InvokableCall`2::Invoke(System.Object[])
+// 0x00000440 System.Boolean UnityEngine.Events.InvokableCall`2::Find(System.Object,System.Reflection.MethodInfo)
+// 0x00000441 System.Void UnityEngine.Events.InvokableCall`3::.ctor(System.Object,System.Reflection.MethodInfo)
+// 0x00000442 System.Void UnityEngine.Events.InvokableCall`3::Invoke(System.Object[])
+// 0x00000443 System.Boolean UnityEngine.Events.InvokableCall`3::Find(System.Object,System.Reflection.MethodInfo)
+// 0x00000444 System.Void UnityEngine.Events.InvokableCall`4::.ctor(System.Object,System.Reflection.MethodInfo)
+// 0x00000445 System.Void UnityEngine.Events.InvokableCall`4::Invoke(System.Object[])
+// 0x00000446 System.Boolean UnityEngine.Events.InvokableCall`4::Find(System.Object,System.Reflection.MethodInfo)
+// 0x00000447 System.Void UnityEngine.Events.CachedInvokableCall`1::.ctor(UnityEngine.Object,System.Reflection.MethodInfo,T)
+// 0x00000448 System.Void UnityEngine.Events.CachedInvokableCall`1::Invoke(System.Object[])
+// 0x00000449 System.Void UnityEngine.Events.CachedInvokableCall`1::Invoke(T)
+// 0x0000044A System.Void UnityEngine.Events.PersistentCall::.ctor()
 extern void PersistentCall__ctor_mBF65325BE6B4EBC6B3E8ADAD3C6FA77EF5BBEFA8 ();
-// 0x00000446 UnityEngine.Object UnityEngine.Events.PersistentCall::get_target()
+// 0x0000044B UnityEngine.Object UnityEngine.Events.PersistentCall::get_target()
 extern void PersistentCall_get_target_mCAD7D486F28743D49DCF268B791721313A7FC8C5 ();
-// 0x00000447 System.String UnityEngine.Events.PersistentCall::get_methodName()
+// 0x0000044C System.String UnityEngine.Events.PersistentCall::get_methodName()
 extern void PersistentCall_get_methodName_m164BE545C327516CABE9464D88A417B7F00010E1 ();
-// 0x00000448 UnityEngine.Events.PersistentListenerMode UnityEngine.Events.PersistentCall::get_mode()
+// 0x0000044D UnityEngine.Events.PersistentListenerMode UnityEngine.Events.PersistentCall::get_mode()
 extern void PersistentCall_get_mode_mC88324F8D18B5E4E79045AE1F99DF3EB36CEE644 ();
-// 0x00000449 UnityEngine.Events.ArgumentCache UnityEngine.Events.PersistentCall::get_arguments()
+// 0x0000044E UnityEngine.Events.ArgumentCache UnityEngine.Events.PersistentCall::get_arguments()
 extern void PersistentCall_get_arguments_m53AFE12B586F0C8948D60852866EC71F38B3BAE1 ();
-// 0x0000044A System.Boolean UnityEngine.Events.PersistentCall::IsValid()
+// 0x0000044F System.Boolean UnityEngine.Events.PersistentCall::IsValid()
 extern void PersistentCall_IsValid_mF3E3A11AF1547E84B2AC78AFAF6B2907C9B159AE ();
-// 0x0000044B UnityEngine.Events.BaseInvokableCall UnityEngine.Events.PersistentCall::GetRuntimeCall(UnityEngine.Events.UnityEventBase)
+// 0x00000450 UnityEngine.Events.BaseInvokableCall UnityEngine.Events.PersistentCall::GetRuntimeCall(UnityEngine.Events.UnityEventBase)
 extern void PersistentCall_GetRuntimeCall_m68F27109F868C451A47DAC3863B27839C515C3A6 ();
-// 0x0000044C UnityEngine.Events.BaseInvokableCall UnityEngine.Events.PersistentCall::GetObjectCall(UnityEngine.Object,System.Reflection.MethodInfo,UnityEngine.Events.ArgumentCache)
+// 0x00000451 UnityEngine.Events.BaseInvokableCall UnityEngine.Events.PersistentCall::GetObjectCall(UnityEngine.Object,System.Reflection.MethodInfo,UnityEngine.Events.ArgumentCache)
 extern void PersistentCall_GetObjectCall_m895EBE1B8E2A4FB297A8C268371CA4CD320F72C9 ();
-// 0x0000044D System.Void UnityEngine.Events.PersistentCallGroup::.ctor()
+// 0x00000452 System.Void UnityEngine.Events.PersistentCallGroup::.ctor()
 extern void PersistentCallGroup__ctor_m46B7802855B55149B9C1ECD9C9C97B8025BF2D7A ();
-// 0x0000044E System.Void UnityEngine.Events.PersistentCallGroup::Initialize(UnityEngine.Events.InvokableCallList,UnityEngine.Events.UnityEventBase)
+// 0x00000453 System.Void UnityEngine.Events.PersistentCallGroup::Initialize(UnityEngine.Events.InvokableCallList,UnityEngine.Events.UnityEventBase)
 extern void PersistentCallGroup_Initialize_m9F47B3D16F78FD424D50E9AE41EB066BA9C681A3 ();
-// 0x0000044F System.Void UnityEngine.Events.InvokableCallList::.ctor()
+// 0x00000454 System.Void UnityEngine.Events.InvokableCallList::.ctor()
 extern void InvokableCallList__ctor_m8A5D49D58DCCC3D962D84C6DAD703DCABE74EC2D ();
-// 0x00000450 System.Void UnityEngine.Events.InvokableCallList::AddPersistentInvokableCall(UnityEngine.Events.BaseInvokableCall)
+// 0x00000455 System.Void UnityEngine.Events.InvokableCallList::AddPersistentInvokableCall(UnityEngine.Events.BaseInvokableCall)
 extern void InvokableCallList_AddPersistentInvokableCall_m62BDD6521FB7B68B58673D5C5B1117FCE4826CAD ();
-// 0x00000451 System.Void UnityEngine.Events.InvokableCallList::AddListener(UnityEngine.Events.BaseInvokableCall)
+// 0x00000456 System.Void UnityEngine.Events.InvokableCallList::AddListener(UnityEngine.Events.BaseInvokableCall)
 extern void InvokableCallList_AddListener_mE4069F40E8762EF21140D688175D7A4E46FD2E83 ();
-// 0x00000452 System.Void UnityEngine.Events.InvokableCallList::RemoveListener(System.Object,System.Reflection.MethodInfo)
+// 0x00000457 System.Void UnityEngine.Events.InvokableCallList::RemoveListener(System.Object,System.Reflection.MethodInfo)
 extern void InvokableCallList_RemoveListener_mC886122D45A6682A85066E48637339065085D6DE ();
-// 0x00000453 System.Void UnityEngine.Events.InvokableCallList::ClearPersistent()
+// 0x00000458 System.Void UnityEngine.Events.InvokableCallList::Clear()
+extern void InvokableCallList_Clear_mE83ECBC1675FD0906508620A3AC2770D0E889B72 ();
+// 0x00000459 System.Void UnityEngine.Events.InvokableCallList::ClearPersistent()
 extern void InvokableCallList_ClearPersistent_m4038DB499DCD84B79C0F1A698AAA7B9519553D49 ();
-// 0x00000454 System.Collections.Generic.List`1<UnityEngine.Events.BaseInvokableCall> UnityEngine.Events.InvokableCallList::PrepareInvoke()
+// 0x0000045A System.Collections.Generic.List`1<UnityEngine.Events.BaseInvokableCall> UnityEngine.Events.InvokableCallList::PrepareInvoke()
 extern void InvokableCallList_PrepareInvoke_m5BB28A5FBF10C84ECF5B52EBC52F9FCCDC840DC1 ();
-// 0x00000455 System.Void UnityEngine.Events.UnityEventBase::.ctor()
+// 0x0000045B System.Void UnityEngine.Events.UnityEventBase::.ctor()
 extern void UnityEventBase__ctor_m57AF08DAFA9C1B4F4C8DA855116900BAE8DF9595 ();
-// 0x00000456 System.Void UnityEngine.Events.UnityEventBase::UnityEngine.ISerializationCallbackReceiver.OnBeforeSerialize()
+// 0x0000045C System.Void UnityEngine.Events.UnityEventBase::UnityEngine.ISerializationCallbackReceiver.OnBeforeSerialize()
 extern void UnityEventBase_UnityEngine_ISerializationCallbackReceiver_OnBeforeSerialize_m147F610873545A23E9005CCB35CA6A05887E7599 ();
-// 0x00000457 System.Void UnityEngine.Events.UnityEventBase::UnityEngine.ISerializationCallbackReceiver.OnAfterDeserialize()
+// 0x0000045D System.Void UnityEngine.Events.UnityEventBase::UnityEngine.ISerializationCallbackReceiver.OnAfterDeserialize()
 extern void UnityEventBase_UnityEngine_ISerializationCallbackReceiver_OnAfterDeserialize_m3A87E89948C5FF32BD5BA1BDD1A4D791738A141E ();
-// 0x00000458 System.Reflection.MethodInfo UnityEngine.Events.UnityEventBase::FindMethod_Impl(System.String,System.Object)
-// 0x00000459 UnityEngine.Events.BaseInvokableCall UnityEngine.Events.UnityEventBase::GetDelegate(System.Object,System.Reflection.MethodInfo)
-// 0x0000045A System.Reflection.MethodInfo UnityEngine.Events.UnityEventBase::FindMethod(UnityEngine.Events.PersistentCall)
+// 0x0000045E System.Reflection.MethodInfo UnityEngine.Events.UnityEventBase::FindMethod_Impl(System.String,System.Object)
+// 0x0000045F UnityEngine.Events.BaseInvokableCall UnityEngine.Events.UnityEventBase::GetDelegate(System.Object,System.Reflection.MethodInfo)
+// 0x00000460 System.Reflection.MethodInfo UnityEngine.Events.UnityEventBase::FindMethod(UnityEngine.Events.PersistentCall)
 extern void UnityEventBase_FindMethod_m4E838DE0D107C86C7CAA5B05D4683066E9EB9C32 ();
-// 0x0000045B System.Reflection.MethodInfo UnityEngine.Events.UnityEventBase::FindMethod(System.String,System.Object,UnityEngine.Events.PersistentListenerMode,System.Type)
+// 0x00000461 System.Reflection.MethodInfo UnityEngine.Events.UnityEventBase::FindMethod(System.String,System.Object,UnityEngine.Events.PersistentListenerMode,System.Type)
 extern void UnityEventBase_FindMethod_m82A135403D677ECE42CEE42A322E15EB2EA53797 ();
-// 0x0000045C System.Void UnityEngine.Events.UnityEventBase::DirtyPersistentCalls()
+// 0x00000462 System.Void UnityEngine.Events.UnityEventBase::DirtyPersistentCalls()
 extern void UnityEventBase_DirtyPersistentCalls_m31D9B2D3B265718318F4D7E87373E53F249E65EB ();
-// 0x0000045D System.Void UnityEngine.Events.UnityEventBase::RebuildPersistentCallsIfNeeded()
+// 0x00000463 System.Void UnityEngine.Events.UnityEventBase::RebuildPersistentCallsIfNeeded()
 extern void UnityEventBase_RebuildPersistentCallsIfNeeded_mFC89AED628B42E5B1CBCC702222A6DF97605234F ();
-// 0x0000045E System.Void UnityEngine.Events.UnityEventBase::AddCall(UnityEngine.Events.BaseInvokableCall)
+// 0x00000464 System.Void UnityEngine.Events.UnityEventBase::AddCall(UnityEngine.Events.BaseInvokableCall)
 extern void UnityEventBase_AddCall_mD45F68C1A40E2BD9B0754490B7709846B84E8075 ();
-// 0x0000045F System.Void UnityEngine.Events.UnityEventBase::RemoveListener(System.Object,System.Reflection.MethodInfo)
+// 0x00000465 System.Void UnityEngine.Events.UnityEventBase::RemoveListener(System.Object,System.Reflection.MethodInfo)
 extern void UnityEventBase_RemoveListener_mE7EBC544115373D2357599AC07F41F13A8C5A49E ();
-// 0x00000460 System.Collections.Generic.List`1<UnityEngine.Events.BaseInvokableCall> UnityEngine.Events.UnityEventBase::PrepareInvoke()
+// 0x00000466 System.Void UnityEngine.Events.UnityEventBase::RemoveAllListeners()
+extern void UnityEventBase_RemoveAllListeners_m7EC34F9A8A4F1990D14EBF9E77BA62718F1C5D43 ();
+// 0x00000467 System.Collections.Generic.List`1<UnityEngine.Events.BaseInvokableCall> UnityEngine.Events.UnityEventBase::PrepareInvoke()
 extern void UnityEventBase_PrepareInvoke_mFA3E2C97DB776A1089DCC85C9F1DA75C295032AE ();
-// 0x00000461 System.String UnityEngine.Events.UnityEventBase::ToString()
+// 0x00000468 System.String UnityEngine.Events.UnityEventBase::ToString()
 extern void UnityEventBase_ToString_m7672D78CA070AC49FFF04E645523864C300DD66D ();
-// 0x00000462 System.Reflection.MethodInfo UnityEngine.Events.UnityEventBase::GetValidMethodInfo(System.Object,System.String,System.Type[])
+// 0x00000469 System.Reflection.MethodInfo UnityEngine.Events.UnityEventBase::GetValidMethodInfo(System.Object,System.String,System.Type[])
 extern void UnityEventBase_GetValidMethodInfo_m4521621AB72C7265A2C0EC6911BE4DC42A99B6A5 ();
-// 0x00000463 System.Void UnityEngine.Events.UnityAction::.ctor(System.Object,System.IntPtr)
+// 0x0000046A System.Void UnityEngine.Events.UnityAction::.ctor(System.Object,System.IntPtr)
 extern void UnityAction__ctor_mEFC4B92529CE83DF72501F92E07EC5598C54BDAC ();
-// 0x00000464 System.Void UnityEngine.Events.UnityAction::Invoke()
+// 0x0000046B System.Void UnityEngine.Events.UnityAction::Invoke()
 extern void UnityAction_Invoke_mC9FF5AA1F82FDE635B3B6644CE71C94C31C3E71A ();
-// 0x00000465 System.IAsyncResult UnityEngine.Events.UnityAction::BeginInvoke(System.AsyncCallback,System.Object)
+// 0x0000046C System.IAsyncResult UnityEngine.Events.UnityAction::BeginInvoke(System.AsyncCallback,System.Object)
 extern void UnityAction_BeginInvoke_m6819B1057D192033B17EB15C9E34305720F0401C ();
-// 0x00000466 System.Void UnityEngine.Events.UnityAction::EndInvoke(System.IAsyncResult)
+// 0x0000046D System.Void UnityEngine.Events.UnityAction::EndInvoke(System.IAsyncResult)
 extern void UnityAction_EndInvoke_m9C465516D5977EF185DCEB6CA81D0B90EDAD7370 ();
-// 0x00000467 System.Void UnityEngine.Events.UnityEvent::.ctor()
+// 0x0000046E System.Void UnityEngine.Events.UnityEvent::.ctor()
 extern void UnityEvent__ctor_m2F8C02F28E289CA65598FF4FA8EAB84D955FF028 ();
-// 0x00000468 System.Void UnityEngine.Events.UnityEvent::AddListener(UnityEngine.Events.UnityAction)
+// 0x0000046F System.Void UnityEngine.Events.UnityEvent::AddListener(UnityEngine.Events.UnityAction)
 extern void UnityEvent_AddListener_m31973FDDC5BB0B2828AB6EF519EC4FD6563499C9 ();
-// 0x00000469 System.Reflection.MethodInfo UnityEngine.Events.UnityEvent::FindMethod_Impl(System.String,System.Object)
+// 0x00000470 System.Reflection.MethodInfo UnityEngine.Events.UnityEvent::FindMethod_Impl(System.String,System.Object)
 extern void UnityEvent_FindMethod_Impl_mC96F40A83BB4D1430E254DAE9B091E27E42E8796 ();
-// 0x0000046A UnityEngine.Events.BaseInvokableCall UnityEngine.Events.UnityEvent::GetDelegate(System.Object,System.Reflection.MethodInfo)
+// 0x00000471 UnityEngine.Events.BaseInvokableCall UnityEngine.Events.UnityEvent::GetDelegate(System.Object,System.Reflection.MethodInfo)
 extern void UnityEvent_GetDelegate_m8D277E2D713BB3605B3D46E5A3DB708B6A338EB0 ();
-// 0x0000046B UnityEngine.Events.BaseInvokableCall UnityEngine.Events.UnityEvent::GetDelegate(UnityEngine.Events.UnityAction)
+// 0x00000472 UnityEngine.Events.BaseInvokableCall UnityEngine.Events.UnityEvent::GetDelegate(UnityEngine.Events.UnityAction)
 extern void UnityEvent_GetDelegate_mDFBD636D71E24D75D0851959256A3B97BA842865 ();
-// 0x0000046C System.Void UnityEngine.Events.UnityEvent::Invoke()
+// 0x00000473 System.Void UnityEngine.Events.UnityEvent::Invoke()
 extern void UnityEvent_Invoke_mB2FA1C76256FE34D5E7F84ABE528AC61CE8A0325 ();
-// 0x0000046D System.Void UnityEngine.Events.UnityAction`1::.ctor(System.Object,System.IntPtr)
-// 0x0000046E System.Void UnityEngine.Events.UnityAction`1::Invoke(T0)
-// 0x0000046F System.IAsyncResult UnityEngine.Events.UnityAction`1::BeginInvoke(T0,System.AsyncCallback,System.Object)
-// 0x00000470 System.Void UnityEngine.Events.UnityAction`1::EndInvoke(System.IAsyncResult)
-// 0x00000471 System.Void UnityEngine.Events.UnityEvent`1::.ctor()
-// 0x00000472 System.Void UnityEngine.Events.UnityEvent`1::AddListener(UnityEngine.Events.UnityAction`1<T0>)
-// 0x00000473 System.Void UnityEngine.Events.UnityEvent`1::RemoveListener(UnityEngine.Events.UnityAction`1<T0>)
-// 0x00000474 System.Reflection.MethodInfo UnityEngine.Events.UnityEvent`1::FindMethod_Impl(System.String,System.Object)
-// 0x00000475 UnityEngine.Events.BaseInvokableCall UnityEngine.Events.UnityEvent`1::GetDelegate(System.Object,System.Reflection.MethodInfo)
-// 0x00000476 UnityEngine.Events.BaseInvokableCall UnityEngine.Events.UnityEvent`1::GetDelegate(UnityEngine.Events.UnityAction`1<T0>)
-// 0x00000477 System.Void UnityEngine.Events.UnityEvent`1::Invoke(T0)
-// 0x00000478 System.Void UnityEngine.Events.UnityAction`2::.ctor(System.Object,System.IntPtr)
-// 0x00000479 System.Void UnityEngine.Events.UnityAction`2::Invoke(T0,T1)
-// 0x0000047A System.IAsyncResult UnityEngine.Events.UnityAction`2::BeginInvoke(T0,T1,System.AsyncCallback,System.Object)
-// 0x0000047B System.Void UnityEngine.Events.UnityAction`2::EndInvoke(System.IAsyncResult)
-// 0x0000047C System.Void UnityEngine.Events.UnityEvent`2::.ctor()
-// 0x0000047D System.Reflection.MethodInfo UnityEngine.Events.UnityEvent`2::FindMethod_Impl(System.String,System.Object)
-// 0x0000047E UnityEngine.Events.BaseInvokableCall UnityEngine.Events.UnityEvent`2::GetDelegate(System.Object,System.Reflection.MethodInfo)
-// 0x0000047F System.Void UnityEngine.Events.UnityAction`3::.ctor(System.Object,System.IntPtr)
-// 0x00000480 System.Void UnityEngine.Events.UnityAction`3::Invoke(T0,T1,T2)
-// 0x00000481 System.IAsyncResult UnityEngine.Events.UnityAction`3::BeginInvoke(T0,T1,T2,System.AsyncCallback,System.Object)
-// 0x00000482 System.Void UnityEngine.Events.UnityAction`3::EndInvoke(System.IAsyncResult)
-// 0x00000483 System.Void UnityEngine.Events.UnityEvent`3::.ctor()
-// 0x00000484 System.Reflection.MethodInfo UnityEngine.Events.UnityEvent`3::FindMethod_Impl(System.String,System.Object)
-// 0x00000485 UnityEngine.Events.BaseInvokableCall UnityEngine.Events.UnityEvent`3::GetDelegate(System.Object,System.Reflection.MethodInfo)
-// 0x00000486 System.Void UnityEngine.Events.UnityAction`4::.ctor(System.Object,System.IntPtr)
-// 0x00000487 System.Void UnityEngine.Events.UnityAction`4::Invoke(T0,T1,T2,T3)
-// 0x00000488 System.IAsyncResult UnityEngine.Events.UnityAction`4::BeginInvoke(T0,T1,T2,T3,System.AsyncCallback,System.Object)
-// 0x00000489 System.Void UnityEngine.Events.UnityAction`4::EndInvoke(System.IAsyncResult)
-// 0x0000048A System.Void UnityEngine.Events.UnityEvent`4::.ctor()
-// 0x0000048B System.Reflection.MethodInfo UnityEngine.Events.UnityEvent`4::FindMethod_Impl(System.String,System.Object)
-// 0x0000048C UnityEngine.Events.BaseInvokableCall UnityEngine.Events.UnityEvent`4::GetDelegate(System.Object,System.Reflection.MethodInfo)
-// 0x0000048D System.Void Unity.Collections.LowLevel.Unsafe.UnsafeUtility::Free(System.Void*,Unity.Collections.Allocator)
+// 0x00000474 System.Void UnityEngine.Events.UnityAction`1::.ctor(System.Object,System.IntPtr)
+// 0x00000475 System.Void UnityEngine.Events.UnityAction`1::Invoke(T0)
+// 0x00000476 System.IAsyncResult UnityEngine.Events.UnityAction`1::BeginInvoke(T0,System.AsyncCallback,System.Object)
+// 0x00000477 System.Void UnityEngine.Events.UnityAction`1::EndInvoke(System.IAsyncResult)
+// 0x00000478 System.Void UnityEngine.Events.UnityEvent`1::.ctor()
+// 0x00000479 System.Void UnityEngine.Events.UnityEvent`1::AddListener(UnityEngine.Events.UnityAction`1<T0>)
+// 0x0000047A System.Void UnityEngine.Events.UnityEvent`1::RemoveListener(UnityEngine.Events.UnityAction`1<T0>)
+// 0x0000047B System.Reflection.MethodInfo UnityEngine.Events.UnityEvent`1::FindMethod_Impl(System.String,System.Object)
+// 0x0000047C UnityEngine.Events.BaseInvokableCall UnityEngine.Events.UnityEvent`1::GetDelegate(System.Object,System.Reflection.MethodInfo)
+// 0x0000047D UnityEngine.Events.BaseInvokableCall UnityEngine.Events.UnityEvent`1::GetDelegate(UnityEngine.Events.UnityAction`1<T0>)
+// 0x0000047E System.Void UnityEngine.Events.UnityEvent`1::Invoke(T0)
+// 0x0000047F System.Void UnityEngine.Events.UnityAction`2::.ctor(System.Object,System.IntPtr)
+// 0x00000480 System.Void UnityEngine.Events.UnityAction`2::Invoke(T0,T1)
+// 0x00000481 System.IAsyncResult UnityEngine.Events.UnityAction`2::BeginInvoke(T0,T1,System.AsyncCallback,System.Object)
+// 0x00000482 System.Void UnityEngine.Events.UnityAction`2::EndInvoke(System.IAsyncResult)
+// 0x00000483 System.Void UnityEngine.Events.UnityEvent`2::.ctor()
+// 0x00000484 System.Reflection.MethodInfo UnityEngine.Events.UnityEvent`2::FindMethod_Impl(System.String,System.Object)
+// 0x00000485 UnityEngine.Events.BaseInvokableCall UnityEngine.Events.UnityEvent`2::GetDelegate(System.Object,System.Reflection.MethodInfo)
+// 0x00000486 System.Void UnityEngine.Events.UnityAction`3::.ctor(System.Object,System.IntPtr)
+// 0x00000487 System.Void UnityEngine.Events.UnityAction`3::Invoke(T0,T1,T2)
+// 0x00000488 System.IAsyncResult UnityEngine.Events.UnityAction`3::BeginInvoke(T0,T1,T2,System.AsyncCallback,System.Object)
+// 0x00000489 System.Void UnityEngine.Events.UnityAction`3::EndInvoke(System.IAsyncResult)
+// 0x0000048A System.Void UnityEngine.Events.UnityEvent`3::.ctor()
+// 0x0000048B System.Reflection.MethodInfo UnityEngine.Events.UnityEvent`3::FindMethod_Impl(System.String,System.Object)
+// 0x0000048C UnityEngine.Events.BaseInvokableCall UnityEngine.Events.UnityEvent`3::GetDelegate(System.Object,System.Reflection.MethodInfo)
+// 0x0000048D System.Void UnityEngine.Events.UnityAction`4::.ctor(System.Object,System.IntPtr)
+// 0x0000048E System.Void UnityEngine.Events.UnityAction`4::Invoke(T0,T1,T2,T3)
+// 0x0000048F System.IAsyncResult UnityEngine.Events.UnityAction`4::BeginInvoke(T0,T1,T2,T3,System.AsyncCallback,System.Object)
+// 0x00000490 System.Void UnityEngine.Events.UnityAction`4::EndInvoke(System.IAsyncResult)
+// 0x00000491 System.Void UnityEngine.Events.UnityEvent`4::.ctor()
+// 0x00000492 System.Reflection.MethodInfo UnityEngine.Events.UnityEvent`4::FindMethod_Impl(System.String,System.Object)
+// 0x00000493 UnityEngine.Events.BaseInvokableCall UnityEngine.Events.UnityEvent`4::GetDelegate(System.Object,System.Reflection.MethodInfo)
+// 0x00000494 System.Void Unity.Collections.LowLevel.Unsafe.UnsafeUtility::Free(System.Void*,Unity.Collections.Allocator)
 extern void UnsafeUtility_Free_mAC082BB03B10D20CA9E5AD7FBA33164DF2B52E89 ();
-// 0x0000048E T Unity.Collections.LowLevel.Unsafe.UnsafeUtility::ReadArrayElement(System.Void*,System.Int32)
-// 0x0000048F System.Void UnityEngine.iOS.NotificationHelper::DestroyLocal(System.IntPtr)
+// 0x00000495 T Unity.Collections.LowLevel.Unsafe.UnsafeUtility::ReadArrayElement(System.Void*,System.Int32)
+// 0x00000496 System.Void UnityEngine.iOS.NotificationHelper::DestroyLocal(System.IntPtr)
 extern void NotificationHelper_DestroyLocal_m31A83960AAC3E5D3C5AF4B945B6F51E890E15E6C ();
-// 0x00000490 System.Void UnityEngine.iOS.NotificationHelper::DestroyRemote(System.IntPtr)
+// 0x00000497 System.Void UnityEngine.iOS.NotificationHelper::DestroyRemote(System.IntPtr)
 extern void NotificationHelper_DestroyRemote_m8DC26FA325608161850486E8F4BF16B67EF90E79 ();
-// 0x00000491 System.Void UnityEngine.iOS.LocalNotification::Finalize()
+// 0x00000498 System.Void UnityEngine.iOS.LocalNotification::Finalize()
 extern void LocalNotification_Finalize_m3B080FBFB1E51F3C5570B6097958CFA834A0594B ();
-// 0x00000492 System.Void UnityEngine.iOS.LocalNotification::.cctor()
+// 0x00000499 System.Void UnityEngine.iOS.LocalNotification::.cctor()
 extern void LocalNotification__cctor_m9E47ADEC8F786289F7C94ACC65A44C318FF59685 ();
-// 0x00000493 System.Void UnityEngine.iOS.RemoteNotification::Finalize()
+// 0x0000049A System.Void UnityEngine.iOS.RemoteNotification::Finalize()
 extern void RemoteNotification_Finalize_m4D3F34A965DDE64EEC2F3AC3AC1750AED0CE1C2F ();
-// 0x00000494 System.Void Unity.Jobs.JobHandle::ScheduleBatchedJobs()
+// 0x0000049B System.Void Unity.Jobs.JobHandle::ScheduleBatchedJobs()
 extern void JobHandle_ScheduleBatchedJobs_mE52469B0B3D765B57BC658E82815840C83A6A4D0 ();
-// 0x00000495 System.Void UnityEngine.Profiling.Memory.Experimental.MetaData::.ctor()
+// 0x0000049C System.Void UnityEngine.Profiling.Memory.Experimental.MetaData::.ctor()
 extern void MetaData__ctor_m1852CAF4EDFB43F1ABCE37819D9963CEE959A620 ();
-// 0x00000496 System.Byte[] UnityEngine.Profiling.Memory.Experimental.MemoryProfiler::PrepareMetadata()
+// 0x0000049D System.Byte[] UnityEngine.Profiling.Memory.Experimental.MemoryProfiler::PrepareMetadata()
 extern void MemoryProfiler_PrepareMetadata_mDFBA7A9960E5B4DF4500092638CD59EB558DD42C ();
-// 0x00000497 System.Int32 UnityEngine.Profiling.Memory.Experimental.MemoryProfiler::WriteIntToByteArray(System.Byte[],System.Int32,System.Int32)
+// 0x0000049E System.Int32 UnityEngine.Profiling.Memory.Experimental.MemoryProfiler::WriteIntToByteArray(System.Byte[],System.Int32,System.Int32)
 extern void MemoryProfiler_WriteIntToByteArray_mBC872709F6A09ADFE716F41C459C1FCC1EFF25A0 ();
-// 0x00000498 System.Int32 UnityEngine.Profiling.Memory.Experimental.MemoryProfiler::WriteStringToByteArray(System.Byte[],System.Int32,System.String)
+// 0x0000049F System.Int32 UnityEngine.Profiling.Memory.Experimental.MemoryProfiler::WriteStringToByteArray(System.Byte[],System.Int32,System.String)
 extern void MemoryProfiler_WriteStringToByteArray_mCAC0D283F16F612E4796C539994FDB487A048332 ();
-// 0x00000499 System.Void UnityEngine.Profiling.Memory.Experimental.MemoryProfiler::FinalizeSnapshot(System.String,System.Boolean)
+// 0x000004A0 System.Void UnityEngine.Profiling.Memory.Experimental.MemoryProfiler::FinalizeSnapshot(System.String,System.Boolean)
 extern void MemoryProfiler_FinalizeSnapshot_m48FD62744888BBF0A9B13826622041226C8B9AD7 ();
-// 0x0000049A System.Void UnityEngine.DrivenRectTransformTracker::Add(UnityEngine.Object,UnityEngine.RectTransform,UnityEngine.DrivenTransformProperties)
+// 0x000004A1 System.Void UnityEngine.DrivenRectTransformTracker::Add(UnityEngine.Object,UnityEngine.RectTransform,UnityEngine.DrivenTransformProperties)
 extern void DrivenRectTransformTracker_Add_m51059F302FBD574E93820E8116283D1608D1AB5A_AdjustorThunk ();
-// 0x0000049B System.Void UnityEngine.DrivenRectTransformTracker::Clear()
+// 0x000004A2 System.Void UnityEngine.DrivenRectTransformTracker::Clear()
 extern void DrivenRectTransformTracker_Clear_m328659F339A4FB519C9A208A685DDED106B6FC89_AdjustorThunk ();
-// 0x0000049C System.Void UnityEngine.RectTransform::add_reapplyDrivenProperties(UnityEngine.RectTransform_ReapplyDrivenProperties)
+// 0x000004A3 System.Void UnityEngine.RectTransform::add_reapplyDrivenProperties(UnityEngine.RectTransform_ReapplyDrivenProperties)
 extern void RectTransform_add_reapplyDrivenProperties_mDA1F055B02E43F9041D4198D446D89E00381851E ();
-// 0x0000049D System.Void UnityEngine.RectTransform::remove_reapplyDrivenProperties(UnityEngine.RectTransform_ReapplyDrivenProperties)
+// 0x000004A4 System.Void UnityEngine.RectTransform::remove_reapplyDrivenProperties(UnityEngine.RectTransform_ReapplyDrivenProperties)
 extern void RectTransform_remove_reapplyDrivenProperties_m65A8DB93E1A247A5C8CD880906FF03FEA89E7CEB ();
-// 0x0000049E UnityEngine.Rect UnityEngine.RectTransform::get_rect()
+// 0x000004A5 UnityEngine.Rect UnityEngine.RectTransform::get_rect()
 extern void RectTransform_get_rect_mE5F283FCB99A66403AC1F0607CA49C156D73A15E ();
-// 0x0000049F UnityEngine.Vector2 UnityEngine.RectTransform::get_anchorMin()
+// 0x000004A6 UnityEngine.Vector2 UnityEngine.RectTransform::get_anchorMin()
 extern void RectTransform_get_anchorMin_mB62D77CAC5A2A086320638AE7DF08135B7028744 ();
-// 0x000004A0 System.Void UnityEngine.RectTransform::set_anchorMin(UnityEngine.Vector2)
+// 0x000004A7 System.Void UnityEngine.RectTransform::set_anchorMin(UnityEngine.Vector2)
 extern void RectTransform_set_anchorMin_mE965F5B0902C2554635010A5752728414A57020A ();
-// 0x000004A1 UnityEngine.Vector2 UnityEngine.RectTransform::get_anchorMax()
+// 0x000004A8 UnityEngine.Vector2 UnityEngine.RectTransform::get_anchorMax()
 extern void RectTransform_get_anchorMax_m1E51C211FBB32326C884375C9F1E8E8221E5C086 ();
-// 0x000004A2 System.Void UnityEngine.RectTransform::set_anchorMax(UnityEngine.Vector2)
+// 0x000004A9 System.Void UnityEngine.RectTransform::set_anchorMax(UnityEngine.Vector2)
 extern void RectTransform_set_anchorMax_m55EEF00D9E42FE542B5346D7CEDAF9248736F7D3 ();
-// 0x000004A3 UnityEngine.Vector2 UnityEngine.RectTransform::get_anchoredPosition()
+// 0x000004AA UnityEngine.Vector2 UnityEngine.RectTransform::get_anchoredPosition()
 extern void RectTransform_get_anchoredPosition_mCB2171DBADBC572F354CCFE3ACA19F9506F97907 ();
-// 0x000004A4 System.Void UnityEngine.RectTransform::set_anchoredPosition(UnityEngine.Vector2)
+// 0x000004AB System.Void UnityEngine.RectTransform::set_anchoredPosition(UnityEngine.Vector2)
 extern void RectTransform_set_anchoredPosition_m4DD45DB1A97734A1F3A81E5F259638ECAF35962F ();
-// 0x000004A5 UnityEngine.Vector2 UnityEngine.RectTransform::get_sizeDelta()
+// 0x000004AC UnityEngine.Vector2 UnityEngine.RectTransform::get_sizeDelta()
 extern void RectTransform_get_sizeDelta_mDA0A3E73679143B1B52CE2F9A417F90CB9F3DAFF ();
-// 0x000004A6 System.Void UnityEngine.RectTransform::set_sizeDelta(UnityEngine.Vector2)
+// 0x000004AD System.Void UnityEngine.RectTransform::set_sizeDelta(UnityEngine.Vector2)
 extern void RectTransform_set_sizeDelta_m7729BA56325BA667F0F7D60D642124F7909F1302 ();
-// 0x000004A7 UnityEngine.Vector2 UnityEngine.RectTransform::get_pivot()
+// 0x000004AE UnityEngine.Vector2 UnityEngine.RectTransform::get_pivot()
 extern void RectTransform_get_pivot_mA5BEEE2069ACA7C0C717530EED3E7D811D46C463 ();
-// 0x000004A8 System.Void UnityEngine.RectTransform::set_pivot(UnityEngine.Vector2)
+// 0x000004AF System.Void UnityEngine.RectTransform::set_pivot(UnityEngine.Vector2)
 extern void RectTransform_set_pivot_mB791A383B3C870B9CBD7BC51B2C95711C88E9DCF ();
-// 0x000004A9 System.Void UnityEngine.RectTransform::set_offsetMin(UnityEngine.Vector2)
+// 0x000004B0 System.Void UnityEngine.RectTransform::set_offsetMin(UnityEngine.Vector2)
 extern void RectTransform_set_offsetMin_m7455ED64FF16C597E648E022BA768CFDCF4531AC ();
-// 0x000004AA System.Void UnityEngine.RectTransform::set_offsetMax(UnityEngine.Vector2)
+// 0x000004B1 System.Void UnityEngine.RectTransform::set_offsetMax(UnityEngine.Vector2)
 extern void RectTransform_set_offsetMax_mD55D44AD4740C79B5C2C83C60B0C38BF1090501C ();
-// 0x000004AB System.Void UnityEngine.RectTransform::GetLocalCorners(UnityEngine.Vector3[])
+// 0x000004B2 System.Void UnityEngine.RectTransform::GetLocalCorners(UnityEngine.Vector3[])
 extern void RectTransform_GetLocalCorners_m8761EA5FFE1F36041809D10D8AD7BC40CF06A520 ();
-// 0x000004AC System.Void UnityEngine.RectTransform::GetWorldCorners(UnityEngine.Vector3[])
+// 0x000004B3 System.Void UnityEngine.RectTransform::GetWorldCorners(UnityEngine.Vector3[])
 extern void RectTransform_GetWorldCorners_m073AA4D13C51C5654A5983EE3FE7E2E60F7761B6 ();
-// 0x000004AD System.Void UnityEngine.RectTransform::SetSizeWithCurrentAnchors(UnityEngine.RectTransform_Axis,System.Single)
+// 0x000004B4 System.Void UnityEngine.RectTransform::SetSizeWithCurrentAnchors(UnityEngine.RectTransform_Axis,System.Single)
 extern void RectTransform_SetSizeWithCurrentAnchors_m6F93CD5B798E4A53F2085862EA1B4021AEAA6745 ();
-// 0x000004AE System.Void UnityEngine.RectTransform::SendReapplyDrivenProperties(UnityEngine.RectTransform)
+// 0x000004B5 System.Void UnityEngine.RectTransform::SendReapplyDrivenProperties(UnityEngine.RectTransform)
 extern void RectTransform_SendReapplyDrivenProperties_m231712A8CDDCA340752CB72690FE808111286653 ();
-// 0x000004AF UnityEngine.Vector2 UnityEngine.RectTransform::GetParentSize()
+// 0x000004B6 UnityEngine.Vector2 UnityEngine.RectTransform::GetParentSize()
 extern void RectTransform_GetParentSize_mFD24CC863A4D7DFBFFE23C982E9A11E9B010D25D ();
-// 0x000004B0 System.Void UnityEngine.RectTransform::get_rect_Injected(UnityEngine.RectU26)
+// 0x000004B7 System.Void UnityEngine.RectTransform::get_rect_Injected(UnityEngine.RectU26)
 extern void RectTransform_get_rect_Injected_m94E98A7B55F470FD170EBDA2D47E44CF919CD89F ();
-// 0x000004B1 System.Void UnityEngine.RectTransform::get_anchorMin_Injected(UnityEngine.Vector2U26)
+// 0x000004B8 System.Void UnityEngine.RectTransform::get_anchorMin_Injected(UnityEngine.Vector2U26)
 extern void RectTransform_get_anchorMin_Injected_m11D468B602FFF89A8CC25685C71ACAA36609EF94 ();
-// 0x000004B2 System.Void UnityEngine.RectTransform::set_anchorMin_Injected(UnityEngine.Vector2U26)
+// 0x000004B9 System.Void UnityEngine.RectTransform::set_anchorMin_Injected(UnityEngine.Vector2U26)
 extern void RectTransform_set_anchorMin_Injected_m8BACA1B777D070E5FF42D1D8B1D7A52FFCD59E40 ();
-// 0x000004B3 System.Void UnityEngine.RectTransform::get_anchorMax_Injected(UnityEngine.Vector2U26)
+// 0x000004BA System.Void UnityEngine.RectTransform::get_anchorMax_Injected(UnityEngine.Vector2U26)
 extern void RectTransform_get_anchorMax_Injected_m61CE870627E5CB0EFAD38D5F207BC36879378DDD ();
-// 0x000004B4 System.Void UnityEngine.RectTransform::set_anchorMax_Injected(UnityEngine.Vector2U26)
+// 0x000004BB System.Void UnityEngine.RectTransform::set_anchorMax_Injected(UnityEngine.Vector2U26)
 extern void RectTransform_set_anchorMax_Injected_m6BC717A6F528E130AD92994FB9A3614195FBFFB2 ();
-// 0x000004B5 System.Void UnityEngine.RectTransform::get_anchoredPosition_Injected(UnityEngine.Vector2U26)
+// 0x000004BC System.Void UnityEngine.RectTransform::get_anchoredPosition_Injected(UnityEngine.Vector2U26)
 extern void RectTransform_get_anchoredPosition_Injected_mCCBAEBA5DD529E03D42194FDE9C2AD1FBA8194E8 ();
-// 0x000004B6 System.Void UnityEngine.RectTransform::set_anchoredPosition_Injected(UnityEngine.Vector2U26)
+// 0x000004BD System.Void UnityEngine.RectTransform::set_anchoredPosition_Injected(UnityEngine.Vector2U26)
 extern void RectTransform_set_anchoredPosition_Injected_mCAEE3D22ADA5AF1CB4E37813EB68BF554220DAEF ();
-// 0x000004B7 System.Void UnityEngine.RectTransform::get_sizeDelta_Injected(UnityEngine.Vector2U26)
+// 0x000004BE System.Void UnityEngine.RectTransform::get_sizeDelta_Injected(UnityEngine.Vector2U26)
 extern void RectTransform_get_sizeDelta_Injected_m225C77C72E97B59C07693E339E0132E9547F8982 ();
-// 0x000004B8 System.Void UnityEngine.RectTransform::set_sizeDelta_Injected(UnityEngine.Vector2U26)
+// 0x000004BF System.Void UnityEngine.RectTransform::set_sizeDelta_Injected(UnityEngine.Vector2U26)
 extern void RectTransform_set_sizeDelta_Injected_mD2B6AE8C7BB4DE09F1C62B4A853E592EEF9E8399 ();
-// 0x000004B9 System.Void UnityEngine.RectTransform::get_pivot_Injected(UnityEngine.Vector2U26)
+// 0x000004C0 System.Void UnityEngine.RectTransform::get_pivot_Injected(UnityEngine.Vector2U26)
 extern void RectTransform_get_pivot_Injected_m23095C3331BE90EB3EEFFDAE0DAD791E79485F7F ();
-// 0x000004BA System.Void UnityEngine.RectTransform::set_pivot_Injected(UnityEngine.Vector2U26)
+// 0x000004C1 System.Void UnityEngine.RectTransform::set_pivot_Injected(UnityEngine.Vector2U26)
 extern void RectTransform_set_pivot_Injected_m2914C16D5516DE065A932CB43B61C6EEA3C5D3D3 ();
-// 0x000004BB System.Void UnityEngine.RectTransform_ReapplyDrivenProperties::.ctor(System.Object,System.IntPtr)
+// 0x000004C2 System.Void UnityEngine.RectTransform_ReapplyDrivenProperties::.ctor(System.Object,System.IntPtr)
 extern void ReapplyDrivenProperties__ctor_m0633C1B8E1B058DF2C3648C96D3E4DC006A76CA7 ();
-// 0x000004BC System.Void UnityEngine.RectTransform_ReapplyDrivenProperties::Invoke(UnityEngine.RectTransform)
+// 0x000004C3 System.Void UnityEngine.RectTransform_ReapplyDrivenProperties::Invoke(UnityEngine.RectTransform)
 extern void ReapplyDrivenProperties_Invoke_m37F24671E6F3C60B3D0C7E0CE234B8E125D5928A ();
-// 0x000004BD System.IAsyncResult UnityEngine.RectTransform_ReapplyDrivenProperties::BeginInvoke(UnityEngine.RectTransform,System.AsyncCallback,System.Object)
+// 0x000004C4 System.IAsyncResult UnityEngine.RectTransform_ReapplyDrivenProperties::BeginInvoke(UnityEngine.RectTransform,System.AsyncCallback,System.Object)
 extern void ReapplyDrivenProperties_BeginInvoke_m5C352648167A36402E86BEDDCAE8FA4784C03604 ();
-// 0x000004BE System.Void UnityEngine.RectTransform_ReapplyDrivenProperties::EndInvoke(System.IAsyncResult)
+// 0x000004C5 System.Void UnityEngine.RectTransform_ReapplyDrivenProperties::EndInvoke(System.IAsyncResult)
 extern void ReapplyDrivenProperties_EndInvoke_mC8DF7BD47EC8976C477491961F44912BA4C0CD7C ();
-// 0x000004BF System.Void UnityEngine.Transform::.ctor()
+// 0x000004C6 System.Void UnityEngine.Transform::.ctor()
 extern void Transform__ctor_mE8E10A06C8922623BAC6053550D19B2E297C2F35 ();
-// 0x000004C0 UnityEngine.Vector3 UnityEngine.Transform::get_position()
+// 0x000004C7 UnityEngine.Vector3 UnityEngine.Transform::get_position()
 extern void Transform_get_position_mF54C3A064F7C8E24F1C56EE128728B2E4485E294 ();
-// 0x000004C1 System.Void UnityEngine.Transform::set_position(UnityEngine.Vector3)
+// 0x000004C8 System.Void UnityEngine.Transform::set_position(UnityEngine.Vector3)
 extern void Transform_set_position_mDA89E4893F14ECA5CBEEE7FB80A5BF7C1B8EA6DC ();
-// 0x000004C2 UnityEngine.Vector3 UnityEngine.Transform::get_localPosition()
+// 0x000004C9 UnityEngine.Vector3 UnityEngine.Transform::get_localPosition()
 extern void Transform_get_localPosition_m812D43318E05BDCB78310EB7308785A13D85EFD8 ();
-// 0x000004C3 System.Void UnityEngine.Transform::set_localPosition(UnityEngine.Vector3)
+// 0x000004CA System.Void UnityEngine.Transform::set_localPosition(UnityEngine.Vector3)
 extern void Transform_set_localPosition_m275F5550DD939F83AFEB5E8D681131172E2E1728 ();
-// 0x000004C4 UnityEngine.Vector3 UnityEngine.Transform::get_forward()
+// 0x000004CB UnityEngine.Vector3 UnityEngine.Transform::get_forward()
 extern void Transform_get_forward_m0BE1E88B86049ADA39391C3ACED2314A624BC67F ();
-// 0x000004C5 UnityEngine.Quaternion UnityEngine.Transform::get_rotation()
+// 0x000004CC UnityEngine.Quaternion UnityEngine.Transform::get_rotation()
 extern void Transform_get_rotation_m3AB90A67403249AECCA5E02BC70FCE8C90FE9FB9 ();
-// 0x000004C6 UnityEngine.Quaternion UnityEngine.Transform::get_localRotation()
+// 0x000004CD UnityEngine.Quaternion UnityEngine.Transform::get_localRotation()
 extern void Transform_get_localRotation_mEDA319E1B42EF12A19A95AC0824345B6574863FE ();
-// 0x000004C7 System.Void UnityEngine.Transform::set_localRotation(UnityEngine.Quaternion)
+// 0x000004CE System.Void UnityEngine.Transform::set_localRotation(UnityEngine.Quaternion)
 extern void Transform_set_localRotation_mE2BECB0954FFC1D93FB631600D9A9BEFF41D9C8A ();
-// 0x000004C8 UnityEngine.Vector3 UnityEngine.Transform::get_localScale()
+// 0x000004CF UnityEngine.Vector3 UnityEngine.Transform::get_localScale()
 extern void Transform_get_localScale_mD8F631021C2D62B7C341B1A17FA75491F64E13DA ();
-// 0x000004C9 System.Void UnityEngine.Transform::set_localScale(UnityEngine.Vector3)
+// 0x000004D0 System.Void UnityEngine.Transform::set_localScale(UnityEngine.Vector3)
 extern void Transform_set_localScale_m7ED1A6E5A87CD1D483515B99D6D3121FB92B0556 ();
-// 0x000004CA UnityEngine.Transform UnityEngine.Transform::get_parent()
+// 0x000004D1 UnityEngine.Transform UnityEngine.Transform::get_parent()
 extern void Transform_get_parent_m8FA24E38A1FA29D90CBF3CDC9F9F017C65BB3403 ();
-// 0x000004CB System.Void UnityEngine.Transform::set_parent(UnityEngine.Transform)
+// 0x000004D2 System.Void UnityEngine.Transform::set_parent(UnityEngine.Transform)
 extern void Transform_set_parent_m65B8E4660B2C554069C57A957D9E55FECA7AA73E ();
-// 0x000004CC UnityEngine.Transform UnityEngine.Transform::get_parentInternal()
+// 0x000004D3 UnityEngine.Transform UnityEngine.Transform::get_parentInternal()
 extern void Transform_get_parentInternal_mEE407FBF144B4EE785164788FD455CAA82DC7C2E ();
-// 0x000004CD System.Void UnityEngine.Transform::set_parentInternal(UnityEngine.Transform)
+// 0x000004D4 System.Void UnityEngine.Transform::set_parentInternal(UnityEngine.Transform)
 extern void Transform_set_parentInternal_m8534EFFADCF054FFA081769F84256F9921B0258C ();
-// 0x000004CE UnityEngine.Transform UnityEngine.Transform::GetParent()
+// 0x000004D5 UnityEngine.Transform UnityEngine.Transform::GetParent()
 extern void Transform_GetParent_m1C9AFA68C014287E3D62A496A5F9AE16EF9BD7E6 ();
-// 0x000004CF System.Void UnityEngine.Transform::SetParent(UnityEngine.Transform)
+// 0x000004D6 System.Void UnityEngine.Transform::SetParent(UnityEngine.Transform)
 extern void Transform_SetParent_mFAF9209CAB6A864552074BA065D740924A4BF979 ();
-// 0x000004D0 System.Void UnityEngine.Transform::SetParent(UnityEngine.Transform,System.Boolean)
+// 0x000004D7 System.Void UnityEngine.Transform::SetParent(UnityEngine.Transform,System.Boolean)
 extern void Transform_SetParent_m268E3814921D90882EFECE244A797264DE2A5E35 ();
-// 0x000004D1 UnityEngine.Matrix4x4 UnityEngine.Transform::get_worldToLocalMatrix()
+// 0x000004D8 UnityEngine.Matrix4x4 UnityEngine.Transform::get_worldToLocalMatrix()
 extern void Transform_get_worldToLocalMatrix_m4791F881839B1087B17DC126FC0CA7F9A596073E ();
-// 0x000004D2 UnityEngine.Matrix4x4 UnityEngine.Transform::get_localToWorldMatrix()
+// 0x000004D9 UnityEngine.Matrix4x4 UnityEngine.Transform::get_localToWorldMatrix()
 extern void Transform_get_localToWorldMatrix_mBC86B8C7BA6F53DAB8E0120D77729166399A0EED ();
-// 0x000004D3 UnityEngine.Vector3 UnityEngine.Transform::TransformPoint(UnityEngine.Vector3)
+// 0x000004DA UnityEngine.Vector3 UnityEngine.Transform::TransformPoint(UnityEngine.Vector3)
 extern void Transform_TransformPoint_mA96DC2A20EE7F4F915F7509863A18D99F5DD76CB ();
-// 0x000004D4 UnityEngine.Vector3 UnityEngine.Transform::InverseTransformPoint(UnityEngine.Vector3)
+// 0x000004DB UnityEngine.Vector3 UnityEngine.Transform::InverseTransformPoint(UnityEngine.Vector3)
 extern void Transform_InverseTransformPoint_mB6E3145F20B531B4A781C194BAC43A8255C96C47 ();
-// 0x000004D5 System.Int32 UnityEngine.Transform::get_childCount()
+// 0x000004DC System.Int32 UnityEngine.Transform::get_childCount()
 extern void Transform_get_childCount_m7665D779DCDB6B175FB52A254276CDF0C384A724 ();
-// 0x000004D6 System.Void UnityEngine.Transform::SetAsFirstSibling()
+// 0x000004DD System.Void UnityEngine.Transform::SetAsFirstSibling()
 extern void Transform_SetAsFirstSibling_m2CAD80F7C9D89EE145BC9D3D0937D6EBEE909531 ();
-// 0x000004D7 System.Boolean UnityEngine.Transform::IsChildOf(UnityEngine.Transform)
+// 0x000004DE System.Boolean UnityEngine.Transform::IsChildOf(UnityEngine.Transform)
 extern void Transform_IsChildOf_mCB98BA14F7FB82B6AF6AE961E84C47AE1D99AA80 ();
-// 0x000004D8 System.Collections.IEnumerator UnityEngine.Transform::GetEnumerator()
+// 0x000004DF System.Collections.IEnumerator UnityEngine.Transform::GetEnumerator()
 extern void Transform_GetEnumerator_mE98B6C5F644AE362EC1D58C10506327D6A5878FC ();
-// 0x000004D9 UnityEngine.Transform UnityEngine.Transform::GetChild(System.Int32)
+// 0x000004E0 UnityEngine.Transform UnityEngine.Transform::GetChild(System.Int32)
 extern void Transform_GetChild_mC86B9B61E4EC086A571B09EA7A33FFBF50DF52D3 ();
-// 0x000004DA System.Void UnityEngine.Transform::get_position_Injected(UnityEngine.Vector3U26)
+// 0x000004E1 System.Void UnityEngine.Transform::get_position_Injected(UnityEngine.Vector3U26)
 extern void Transform_get_position_Injected_mFD1BD0E2D17761BA08289ABBB4F87EDFFF7C1EBB ();
-// 0x000004DB System.Void UnityEngine.Transform::set_position_Injected(UnityEngine.Vector3U26)
+// 0x000004E2 System.Void UnityEngine.Transform::set_position_Injected(UnityEngine.Vector3U26)
 extern void Transform_set_position_Injected_mB6BEBF6B460A566E933ED59C4470ED58D81B3226 ();
-// 0x000004DC System.Void UnityEngine.Transform::get_localPosition_Injected(UnityEngine.Vector3U26)
+// 0x000004E3 System.Void UnityEngine.Transform::get_localPosition_Injected(UnityEngine.Vector3U26)
 extern void Transform_get_localPosition_Injected_mC1E8F9DAC652621188ABFB58571782157E4C8FBA ();
-// 0x000004DD System.Void UnityEngine.Transform::set_localPosition_Injected(UnityEngine.Vector3U26)
+// 0x000004E4 System.Void UnityEngine.Transform::set_localPosition_Injected(UnityEngine.Vector3U26)
 extern void Transform_set_localPosition_Injected_m8B4E45BAADCDD69683EB6424992FC9B9045927DE ();
-// 0x000004DE System.Void UnityEngine.Transform::get_rotation_Injected(UnityEngine.QuaternionU26)
+// 0x000004E5 System.Void UnityEngine.Transform::get_rotation_Injected(UnityEngine.QuaternionU26)
 extern void Transform_get_rotation_Injected_m41BEC8ACE323E571978CED341997B1174340701B ();
-// 0x000004DF System.Void UnityEngine.Transform::get_localRotation_Injected(UnityEngine.QuaternionU26)
+// 0x000004E6 System.Void UnityEngine.Transform::get_localRotation_Injected(UnityEngine.QuaternionU26)
 extern void Transform_get_localRotation_Injected_m1ADF4910B326BAA828892B3ADC5AD1A332DE963B ();
-// 0x000004E0 System.Void UnityEngine.Transform::set_localRotation_Injected(UnityEngine.QuaternionU26)
+// 0x000004E7 System.Void UnityEngine.Transform::set_localRotation_Injected(UnityEngine.QuaternionU26)
 extern void Transform_set_localRotation_Injected_mF84F8CFA00AABFB7520AB782BA8A6E4BBF24FDD5 ();
-// 0x000004E1 System.Void UnityEngine.Transform::get_localScale_Injected(UnityEngine.Vector3U26)
+// 0x000004E8 System.Void UnityEngine.Transform::get_localScale_Injected(UnityEngine.Vector3U26)
 extern void Transform_get_localScale_Injected_mA8987BAB5DA11154A22E2B36995C7328792371BE ();
-// 0x000004E2 System.Void UnityEngine.Transform::set_localScale_Injected(UnityEngine.Vector3U26)
+// 0x000004E9 System.Void UnityEngine.Transform::set_localScale_Injected(UnityEngine.Vector3U26)
 extern void Transform_set_localScale_Injected_m9BF22FF0CD55A5008834951B58BB8E70D6982AB2 ();
-// 0x000004E3 System.Void UnityEngine.Transform::get_worldToLocalMatrix_Injected(UnityEngine.Matrix4x4U26)
+// 0x000004EA System.Void UnityEngine.Transform::get_worldToLocalMatrix_Injected(UnityEngine.Matrix4x4U26)
 extern void Transform_get_worldToLocalMatrix_Injected_mFEC701DE6F97A22DF1718EB82FBE3C3E62447936 ();
-// 0x000004E4 System.Void UnityEngine.Transform::get_localToWorldMatrix_Injected(UnityEngine.Matrix4x4U26)
+// 0x000004EB System.Void UnityEngine.Transform::get_localToWorldMatrix_Injected(UnityEngine.Matrix4x4U26)
 extern void Transform_get_localToWorldMatrix_Injected_mF5629FA21895EB6851367E1636283C7FB70333A9 ();
-// 0x000004E5 System.Void UnityEngine.Transform::TransformPoint_Injected(UnityEngine.Vector3U26,UnityEngine.Vector3U26)
+// 0x000004EC System.Void UnityEngine.Transform::TransformPoint_Injected(UnityEngine.Vector3U26,UnityEngine.Vector3U26)
 extern void Transform_TransformPoint_Injected_mB697D04DF989E68C8AAFAE6BFBBE718B68CB477D ();
-// 0x000004E6 System.Void UnityEngine.Transform::InverseTransformPoint_Injected(UnityEngine.Vector3U26,UnityEngine.Vector3U26)
+// 0x000004ED System.Void UnityEngine.Transform::InverseTransformPoint_Injected(UnityEngine.Vector3U26,UnityEngine.Vector3U26)
 extern void Transform_InverseTransformPoint_Injected_m320ED08EABA9713FDF7BDAD425630D567D39AB1D ();
-// 0x000004E7 System.Void UnityEngine.Transform_Enumerator::.ctor(UnityEngine.Transform)
+// 0x000004EE System.Void UnityEngine.Transform_Enumerator::.ctor(UnityEngine.Transform)
 extern void Enumerator__ctor_mBF5A46090D26A1DD98484C00389566FD8CB80770 ();
-// 0x000004E8 System.Object UnityEngine.Transform_Enumerator::get_Current()
+// 0x000004EF System.Object UnityEngine.Transform_Enumerator::get_Current()
 extern void Enumerator_get_Current_mD91FA41B0959224F24BF83051D46FCF3AF82F773 ();
-// 0x000004E9 System.Boolean UnityEngine.Transform_Enumerator::MoveNext()
+// 0x000004F0 System.Boolean UnityEngine.Transform_Enumerator::MoveNext()
 extern void Enumerator_MoveNext_mF27E895DC4BB3826D2F00E9484A9ECC635770031 ();
-// 0x000004EA System.Void UnityEngine.Transform_Enumerator::Reset()
+// 0x000004F1 System.Void UnityEngine.Transform_Enumerator::Reset()
 extern void Enumerator_Reset_mA4AD59858E0D61FE247C0E158737A4C02FCE244F ();
-// 0x000004EB UnityEngine.Vector4 UnityEngine.Sprites.DataUtility::GetInnerUV(UnityEngine.Sprite)
+// 0x000004F2 UnityEngine.Vector4 UnityEngine.Sprites.DataUtility::GetInnerUV(UnityEngine.Sprite)
 extern void DataUtility_GetInnerUV_m19FC4FF27A6733C9595B63F265EFBEC3BC183732 ();
-// 0x000004EC UnityEngine.Vector4 UnityEngine.Sprites.DataUtility::GetOuterUV(UnityEngine.Sprite)
+// 0x000004F3 UnityEngine.Vector4 UnityEngine.Sprites.DataUtility::GetOuterUV(UnityEngine.Sprite)
 extern void DataUtility_GetOuterUV_mB7DEA861925EECF861EEB643145C54E8BF449213 ();
-// 0x000004ED UnityEngine.Vector4 UnityEngine.Sprites.DataUtility::GetPadding(UnityEngine.Sprite)
+// 0x000004F4 UnityEngine.Vector4 UnityEngine.Sprites.DataUtility::GetPadding(UnityEngine.Sprite)
 extern void DataUtility_GetPadding_mE967167C8AB44F752F7C3A7B9D0A2789F5BD7034 ();
-// 0x000004EE UnityEngine.Vector2 UnityEngine.Sprites.DataUtility::GetMinSize(UnityEngine.Sprite)
+// 0x000004F5 UnityEngine.Vector2 UnityEngine.Sprites.DataUtility::GetMinSize(UnityEngine.Sprite)
 extern void DataUtility_GetMinSize_m8031F50000ACDDD00E1CE4C765FA4B0A2E9255AD ();
-// 0x000004EF System.Void UnityEngine.Sprite::.ctor()
+// 0x000004F6 System.Void UnityEngine.Sprite::.ctor()
 extern void Sprite__ctor_m8559FBC54BD7CDA181B190797CC8AC6FB1310F9E ();
-// 0x000004F0 System.Int32 UnityEngine.Sprite::GetPackingMode()
+// 0x000004F7 System.Int32 UnityEngine.Sprite::GetPackingMode()
 extern void Sprite_GetPackingMode_mF0507D88752CDA45A9283445067070092E524317 ();
-// 0x000004F1 System.Int32 UnityEngine.Sprite::GetPacked()
+// 0x000004F8 System.Int32 UnityEngine.Sprite::GetPacked()
 extern void Sprite_GetPacked_mBDE07283B07E7FB8892D309C5EDC81584C849BCC ();
-// 0x000004F2 UnityEngine.Rect UnityEngine.Sprite::GetTextureRect()
+// 0x000004F9 UnityEngine.Rect UnityEngine.Sprite::GetTextureRect()
 extern void Sprite_GetTextureRect_mE506ABF33181E32E82B75479EE4A0910350B1BF9 ();
-// 0x000004F3 UnityEngine.Vector4 UnityEngine.Sprite::GetInnerUVs()
+// 0x000004FA UnityEngine.Vector4 UnityEngine.Sprite::GetInnerUVs()
 extern void Sprite_GetInnerUVs_m273E051E7DF38ED3D6077781D75A1C1019CABA25 ();
-// 0x000004F4 UnityEngine.Vector4 UnityEngine.Sprite::GetOuterUVs()
+// 0x000004FB UnityEngine.Vector4 UnityEngine.Sprite::GetOuterUVs()
 extern void Sprite_GetOuterUVs_mD78E47470B4D8AD231F194E256136B0094ECEBC5 ();
-// 0x000004F5 UnityEngine.Vector4 UnityEngine.Sprite::GetPadding()
+// 0x000004FC UnityEngine.Vector4 UnityEngine.Sprite::GetPadding()
 extern void Sprite_GetPadding_m5781452D40FAE3B7D0CE78BF8808637FBFE78105 ();
-// 0x000004F6 UnityEngine.Bounds UnityEngine.Sprite::get_bounds()
+// 0x000004FD UnityEngine.Bounds UnityEngine.Sprite::get_bounds()
 extern void Sprite_get_bounds_mD440465B889CCD2D80D118F9174FD5EAB19AE874 ();
-// 0x000004F7 UnityEngine.Rect UnityEngine.Sprite::get_rect()
+// 0x000004FE UnityEngine.Rect UnityEngine.Sprite::get_rect()
 extern void Sprite_get_rect_mF1D59ED35D077D9B5075E2114605FDEB728D3AFF ();
-// 0x000004F8 UnityEngine.Vector4 UnityEngine.Sprite::get_border()
+// 0x000004FF UnityEngine.Vector4 UnityEngine.Sprite::get_border()
 extern void Sprite_get_border_m940E803CAD380B3B1B88371D7A4E74DF9A48604F ();
-// 0x000004F9 UnityEngine.Texture2D UnityEngine.Sprite::get_texture()
+// 0x00000500 UnityEngine.Texture2D UnityEngine.Sprite::get_texture()
 extern void Sprite_get_texture_mA1FF8462BBB398DC8B3F0F92B2AB41BDA6AF69A5 ();
-// 0x000004FA System.Single UnityEngine.Sprite::get_pixelsPerUnit()
+// 0x00000501 System.Single UnityEngine.Sprite::get_pixelsPerUnit()
 extern void Sprite_get_pixelsPerUnit_m54E3B43BD3D255D18CAE3DC8D963A81846983030 ();
-// 0x000004FB UnityEngine.Texture2D UnityEngine.Sprite::get_associatedAlphaSplitTexture()
+// 0x00000502 UnityEngine.Texture2D UnityEngine.Sprite::get_associatedAlphaSplitTexture()
 extern void Sprite_get_associatedAlphaSplitTexture_m2EF38CF62616FBBBBAE7876ECBCC596DB3F42156 ();
-// 0x000004FC UnityEngine.Vector2 UnityEngine.Sprite::get_pivot()
+// 0x00000503 UnityEngine.Vector2 UnityEngine.Sprite::get_pivot()
 extern void Sprite_get_pivot_m8E3D24C208E01EC8464B0E63FBF3FB9429E4C1D9 ();
-// 0x000004FD System.Boolean UnityEngine.Sprite::get_packed()
+// 0x00000504 System.Boolean UnityEngine.Sprite::get_packed()
 extern void Sprite_get_packed_m501A9E7D2C44867665FB579FD1A8C5D397C872C3 ();
-// 0x000004FE UnityEngine.SpritePackingMode UnityEngine.Sprite::get_packingMode()
+// 0x00000505 UnityEngine.SpritePackingMode UnityEngine.Sprite::get_packingMode()
 extern void Sprite_get_packingMode_m1B5AA0F5476DAEADFF14F65E99944B54940D869F ();
-// 0x000004FF UnityEngine.Rect UnityEngine.Sprite::get_textureRect()
+// 0x00000506 UnityEngine.Rect UnityEngine.Sprite::get_textureRect()
 extern void Sprite_get_textureRect_m8CDA38796589CB967909F78076E7138907814DCD ();
-// 0x00000500 UnityEngine.Vector2[] UnityEngine.Sprite::get_vertices()
+// 0x00000507 UnityEngine.Vector2[] UnityEngine.Sprite::get_vertices()
 extern void Sprite_get_vertices_mD858385A07239A56691D1559728B1B5765C32722 ();
-// 0x00000501 System.UInt16[] UnityEngine.Sprite::get_triangles()
+// 0x00000508 System.UInt16[] UnityEngine.Sprite::get_triangles()
 extern void Sprite_get_triangles_m3B0A097930B40C800E0591E5B095D118D2A33D2E ();
-// 0x00000502 UnityEngine.Vector2[] UnityEngine.Sprite::get_uv()
+// 0x00000509 UnityEngine.Vector2[] UnityEngine.Sprite::get_uv()
 extern void Sprite_get_uv_mBD484CDCD2DF54AAE452ADBA927806193CB0FE84 ();
-// 0x00000503 System.Void UnityEngine.Sprite::GetTextureRect_Injected(UnityEngine.RectU26)
+// 0x0000050A System.Void UnityEngine.Sprite::GetTextureRect_Injected(UnityEngine.RectU26)
 extern void Sprite_GetTextureRect_Injected_m3D0143FD7E689267FAE3164F7C149DB5FF3384C2 ();
-// 0x00000504 System.Void UnityEngine.Sprite::GetInnerUVs_Injected(UnityEngine.Vector4U26)
+// 0x0000050B System.Void UnityEngine.Sprite::GetInnerUVs_Injected(UnityEngine.Vector4U26)
 extern void Sprite_GetInnerUVs_Injected_m19AF3A32647EE2153374B4B58CB248A5E3715F6B ();
-// 0x00000505 System.Void UnityEngine.Sprite::GetOuterUVs_Injected(UnityEngine.Vector4U26)
+// 0x0000050C System.Void UnityEngine.Sprite::GetOuterUVs_Injected(UnityEngine.Vector4U26)
 extern void Sprite_GetOuterUVs_Injected_m57E56A2D7686D47E6948511F102AF8135E98B2B0 ();
-// 0x00000506 System.Void UnityEngine.Sprite::GetPadding_Injected(UnityEngine.Vector4U26)
+// 0x0000050D System.Void UnityEngine.Sprite::GetPadding_Injected(UnityEngine.Vector4U26)
 extern void Sprite_GetPadding_Injected_m843873F288F8CBC4BDDF1BBE20211405039ABBDC ();
-// 0x00000507 System.Void UnityEngine.Sprite::get_bounds_Injected(UnityEngine.BoundsU26)
+// 0x0000050E System.Void UnityEngine.Sprite::get_bounds_Injected(UnityEngine.BoundsU26)
 extern void Sprite_get_bounds_Injected_m6422C2DBFD84A7B7F921DCA14BDFF2157738194B ();
-// 0x00000508 System.Void UnityEngine.Sprite::get_rect_Injected(UnityEngine.RectU26)
+// 0x0000050F System.Void UnityEngine.Sprite::get_rect_Injected(UnityEngine.RectU26)
 extern void Sprite_get_rect_Injected_mABF4FCC2AEDD9EE874797E35EDEFF023A52F5830 ();
-// 0x00000509 System.Void UnityEngine.Sprite::get_border_Injected(UnityEngine.Vector4U26)
+// 0x00000510 System.Void UnityEngine.Sprite::get_border_Injected(UnityEngine.Vector4U26)
 extern void Sprite_get_border_Injected_mA56DD9A38B61783341DF35C808FBFE93A1BD4BB6 ();
-// 0x0000050A System.Void UnityEngine.Sprite::get_pivot_Injected(UnityEngine.Vector2U26)
+// 0x00000511 System.Void UnityEngine.Sprite::get_pivot_Injected(UnityEngine.Vector2U26)
 extern void Sprite_get_pivot_Injected_m526201DCD812D7AB10AACE35E4195F7E53B633EC ();
-// 0x0000050B System.Boolean UnityEngine.U2D.SpriteAtlasManager::RequestAtlas(System.String)
+// 0x00000512 System.Boolean UnityEngine.U2D.SpriteAtlasManager::RequestAtlas(System.String)
 extern void SpriteAtlasManager_RequestAtlas_m792F61C44C634D9E8F1E15401C8CECB7A12F5DDE ();
-// 0x0000050C System.Void UnityEngine.U2D.SpriteAtlasManager::add_atlasRegistered(System.Action`1<UnityEngine.U2D.SpriteAtlas>)
+// 0x00000513 System.Void UnityEngine.U2D.SpriteAtlasManager::add_atlasRegistered(System.Action`1<UnityEngine.U2D.SpriteAtlas>)
 extern void SpriteAtlasManager_add_atlasRegistered_m6742D91F217B69CC2A65D80B5F25CFA372A1E2DA ();
-// 0x0000050D System.Void UnityEngine.U2D.SpriteAtlasManager::remove_atlasRegistered(System.Action`1<UnityEngine.U2D.SpriteAtlas>)
+// 0x00000514 System.Void UnityEngine.U2D.SpriteAtlasManager::remove_atlasRegistered(System.Action`1<UnityEngine.U2D.SpriteAtlas>)
 extern void SpriteAtlasManager_remove_atlasRegistered_m55564CC2797E687E4B966DC1797D059ABBB04051 ();
-// 0x0000050E System.Void UnityEngine.U2D.SpriteAtlasManager::PostRegisteredAtlas(UnityEngine.U2D.SpriteAtlas)
+// 0x00000515 System.Void UnityEngine.U2D.SpriteAtlasManager::PostRegisteredAtlas(UnityEngine.U2D.SpriteAtlas)
 extern void SpriteAtlasManager_PostRegisteredAtlas_m2FCA85EDC754279C0A90CC3AF5E12C3E8F6A61CB ();
-// 0x0000050F System.Void UnityEngine.U2D.SpriteAtlasManager::Register(UnityEngine.U2D.SpriteAtlas)
+// 0x00000516 System.Void UnityEngine.U2D.SpriteAtlasManager::Register(UnityEngine.U2D.SpriteAtlas)
 extern void SpriteAtlasManager_Register_m2C324F6E122AF09D44E4EE3F8F024323663670D2 ();
-// 0x00000510 System.Void UnityEngine.U2D.SpriteAtlasManager::.cctor()
+// 0x00000517 System.Void UnityEngine.U2D.SpriteAtlasManager::.cctor()
 extern void SpriteAtlasManager__cctor_m826C9096AB53C9C6CFCF342FA9FDC345A726B6C6 ();
-// 0x00000511 System.Boolean UnityEngine.U2D.SpriteAtlas::CanBindTo(UnityEngine.Sprite)
+// 0x00000518 System.Boolean UnityEngine.U2D.SpriteAtlas::CanBindTo(UnityEngine.Sprite)
 extern void SpriteAtlas_CanBindTo_m6CE0E011A4C5F489F9A62317380FB35F20DF7016 ();
-// 0x00000512 System.Boolean UnityEngine._Scripting.APIUpdating.APIUpdaterRuntimeHelpers::GetMovedFromAttributeDataForType(System.Type,System.StringU26,System.StringU26,System.StringU26)
+// 0x00000519 System.Boolean UnityEngine._Scripting.APIUpdating.APIUpdaterRuntimeHelpers::GetMovedFromAttributeDataForType(System.Type,System.StringU26,System.StringU26,System.StringU26)
 extern void APIUpdaterRuntimeHelpers_GetMovedFromAttributeDataForType_m2574674719979232087612C3C17A760E439BCA45 ();
-// 0x00000513 System.Boolean UnityEngine._Scripting.APIUpdating.APIUpdaterRuntimeHelpers::GetObsoleteTypeRedirection(System.Type,System.StringU26,System.StringU26,System.StringU26)
+// 0x0000051A System.Boolean UnityEngine._Scripting.APIUpdating.APIUpdaterRuntimeHelpers::GetObsoleteTypeRedirection(System.Type,System.StringU26,System.StringU26,System.StringU26)
 extern void APIUpdaterRuntimeHelpers_GetObsoleteTypeRedirection_m43E0605422153F402426F8959BC2E8C65A69F597 ();
-static Il2CppMethodPointer s_methodPointers[1299] = 
+static Il2CppMethodPointer s_methodPointers[1306] = 
 {
 	SortingLayer_GetLayerValueFromID_m564F9C83200E5EC3E9578A75854CB943CE5546F8,
 	AnimationCurve__ctor_mE9462D171C06A2A746B9DA1B0A6B0F4FC7DB94CF,
@@ -3462,6 +3474,10 @@ static Il2CppMethodPointer s_methodPointers[1299] =
 	Object_GetCachedPtr_m8CCFA6D419ADFBA8F9EF83CB45DFD75C2704C4A0,
 	Object_get_name_mA2D400141CB3C991C87A2556429781DE961A83CE,
 	Object_set_name_m538711B144CDE30F929376BCF72D0DC8F85D0826,
+	Object_Instantiate_m17AA3123A55239124BC54A907AEEE509034F0830,
+	Object_Instantiate_m674B3934708548332899CE953CA56BB696C1C887,
+	NULL,
+	NULL,
 	NULL,
 	Object_Destroy_m09F51D8BDECFD2E8C618498EF7377029B669030D,
 	Object_Destroy_m23B4562495BA35A74266D4372D45368F8C05109A,
@@ -3477,6 +3493,7 @@ static Il2CppMethodPointer s_methodPointers[1299] =
 	Object_op_Equality_mBC2401774F3BE33E8CF6F0A8148E66C95D6CFF1C,
 	Object_op_Inequality_m31EF58E217E8F4BDD3E409DEF79E1AEE95874FC1,
 	Object_Internal_CloneSingle_m4231A0B9138AC40B76655B772F687CC7E6160C06,
+	Object_Internal_CloneSingleWithParent_m32F1D681010B51B98CDBC82E3510FC260D2D1E17,
 	Object_ToString_m7A4BBACD14901DD0181038A25BED62520D273EDC,
 	Object_GetName_m1691C0D50AEBC1C86229AEAC2FBC1EE2DC6B67AF,
 	Object_SetName_m2CBABC30BA2B93EFF6A39B3295A7AB85901E60E8,
@@ -3599,6 +3616,7 @@ static Il2CppMethodPointer s_methodPointers[1299] =
 	InvokableCallList_AddPersistentInvokableCall_m62BDD6521FB7B68B58673D5C5B1117FCE4826CAD,
 	InvokableCallList_AddListener_mE4069F40E8762EF21140D688175D7A4E46FD2E83,
 	InvokableCallList_RemoveListener_mC886122D45A6682A85066E48637339065085D6DE,
+	InvokableCallList_Clear_mE83ECBC1675FD0906508620A3AC2770D0E889B72,
 	InvokableCallList_ClearPersistent_m4038DB499DCD84B79C0F1A698AAA7B9519553D49,
 	InvokableCallList_PrepareInvoke_m5BB28A5FBF10C84ECF5B52EBC52F9FCCDC840DC1,
 	UnityEventBase__ctor_m57AF08DAFA9C1B4F4C8DA855116900BAE8DF9595,
@@ -3612,6 +3630,7 @@ static Il2CppMethodPointer s_methodPointers[1299] =
 	UnityEventBase_RebuildPersistentCallsIfNeeded_mFC89AED628B42E5B1CBCC702222A6DF97605234F,
 	UnityEventBase_AddCall_mD45F68C1A40E2BD9B0754490B7709846B84E8075,
 	UnityEventBase_RemoveListener_mE7EBC544115373D2357599AC07F41F13A8C5A49E,
+	UnityEventBase_RemoveAllListeners_m7EC34F9A8A4F1990D14EBF9E77BA62718F1C5D43,
 	UnityEventBase_PrepareInvoke_mFA3E2C97DB776A1089DCC85C9F1DA75C295032AE,
 	UnityEventBase_ToString_m7672D78CA070AC49FFF04E645523864C300DD66D,
 	UnityEventBase_GetValidMethodInfo_m4521621AB72C7265A2C0EC6911BE4DC42A99B6A5,
@@ -3793,7 +3812,7 @@ static Il2CppMethodPointer s_methodPointers[1299] =
 	APIUpdaterRuntimeHelpers_GetMovedFromAttributeDataForType_m2574674719979232087612C3C17A760E439BCA45,
 	APIUpdaterRuntimeHelpers_GetObsoleteTypeRedirection_m43E0605422153F402426F8959BC2E8C65A69F597,
 };
-static const int32_t s_InvokerIndices[1299] = 
+static const int32_t s_InvokerIndices[1306] = 
 {
 	41,
 	4,
@@ -4764,6 +4783,10 @@ static const int32_t s_InvokerIndices[1299] =
 	51,
 	14,
 	4,
+	0,
+	206,
+	-1,
+	-1,
 	-1,
 	1546,
 	30,
@@ -4779,6 +4802,7 @@ static const int32_t s_InvokerIndices[1299] =
 	12,
 	12,
 	0,
+	206,
 	0,
 	0,
 	158,
@@ -4902,6 +4926,7 @@ static const int32_t s_InvokerIndices[1299] =
 	4,
 	23,
 	13,
+	13,
 	14,
 	13,
 	13,
@@ -4914,6 +4939,7 @@ static const int32_t s_InvokerIndices[1299] =
 	13,
 	4,
 	23,
+	13,
 	14,
 	14,
 	2,
@@ -5095,19 +5121,19 @@ static const int32_t s_InvokerIndices[1299] =
 	1560,
 	1560,
 };
-static const Il2CppTokenRangePair s_rgctxIndices[46] = 
+static const Il2CppTokenRangePair s_rgctxIndices[48] = 
 {
 	{ 0x0200009A, { 13, 6 } },
 	{ 0x0200009B, { 19, 4 } },
-	{ 0x0200018E, { 60, 7 } },
-	{ 0x0200018F, { 67, 7 } },
-	{ 0x02000190, { 74, 9 } },
-	{ 0x02000191, { 83, 11 } },
-	{ 0x02000192, { 94, 3 } },
-	{ 0x0200019B, { 97, 8 } },
-	{ 0x0200019D, { 105, 4 } },
-	{ 0x0200019F, { 109, 5 } },
-	{ 0x020001A1, { 114, 6 } },
+	{ 0x0200018E, { 62, 7 } },
+	{ 0x0200018F, { 69, 7 } },
+	{ 0x02000190, { 76, 9 } },
+	{ 0x02000191, { 85, 11 } },
+	{ 0x02000192, { 96, 3 } },
+	{ 0x0200019B, { 99, 8 } },
+	{ 0x0200019D, { 107, 4 } },
+	{ 0x0200019F, { 111, 5 } },
+	{ 0x020001A1, { 116, 6 } },
 	{ 0x0600001E, { 0, 3 } },
 	{ 0x0600001F, { 3, 3 } },
 	{ 0x06000097, { 6, 1 } },
@@ -5139,147 +5165,151 @@ static const Il2CppTokenRangePair s_rgctxIndices[46] =
 	{ 0x06000372, { 50, 2 } },
 	{ 0x0600039F, { 52, 1 } },
 	{ 0x060003A8, { 53, 2 } },
-	{ 0x060003CA, { 55, 1 } },
-	{ 0x060003D2, { 56, 2 } },
-	{ 0x06000428, { 58, 2 } },
-	{ 0x0600048E, { 120, 1 } },
+	{ 0x060003CC, { 55, 1 } },
+	{ 0x060003CD, { 56, 1 } },
+	{ 0x060003CE, { 57, 1 } },
+	{ 0x060003D6, { 58, 2 } },
+	{ 0x0600042D, { 60, 2 } },
+	{ 0x06000495, { 122, 1 } },
 };
-static const Il2CppRGCTXDefinition s_rgctxValues[121] = 
+static const Il2CppRGCTXDefinition s_rgctxValues[123] = 
 {
-	{ (Il2CppRGCTXDataType)3, 12625 },
-	{ (Il2CppRGCTXDataType)2, 20070 },
-	{ (Il2CppRGCTXDataType)3, 12626 },
-	{ (Il2CppRGCTXDataType)1, 16490 },
-	{ (Il2CppRGCTXDataType)2, 16490 },
-	{ (Il2CppRGCTXDataType)2, 16491 },
-	{ (Il2CppRGCTXDataType)1, 20071 },
-	{ (Il2CppRGCTXDataType)2, 16748 },
-	{ (Il2CppRGCTXDataType)2, 16748 },
-	{ (Il2CppRGCTXDataType)3, 12627 },
-	{ (Il2CppRGCTXDataType)3, 12628 },
-	{ (Il2CppRGCTXDataType)3, 12629 },
-	{ (Il2CppRGCTXDataType)3, 12630 },
-	{ (Il2CppRGCTXDataType)3, 12631 },
-	{ (Il2CppRGCTXDataType)2, 16857 },
-	{ (Il2CppRGCTXDataType)3, 12632 },
-	{ (Il2CppRGCTXDataType)3, 12633 },
-	{ (Il2CppRGCTXDataType)2, 16859 },
-	{ (Il2CppRGCTXDataType)3, 12634 },
-	{ (Il2CppRGCTXDataType)3, 12635 },
-	{ (Il2CppRGCTXDataType)3, 12636 },
-	{ (Il2CppRGCTXDataType)3, 12637 },
-	{ (Il2CppRGCTXDataType)2, 16866 },
-	{ (Il2CppRGCTXDataType)1, 17223 },
-	{ (Il2CppRGCTXDataType)2, 17223 },
-	{ (Il2CppRGCTXDataType)1, 17239 },
-	{ (Il2CppRGCTXDataType)2, 17239 },
-	{ (Il2CppRGCTXDataType)1, 17264 },
-	{ (Il2CppRGCTXDataType)1, 17265 },
-	{ (Il2CppRGCTXDataType)2, 17265 },
-	{ (Il2CppRGCTXDataType)3, 12638 },
-	{ (Il2CppRGCTXDataType)3, 12639 },
-	{ (Il2CppRGCTXDataType)1, 17270 },
-	{ (Il2CppRGCTXDataType)2, 17270 },
-	{ (Il2CppRGCTXDataType)3, 12640 },
-	{ (Il2CppRGCTXDataType)3, 12641 },
 	{ (Il2CppRGCTXDataType)3, 12642 },
-	{ (Il2CppRGCTXDataType)1, 17278 },
+	{ (Il2CppRGCTXDataType)2, 20109 },
 	{ (Il2CppRGCTXDataType)3, 12643 },
-	{ (Il2CppRGCTXDataType)1, 17294 },
+	{ (Il2CppRGCTXDataType)1, 16514 },
+	{ (Il2CppRGCTXDataType)2, 16514 },
+	{ (Il2CppRGCTXDataType)2, 16515 },
+	{ (Il2CppRGCTXDataType)1, 20110 },
+	{ (Il2CppRGCTXDataType)2, 16772 },
+	{ (Il2CppRGCTXDataType)2, 16772 },
 	{ (Il2CppRGCTXDataType)3, 12644 },
-	{ (Il2CppRGCTXDataType)1, 17296 },
-	{ (Il2CppRGCTXDataType)2, 17296 },
-	{ (Il2CppRGCTXDataType)1, 17298 },
-	{ (Il2CppRGCTXDataType)2, 17297 },
-	{ (Il2CppRGCTXDataType)1, 17300 },
-	{ (Il2CppRGCTXDataType)1, 17302 },
-	{ (Il2CppRGCTXDataType)1, 17304 },
-	{ (Il2CppRGCTXDataType)1, 17306 },
-	{ (Il2CppRGCTXDataType)2, 17305 },
-	{ (Il2CppRGCTXDataType)1, 17307 },
-	{ (Il2CppRGCTXDataType)2, 17307 },
 	{ (Il2CppRGCTXDataType)3, 12645 },
-	{ (Il2CppRGCTXDataType)1, 17328 },
-	{ (Il2CppRGCTXDataType)2, 17328 },
-	{ (Il2CppRGCTXDataType)2, 17351 },
-	{ (Il2CppRGCTXDataType)1, 17353 },
-	{ (Il2CppRGCTXDataType)2, 17353 },
-	{ (Il2CppRGCTXDataType)2, 20072 },
-	{ (Il2CppRGCTXDataType)1, 20072 },
-	{ (Il2CppRGCTXDataType)1, 17427 },
-	{ (Il2CppRGCTXDataType)2, 17427 },
 	{ (Il2CppRGCTXDataType)3, 12646 },
 	{ (Il2CppRGCTXDataType)3, 12647 },
 	{ (Il2CppRGCTXDataType)3, 12648 },
-	{ (Il2CppRGCTXDataType)2, 17428 },
+	{ (Il2CppRGCTXDataType)2, 16881 },
 	{ (Il2CppRGCTXDataType)3, 12649 },
-	{ (Il2CppRGCTXDataType)1, 20073 },
-	{ (Il2CppRGCTXDataType)2, 20073 },
 	{ (Il2CppRGCTXDataType)3, 12650 },
+	{ (Il2CppRGCTXDataType)2, 16883 },
 	{ (Il2CppRGCTXDataType)3, 12651 },
-	{ (Il2CppRGCTXDataType)2, 17433 },
-	{ (Il2CppRGCTXDataType)2, 17434 },
 	{ (Il2CppRGCTXDataType)3, 12652 },
-	{ (Il2CppRGCTXDataType)1, 20074 },
-	{ (Il2CppRGCTXDataType)2, 20074 },
 	{ (Il2CppRGCTXDataType)3, 12653 },
 	{ (Il2CppRGCTXDataType)3, 12654 },
+	{ (Il2CppRGCTXDataType)2, 16890 },
+	{ (Il2CppRGCTXDataType)1, 17247 },
+	{ (Il2CppRGCTXDataType)2, 17247 },
+	{ (Il2CppRGCTXDataType)1, 17263 },
+	{ (Il2CppRGCTXDataType)2, 17263 },
+	{ (Il2CppRGCTXDataType)1, 17288 },
+	{ (Il2CppRGCTXDataType)1, 17289 },
+	{ (Il2CppRGCTXDataType)2, 17289 },
 	{ (Il2CppRGCTXDataType)3, 12655 },
-	{ (Il2CppRGCTXDataType)2, 17438 },
-	{ (Il2CppRGCTXDataType)2, 17439 },
-	{ (Il2CppRGCTXDataType)2, 17440 },
 	{ (Il2CppRGCTXDataType)3, 12656 },
-	{ (Il2CppRGCTXDataType)1, 20075 },
-	{ (Il2CppRGCTXDataType)2, 20075 },
+	{ (Il2CppRGCTXDataType)1, 17294 },
+	{ (Il2CppRGCTXDataType)2, 17294 },
 	{ (Il2CppRGCTXDataType)3, 12657 },
 	{ (Il2CppRGCTXDataType)3, 12658 },
 	{ (Il2CppRGCTXDataType)3, 12659 },
+	{ (Il2CppRGCTXDataType)1, 17302 },
 	{ (Il2CppRGCTXDataType)3, 12660 },
-	{ (Il2CppRGCTXDataType)2, 17444 },
-	{ (Il2CppRGCTXDataType)2, 17445 },
-	{ (Il2CppRGCTXDataType)2, 17446 },
-	{ (Il2CppRGCTXDataType)2, 17447 },
+	{ (Il2CppRGCTXDataType)1, 17318 },
 	{ (Il2CppRGCTXDataType)3, 12661 },
+	{ (Il2CppRGCTXDataType)1, 17320 },
+	{ (Il2CppRGCTXDataType)2, 17320 },
+	{ (Il2CppRGCTXDataType)1, 17322 },
+	{ (Il2CppRGCTXDataType)2, 17321 },
+	{ (Il2CppRGCTXDataType)1, 17324 },
+	{ (Il2CppRGCTXDataType)1, 17326 },
+	{ (Il2CppRGCTXDataType)1, 17328 },
+	{ (Il2CppRGCTXDataType)1, 17330 },
+	{ (Il2CppRGCTXDataType)2, 17329 },
+	{ (Il2CppRGCTXDataType)1, 17331 },
+	{ (Il2CppRGCTXDataType)2, 17331 },
 	{ (Il2CppRGCTXDataType)3, 12662 },
-	{ (Il2CppRGCTXDataType)2, 17449 },
+	{ (Il2CppRGCTXDataType)1, 17352 },
+	{ (Il2CppRGCTXDataType)2, 17352 },
+	{ (Il2CppRGCTXDataType)2, 17375 },
 	{ (Il2CppRGCTXDataType)3, 12663 },
+	{ (Il2CppRGCTXDataType)2, 17377 },
+	{ (Il2CppRGCTXDataType)1, 17379 },
+	{ (Il2CppRGCTXDataType)2, 17379 },
+	{ (Il2CppRGCTXDataType)2, 20111 },
+	{ (Il2CppRGCTXDataType)1, 20111 },
+	{ (Il2CppRGCTXDataType)1, 17453 },
+	{ (Il2CppRGCTXDataType)2, 17453 },
 	{ (Il2CppRGCTXDataType)3, 12664 },
-	{ (Il2CppRGCTXDataType)2, 20076 },
-	{ (Il2CppRGCTXDataType)1, 17478 },
-	{ (Il2CppRGCTXDataType)2, 20077 },
 	{ (Il2CppRGCTXDataType)3, 12665 },
 	{ (Il2CppRGCTXDataType)3, 12666 },
+	{ (Il2CppRGCTXDataType)2, 17454 },
 	{ (Il2CppRGCTXDataType)3, 12667 },
-	{ (Il2CppRGCTXDataType)2, 17478 },
-	{ (Il2CppRGCTXDataType)1, 20078 },
-	{ (Il2CppRGCTXDataType)1, 20079 },
-	{ (Il2CppRGCTXDataType)2, 20080 },
+	{ (Il2CppRGCTXDataType)1, 20112 },
+	{ (Il2CppRGCTXDataType)2, 20112 },
 	{ (Il2CppRGCTXDataType)3, 12668 },
-	{ (Il2CppRGCTXDataType)1, 20081 },
-	{ (Il2CppRGCTXDataType)1, 20082 },
-	{ (Il2CppRGCTXDataType)1, 20083 },
-	{ (Il2CppRGCTXDataType)2, 20084 },
 	{ (Il2CppRGCTXDataType)3, 12669 },
-	{ (Il2CppRGCTXDataType)1, 20085 },
-	{ (Il2CppRGCTXDataType)1, 20086 },
-	{ (Il2CppRGCTXDataType)1, 20087 },
-	{ (Il2CppRGCTXDataType)1, 20088 },
-	{ (Il2CppRGCTXDataType)2, 20089 },
+	{ (Il2CppRGCTXDataType)2, 17459 },
+	{ (Il2CppRGCTXDataType)2, 17460 },
 	{ (Il2CppRGCTXDataType)3, 12670 },
-	{ (Il2CppRGCTXDataType)2, 17502 },
+	{ (Il2CppRGCTXDataType)1, 20113 },
+	{ (Il2CppRGCTXDataType)2, 20113 },
+	{ (Il2CppRGCTXDataType)3, 12671 },
+	{ (Il2CppRGCTXDataType)3, 12672 },
+	{ (Il2CppRGCTXDataType)3, 12673 },
+	{ (Il2CppRGCTXDataType)2, 17464 },
+	{ (Il2CppRGCTXDataType)2, 17465 },
+	{ (Il2CppRGCTXDataType)2, 17466 },
+	{ (Il2CppRGCTXDataType)3, 12674 },
+	{ (Il2CppRGCTXDataType)1, 20114 },
+	{ (Il2CppRGCTXDataType)2, 20114 },
+	{ (Il2CppRGCTXDataType)3, 12675 },
+	{ (Il2CppRGCTXDataType)3, 12676 },
+	{ (Il2CppRGCTXDataType)3, 12677 },
+	{ (Il2CppRGCTXDataType)3, 12678 },
+	{ (Il2CppRGCTXDataType)2, 17470 },
+	{ (Il2CppRGCTXDataType)2, 17471 },
+	{ (Il2CppRGCTXDataType)2, 17472 },
+	{ (Il2CppRGCTXDataType)2, 17473 },
+	{ (Il2CppRGCTXDataType)3, 12679 },
+	{ (Il2CppRGCTXDataType)3, 12680 },
+	{ (Il2CppRGCTXDataType)2, 17475 },
+	{ (Il2CppRGCTXDataType)3, 12681 },
+	{ (Il2CppRGCTXDataType)3, 12682 },
+	{ (Il2CppRGCTXDataType)2, 20115 },
+	{ (Il2CppRGCTXDataType)1, 17504 },
+	{ (Il2CppRGCTXDataType)2, 20116 },
+	{ (Il2CppRGCTXDataType)3, 12683 },
+	{ (Il2CppRGCTXDataType)3, 12684 },
+	{ (Il2CppRGCTXDataType)3, 12685 },
+	{ (Il2CppRGCTXDataType)2, 17504 },
+	{ (Il2CppRGCTXDataType)1, 20117 },
+	{ (Il2CppRGCTXDataType)1, 20118 },
+	{ (Il2CppRGCTXDataType)2, 20119 },
+	{ (Il2CppRGCTXDataType)3, 12686 },
+	{ (Il2CppRGCTXDataType)1, 20120 },
+	{ (Il2CppRGCTXDataType)1, 20121 },
+	{ (Il2CppRGCTXDataType)1, 20122 },
+	{ (Il2CppRGCTXDataType)2, 20123 },
+	{ (Il2CppRGCTXDataType)3, 12687 },
+	{ (Il2CppRGCTXDataType)1, 20124 },
+	{ (Il2CppRGCTXDataType)1, 20125 },
+	{ (Il2CppRGCTXDataType)1, 20126 },
+	{ (Il2CppRGCTXDataType)1, 20127 },
+	{ (Il2CppRGCTXDataType)2, 20128 },
+	{ (Il2CppRGCTXDataType)3, 12688 },
+	{ (Il2CppRGCTXDataType)2, 17528 },
 };
 extern const Il2CppCodeGenModule g_UnityEngine_CoreModuleCodeGenModule;
 const Il2CppCodeGenModule g_UnityEngine_CoreModuleCodeGenModule = 
 {
 	"UnityEngine.CoreModule.dll",
-	1299,
+	1306,
 	s_methodPointers,
 	s_InvokerIndices,
 	0,
 	NULL,
-	46,
+	48,
 	s_rgctxIndices,
-	121,
+	123,
 	s_rgctxValues,
 	NULL,
 };

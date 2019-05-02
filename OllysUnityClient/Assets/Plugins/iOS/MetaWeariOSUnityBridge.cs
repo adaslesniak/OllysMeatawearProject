@@ -14,12 +14,32 @@ public class MetaWearNative : MonoBehaviour {
     public static event VoidWithDeviceCards onKnowDevicesScaned;
 
 
-    //NOTE: ensure this are exactly as on iOS side
+    //NOTE: ensure this are exactly as on iOS side: MetaWearUnity.swift
     class MessageSubjects {
         public string acceleratorData = "accelerator_measurment";
         public const string foundKnownDevices = "known_devices";
         public const string foundNewDevices = "new_devices";
         public const string unspecified = "unspecified";
+    }
+    public enum LedColors {
+        NONE, GREEN, BLUE, RED, ALL
+    }
+    //NOTE: ensure those are exactly as on iOS side: MetaWearUnity.swift
+    private static string LedColorCode(LedColors forColor) {
+        switch(forColor) {
+        case LedColors.ALL:
+            return "all";
+        case LedColors.BLUE:
+            return "blue";
+        case LedColors.GREEN:
+            return "green";
+        case LedColors.RED:
+            return "red";
+        case LedColors.NONE:
+            return "none";
+        default:
+            return "unspecified";
+        }
     }
 
     #region EXTERNAL_DECLARATIONS
@@ -39,7 +59,10 @@ public class MetaWearNative : MonoBehaviour {
     private static extern void ios_setCallbackReceiver(MessageReceiver listener);
 
     [DllImport(DLL_LOCATION)]
-    private static extern void ios_stopDeviceLeds([MarshalAs(UnmanagedType.LPStr)]string deviceId);
+    private static extern void ios_stopDeviceLeds([MarshalAs(UnmanagedType.LPStr)]string deviceI, [MarshalAs(UnmanagedType.LPStr)]string colorsCode);
+
+    [DllImport(DLL_LOCATION)]
+    private static extern void ios_turnDeviceLedOn([MarshalAs(UnmanagedType.LPStr)]string deviceId, [MarshalAs(UnmanagedType.LPStr)]string colorsCode);
 
     [DllImport(DLL_LOCATION)]
     private static extern void ios_rememberDevice([MarshalAs(UnmanagedType.LPStr)]string deviceId, [MarshalAs(UnmanagedType.LPStr)]string name);
@@ -69,22 +92,52 @@ public class MetaWearNative : MonoBehaviour {
         #endif
     }
 
-    public static void StopDeviceLeds(DeviceCard device) {
+    public static void StartDeviceLed(DeviceCard device, LedColors color) {
         #if UNITY_IOS && !UNITY_EDITOR
-        ios_stopDeviceLeds(device.id);
+        ios_turnDeviceLedOn(device.id, LedColorCode(color));
         #endif
+    }
+
+    public static void StopDeviceLeds(DeviceCard device, LedColors color = LedColors.ALL) {
+#if UNITY_IOS && !UNITY_EDITOR
+        ios_stopDeviceLeds(device.id, LedColorCode(color));
+#endif
     }
 
     public static void RememberDevice(DeviceCard device, string withName) {
-        #if UNITY_IOS && !UNITY_EDITOR
+#if UNITY_IOS && !UNITY_EDITOR
         ios_rememberDevice(device.id, withName);
-        #endif
+#endif
     }
 
     public static void ForgetAllRememberdDevices() {
-        #if UNITY_IOS && !UNITY_EDITOR
+#if UNITY_IOS && !UNITY_EDITOR
         ios_forgetRememberedDevices();
-        #endif
+#endif
+    }
+
+    public static void StartAccelerometerStream(DeviceCard forDevice) {
+        Debug.LogWarning("NOT_IMPLEMENTED - start accelerometer");
+    }
+
+    public static void StopAccelerometerStream(DeviceCard forDevice) {
+        Debug.LogWarning("NOT_IMPLEMENTED - stop accelerometer");
+    }
+
+    public static void StartSensorFusionStream(DeviceCard forDevice) {
+        Debug.LogWarning("NOT_IMPLEMENTED - start sensor fusion");
+    }
+
+    public static void StopSensorFusionStream(DeviceCard forDevice) {
+        Debug.LogWarning("NOT_IMPLEMENTED - stop sensor fusion");
+    }
+
+    public static void DisconnectDevice(DeviceCard device) {
+        Debug.LogWarning("NOT_IMPLEMENTED - disconnect device");
+    }
+
+    public static void DisconnectAllDevices() {
+        Debug.LogWarning("NOT_IMPLEMENTED - disconnect all devices");
     }
 
     static MetaWearNative() {

@@ -14,6 +14,21 @@ import Foundation
         case simpleMessage = "unspecified"
     }
     
+    static func ledColorFromCode(_ colorCode: String) -> LedColor? {
+        switch colorCode {
+        case "all":
+            return .all
+        case "blue":
+            return .blue
+        case "green":
+            return .green
+        case "red":
+            return .red
+        default:
+            return nil
+        }
+    }
+    
     public typealias Listener = (String, String) -> Void
     private static var unityListener: Listener?
     
@@ -49,9 +64,22 @@ import Foundation
         deviceCtrl(deviceId)?.startFlashing(.green)
     }
     
-    @objc public static func stopLeds(_ deviceId: String) {
+    @objc public static func startLed(_ deviceId: String, colorsCode: String) {
+        print("NOT_IMPLEMENTED - MetawearUnity.startLed")
+        guard let colors = ledColorFromCode(colorsCode) else {
+            Log.error("wrong colord code send to startLed: \(colorsCode)")
+            return
+        }
+        deviceCtrl(deviceId)?.turnOnLed(colors)
+    }
+    
+    @objc public static func stopLeds(_ deviceId: String, colorsCode: String) {
         print("MetaWearUnity.stopDeviceLeds (is there device?= \(deviceCtrl(deviceId) != nil))")
-        deviceCtrl(deviceId)?.turnOffLed()
+        guard let colors = ledColorFromCode(colorsCode) else {
+            Log.error("wrong color code send to stopLeds: \(colorsCode)")
+            return
+        }
+        deviceCtrl(deviceId)?.turnOffLed(colors)
     }
     
     @objc public static func rememberDevice(_ deviceId: String, as givenName: String) {
@@ -71,10 +99,8 @@ import Foundation
     }
     
     
-    
     public static func sendAccelerometerData(_ measurment: AccelerometerMeasurment) {
         var json = [String:Any]()
-        json["what"] = "accelerometerData"
         json["sender"] = measurment.sourceName()
         json["accelX"] = measurment.xAcceleration;
         json["accelY"] = measurment.yAcceleration;
