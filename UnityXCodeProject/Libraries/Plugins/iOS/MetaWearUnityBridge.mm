@@ -3,6 +3,10 @@
 
 #pragma mark - C interface
 
+NSString* iosString(const char* cString) {
+    return [NSString stringWithCString:cString encoding:NSUTF8StringEncoding];
+}
+
 extern "C" {
 
     
@@ -17,20 +21,32 @@ extern "C" {
     }
     
     void ios_startFlashingDevice(const char* deviceId) {
-        NSString* deviceIdString = [NSString stringWithCString:deviceId encoding:NSUTF8StringEncoding];
-        [MetaWearUnity startFlashing:deviceIdString];
+        //NSString* deviceIdString = [NSString stringWithCString:deviceId encoding:NSUTF8StringEncoding];
+        NSString* idString = iosString(deviceId);
+        [MetaWearUnity startFlashing:idString];
     }
     
-    void ios_stopDeviceLeds(const char* deviceId) {
+    void ios_turnDeviceLedOn(const char* deviceId, const char* colorsCode) {
+        NSString* idString = iosString(deviceId);
+        NSString* colorString = iosString(colorsCode);
+        [MetaWearUnity startLed:idString colorsCode:colorString];
+    }
+    
+    void ios_stopDeviceLeds(const char* deviceId, const char* colorsCode) {
         printf("ios_stopDeviceLeds executed");
-        NSString* deviceIdString = [NSString stringWithCString:deviceId encoding:NSUTF8StringEncoding];
-        [MetaWearUnity stopLeds:deviceIdString];
+        //NSString* deviceIdString = [NSString stringWithCString:deviceId encoding:NSUTF8StringEncoding];
+        //NSString* colorsId = [NSString stringWithCString:colorsCode encoding:NSUTF8StringEncoding];
+        NSString* idString = iosString(deviceId);
+        NSString* colorsString = iosString(colorsCode);
+        [MetaWearUnity stopLeds:idString colorsCode:colorsString];
     }
     
     void ios_rememberDevice(const char* deviceId, const char* name) {
-        NSString* deviceIdString = [NSString stringWithCString:deviceId encoding:NSUTF8StringEncoding];
-        NSString* newName = [NSString stringWithCString:name encoding:NSUTF8StringEncoding];
-        [MetaWearUnity rememberDevice:deviceIdString as:newName];
+        //NSString* deviceIdString = [NSString stringWithCString:deviceId encoding:NSUTF8StringEncoding];
+        //NSString* newName = [NSString stringWithCString:name encoding:NSUTF8StringEncoding];
+        NSString* idString = iosString(deviceId);
+        NSString* newName = iosString(name);
+        [MetaWearUnity rememberDevice:idString as:newName];
     }
     
     typedef void (*CallbackListener)(const char* topic, const char* message);

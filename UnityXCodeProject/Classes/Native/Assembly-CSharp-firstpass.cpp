@@ -249,6 +249,7 @@ struct Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0;
 struct iOSMessageReceiver_t66DDFDF4CD60A2626BC57AB5C4E2D359EE8C2654;
 
 IL2CPP_EXTERN_C RuntimeClass* DateTime_t349B7449FBAAFF4192636E2B7A07694DA9236132_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Debug_t7B5FCB117E2FD63B6838BC52821B252E2BFB61C4_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* DeviceCard_t82A8F9A320CB17DAFEED5F5176B8BE78F792DD16_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* IDisposable_t7218B22548186B208D65EA5B7870503810A2D15A_il2cpp_TypeInfo_var;
@@ -267,15 +268,27 @@ IL2CPP_EXTERN_C RuntimeClass* iOSMessageReceiver_t66DDFDF4CD60A2626BC57AB5C4E2D3
 IL2CPP_EXTERN_C String_t* _stringLiteral08978886DEFAF5ABA2F28E11E2378BDC5BE800E6;
 IL2CPP_EXTERN_C String_t* _stringLiteral091385BE99B45F459A231582D583EC9F3FA3D194;
 IL2CPP_EXTERN_C String_t* _stringLiteral4C10E261F4AFB978699EB377C823EB45CBEB0365;
+IL2CPP_EXTERN_C String_t* _stringLiteral4C9A82CE72CA2519F38D0AF0ABBB4CECB9FCECA9;
 IL2CPP_EXTERN_C String_t* _stringLiteral4ED7EAAD395DD81505888EBCD0BD63416D407B38;
+IL2CPP_EXTERN_C String_t* _stringLiteral66560884E0ED2078CBBE79F4EADCA71ADAE84723;
 IL2CPP_EXTERN_C String_t* _stringLiteral6AE999552A0D2DCA14D62E2BC8B764D377B1DD6C;
 IL2CPP_EXTERN_C String_t* _stringLiteral6B05A59CAD7754B921DBD229F8E680EEA812F8C1;
 IL2CPP_EXTERN_C String_t* _stringLiteral6CCCD026A25D8CB3E30F1BC64A73E86B4B10F6DC;
+IL2CPP_EXTERN_C String_t* _stringLiteral71F8E7976E4CBC4561C9D62FB283E7F788202ACB;
+IL2CPP_EXTERN_C String_t* _stringLiteral78988010B890CE6F4D2136481F392787EC6D6106;
+IL2CPP_EXTERN_C String_t* _stringLiteral7C537E5966C8BD26C48225C20935756C63AF5A3F;
+IL2CPP_EXTERN_C String_t* _stringLiteral7DDD8F15567763EA0429A4B93B90D2A732DB7B45;
+IL2CPP_EXTERN_C String_t* _stringLiteral8131D2FF239E771247C0577DF864163B749FF518;
+IL2CPP_EXTERN_C String_t* _stringLiteral8732F91E94782290F8F85CF2814F082013C33C2E;
 IL2CPP_EXTERN_C String_t* _stringLiteral87EA5DFC8B8E384D848979496E706390B497E547;
 IL2CPP_EXTERN_C String_t* _stringLiteral98AD5D23586C10E2597C734246CEA2660F96F7E8;
+IL2CPP_EXTERN_C String_t* _stringLiteralA05252FC2198C4CA4CC293F8318AAA9389B66EFE;
 IL2CPP_EXTERN_C String_t* _stringLiteralA17C9AAA61E80A1BF71D0D850AF4E5BAA9800BBD;
 IL2CPP_EXTERN_C String_t* _stringLiteralA4CD7B522EA818E01A99E31500EFFC64F6D31C15;
+IL2CPP_EXTERN_C String_t* _stringLiteralB78DA89BD945BBBF7FE4233E0651B0354488EE87;
+IL2CPP_EXTERN_C String_t* _stringLiteralBC74F4F071A5A33F00AB88A6D6385B5E6638B86C;
 IL2CPP_EXTERN_C String_t* _stringLiteralC32782643F86448DD0CF8F2A6E1B2A3F7AA0CCAB;
+IL2CPP_EXTERN_C String_t* _stringLiteralD87C448044DEFB778F33158D8CCF94A20531D600;
 IL2CPP_EXTERN_C String_t* _stringLiteralD965050D70187FFF0BDFECDF3D67928DE5867AD7;
 IL2CPP_EXTERN_C String_t* _stringLiteralE2DD208E6EE19DB2DDC63FC676717375A20D7427;
 IL2CPP_EXTERN_C String_t* _stringLiteralF0DB24E44F63002A7AF891222D783F3C0C9392BE;
@@ -288,13 +301,21 @@ IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Count_m88CABD299715B67894E9CDDDD
 IL2CPP_EXTERN_C const RuntimeMethod* MetaWearNative_ProcessIosMessage_m9E9D779D05DC91BAA4CA084E3AE91685E1C6F1BD_RuntimeMethod_var;
 IL2CPP_EXTERN_C const uint32_t DeviceCard_fromIosSerialised_m6D17407CEE070BA9579EF91BAF320C36B66AA94D_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t MessageSubjects__ctor_m41BFD80695A58503ACEA13D8156881399DB85AA1_MetadataUsageId;
+IL2CPP_EXTERN_C const uint32_t MetaWearNative_DisconnectAllDevices_m8FD74C145E1E10095877823B41F1FBA9D29EB5D2_MetadataUsageId;
+IL2CPP_EXTERN_C const uint32_t MetaWearNative_DisconnectDevice_m6A7446C039A549D13F8364BBAA706A18610C2776_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t MetaWearNative_ForgetAllRememberdDevices_m70CBC28D2E720921AF81436B768D71E0003BB46C_MetadataUsageId;
+IL2CPP_EXTERN_C const uint32_t MetaWearNative_LedColorCode_m8170EFAFA718EDB3D29C9E513F7AEFA99C4E9D3D_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t MetaWearNative_ProcessIosMessage_m9E9D779D05DC91BAA4CA084E3AE91685E1C6F1BD_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t MetaWearNative_RememberDevice_m2AFFF7C88CF5F29B4DCF783EAC482D3674B15C5B_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t MetaWearNative_ScanForKnownDevices_mE0BE23631DC7BFCF170A69DC808248B16E27C59D_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t MetaWearNative_ScanForNewDevices_m59AB7E2569E777BC01002D2B46981034D0F4AE73_MetadataUsageId;
+IL2CPP_EXTERN_C const uint32_t MetaWearNative_StartAccelerometerStream_m15F15B5595F92E06827CA7ED0C3ED7941EB85DE9_MetadataUsageId;
+IL2CPP_EXTERN_C const uint32_t MetaWearNative_StartDeviceLed_mAB0F6DB18C7A7B21FF0C5C49AE43652B0B404714_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t MetaWearNative_StartFlashingDevice_m8854A03FF6E556D5D2A6E6B2342BDAF5E06DFD2E_MetadataUsageId;
-IL2CPP_EXTERN_C const uint32_t MetaWearNative_StopDeviceLeds_mB9C2DD2E8DEA86F5083B2A72782D08B6F8A008BA_MetadataUsageId;
+IL2CPP_EXTERN_C const uint32_t MetaWearNative_StartSensorFusionStream_m00B16A06845A318B4AA84F4AECA55D32E82A5D05_MetadataUsageId;
+IL2CPP_EXTERN_C const uint32_t MetaWearNative_StopAccelerometerStream_m9347B74549BDCF4575FD6DB701B1C0E2B9341815_MetadataUsageId;
+IL2CPP_EXTERN_C const uint32_t MetaWearNative_StopDeviceLeds_m38FD70457E7BE829F970756C3DD4683F2FCFBE44_MetadataUsageId;
+IL2CPP_EXTERN_C const uint32_t MetaWearNative_StopSensorFusionStream_mD2057F3A0EF213474491E71775E747940FB1D487_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t MetaWearNative__cctor_mF7693C64EEE8281967AC8C2FD2E501D08762391A_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t MetaWearNative_add_onKnowDevicesScaned_m5E2A35B679D39D00967C49426984EB5B092288AA_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t MetaWearNative_add_onNewDevicesScaned_m5658362A8D46052A7BBA10248ECA2FDB0DD7C3C6_MetadataUsageId;
@@ -943,6 +964,24 @@ public:
 };
 
 
+// MetaWearNative_LedColors
+struct  LedColors_t24F1D028387467BD74F559B2AF7E242C0D185A52 
+{
+public:
+	// System.Int32 MetaWearNative_LedColors::value__
+	int32_t ___value___2;
+
+public:
+	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(LedColors_t24F1D028387467BD74F559B2AF7E242C0D185A52, ___value___2)); }
+	inline int32_t get_value___2() const { return ___value___2; }
+	inline int32_t* get_address_of_value___2() { return &___value___2; }
+	inline void set_value___2(int32_t value)
+	{
+		___value___2 = value;
+	}
+};
+
+
 // Newtonsoft.Json.Linq.JArray
 struct  JArray_t1CE13821116F9B501573275C6BDD9FB254E65F11  : public JContainer_tF4CD2E574503C709DEF18A04B79B264B83746DAB
 {
@@ -1523,12 +1562,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaWearNative_ios_scanForKnownDevices_m
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* DeviceCard_get_id_m9AC5D3AB4ED36D0EDC7BD94A7ACDEF3595CCCA3F (DeviceCard_t82A8F9A320CB17DAFEED5F5176B8BE78F792DD16 * __this, const RuntimeMethod* method);
 // System.Void MetaWearNative::ios_startFlashingDevice(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaWearNative_ios_startFlashingDevice_m747BE2E3233DAD47A33E98279C35D843F43880BA (String_t* ___deviceId0, const RuntimeMethod* method);
-// System.Void MetaWearNative::ios_stopDeviceLeds(System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaWearNative_ios_stopDeviceLeds_m3C0247A3EF2B74FA64E9C2898F7E84EDB5CD09B7 (String_t* ___deviceId0, const RuntimeMethod* method);
+// System.String MetaWearNative::LedColorCode(MetaWearNative/LedColors)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* MetaWearNative_LedColorCode_m8170EFAFA718EDB3D29C9E513F7AEFA99C4E9D3D (int32_t ___forColor0, const RuntimeMethod* method);
+// System.Void MetaWearNative::ios_turnDeviceLedOn(System.String,System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaWearNative_ios_turnDeviceLedOn_mBE1B910E222D9D92211D0E9D1D780B65F3093121 (String_t* ___deviceId0, String_t* ___colorsCode1, const RuntimeMethod* method);
+// System.Void MetaWearNative::ios_stopDeviceLeds(System.String,System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaWearNative_ios_stopDeviceLeds_m18799FC7759C72683B265BD0A90B1690BA776738 (String_t* ___deviceI0, String_t* ___colorsCode1, const RuntimeMethod* method);
 // System.Void MetaWearNative::ios_rememberDevice(System.String,System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaWearNative_ios_rememberDevice_mFEA32D979247BD04577956AF0EB62694CE5E0702 (String_t* ___deviceId0, String_t* ___name1, const RuntimeMethod* method);
 // System.Void MetaWearNative::ios_forgetRememberedDevices()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaWearNative_ios_forgetRememberedDevices_m864F71318DB4A2BF72B6373BFEDF220092F1EDE4 (const RuntimeMethod* method);
+// System.Void UnityEngine.Debug::LogWarning(System.Object)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_LogWarning_m37338644DC81F640CCDFEAE35A223F0E965F0568 (RuntimeObject * p0, const RuntimeMethod* method);
 // System.Void UnityEngine.Application::SetStackTraceLogType(UnityEngine.LogType,UnityEngine.StackTraceLogType)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Application_SetStackTraceLogType_m0E7F71F07C77A92CD88DD0F4A0BFD881AE4F1692 (int32_t p0, int32_t p1, const RuntimeMethod* method);
 // System.Void MetaWearNative/MessageReceiver::.ctor(System.Object,System.IntPtr)
@@ -1907,6 +1952,75 @@ IL_0006:
 		return;
 	}
 }
+// System.String MetaWearNative::LedColorCode(MetaWearNative_LedColors)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* MetaWearNative_LedColorCode_m8170EFAFA718EDB3D29C9E513F7AEFA99C4E9D3D (int32_t ___forColor0, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (MetaWearNative_LedColorCode_m8170EFAFA718EDB3D29C9E513F7AEFA99C4E9D3D_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		int32_t L_0 = ___forColor0;
+		switch (L_0)
+		{
+			case 0:
+			{
+				goto IL_0034;
+			}
+			case 1:
+			{
+				goto IL_0028;
+			}
+			case 2:
+			{
+				goto IL_0022;
+			}
+			case 3:
+			{
+				goto IL_002e;
+			}
+			case 4:
+			{
+				goto IL_001c;
+			}
+		}
+	}
+	{
+		goto IL_003a;
+	}
+
+IL_001c:
+	{
+		return _stringLiteralD87C448044DEFB778F33158D8CCF94A20531D600;
+	}
+
+IL_0022:
+	{
+		return _stringLiteral4C9A82CE72CA2519F38D0AF0ABBB4CECB9FCECA9;
+	}
+
+IL_0028:
+	{
+		return _stringLiteralBC74F4F071A5A33F00AB88A6D6385B5E6638B86C;
+	}
+
+IL_002e:
+	{
+		return _stringLiteral78988010B890CE6F4D2136481F392787EC6D6106;
+	}
+
+IL_0034:
+	{
+		return _stringLiteral71F8E7976E4CBC4561C9D62FB283E7F788202ACB;
+	}
+
+IL_003a:
+	{
+		return _stringLiteral7C537E5966C8BD26C48225C20935756C63AF5A3F;
+	}
+}
 #if !FORCE_PINVOKE_INTERNAL
 IL2CPP_EXTERN_C void DEFAULT_CALL ios_scanForNewDevices();
 #endif
@@ -1968,23 +2082,59 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaWearNative_ios_setCallbackReceiver_m
 
 }
 #if !FORCE_PINVOKE_INTERNAL
-IL2CPP_EXTERN_C void DEFAULT_CALL ios_stopDeviceLeds(char*);
+IL2CPP_EXTERN_C void DEFAULT_CALL ios_stopDeviceLeds(char*, char*);
 #endif
-// System.Void MetaWearNative::ios_stopDeviceLeds(System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaWearNative_ios_stopDeviceLeds_m3C0247A3EF2B74FA64E9C2898F7E84EDB5CD09B7 (String_t* ___deviceId0, const RuntimeMethod* method)
+// System.Void MetaWearNative::ios_stopDeviceLeds(System.String,System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaWearNative_ios_stopDeviceLeds_m18799FC7759C72683B265BD0A90B1690BA776738 (String_t* ___deviceI0, String_t* ___colorsCode1, const RuntimeMethod* method)
 {
-	typedef void (DEFAULT_CALL *PInvokeFunc) (char*);
+	typedef void (DEFAULT_CALL *PInvokeFunc) (char*, char*);
+
+	// Marshaling of parameter U27___deviceI0U27 to native representation
+	char* ____deviceI0_marshaled = NULL;
+	____deviceI0_marshaled = il2cpp_codegen_marshal_string(___deviceI0);
+
+	// Marshaling of parameter U27___colorsCode1U27 to native representation
+	char* ____colorsCode1_marshaled = NULL;
+	____colorsCode1_marshaled = il2cpp_codegen_marshal_string(___colorsCode1);
+
+	// Native function invocation
+	reinterpret_cast<PInvokeFunc>(ios_stopDeviceLeds)(____deviceI0_marshaled, ____colorsCode1_marshaled);
+
+	// Marshaling cleanup of parameter U27___deviceI0U27 native representation
+	il2cpp_codegen_marshal_free(____deviceI0_marshaled);
+	____deviceI0_marshaled = NULL;
+
+	// Marshaling cleanup of parameter U27___colorsCode1U27 native representation
+	il2cpp_codegen_marshal_free(____colorsCode1_marshaled);
+	____colorsCode1_marshaled = NULL;
+
+}
+#if !FORCE_PINVOKE_INTERNAL
+IL2CPP_EXTERN_C void DEFAULT_CALL ios_turnDeviceLedOn(char*, char*);
+#endif
+// System.Void MetaWearNative::ios_turnDeviceLedOn(System.String,System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaWearNative_ios_turnDeviceLedOn_mBE1B910E222D9D92211D0E9D1D780B65F3093121 (String_t* ___deviceId0, String_t* ___colorsCode1, const RuntimeMethod* method)
+{
+	typedef void (DEFAULT_CALL *PInvokeFunc) (char*, char*);
 
 	// Marshaling of parameter U27___deviceId0U27 to native representation
 	char* ____deviceId0_marshaled = NULL;
 	____deviceId0_marshaled = il2cpp_codegen_marshal_string(___deviceId0);
 
+	// Marshaling of parameter U27___colorsCode1U27 to native representation
+	char* ____colorsCode1_marshaled = NULL;
+	____colorsCode1_marshaled = il2cpp_codegen_marshal_string(___colorsCode1);
+
 	// Native function invocation
-	reinterpret_cast<PInvokeFunc>(ios_stopDeviceLeds)(____deviceId0_marshaled);
+	reinterpret_cast<PInvokeFunc>(ios_turnDeviceLedOn)(____deviceId0_marshaled, ____colorsCode1_marshaled);
 
 	// Marshaling cleanup of parameter U27___deviceId0U27 native representation
 	il2cpp_codegen_marshal_free(____deviceId0_marshaled);
 	____deviceId0_marshaled = NULL;
+
+	// Marshaling cleanup of parameter U27___colorsCode1U27 native representation
+	il2cpp_codegen_marshal_free(____colorsCode1_marshaled);
+	____colorsCode1_marshaled = NULL;
 
 }
 #if !FORCE_PINVOKE_INTERNAL
@@ -2076,21 +2226,43 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaWearNative_StartFlashingDevice_m8854
 		return;
 	}
 }
-// System.Void MetaWearNative::StopDeviceLeds(DeviceCard)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaWearNative_StopDeviceLeds_mB9C2DD2E8DEA86F5083B2A72782D08B6F8A008BA (DeviceCard_t82A8F9A320CB17DAFEED5F5176B8BE78F792DD16 * ___device0, const RuntimeMethod* method)
+// System.Void MetaWearNative::StartDeviceLed(DeviceCard,MetaWearNative_LedColors)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaWearNative_StartDeviceLed_mAB0F6DB18C7A7B21FF0C5C49AE43652B0B404714 (DeviceCard_t82A8F9A320CB17DAFEED5F5176B8BE78F792DD16 * ___device0, int32_t ___color1, const RuntimeMethod* method)
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_method (MetaWearNative_StopDeviceLeds_mB9C2DD2E8DEA86F5083B2A72782D08B6F8A008BA_MetadataUsageId);
+		il2cpp_codegen_initialize_method (MetaWearNative_StartDeviceLed_mAB0F6DB18C7A7B21FF0C5C49AE43652B0B404714_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
 		DeviceCard_t82A8F9A320CB17DAFEED5F5176B8BE78F792DD16 * L_0 = ___device0;
 		NullCheck(L_0);
 		String_t* L_1 = DeviceCard_get_id_m9AC5D3AB4ED36D0EDC7BD94A7ACDEF3595CCCA3F(L_0, /*hidden argument*/NULL);
+		int32_t L_2 = ___color1;
 		IL2CPP_RUNTIME_CLASS_INIT(MetaWearNative_t3A995D5B3FB55C18B4195CA9135EE54C5F7AB287_il2cpp_TypeInfo_var);
-		MetaWearNative_ios_stopDeviceLeds_m3C0247A3EF2B74FA64E9C2898F7E84EDB5CD09B7(L_1, /*hidden argument*/NULL);
+		String_t* L_3 = MetaWearNative_LedColorCode_m8170EFAFA718EDB3D29C9E513F7AEFA99C4E9D3D(L_2, /*hidden argument*/NULL);
+		MetaWearNative_ios_turnDeviceLedOn_mBE1B910E222D9D92211D0E9D1D780B65F3093121(L_1, L_3, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void MetaWearNative::StopDeviceLeds(DeviceCard,MetaWearNative_LedColors)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaWearNative_StopDeviceLeds_m38FD70457E7BE829F970756C3DD4683F2FCFBE44 (DeviceCard_t82A8F9A320CB17DAFEED5F5176B8BE78F792DD16 * ___device0, int32_t ___color1, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (MetaWearNative_StopDeviceLeds_m38FD70457E7BE829F970756C3DD4683F2FCFBE44_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		DeviceCard_t82A8F9A320CB17DAFEED5F5176B8BE78F792DD16 * L_0 = ___device0;
+		NullCheck(L_0);
+		String_t* L_1 = DeviceCard_get_id_m9AC5D3AB4ED36D0EDC7BD94A7ACDEF3595CCCA3F(L_0, /*hidden argument*/NULL);
+		int32_t L_2 = ___color1;
+		IL2CPP_RUNTIME_CLASS_INIT(MetaWearNative_t3A995D5B3FB55C18B4195CA9135EE54C5F7AB287_il2cpp_TypeInfo_var);
+		String_t* L_3 = MetaWearNative_LedColorCode_m8170EFAFA718EDB3D29C9E513F7AEFA99C4E9D3D(L_2, /*hidden argument*/NULL);
+		MetaWearNative_ios_stopDeviceLeds_m18799FC7759C72683B265BD0A90B1690BA776738(L_1, L_3, /*hidden argument*/NULL);
 		return;
 	}
 }
@@ -2125,6 +2297,96 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaWearNative_ForgetAllRememberdDevices
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(MetaWearNative_t3A995D5B3FB55C18B4195CA9135EE54C5F7AB287_il2cpp_TypeInfo_var);
 		MetaWearNative_ios_forgetRememberedDevices_m864F71318DB4A2BF72B6373BFEDF220092F1EDE4(/*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void MetaWearNative::StartAccelerometerStream(DeviceCard)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaWearNative_StartAccelerometerStream_m15F15B5595F92E06827CA7ED0C3ED7941EB85DE9 (DeviceCard_t82A8F9A320CB17DAFEED5F5176B8BE78F792DD16 * ___forDevice0, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (MetaWearNative_StartAccelerometerStream_m15F15B5595F92E06827CA7ED0C3ED7941EB85DE9_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t7B5FCB117E2FD63B6838BC52821B252E2BFB61C4_il2cpp_TypeInfo_var);
+		Debug_LogWarning_m37338644DC81F640CCDFEAE35A223F0E965F0568(_stringLiteral8131D2FF239E771247C0577DF864163B749FF518, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void MetaWearNative::StopAccelerometerStream(DeviceCard)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaWearNative_StopAccelerometerStream_m9347B74549BDCF4575FD6DB701B1C0E2B9341815 (DeviceCard_t82A8F9A320CB17DAFEED5F5176B8BE78F792DD16 * ___forDevice0, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (MetaWearNative_StopAccelerometerStream_m9347B74549BDCF4575FD6DB701B1C0E2B9341815_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t7B5FCB117E2FD63B6838BC52821B252E2BFB61C4_il2cpp_TypeInfo_var);
+		Debug_LogWarning_m37338644DC81F640CCDFEAE35A223F0E965F0568(_stringLiteral66560884E0ED2078CBBE79F4EADCA71ADAE84723, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void MetaWearNative::StartSensorFusionStream(DeviceCard)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaWearNative_StartSensorFusionStream_m00B16A06845A318B4AA84F4AECA55D32E82A5D05 (DeviceCard_t82A8F9A320CB17DAFEED5F5176B8BE78F792DD16 * ___forDevice0, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (MetaWearNative_StartSensorFusionStream_m00B16A06845A318B4AA84F4AECA55D32E82A5D05_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t7B5FCB117E2FD63B6838BC52821B252E2BFB61C4_il2cpp_TypeInfo_var);
+		Debug_LogWarning_m37338644DC81F640CCDFEAE35A223F0E965F0568(_stringLiteral8732F91E94782290F8F85CF2814F082013C33C2E, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void MetaWearNative::StopSensorFusionStream(DeviceCard)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaWearNative_StopSensorFusionStream_mD2057F3A0EF213474491E71775E747940FB1D487 (DeviceCard_t82A8F9A320CB17DAFEED5F5176B8BE78F792DD16 * ___forDevice0, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (MetaWearNative_StopSensorFusionStream_mD2057F3A0EF213474491E71775E747940FB1D487_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t7B5FCB117E2FD63B6838BC52821B252E2BFB61C4_il2cpp_TypeInfo_var);
+		Debug_LogWarning_m37338644DC81F640CCDFEAE35A223F0E965F0568(_stringLiteral7DDD8F15567763EA0429A4B93B90D2A732DB7B45, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void MetaWearNative::DisconnectDevice(DeviceCard)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaWearNative_DisconnectDevice_m6A7446C039A549D13F8364BBAA706A18610C2776 (DeviceCard_t82A8F9A320CB17DAFEED5F5176B8BE78F792DD16 * ___device0, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (MetaWearNative_DisconnectDevice_m6A7446C039A549D13F8364BBAA706A18610C2776_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t7B5FCB117E2FD63B6838BC52821B252E2BFB61C4_il2cpp_TypeInfo_var);
+		Debug_LogWarning_m37338644DC81F640CCDFEAE35A223F0E965F0568(_stringLiteralA05252FC2198C4CA4CC293F8318AAA9389B66EFE, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void MetaWearNative::DisconnectAllDevices()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaWearNative_DisconnectAllDevices_m8FD74C145E1E10095877823B41F1FBA9D29EB5D2 (const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (MetaWearNative_DisconnectAllDevices_m8FD74C145E1E10095877823B41F1FBA9D29EB5D2_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t7B5FCB117E2FD63B6838BC52821B252E2BFB61C4_il2cpp_TypeInfo_var);
+		Debug_LogWarning_m37338644DC81F640CCDFEAE35A223F0E965F0568(_stringLiteralB78DA89BD945BBBF7FE4233E0651B0354488EE87, /*hidden argument*/NULL);
 		return;
 	}
 }
@@ -2397,6 +2659,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaWearNative__ctor_m56002F84DDCF96F8F5
 		return;
 	}
 }
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
