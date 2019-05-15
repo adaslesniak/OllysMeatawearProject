@@ -38,14 +38,13 @@
 		<type fullname="UnityEngine.RenderSettings" preserve="nothing"/>
 		<type fullname="UnityEngine.LightProbes" preserve="nothing"/>
 	</assembly>
-	<assembly fullname="Assembly-CSharp-firstpass">
-		<type fullname="iOSMessageReceiver" preserve="nothing"/>
-	</assembly>
 	<assembly fullname="Assembly-CSharp">
 		<type fullname="AvailableDevicesViewCtrl" preserve="nothing"/>
+		<type fullname="DeviceTableCell" preserve="nothing"/>
 		<type fullname="ExecuteIosCode" preserve="nothing"/>
 		<type fullname="HomeViewCtrl" preserve="nothing"/>
 		<type fullname="NameDeviceViewCtrl" preserve="nothing"/>
+		<type fullname="SetupDeviceConfirmationPanel" preserve="nothing"/>
 		<type fullname="SetupDeviceViewCtrl" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="UnityEditor.Graphs">
@@ -54,6 +53,9 @@
 		<type fullname="UnityEditor.Graphs.AnimationStateMachine.Graph" preserve="nothing"/>
 		<type fullname="UnityEditor.Graphs.AnimationStateMachine.GraphGUI" preserve="nothing"/>
 		<type fullname="UnityEditor.Graphs.AnimatorControllerTool" preserve="nothing"/>
+	</assembly>
+	<assembly fullname="UnityEditor.TestRunner">
+		<type fullname="UnityEditor.TestTools.TestRunner.TestListCacheData" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="UnityEngine.UI">
 		<type fullname="UnityEngine.EventSystems.EventSystem" preserve="nothing"/>

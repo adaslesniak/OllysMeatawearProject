@@ -71,11 +71,14 @@ public class SetupDeviceViewCtrl : MonoBehaviour
         if(touchedDevice == nearest) {
             return; 
         }
+        print("here...");
         if(touchedDevice != null) {
             MetaWearNative.StopDeviceLeds(touchedDevice);
         }
+        print("and there...");
         touchedDevice = nearest;
         MetaWearNative.StartFlashingDevice(touchedDevice);
+        print("and even here...");
         EnableSetupUI(true);
         //Invoke("Scan", 1.66f); //to check if dissapeared from range
     }

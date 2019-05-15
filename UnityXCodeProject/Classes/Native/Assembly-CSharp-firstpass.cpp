@@ -237,21 +237,12 @@ struct MethodInfo_t;
 struct String_t;
 // System.Void
 struct Void_t22962CB4C05B1D89B55A6E1139F0E87A90987017;
-// UnityEngine.Component
-struct Component_t05064EF382ABCAF4B8C94F8A350EA85184C26621;
-// UnityEngine.GameObject
-struct GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F;
 // UnityEngine.MonoBehaviour
 struct MonoBehaviour_t4A60845CF505405AF8BE8C61CC07F75CADEF6429;
-// UnityEngine.Object
-struct Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0;
-// iOSMessageReceiver
-struct iOSMessageReceiver_t66DDFDF4CD60A2626BC57AB5C4E2D359EE8C2654;
 
 IL2CPP_EXTERN_C RuntimeClass* DateTime_t349B7449FBAAFF4192636E2B7A07694DA9236132_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Debug_t7B5FCB117E2FD63B6838BC52821B252E2BFB61C4_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* DeviceCard_t82A8F9A320CB17DAFEED5F5176B8BE78F792DD16_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeClass* GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* IDisposable_t7218B22548186B208D65EA5B7870503810A2D15A_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* IEnumerator_1_tA3DFFFD6133C0C5607FFA19B3E4E7395E872113C_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* IEnumerator_t8789118187258CC88B77AFAC6315B5AF87D3E18A_il2cpp_TypeInfo_var;
@@ -262,9 +253,7 @@ IL2CPP_EXTERN_C RuntimeClass* List_1_t6274AC1DD01F89225F859A773F66F814F4B1C244_i
 IL2CPP_EXTERN_C RuntimeClass* MessageReceiver_tBD1F6A0FF4784056C8B6B8D73B35F9ED4A37AC3C_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* MetaWearNative_t3A995D5B3FB55C18B4195CA9135EE54C5F7AB287_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* ObjectU5BU5D_t3C9242B5C88A48B2A5BD9FDA6CD0024E792AF08A_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeClass* Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* VoidWithDeviceCards_t5E8637B3777760B8CEE1D784726E9A7EA5FCE2DE_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeClass* iOSMessageReceiver_t66DDFDF4CD60A2626BC57AB5C4E2D359EE8C2654_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C String_t* _stringLiteral08978886DEFAF5ABA2F28E11E2378BDC5BE800E6;
 IL2CPP_EXTERN_C String_t* _stringLiteral091385BE99B45F459A231582D583EC9F3FA3D194;
 IL2CPP_EXTERN_C String_t* _stringLiteral4C10E261F4AFB978699EB377C823EB45CBEB0365;
@@ -281,20 +270,17 @@ IL2CPP_EXTERN_C String_t* _stringLiteral7DDD8F15567763EA0429A4B93B90D2A732DB7B45
 IL2CPP_EXTERN_C String_t* _stringLiteral8131D2FF239E771247C0577DF864163B749FF518;
 IL2CPP_EXTERN_C String_t* _stringLiteral8732F91E94782290F8F85CF2814F082013C33C2E;
 IL2CPP_EXTERN_C String_t* _stringLiteral87EA5DFC8B8E384D848979496E706390B497E547;
-IL2CPP_EXTERN_C String_t* _stringLiteral98AD5D23586C10E2597C734246CEA2660F96F7E8;
 IL2CPP_EXTERN_C String_t* _stringLiteralA05252FC2198C4CA4CC293F8318AAA9389B66EFE;
 IL2CPP_EXTERN_C String_t* _stringLiteralA17C9AAA61E80A1BF71D0D850AF4E5BAA9800BBD;
 IL2CPP_EXTERN_C String_t* _stringLiteralA4CD7B522EA818E01A99E31500EFFC64F6D31C15;
 IL2CPP_EXTERN_C String_t* _stringLiteralB78DA89BD945BBBF7FE4233E0651B0354488EE87;
 IL2CPP_EXTERN_C String_t* _stringLiteralBC74F4F071A5A33F00AB88A6D6385B5E6638B86C;
-IL2CPP_EXTERN_C String_t* _stringLiteralC32782643F86448DD0CF8F2A6E1B2A3F7AA0CCAB;
 IL2CPP_EXTERN_C String_t* _stringLiteralD87C448044DEFB778F33158D8CCF94A20531D600;
 IL2CPP_EXTERN_C String_t* _stringLiteralD965050D70187FFF0BDFECDF3D67928DE5867AD7;
 IL2CPP_EXTERN_C String_t* _stringLiteralE2DD208E6EE19DB2DDC63FC676717375A20D7427;
 IL2CPP_EXTERN_C String_t* _stringLiteralF0DB24E44F63002A7AF891222D783F3C0C9392BE;
 IL2CPP_EXTERN_C const RuntimeMethod* Extensions_Value_TisInt32_t585191389E07734F19F3156FF88FB3EF4800D102_mFDA0103FD7D2695561560B82EADA05C57D842AFB_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Extensions_Value_TisString_t_mD91A9B85F9FD8D044137D3187CB3530F9EB0F358_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* GameObject_AddComponent_TisiOSMessageReceiver_t66DDFDF4CD60A2626BC57AB5C4E2D359EE8C2654_m8B90E23F458A26FE94EBF513F7590DE8A17988BB_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_Add_m602D3DDCDE4D203D2F49632DFBF2C7E95C49E141_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1__ctor_mBC32F9E9D15C57CCB05B208CFCBB4C254BC9C3C0_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Count_m88CABD299715B67894E9CDDDDE1ADE364D10F8C3_RuntimeMethod_var;
@@ -321,9 +307,6 @@ IL2CPP_EXTERN_C const uint32_t MetaWearNative_add_onKnowDevicesScaned_m5E2A35B67
 IL2CPP_EXTERN_C const uint32_t MetaWearNative_add_onNewDevicesScaned_m5658362A8D46052A7BBA10248ECA2FDB0DD7C3C6_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t MetaWearNative_remove_onKnowDevicesScaned_m0EA89C39B1073EEDAD3E702F1B8D94AA02434DAD_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t MetaWearNative_remove_onNewDevicesScaned_m6D09CFDCD2EF7E356AA910024100E09541633D24_MetadataUsageId;
-IL2CPP_EXTERN_C const uint32_t iOSMessageReceiver_Awake_m0E78739D5E9876B702D0219CD83179FF8C89889C_MetadataUsageId;
-IL2CPP_EXTERN_C const uint32_t iOSMessageReceiver_get_instance_m68D3B5B648CE2B772D449B7B2C2EF6626F66F8F3_MetadataUsageId;
-IL2CPP_EXTERN_C const uint32_t iOSMessageReceiver_onMessageFromiOS_m72A95A6FE316B9190907901DDC100B71A908911B_MetadataUsageId;
 struct Delegate_t_marshaled_com;
 struct Delegate_t_marshaled_pinvoke;
 
@@ -1312,15 +1295,6 @@ public:
 };
 
 
-// UnityEngine.GameObject
-struct  GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F  : public Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0
-{
-public:
-
-public:
-};
-
-
 // MetaWearNative_MessageReceiver
 struct  MessageReceiver_tBD1F6A0FF4784056C8B6B8D73B35F9ED4A37AC3C  : public MulticastDelegate_t
 {
@@ -1399,32 +1373,6 @@ public:
 	{
 		___onKnowDevicesScaned_5 = value;
 		Il2CppCodeGenWriteBarrier((void**)(&___onKnowDevicesScaned_5), (void*)value);
-	}
-};
-
-
-// iOSMessageReceiver
-struct  iOSMessageReceiver_t66DDFDF4CD60A2626BC57AB5C4E2D359EE8C2654  : public MonoBehaviour_t4A60845CF505405AF8BE8C61CC07F75CADEF6429
-{
-public:
-
-public:
-};
-
-struct iOSMessageReceiver_t66DDFDF4CD60A2626BC57AB5C4E2D359EE8C2654_StaticFields
-{
-public:
-	// iOSMessageReceiver iOSMessageReceiver::_instance
-	iOSMessageReceiver_t66DDFDF4CD60A2626BC57AB5C4E2D359EE8C2654 * ____instance_4;
-
-public:
-	inline static int32_t get_offset_of__instance_4() { return static_cast<int32_t>(offsetof(iOSMessageReceiver_t66DDFDF4CD60A2626BC57AB5C4E2D359EE8C2654_StaticFields, ____instance_4)); }
-	inline iOSMessageReceiver_t66DDFDF4CD60A2626BC57AB5C4E2D359EE8C2654 * get__instance_4() const { return ____instance_4; }
-	inline iOSMessageReceiver_t66DDFDF4CD60A2626BC57AB5C4E2D359EE8C2654 ** get_address_of__instance_4() { return &____instance_4; }
-	inline void set__instance_4(iOSMessageReceiver_t66DDFDF4CD60A2626BC57AB5C4E2D359EE8C2654 * value)
-	{
-		____instance_4 = value;
-		Il2CppCodeGenWriteBarrier((void**)(&____instance_4), (void*)value);
 	}
 };
 
@@ -1517,8 +1465,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1__ctor_mC832F1AC0F814BAEB19175F5D7
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1_Add_m6930161974C7504C80F52EC379EF012387D43138_gshared (List_1_t05CC3C859AB5E6024394EF9A42E3E696628CA02D * __this, RuntimeObject * p0, const RuntimeMethod* method);
 // System.Int32 System.Collections.Generic.List`1<System.Object>::get_Count()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m507C9149FF7F83AAC72C29091E745D557DA47D22_gshared (List_1_t05CC3C859AB5E6024394EF9A42E3E696628CA02D * __this, const RuntimeMethod* method);
-// !!0 UnityEngine.GameObject::AddComponent<System.Object>()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject * GameObject_AddComponent_TisRuntimeObject_mCB8164FB05F8DCF99E098ADC5E13E96FEF6FC4E9_gshared (GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F * __this, const RuntimeMethod* method);
 
 // System.Void DeviceCard::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DeviceCard__ctor_mB95AE5C5BFB661A4AEF8D725AEEAC0C3305E3182 (DeviceCard_t82A8F9A320CB17DAFEED5F5176B8BE78F792DD16 * __this, const RuntimeMethod* method);
@@ -1611,25 +1557,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VoidWithDeviceCards_Invoke_mD8638D3A75F3
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Concat_mDD2E38332DED3A8C088D38D78A0E0BEB5091DA64 (String_t* p0, String_t* p1, String_t* p2, String_t* p3, const RuntimeMethod* method);
 // System.Void UnityEngine.MonoBehaviour::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviour__ctor_mEAEC84B222C60319D593E456D769B3311DFCEF97 (MonoBehaviour_t4A60845CF505405AF8BE8C61CC07F75CADEF6429 * __this, const RuntimeMethod* method);
-// System.Boolean UnityEngine.Object::op_Equality(UnityEngine.Object,UnityEngine.Object)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Object_op_Equality_mBC2401774F3BE33E8CF6F0A8148E66C95D6CFF1C (Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0 * p0, Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0 * p1, const RuntimeMethod* method);
-// System.Void UnityEngine.GameObject::.ctor(System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameObject__ctor_mBB454E679AD9CF0B84D3609A01E6A9753ACF4686 (GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F * __this, String_t* p0, const RuntimeMethod* method);
-// !!0 UnityEngine.GameObject::AddComponent<iOSMessageReceiver>()
-inline iOSMessageReceiver_t66DDFDF4CD60A2626BC57AB5C4E2D359EE8C2654 * GameObject_AddComponent_TisiOSMessageReceiver_t66DDFDF4CD60A2626BC57AB5C4E2D359EE8C2654_m8B90E23F458A26FE94EBF513F7590DE8A17988BB (GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F * __this, const RuntimeMethod* method)
-{
-	return ((  iOSMessageReceiver_t66DDFDF4CD60A2626BC57AB5C4E2D359EE8C2654 * (*) (GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F *, const RuntimeMethod*))GameObject_AddComponent_TisRuntimeObject_mCB8164FB05F8DCF99E098ADC5E13E96FEF6FC4E9_gshared)(__this, method);
-}
-// System.Boolean UnityEngine.Object::op_Inequality(UnityEngine.Object,UnityEngine.Object)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Object_op_Inequality_m31EF58E217E8F4BDD3E409DEF79E1AEE95874FC1 (Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0 * p0, Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0 * p1, const RuntimeMethod* method);
-// UnityEngine.GameObject UnityEngine.Component::get_gameObject()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F * Component_get_gameObject_m0B0570BA8DDD3CD78A9DB568EA18D7317686603C (Component_t05064EF382ABCAF4B8C94F8A350EA85184C26621 * __this, const RuntimeMethod* method);
-// System.Void UnityEngine.Object::Destroy(UnityEngine.Object)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object_Destroy_m23B4562495BA35A74266D4372D45368F8C05109A (Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0 * p0, const RuntimeMethod* method);
-// System.Void UnityEngine.Object::DontDestroyOnLoad(UnityEngine.Object)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object_DontDestroyOnLoad_m4DC90770AD6084E4B1B8489C6B41205DC020C207 (Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0 * p0, const RuntimeMethod* method);
-// System.String System.String::Concat(System.String,System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Concat_mB78D0094592718DA6D5DB6C712A9C225631666BE (String_t* p0, String_t* p1, const RuntimeMethod* method);
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -2975,103 +2902,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* VoidWithDeviceCards_BeginInvok
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VoidWithDeviceCards_EndInvoke_mD96B60A43DA0EB0FCFF92289017D7DB69A609E6E (VoidWithDeviceCards_t5E8637B3777760B8CEE1D784726E9A7EA5FCE2DE * __this, RuntimeObject* ___result0, const RuntimeMethod* method)
 {
 	il2cpp_codegen_delegate_end_invoke((Il2CppAsyncResult*) ___result0, 0);
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-// iOSMessageReceiver iOSMessageReceiver::get_instance()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR iOSMessageReceiver_t66DDFDF4CD60A2626BC57AB5C4E2D359EE8C2654 * iOSMessageReceiver_get_instance_m68D3B5B648CE2B772D449B7B2C2EF6626F66F8F3 (const RuntimeMethod* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (iOSMessageReceiver_get_instance_m68D3B5B648CE2B772D449B7B2C2EF6626F66F8F3_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		iOSMessageReceiver_t66DDFDF4CD60A2626BC57AB5C4E2D359EE8C2654 * L_0 = ((iOSMessageReceiver_t66DDFDF4CD60A2626BC57AB5C4E2D359EE8C2654_StaticFields*)il2cpp_codegen_static_fields_for(iOSMessageReceiver_t66DDFDF4CD60A2626BC57AB5C4E2D359EE8C2654_il2cpp_TypeInfo_var))->get__instance_4();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Equality_mBC2401774F3BE33E8CF6F0A8148E66C95D6CFF1C(L_0, (Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_001d;
-		}
-	}
-	{
-		GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F * L_2 = (GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F *)il2cpp_codegen_object_new(GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F_il2cpp_TypeInfo_var);
-		GameObject__ctor_mBB454E679AD9CF0B84D3609A01E6A9753ACF4686(L_2, _stringLiteralC32782643F86448DD0CF8F2A6E1B2A3F7AA0CCAB, /*hidden argument*/NULL);
-		NullCheck(L_2);
-		GameObject_AddComponent_TisiOSMessageReceiver_t66DDFDF4CD60A2626BC57AB5C4E2D359EE8C2654_m8B90E23F458A26FE94EBF513F7590DE8A17988BB(L_2, /*hidden argument*/GameObject_AddComponent_TisiOSMessageReceiver_t66DDFDF4CD60A2626BC57AB5C4E2D359EE8C2654_m8B90E23F458A26FE94EBF513F7590DE8A17988BB_RuntimeMethod_var);
-	}
-
-IL_001d:
-	{
-		iOSMessageReceiver_t66DDFDF4CD60A2626BC57AB5C4E2D359EE8C2654 * L_3 = ((iOSMessageReceiver_t66DDFDF4CD60A2626BC57AB5C4E2D359EE8C2654_StaticFields*)il2cpp_codegen_static_fields_for(iOSMessageReceiver_t66DDFDF4CD60A2626BC57AB5C4E2D359EE8C2654_il2cpp_TypeInfo_var))->get__instance_4();
-		return L_3;
-	}
-}
-// System.Void iOSMessageReceiver::Awake()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSMessageReceiver_Awake_m0E78739D5E9876B702D0219CD83179FF8C89889C (iOSMessageReceiver_t66DDFDF4CD60A2626BC57AB5C4E2D359EE8C2654 * __this, const RuntimeMethod* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (iOSMessageReceiver_Awake_m0E78739D5E9876B702D0219CD83179FF8C89889C_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		iOSMessageReceiver_t66DDFDF4CD60A2626BC57AB5C4E2D359EE8C2654 * L_0 = ((iOSMessageReceiver_t66DDFDF4CD60A2626BC57AB5C4E2D359EE8C2654_StaticFields*)il2cpp_codegen_static_fields_for(iOSMessageReceiver_t66DDFDF4CD60A2626BC57AB5C4E2D359EE8C2654_il2cpp_TypeInfo_var))->get__instance_4();
-		IL2CPP_RUNTIME_CLASS_INIT(Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m31EF58E217E8F4BDD3E409DEF79E1AEE95874FC1(L_0, (Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
-		{
-			goto IL_0019;
-		}
-	}
-	{
-		GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F * L_2 = Component_get_gameObject_m0B0570BA8DDD3CD78A9DB568EA18D7317686603C(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0_il2cpp_TypeInfo_var);
-		Object_Destroy_m23B4562495BA35A74266D4372D45368F8C05109A(L_2, /*hidden argument*/NULL);
-		return;
-	}
-
-IL_0019:
-	{
-		((iOSMessageReceiver_t66DDFDF4CD60A2626BC57AB5C4E2D359EE8C2654_StaticFields*)il2cpp_codegen_static_fields_for(iOSMessageReceiver_t66DDFDF4CD60A2626BC57AB5C4E2D359EE8C2654_il2cpp_TypeInfo_var))->set__instance_4(__this);
-		GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F * L_3 = Component_get_gameObject_m0B0570BA8DDD3CD78A9DB568EA18D7317686603C(__this, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0_il2cpp_TypeInfo_var);
-		Object_DontDestroyOnLoad_m4DC90770AD6084E4B1B8489C6B41205DC020C207(L_3, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void iOSMessageReceiver::onMessageFromiOS(System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSMessageReceiver_onMessageFromiOS_m72A95A6FE316B9190907901DDC100B71A908911B (iOSMessageReceiver_t66DDFDF4CD60A2626BC57AB5C4E2D359EE8C2654 * __this, String_t* ___json0, const RuntimeMethod* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (iOSMessageReceiver_onMessageFromiOS_m72A95A6FE316B9190907901DDC100B71A908911B_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		String_t* L_0 = ___json0;
-		String_t* L_1 = String_Concat_mB78D0094592718DA6D5DB6C712A9C225631666BE(_stringLiteral98AD5D23586C10E2597C734246CEA2660F96F7E8, L_0, /*hidden argument*/NULL);
-		MonoBehaviour_print_m171D860AF3370C46648FE8F3EE3E0E6535E1C774(L_1, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void iOSMessageReceiver::.ctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSMessageReceiver__ctor_m30A0E2119C4FE3F9C745996326AB491C80EF0BB8 (iOSMessageReceiver_t66DDFDF4CD60A2626BC57AB5C4E2D359EE8C2654 * __this, const RuntimeMethod* method)
-{
-	{
-		MonoBehaviour__ctor_mEAEC84B222C60319D593E456D769B3311DFCEF97(__this, /*hidden argument*/NULL);
-		return;
-	}
 }
 #ifdef __clang__
 #pragma clang diagnostic pop
