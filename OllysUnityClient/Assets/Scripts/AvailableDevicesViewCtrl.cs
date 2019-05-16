@@ -15,11 +15,13 @@ public class AvailableDevicesViewCtrl : MonoBehaviour {
 
     public void StartScanning() {
         isScanning = true;
+        MetaWearNative.onKnowDevicesScaned += OnAvailableDevicesScanned;
         Scan();
     }
     void StopScanning() {
         isScanning = false;
         CancelInvoke("Scan");
+        MetaWearNative.onKnowDevicesScaned -= OnAvailableDevicesScanned;
     }
 
     // Start is called before the first frame update
@@ -32,7 +34,6 @@ public class AvailableDevicesViewCtrl : MonoBehaviour {
         prototypeCell = GetComponentInChildren<DeviceTableCell>();
         cellsContainer = prototypeCell.transform.parent;
         prototypeCell.gameObject.SetActive(false);
-        MetaWearNative.onKnowDevicesScaned += OnAvailableDevicesScanned;
     }
 
     void AddCell(DeviceCard forDevice) {
@@ -97,7 +98,7 @@ public class AvailableDevicesViewCtrl : MonoBehaviour {
             AddCell(found);
         }
         if (isScanning) {
-            Invoke("Scan", 1.05f);
+            //Invoke("Scan", 1.05f); //FIXME: uncomment that after debugged is stuff
         }
     }
 

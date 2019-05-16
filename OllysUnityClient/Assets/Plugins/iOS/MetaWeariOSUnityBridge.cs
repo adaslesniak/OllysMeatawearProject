@@ -45,7 +45,10 @@ public class MetaWearNative : MonoBehaviour {
     #region EXTERNAL_DECLARATIONS
     delegate void MessageReceiver(string topic, string message);
     const string DLL_LOCATION = "__Internal";
-//#if UNITY_IOS && !UNITY_EDITOR
+    //#if UNITY_IOS && !UNITY_EDITOR
+    [DllImport(DLL_LOCATION)]
+    private static extern void ios_loadSavedDevices();
+
     [DllImport(DLL_LOCATION)]
     private static extern void ios_scanForNewDevices();
 
@@ -73,29 +76,36 @@ public class MetaWearNative : MonoBehaviour {
     #endregion EXTERNAL_DECLARATIONS
 
 
+    public static void LoadSavedDevices() {
+        print("Unity-LoadSavedDevices...");
+        #if UNITY_IOS && !UNITY_EDITOR
+        ios_loadSavedDevices();
+        #endif
+    }
+
     public static void ScanForNewDevices() {
         print("MetaWeariOSUnity.ScanForNewDevices - calling C code");
-        #if UNITY_IOS && !UNITY_EDITOR 
+#if UNITY_IOS && !UNITY_EDITOR
         ios_scanForNewDevices();
-        #endif
+#endif
     }
 
     public static void ScanForKnownDevices() {
-        #if UNITY_IOS && !UNITY_EDITOR
+#if UNITY_IOS && !UNITY_EDITOR
         ios_scanForKnownDevices();
-        #endif
+#endif
     }
 
     public static void StartFlashingDevice(DeviceCard device) {
-        #if UNITY_IOS && !UNITY_EDITOR
+#if UNITY_IOS && !UNITY_EDITOR
         ios_startFlashingDevice(device.id);
-        #endif
+#endif
     }
 
     public static void StartDeviceLed(DeviceCard device, LedColors color) {
-        #if UNITY_IOS && !UNITY_EDITOR
+#if UNITY_IOS && !UNITY_EDITOR
         ios_turnDeviceLedOn(device.id, LedColorCode(color));
-        #endif
+#endif
     }
 
     public static void StopDeviceLeds(DeviceCard device, LedColors color = LedColors.ALL) {

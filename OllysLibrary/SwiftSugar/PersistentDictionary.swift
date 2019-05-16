@@ -15,6 +15,9 @@ public class PersistentDictionary {
         queue = DispatchQueue(label: storageKey)
         if let saved = UserDefaults.standard.dictionary(forKey: storageKey) {
             values = saved
+            print("got saved persistent dictionary [\(storageKey)]: \(values)")
+        } else {
+            print("there were nothing persisted for dictionary: \(storageKey)")
         }
     }
     
@@ -30,6 +33,7 @@ public class PersistentDictionary {
                     //FIXME: that should be run in background - not blocking dictionary in lock
                     UserDefaults.standard.set(values, forKey: queue.label)
                     UserDefaults.standard.synchronize()
+                    print("synchronizing PersistentDeicgtionary[\(queue.label)]: \(values)")
                 }
             }
         }

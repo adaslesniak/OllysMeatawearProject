@@ -28,24 +28,30 @@ public class DeviceTableCell : MonoBehaviour {
         redLedSwitch.onValueChanged.RemoveAllListeners();
         redLedSwitch.onValueChanged.AddListener((isOn) => {
             if (isOn) {
+                MetaWearNative.StartDeviceLed(controlled, MetaWearNative.LedColors.RED);
                 Debug.Log("NOT_IMPLEMENTED -> switching on red led");
             } else {
                 Debug.Log("NOT_IMPLEMENTED -> turning off single led");
+                MetaWearNative.StopDeviceLeds(controlled, MetaWearNative.LedColors.RED);
             }
         });
         blueLedSwitch.onValueChanged.RemoveAllListeners();
         blueLedSwitch.onValueChanged.AddListener((isOn) => {
             if (isOn) {
                 Debug.Log("NOT_IMPLEMENTED -> switching on blue led");
+                MetaWearNative.StartDeviceLed(controlled, MetaWearNative.LedColors.BLUE);
             } else {
                 Debug.Log("NOT_IMPLEMENTED -> turning off single led");
+                MetaWearNative.StopDeviceLeds(controlled, MetaWearNative.LedColors.BLUE);
             }
         });
         accelerometerSwitch.onValueChanged.RemoveAllListeners();
         accelerometerSwitch.onValueChanged.AddListener((isOn) => {
             if(isOn) {
+                MetaWearNative.StartAccelerometerStream(controlled);
                 Debug.Log("NOT_IMPLEMENTED - turning on accelerometer");
             } else {
+                MetaWearNative.StopAccelerometerStream(controlled);
                 Debug.Log("NOT_IMPLEMENTED - turning off accelerometer");
             }
         });

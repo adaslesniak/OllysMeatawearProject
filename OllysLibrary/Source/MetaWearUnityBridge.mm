@@ -8,7 +8,6 @@ NSString* iosString(const char* cString) {
 }
 
 extern "C" {
-
     
     void ios_scanForNewDevices() {
         printf("scanning for new devices... objc++ code");
@@ -21,12 +20,13 @@ extern "C" {
     }
     
     void ios_startFlashingDevice(const char* deviceId) {
-        //NSString* deviceIdString = [NSString stringWithCString:deviceId encoding:NSUTF8StringEncoding];
+        printf("ios_startFlashingDevice");
         NSString* idString = iosString(deviceId);
         [MetaWearUnity startFlashing:idString];
     }
     
     void ios_turnDeviceLedOn(const char* deviceId, const char* colorsCode) {
+        printf("ios_turnDeviceLedOn");
         NSString* idString = iosString(deviceId);
         NSString* colorString = iosString(colorsCode);
         [MetaWearUnity startLed:idString colorsCode:colorString];
@@ -34,18 +34,15 @@ extern "C" {
     
     void ios_stopDeviceLeds(const char* deviceId, const char* colorsCode) {
         printf("ios_stopDeviceLeds executed");
-        //NSString* deviceIdString = [NSString stringWithCString:deviceId encoding:NSUTF8StringEncoding];
-        //NSString* colorsId = [NSString stringWithCString:colorsCode encoding:NSUTF8StringEncoding];
         NSString* idString = iosString(deviceId);
         NSString* colorsString = iosString(colorsCode);
         [MetaWearUnity stopLeds:idString colorsCode:colorsString];
     }
     
     void ios_rememberDevice(const char* deviceId, const char* name) {
-        //NSString* deviceIdString = [NSString stringWithCString:deviceId encoding:NSUTF8StringEncoding];
-        //NSString* newName = [NSString stringWithCString:name encoding:NSUTF8StringEncoding];
         NSString* idString = iosString(deviceId);
         NSString* newName = iosString(name);
+        printf("ios_rememberDevice: %s", deviceId);
         [MetaWearUnity rememberDevice:idString as:newName];
     }
     
@@ -58,7 +55,14 @@ extern "C" {
         }];
     }
     
+    //this is kind of init... should be automatically triggered probably
+    void ios_loadSavedDevices() {
+        printf("ios_loadSavedDevices");
+        [Devices loadSavedDevices];
+    }
+    
     void ios_forgetRememberedDevices() {
+        printf("ios_forgetRememberedDevices");
         [MetaWearUnity forgetAllDevices];
     }
 }

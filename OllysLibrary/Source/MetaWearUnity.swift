@@ -91,8 +91,13 @@ import Foundation
     }
     
     private static func deviceCtrl(_ withId: String) -> DeviceCtrl? {
-        guard let theDevice = Devices.nearby.first(where: { $0.id.uuidString == withId }) else {
-            Log.error("can't start flashing, device not found among \(Devices.nearby.count)  nearby devices")
+        guard let theDevice = Devices.neighbourhood.first(where: { $0.id.uuidString == withId }) else {
+            var nearbyIds = "["
+            for something in Devices.neighbourhood {
+                nearbyIds += "\(something.id.uuidString);  "
+            }
+            nearbyIds += "]"
+            Log.error("device >\(withId)< not found among \(Devices.neighbourhood.count)  nearby devices: \(nearbyIds)")
             return nil
         }
         return theDevice

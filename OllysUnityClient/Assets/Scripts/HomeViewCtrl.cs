@@ -32,6 +32,9 @@ public class HomeViewCtrl : MonoBehaviour {
             BringInView(devicesView.transform);
             devicesView.StartScanning();
         });
+
+        //TODO: consider better place for that:
+        MetaWearNative.LoadSavedDevices();
     }
 
     private struct ViewTransition {

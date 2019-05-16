@@ -15,21 +15,25 @@ public class SetupDeviceViewCtrl : MonoBehaviour
     NameDeviceViewCtrl namingView;
 
 
-    void Start() {
+    void Awake() {
         var homeCtrl = FindObjectOfType<HomeViewCtrl>();
         backBtn.onClick.AddListener(() => {
             homeCtrl.SendViewAway(this.transform);
-            isToScan = false;
+            StopScannning();
         });
         confirmationPanel = FindObjectOfType<SetupDeviceConfirmationPanel>();
-        MetaWearNative.onNewDevicesScaned += OnNewDevicesFound;
         namingView = FindObjectOfType<NameDeviceViewCtrl>();
     }
 
     bool isToScan = false;
     public void StartScanningForNearestDevice() {
+        MetaWearNative.onNewDevicesScaned += OnNewDevicesFound;
         isToScan = true;
         Scan();
+    }
+    void StopScannning() {
+        MetaWearNative.onNewDevicesScaned -= OnNewDevicesFound;
+        isToScan = false;
     }
     private void Scan() {
         print("will call scan  (" + isToScan+")");
@@ -50,18 +54,21 @@ public class SetupDeviceViewCtrl : MonoBehaviour
             EnableSetupUI(false);
             Invoke("Scan", 1.34f);
         }
+        print("ns1");
         if (found.Count == 0) {
-            print("ups... nothing new under the sky");
+            print("nothing new under the sky");
             finishWithoutTouchedDevice();
             return;
         }
+        print("ns2");
         found.Sort((d1, d2) => {
             return d2.signalStrength.CompareTo(d1.signalStrength);
         });
         var nearest = found.First((device) => {
             return device.signalStrength <= 0;
         });
-        if(nearest.signalStrength < -44) { //FIXME: should be -39
+        print("ns3");
+        if (nearest.signalStrength < -44) { //FIXME: should be -39
             print("there is new device but too far away (signal= ("+nearest.signalStrength+ "); " +
             	" last is: " + found.Last().signalStrength +
             	" first is: " + found.First().signalStrength);
@@ -71,15 +78,16 @@ public class SetupDeviceViewCtrl : MonoBehaviour
         if(touchedDevice == nearest) {
             return; 
         }
-        print("here...");
-        if(touchedDevice != null) {
+        print("ns4");
+        if (touchedDevice != null) {
+            print("stopping device led flashing");
             MetaWearNative.StopDeviceLeds(touchedDevice);
         }
-        print("and there...");
+        print("ns5");
         touchedDevice = nearest;
         MetaWearNative.StartFlashingDevice(touchedDevice);
-        print("and even here...");
-        EnableSetupUI(true);
+        print("starting device flashing: " + nearest.id);
+        EnableSetupUI(true); 
         //Invoke("Scan", 1.66f); //to check if dissapeared from range
     }
 
@@ -92,6 +100,7 @@ public class SetupDeviceViewCtrl : MonoBehaviour
                 if (isConfrimed) {
                     LearnTouchedDevice();
                 } else if (touchedDevice != null) {
+                    print("calling to turn of flashing from SetupDeviceViewCtrl");
                     MetaWearNative.StopDeviceLeds(touchedDevice);
                 }
             });
@@ -109,7 +118,7 @@ public class SetupDeviceViewCtrl : MonoBehaviour
             MetaWearNative.StopDeviceLeds(touchedDevice);
             MetaWearNative.RememberDevice(touchedDevice, name);
             touchedDevice = null;
-            Invoke("Scan", 0.5f);
+            //Invoke("Scan", 0.5f); //FIXME: uncomment that after debugging
         });
     }
 }

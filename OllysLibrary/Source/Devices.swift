@@ -10,7 +10,7 @@ import Foundation
     private static var _known: [MetaWear]?
     private static var listeners = [() -> Void]()
     private static var names = PersistentDictionary("saved_devices")
-    static private(set) var nearby = [DeviceCtrl]()
+    static private(set) var neighbourhood = [DeviceCtrl]()
     
     public static func forgetRmemberedDevices() {
         Log.printDevices(Devices.known, header: "devices known before forgetting")
@@ -26,7 +26,7 @@ import Foundation
         }
     }
     
-    private static var isLoadingSavedDevices: Bool = false //false means not yet, but started
+    private static var isLoadingSavedDevices: Bool = false //true means not finished, but started
     @objc public static func loadSavedDevices() {
         guard !isLoadingSavedDevices else {
             Log.error("can't load saved devices while already loading them")
@@ -102,8 +102,8 @@ import Foundation
             Log.debug("there were \(devices.count) connected devices")
             tryCallback()
         }
-        scanForNearbyDevices { nearby in
-            for found in nearby {
+        scanForNearbyDevices { detected in
+            for found in detected {
                 if let info = known.first(where: {$0.id == found.id}) {
                     accessible.append(DeviceCtrl(found.device, as: info.name))
                 } else {
@@ -122,9 +122,9 @@ import Foundation
         var timeout = 1.9
         func finishScan() {
             MetaWearScanner.shared.stopScan()
-            let neigborhood = actualNeraby.map({ return DeviceCtrl($0) })
-            nearby = neigborhood //keeping reference to self, but then it's static class
-            whenDone(neigborhood)
+            let detected = actualNeraby.map({ return DeviceCtrl($0) })
+            neighbourhood = detected //keeping reference to self, but then it's static class
+            whenDone(detected)
             timeout = -1 //invalid
         }
         MetaWearScanner.shared.startScan(allowDuplicates: false) { found in
@@ -156,9 +156,9 @@ import Foundation
     }
     
     public static func scanForNewDevices(_ whendDone: @escaping ([DeviceCard:DeviceCtrl]) -> Void) {
-        scanForNearbyDevices { nearby in
+        scanForNearbyDevices { detected in
             var newDevices = [DeviceCard:DeviceCtrl]()
-            for found in nearby {
+            for found in detected {
                 if !known.contains(where: { $0.id == found.id }) {
                     let info = found.device.createCard()
                     newDevices[info] = found
