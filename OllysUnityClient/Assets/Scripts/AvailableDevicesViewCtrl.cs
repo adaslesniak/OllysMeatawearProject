@@ -39,6 +39,8 @@ public class AvailableDevicesViewCtrl : MonoBehaviour {
         var copy = Instantiate(prototypeCell, cellsContainer);
         copy.gameObject.SetActive(true);
         copy.Setup(forDevice);
+        copy.transform.SetParent(cellsContainer);
+        print("added cell for device: "+forDevice.name);
         //TODO: do the things with content view so it adjust it's size
     }
 
@@ -54,24 +56,30 @@ public class AvailableDevicesViewCtrl : MonoBehaviour {
     }
 
     void OnAvailableDevicesScanned(List<DeviceCard> scanResult) {
-        print("got result of scan in AvailableDevicesViewCtrl");
+        print($"got result of scan in AvailableDevicesViewCtrl: {scanResult.Count}");
         var newOnes = new List<DeviceCard>();
         var lostOnes = new List<DeviceTableCell>();
-        if(scanResult == null) {
-            print("scan result is nil");
-        } else {
-            print("scan result is: " + scanResult.Count);
-        }
-
         foreach(var found in scanResult) {
-            var existing = cells.Where((cell) => {
+            var isExisting = false;
+            foreach (var cell in cells) {
+                isExisting |= cell.controlled.id == found.id;
+            }
+            if(!isExisting) {
+                newOnes.Add(found);
+                print($"this is really new one: {found.name}");
+            } else {
+                print($"this was already known: {found.name}");
+            }
+            /*var existing = cells.Where((cell) => {
                 return cell.controlled.id == found.id;
             });
             if(existing == null) {
+                print("this is really new one");
                 newOnes.Add(found);
-            }
+            } else {
+                print("this was already known");
+            }*/
         }
-        print("ns1...");
         foreach(var existing in cells) {
             var updated = scanResult.Where((card) => {
                 return card.id == existing.controlled.id;
@@ -80,14 +88,13 @@ public class AvailableDevicesViewCtrl : MonoBehaviour {
                 lostOnes.Add(existing);
             }
         }
-        print("ns2...");
+        print($"prevoious cells: {cells.Count} new cells: {newOnes.Count} and forgotten: {lostOnes.Count}");
         foreach(var lost in lostOnes) {
             RemoveCell(lost);
         }
         foreach(var found in newOnes) {
             AddCell(found);
         }
-        print("ns3...");
         if (isScanning) {
             Invoke("Scan", 1.05f);
         }

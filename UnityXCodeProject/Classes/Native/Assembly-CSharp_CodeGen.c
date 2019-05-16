@@ -124,55 +124,51 @@ extern void U3CU3Ec__DisplayClass7_0__ctor_m3A6B626AB04895FDF422E9F997085E2D955E
 extern void U3CU3Ec__DisplayClass7_0_U3CStartU3Eb__0_m64CA0ABC611EADCD532F21B1520A2F723B272354 ();
 // 0x00000034 System.Void AvailableDevicesViewCtrl_<>c__DisplayClass11_0::.ctor()
 extern void U3CU3Ec__DisplayClass11_0__ctor_m3282BC1A0E7E52DB47E4DDBFBEBB597A0DB79F95 ();
-// 0x00000035 System.Boolean AvailableDevicesViewCtrl_<>c__DisplayClass11_0::<OnAvailableDevicesScanned>b__0(DeviceTableCell)
-extern void U3CU3Ec__DisplayClass11_0_U3COnAvailableDevicesScannedU3Eb__0_m928CC71022FE992065EF7ED17BD77D2C1BA35F80 ();
-// 0x00000036 System.Void AvailableDevicesViewCtrl_<>c__DisplayClass11_1::.ctor()
-extern void U3CU3Ec__DisplayClass11_1__ctor_mA810FE2F31B76301F8B6728DFD072620CCA42D6A ();
-// 0x00000037 System.Boolean AvailableDevicesViewCtrl_<>c__DisplayClass11_1::<OnAvailableDevicesScanned>b__1(DeviceCard)
-extern void U3CU3Ec__DisplayClass11_1_U3COnAvailableDevicesScannedU3Eb__1_m5771640CD70ED709F8230F34F9F0EF94AB591F83 ();
-// 0x00000038 System.Void DeviceTableCell_<>c::.cctor()
+// 0x00000035 System.Boolean AvailableDevicesViewCtrl_<>c__DisplayClass11_0::<OnAvailableDevicesScanned>b__0(DeviceCard)
+extern void U3CU3Ec__DisplayClass11_0_U3COnAvailableDevicesScannedU3Eb__0_m5B67E097FEF7FCA1A4F50A307E98F6BB7EFB5B6E ();
+// 0x00000036 System.Void DeviceTableCell_<>c::.cctor()
 extern void U3CU3Ec__cctor_mECA3FB17A70D1618B73777AEE1DCEEAA51E36C94 ();
-// 0x00000039 System.Void DeviceTableCell_<>c::.ctor()
+// 0x00000037 System.Void DeviceTableCell_<>c::.ctor()
 extern void U3CU3Ec__ctor_mCF8E95C46CBD55F4C58A45E7AC28BF13DBC37325 ();
-// 0x0000003A System.Void DeviceTableCell_<>c::<Setup>b__10_0(System.Boolean)
+// 0x00000038 System.Void DeviceTableCell_<>c::<Setup>b__10_0(System.Boolean)
 extern void U3CU3Ec_U3CSetupU3Eb__10_0_m8DB6F93D53BB25E1DE2F6A5E7FA708BCF46422A8 ();
-// 0x0000003B System.Void DeviceTableCell_<>c::<Setup>b__10_1(System.Boolean)
+// 0x00000039 System.Void DeviceTableCell_<>c::<Setup>b__10_1(System.Boolean)
 extern void U3CU3Ec_U3CSetupU3Eb__10_1_mA1CE50471DFA5282530BAF38ABA46F6DA7A2774E ();
-// 0x0000003C System.Void DeviceTableCell_<>c::<Setup>b__10_2(System.Boolean)
+// 0x0000003A System.Void DeviceTableCell_<>c::<Setup>b__10_2(System.Boolean)
 extern void U3CU3Ec_U3CSetupU3Eb__10_2_m4B05A2B87DF9FFD772559E895703B2D729C628DB ();
-// 0x0000003D System.Void DeviceTableCell_<>c::<Setup>b__10_3(System.Boolean)
+// 0x0000003B System.Void DeviceTableCell_<>c::<Setup>b__10_3(System.Boolean)
 extern void U3CU3Ec_U3CSetupU3Eb__10_3_m028F14CB1DFAA44926DBA0CF6652CA484F54D262 ();
-// 0x0000003E System.Void HomeViewCtrl_<>c__DisplayClass2_0::.ctor()
+// 0x0000003C System.Void HomeViewCtrl_<>c__DisplayClass2_0::.ctor()
 extern void U3CU3Ec__DisplayClass2_0__ctor_m0FC96644490C71E0DB5E0479231E7990E04709C7 ();
-// 0x0000003F System.Void HomeViewCtrl_<>c__DisplayClass2_0::<Start>b__0()
+// 0x0000003D System.Void HomeViewCtrl_<>c__DisplayClass2_0::<Start>b__0()
 extern void U3CU3Ec__DisplayClass2_0_U3CStartU3Eb__0_m0CA27A4C2E3987132DB924688546E2F28D771DBC ();
-// 0x00000040 System.Void HomeViewCtrl_<>c__DisplayClass2_0::<Start>b__1()
+// 0x0000003E System.Void HomeViewCtrl_<>c__DisplayClass2_0::<Start>b__1()
 extern void U3CU3Ec__DisplayClass2_0_U3CStartU3Eb__1_m0F8C287AA631585048D5110600CAE3EB871B8174 ();
-// 0x00000041 System.Void HomeViewCtrl_<MovingView>d__6::.ctor(System.Int32)
+// 0x0000003F System.Void HomeViewCtrl_<MovingView>d__6::.ctor(System.Int32)
 extern void U3CMovingViewU3Ed__6__ctor_m84FB29BB0040E1E6D410F0B06E29E27040E26D17 ();
-// 0x00000042 System.Void HomeViewCtrl_<MovingView>d__6::System.IDisposable.Dispose()
+// 0x00000040 System.Void HomeViewCtrl_<MovingView>d__6::System.IDisposable.Dispose()
 extern void U3CMovingViewU3Ed__6_System_IDisposable_Dispose_m6E9A954231C232734C26086471E27E9EC2D60061 ();
-// 0x00000043 System.Boolean HomeViewCtrl_<MovingView>d__6::MoveNext()
+// 0x00000041 System.Boolean HomeViewCtrl_<MovingView>d__6::MoveNext()
 extern void U3CMovingViewU3Ed__6_MoveNext_m51E9A3B5E0BF94D6806A04566BC4AC94C8BB837E ();
-// 0x00000044 System.Object HomeViewCtrl_<MovingView>d__6::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x00000042 System.Object HomeViewCtrl_<MovingView>d__6::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CMovingViewU3Ed__6_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m9AE7E29E3ED55DE55D7F07C4B053F27B8509CB49 ();
-// 0x00000045 System.Void HomeViewCtrl_<MovingView>d__6::System.Collections.IEnumerator.Reset()
+// 0x00000043 System.Void HomeViewCtrl_<MovingView>d__6::System.Collections.IEnumerator.Reset()
 extern void U3CMovingViewU3Ed__6_System_Collections_IEnumerator_Reset_m2901DA4748DB6EC55626BA8FBD12724E0C7AACAB ();
-// 0x00000046 System.Object HomeViewCtrl_<MovingView>d__6::System.Collections.IEnumerator.get_Current()
+// 0x00000044 System.Object HomeViewCtrl_<MovingView>d__6::System.Collections.IEnumerator.get_Current()
 extern void U3CMovingViewU3Ed__6_System_Collections_IEnumerator_get_Current_mE12119C0845EE734775BAB53C44F5C69178C8BDB ();
-// 0x00000047 System.Void SetupDeviceViewCtrl_<>c__DisplayClass6_0::.ctor()
+// 0x00000045 System.Void SetupDeviceViewCtrl_<>c__DisplayClass6_0::.ctor()
 extern void U3CU3Ec__DisplayClass6_0__ctor_m53C20CB623138CA43444E8656178E5B03DF665C7 ();
-// 0x00000048 System.Void SetupDeviceViewCtrl_<>c__DisplayClass6_0::<Start>b__0()
+// 0x00000046 System.Void SetupDeviceViewCtrl_<>c__DisplayClass6_0::<Start>b__0()
 extern void U3CU3Ec__DisplayClass6_0_U3CStartU3Eb__0_m83580E5C8DD3B318B39CFA46858095A06EE2EFDB ();
-// 0x00000049 System.Void SetupDeviceViewCtrl_<>c::.cctor()
+// 0x00000047 System.Void SetupDeviceViewCtrl_<>c::.cctor()
 extern void U3CU3Ec__cctor_mB7A16BC2D13614A22C658707498C6B8D02A38C1F ();
-// 0x0000004A System.Void SetupDeviceViewCtrl_<>c::.ctor()
+// 0x00000048 System.Void SetupDeviceViewCtrl_<>c::.ctor()
 extern void U3CU3Ec__ctor_mD17623EA0D42D1E6F3B4832D84413A68AA41E93F ();
-// 0x0000004B System.Int32 SetupDeviceViewCtrl_<>c::<OnNewDevicesFound>b__10_1(DeviceCard,DeviceCard)
+// 0x00000049 System.Int32 SetupDeviceViewCtrl_<>c::<OnNewDevicesFound>b__10_1(DeviceCard,DeviceCard)
 extern void U3CU3Ec_U3COnNewDevicesFoundU3Eb__10_1_m4983E42BA998C0EA682C0DD691E49444208FB63E ();
-// 0x0000004C System.Boolean SetupDeviceViewCtrl_<>c::<OnNewDevicesFound>b__10_2(DeviceCard)
+// 0x0000004A System.Boolean SetupDeviceViewCtrl_<>c::<OnNewDevicesFound>b__10_2(DeviceCard)
 extern void U3CU3Ec_U3COnNewDevicesFoundU3Eb__10_2_mE8AD94EF0DEE797D32DD058AB6DF2D769439EF55 ();
-static Il2CppMethodPointer s_methodPointers[76] = 
+static Il2CppMethodPointer s_methodPointers[74] = 
 {
 	AvailableDevicesViewCtrl_StartScanning_mD81164C485714FB23C83D4365C54FFA7368B4C09,
 	AvailableDevicesViewCtrl_StopScanning_m5BDF918A3C93A41160967C37021794315D92EC25,
@@ -226,9 +222,7 @@ static Il2CppMethodPointer s_methodPointers[76] =
 	U3CU3Ec__DisplayClass7_0__ctor_m3A6B626AB04895FDF422E9F997085E2D955E442E,
 	U3CU3Ec__DisplayClass7_0_U3CStartU3Eb__0_m64CA0ABC611EADCD532F21B1520A2F723B272354,
 	U3CU3Ec__DisplayClass11_0__ctor_m3282BC1A0E7E52DB47E4DDBFBEBB597A0DB79F95,
-	U3CU3Ec__DisplayClass11_0_U3COnAvailableDevicesScannedU3Eb__0_m928CC71022FE992065EF7ED17BD77D2C1BA35F80,
-	U3CU3Ec__DisplayClass11_1__ctor_mA810FE2F31B76301F8B6728DFD072620CCA42D6A,
-	U3CU3Ec__DisplayClass11_1_U3COnAvailableDevicesScannedU3Eb__1_m5771640CD70ED709F8230F34F9F0EF94AB591F83,
+	U3CU3Ec__DisplayClass11_0_U3COnAvailableDevicesScannedU3Eb__0_m5B67E097FEF7FCA1A4F50A307E98F6BB7EFB5B6E,
 	U3CU3Ec__cctor_mECA3FB17A70D1618B73777AEE1DCEEAA51E36C94,
 	U3CU3Ec__ctor_mCF8E95C46CBD55F4C58A45E7AC28BF13DBC37325,
 	U3CU3Ec_U3CSetupU3Eb__10_0_m8DB6F93D53BB25E1DE2F6A5E7FA708BCF46422A8,
@@ -251,7 +245,7 @@ static Il2CppMethodPointer s_methodPointers[76] =
 	U3CU3Ec_U3COnNewDevicesFoundU3Eb__10_1_m4983E42BA998C0EA682C0DD691E49444208FB63E,
 	U3CU3Ec_U3COnNewDevicesFoundU3Eb__10_2_mE8AD94EF0DEE797D32DD058AB6DF2D769439EF55,
 };
-static const int32_t s_InvokerIndices[76] = 
+static const int32_t s_InvokerIndices[74] = 
 {
 	13,
 	13,
@@ -306,8 +300,6 @@ static const int32_t s_InvokerIndices[76] =
 	13,
 	13,
 	32,
-	13,
-	32,
 	8,
 	13,
 	44,
@@ -334,7 +326,7 @@ extern const Il2CppCodeGenModule g_AssemblyU2DCSharpCodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharpCodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	76,
+	74,
 	s_methodPointers,
 	s_InvokerIndices,
 	0,
