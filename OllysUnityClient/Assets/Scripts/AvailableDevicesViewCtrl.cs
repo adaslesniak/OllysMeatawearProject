@@ -9,7 +9,7 @@ public class AvailableDevicesViewCtrl : MonoBehaviour {
     [SerializeField] Button backBtn;
 
     DeviceTableCell prototypeCell;
-    List<DeviceTableCell> cells;
+    List<DeviceTableCell> cells = new List<DeviceTableCell>();
     Transform cellsContainer;
     bool isScanning = false;
 
@@ -54,8 +54,15 @@ public class AvailableDevicesViewCtrl : MonoBehaviour {
     }
 
     void OnAvailableDevicesScanned(List<DeviceCard> scanResult) {
+        print("got result of scan in AvailableDevicesViewCtrl");
         var newOnes = new List<DeviceCard>();
         var lostOnes = new List<DeviceTableCell>();
+        if(scanResult == null) {
+            print("scan result is nil");
+        } else {
+            print("scan result is: " + scanResult.Count);
+        }
+
         foreach(var found in scanResult) {
             var existing = cells.Where((cell) => {
                 return cell.controlled.id == found.id;
@@ -64,6 +71,7 @@ public class AvailableDevicesViewCtrl : MonoBehaviour {
                 newOnes.Add(found);
             }
         }
+        print("ns1...");
         foreach(var existing in cells) {
             var updated = scanResult.Where((card) => {
                 return card.id == existing.controlled.id;
@@ -72,12 +80,14 @@ public class AvailableDevicesViewCtrl : MonoBehaviour {
                 lostOnes.Add(existing);
             }
         }
+        print("ns2...");
         foreach(var lost in lostOnes) {
             RemoveCell(lost);
         }
         foreach(var found in newOnes) {
             AddCell(found);
         }
+        print("ns3...");
         if (isScanning) {
             Invoke("Scan", 1.05f);
         }
