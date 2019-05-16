@@ -40,6 +40,7 @@ public class AvailableDevicesViewCtrl : MonoBehaviour {
         copy.gameObject.SetActive(true);
         copy.Setup(forDevice);
         copy.transform.SetParent(cellsContainer);
+        cells.Add(copy);
         print("added cell for device: "+forDevice.name);
         //TODO: do the things with content view so it adjust it's size
     }
