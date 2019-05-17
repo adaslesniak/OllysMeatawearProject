@@ -29,30 +29,30 @@ public class DeviceTableCell : MonoBehaviour {
         redLedSwitch.onValueChanged.AddListener((isOn) => {
             if (isOn) {
                 MetaWearNative.StartDeviceLed(controlled, MetaWearNative.LedColors.RED);
-                Debug.Log("NOT_IMPLEMENTED -> switching on red led");
+                Debug.Log("Unity - calling to turn on red led");
             } else {
-                Debug.Log("NOT_IMPLEMENTED -> turning off single led");
+                Debug.Log("Unity - calling to turn off red led");
                 MetaWearNative.StopDeviceLeds(controlled, MetaWearNative.LedColors.RED);
             }
         });
         blueLedSwitch.onValueChanged.RemoveAllListeners();
         blueLedSwitch.onValueChanged.AddListener((isOn) => {
             if (isOn) {
-                Debug.Log("NOT_IMPLEMENTED -> switching on blue led");
+                Debug.Log("Unity - calling to turn on blue led");
                 MetaWearNative.StartDeviceLed(controlled, MetaWearNative.LedColors.BLUE);
             } else {
-                Debug.Log("NOT_IMPLEMENTED -> turning off single led");
+                Debug.Log("Unity - calling to turn off blue led");
                 MetaWearNative.StopDeviceLeds(controlled, MetaWearNative.LedColors.BLUE);
             }
         });
         accelerometerSwitch.onValueChanged.RemoveAllListeners();
         accelerometerSwitch.onValueChanged.AddListener((isOn) => {
             if(isOn) {
+                Debug.Log("Unity -  calling to turn on accelerometer");
                 MetaWearNative.StartAccelerometerStream(controlled);
-                Debug.Log("NOT_IMPLEMENTED - turning on accelerometer");
             } else {
+                Debug.Log("Unity - calling to turn off accelerometer");
                 MetaWearNative.StopAccelerometerStream(controlled);
-                Debug.Log("NOT_IMPLEMENTED - turning off accelerometer");
             }
         });
         sensorFusionSwitch.onValueChanged.RemoveAllListeners();

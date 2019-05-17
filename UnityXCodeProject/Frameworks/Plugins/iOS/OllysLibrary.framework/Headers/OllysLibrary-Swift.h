@@ -263,6 +263,8 @@ SWIFT_CLASS("_TtC12OllysLibrary13MetaWearUnity")
 + (void)scanForKnownDevices;
 + (void)setUnityListener:(void (^ _Nonnull)(NSString * _Nonnull, NSString * _Nonnull))code;
 + (void)forgetAllDevices;
++ (void)startAccelerometering:(NSString * _Nonnull)deviceId;
++ (void)stopAccelerometering:(NSString * _Nonnull)deviceId;
 + (void)startFlashing:(NSString * _Nonnull)deviceId;
 + (void)startLed:(NSString * _Nonnull)deviceId colorsCode:(NSString * _Nonnull)colorsCode;
 + (void)stopLeds:(NSString * _Nonnull)deviceId colorsCode:(NSString * _Nonnull)colorsCode;

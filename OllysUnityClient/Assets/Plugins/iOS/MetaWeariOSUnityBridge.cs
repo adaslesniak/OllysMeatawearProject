@@ -56,6 +56,12 @@ public class MetaWearNative : MonoBehaviour {
     private static extern void ios_scanForKnownDevices();
 
     [DllImport(DLL_LOCATION)]
+    private static extern void ios_startAccelerometering([MarshalAs(UnmanagedType.LPStr)]string deviceId);
+
+    [DllImport(DLL_LOCATION)]
+    private static extern void ios_stopAccelerometering([MarshalAs(UnmanagedType.LPStr)]string deviceId);
+
+    [DllImport(DLL_LOCATION)]
     private static extern void ios_startFlashingDevice([MarshalAs( UnmanagedType.LPStr )]string deviceId);
 
     [DllImport(DLL_LOCATION)]
@@ -73,15 +79,8 @@ public class MetaWearNative : MonoBehaviour {
     [DllImport(DLL_LOCATION)]
     private static extern void ios_forgetRememberedDevices();
     //#endif
-    #endregion EXTERNAL_DECLARATIONS
+#endregion EXTERNAL_DECLARATIONS
 
-
-    public static void LoadSavedDevices() {
-        print("Unity-LoadSavedDevices...");
-        #if UNITY_IOS && !UNITY_EDITOR
-        ios_loadSavedDevices();
-        #endif
-    }
 
     public static void ScanForNewDevices() {
         print("MetaWeariOSUnity.ScanForNewDevices - calling C code");
@@ -126,12 +125,16 @@ public class MetaWearNative : MonoBehaviour {
 #endif
     }
 
-    public static void StartAccelerometerStream(DeviceCard forDevice) {
-        Debug.LogWarning("NOT_IMPLEMENTED - start accelerometer");
+    public static void StartAccelerometerStream(DeviceCard onDevice) {
+#if UNITY_IOS && !UNITY_EDITOR
+        ios_startAccelerometering(onDevice.id);
+#endif
     }
 
-    public static void StopAccelerometerStream(DeviceCard forDevice) {
-        Debug.LogWarning("NOT_IMPLEMENTED - stop accelerometer");
+    public static void StopAccelerometerStream(DeviceCard onDevice) {
+#if UNITY_IOS && !UNITY_EDITOR
+        ios_stopAccelerometering(onDevice.id);
+#endif
     }
 
     public static void StartSensorFusionStream(DeviceCard forDevice) {
@@ -154,6 +157,7 @@ public class MetaWearNative : MonoBehaviour {
         Application.SetStackTraceLogType(LogType.Log, StackTraceLogType.None);
         Application.SetStackTraceLogType(LogType.Warning, StackTraceLogType.None);
 #if UNITY_IOS && !UNITY_EDITOR
+        ios_loadSavedDevices();
         ios_setCallbackReceiver(ProcessIosMessage);
 #endif
     }

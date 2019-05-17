@@ -52,7 +52,7 @@ public class SetupDeviceViewCtrl : MonoBehaviour
                 touchedDevice = null;
             }
             EnableSetupUI(false);
-            Invoke("Scan", 1.34f);
+            //Invoke("Scan", 1.34f); FIXME: uncomment that
         }
         print("ns1");
         if (found.Count == 0) {

@@ -58,6 +58,16 @@ import Foundation
         Devices.forgetRmemberedDevices()
     }
     
+    @objc public static func startAccelerometering(_ deviceId:  String) {
+        deviceCtrl(deviceId)?.startAccelerometering { measurement in
+            sendObj2Unity(measurement.serialize(), topic: .accelerometerData)
+        }
+    }
+    
+    @objc public static func stopAccelerometering(_ deviceId: String) {
+        deviceCtrl(deviceId)?.stopAccelerometering()
+    }
+    
     
     //could add color here but that would be too darn hard
     @objc public static func startFlashing(_ deviceId: String) {
@@ -65,7 +75,6 @@ import Foundation
     }
     
     @objc public static func startLed(_ deviceId: String, colorsCode: String) {
-        print("NOT_IMPLEMENTED - MetawearUnity.startLed")
         guard let colors = ledColorFromCode(colorsCode) else {
             Log.error("wrong colord code send to startLed: \(colorsCode)")
             return

@@ -8,7 +8,6 @@ NSString* iosString(const char* cString) {
 }
 
 extern "C" {
-
     
     void ios_scanForNewDevices() {
         printf("scanning for new devices... objc++ code");
@@ -21,32 +20,31 @@ extern "C" {
     }
     
     void ios_startFlashingDevice(const char* deviceId) {
-        //NSString* deviceIdString = [NSString stringWithCString:deviceId encoding:NSUTF8StringEncoding];
-        NSString* idString = iosString(deviceId);
-        [MetaWearUnity startFlashing:idString];
+        printf("ios_startFlashingDevice");
+        [MetaWearUnity startFlashing:iosString(deviceId)];
     }
     
     void ios_turnDeviceLedOn(const char* deviceId, const char* colorsCode) {
-        NSString* idString = iosString(deviceId);
-        NSString* colorString = iosString(colorsCode);
-        [MetaWearUnity startLed:idString colorsCode:colorString];
+        printf("ios_turnDeviceLedOn");
+        [MetaWearUnity startLed:iosString(deviceId) colorsCode:iosString(colorsCode)];
     }
     
     void ios_stopDeviceLeds(const char* deviceId, const char* colorsCode) {
         printf("ios_stopDeviceLeds executed");
-        //NSString* deviceIdString = [NSString stringWithCString:deviceId encoding:NSUTF8StringEncoding];
-        //NSString* colorsId = [NSString stringWithCString:colorsCode encoding:NSUTF8StringEncoding];
-        NSString* idString = iosString(deviceId);
-        NSString* colorsString = iosString(colorsCode);
-        [MetaWearUnity stopLeds:idString colorsCode:colorsString];
+        [MetaWearUnity stopLeds:iosString(deviceId) colorsCode:iosString(colorsCode)];
+    }
+    
+    void ios_startAccelerometering(const char* deviceId) {
+        [MetaWearUnity startAccelerometering:iosString(deviceId)];
+    }
+    
+    void ios_stopAccelerometering(const char* deviceId) {
+        [MetaWearUnity stopAccelerometering:iosString(deviceId)];
     }
     
     void ios_rememberDevice(const char* deviceId, const char* name) {
-        //NSString* deviceIdString = [NSString stringWithCString:deviceId encoding:NSUTF8StringEncoding];
-        //NSString* newName = [NSString stringWithCString:name encoding:NSUTF8StringEncoding];
-        NSString* idString = iosString(deviceId);
-        NSString* newName = iosString(name);
-        [MetaWearUnity rememberDevice:idString as:newName];
+        printf("ios_rememberDevice: %s", deviceId);
+        [MetaWearUnity rememberDevice:iosString(deviceId) as:iosString(name)];
     }
     
     typedef void (*CallbackListener)(const char* topic, const char* message);
@@ -58,7 +56,14 @@ extern "C" {
         }];
     }
     
+    //this is kind of init... should be automatically triggered probably
+    void ios_loadSavedDevices() {
+        printf("ios_loadSavedDevices");
+        [Devices loadSavedDevices];
+    }
+    
     void ios_forgetRememberedDevices() {
+        printf("ios_forgetRememberedDevices");
         [MetaWearUnity forgetAllDevices];
     }
 }

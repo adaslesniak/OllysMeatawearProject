@@ -44,4 +44,8 @@ import MetaWearCpp
         formatter.dateFormat = "HH:mm:ss:mmm"
         return "\(sourceName()) at: \(formatter.string(from: when)) = [\(xAcceleration);  \(yAcceleration);  \(zAcceleration)]"
     }
+    
+    func serialize() -> [String:Any] {
+        return ["device_id":source.uuidString, "when": "NOT_IMPLEMENTED", "x": xAcceleration, "y": yAcceleration, "z": zAcceleration]
+    }
 }

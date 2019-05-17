@@ -21,29 +21,30 @@ extern "C" {
     
     void ios_startFlashingDevice(const char* deviceId) {
         printf("ios_startFlashingDevice");
-        NSString* idString = iosString(deviceId);
-        [MetaWearUnity startFlashing:idString];
+        [MetaWearUnity startFlashing:iosString(deviceId)];
     }
     
     void ios_turnDeviceLedOn(const char* deviceId, const char* colorsCode) {
         printf("ios_turnDeviceLedOn");
-        NSString* idString = iosString(deviceId);
-        NSString* colorString = iosString(colorsCode);
-        [MetaWearUnity startLed:idString colorsCode:colorString];
+        [MetaWearUnity startLed:iosString(deviceId) colorsCode:iosString(colorsCode)];
     }
     
     void ios_stopDeviceLeds(const char* deviceId, const char* colorsCode) {
         printf("ios_stopDeviceLeds executed");
-        NSString* idString = iosString(deviceId);
-        NSString* colorsString = iosString(colorsCode);
-        [MetaWearUnity stopLeds:idString colorsCode:colorsString];
+        [MetaWearUnity stopLeds:iosString(deviceId) colorsCode:iosString(colorsCode)];
+    }
+    
+    void ios_startAccelerometering(const char* deviceId) {
+        [MetaWearUnity startAccelerometering:iosString(deviceId)];
+    }
+    
+    void ios_stopAccelerometering(const char* deviceId) {
+        [MetaWearUnity stopAccelerometering:iosString(deviceId)];
     }
     
     void ios_rememberDevice(const char* deviceId, const char* name) {
-        NSString* idString = iosString(deviceId);
-        NSString* newName = iosString(name);
         printf("ios_rememberDevice: %s", deviceId);
-        [MetaWearUnity rememberDevice:idString as:newName];
+        [MetaWearUnity rememberDevice:iosString(deviceId) as:iosString(name)];
     }
     
     typedef void (*CallbackListener)(const char* topic, const char* message);
