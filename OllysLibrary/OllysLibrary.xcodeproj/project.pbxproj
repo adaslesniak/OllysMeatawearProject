@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		8117530622788021002A9287 /* MetaWearUnityBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8117530522788021002A9287 /* MetaWearUnityBridge.mm */; };
 		811753082278814C002A9287 /* MetaWearUnity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811753072278814C002A9287 /* MetaWearUnity.swift */; };
-		8117530A2278A1D4002A9287 /* ExposedInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811753092278A1D4002A9287 /* ExposedInterface.swift */; };
+		81544DEA228ED7ED00E49A60 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81544DE9228ED7ED00E49A60 /* Date+.swift */; };
 		81A9E2C92275DE9E009531E0 /* OllysLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 81A9E2C72275DE9E009531E0 /* OllysLibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		81A9E2D42275DEDC009531E0 /* Zip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81A9E2D02275DEDC009531E0 /* Zip.framework */; };
 		81A9E2D52275DEDC009531E0 /* MetaWear.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81A9E2D12275DEDC009531E0 /* MetaWear.framework */; };
@@ -43,7 +43,7 @@
 		49EFA33B660FBFC404527F2A /* Pods-OllysLibrary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OllysLibrary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OllysLibrary/Pods-OllysLibrary.debug.xcconfig"; sourceTree = "<group>"; };
 		8117530522788021002A9287 /* MetaWearUnityBridge.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MetaWearUnityBridge.mm; sourceTree = "<group>"; };
 		811753072278814C002A9287 /* MetaWearUnity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetaWearUnity.swift; sourceTree = "<group>"; };
-		811753092278A1D4002A9287 /* ExposedInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExposedInterface.swift; sourceTree = "<group>"; };
+		81544DE9228ED7ED00E49A60 /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 		81A9E2C42275DE9E009531E0 /* OllysLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OllysLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A9E2C72275DE9E009531E0 /* OllysLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OllysLibrary.h; sourceTree = "<group>"; };
 		81A9E2C82275DE9E009531E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -158,7 +158,7 @@
 				81A9E2E72275E10C009531E0 /* MetaWear+.swift */,
 				8117530522788021002A9287 /* MetaWearUnityBridge.mm */,
 				811753072278814C002A9287 /* MetaWearUnity.swift */,
-				811753092278A1D4002A9287 /* ExposedInterface.swift */,
+				81544DE9228ED7ED00E49A60 /* Date+.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -305,8 +305,8 @@
 				81A9E2F32275E10C009531E0 /* LedCtrl.swift in Sources */,
 				81A9E2ED2275E10C009531E0 /* Log.swift in Sources */,
 				81A9E2E32275E0F8009531E0 /* Dictionary+.swift in Sources */,
-				8117530A2278A1D4002A9287 /* ExposedInterface.swift in Sources */,
 				8117530622788021002A9287 /* MetaWearUnityBridge.mm in Sources */,
+				81544DEA228ED7ED00E49A60 /* Date+.swift in Sources */,
 				81A9E2EC2275E10C009531E0 /* AccelerometerMeasurment.swift in Sources */,
 				811753082278814C002A9287 /* MetaWearUnity.swift in Sources */,
 				81A9E2FF2275E175009531E0 /* unzip.c in Sources */,

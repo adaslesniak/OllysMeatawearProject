@@ -28,7 +28,7 @@ public class AcceleratorData  {
         self.zAcceleration = serialised["z"].Value<float>();
         self.deviceId = serialised["device_id"].Value<string>();
         var dateString = serialised["when"].Value<string>();
-        //FIXME: implement date
+        self.when = DateTimeExt.fromiOSDate(dateString);
         return self;
     }
 

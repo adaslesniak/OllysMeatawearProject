@@ -40,12 +40,10 @@ import MetaWearCpp
     }
     
     public override var description: String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "HH:mm:ss:mmm"
-        return "\(sourceName()) at: \(formatter.string(from: when)) = [\(xAcceleration);  \(yAcceleration);  \(zAcceleration)]"
+        return "\(sourceName()) at: \(when.toUnityString()) = [\(xAcceleration);  \(yAcceleration);  \(zAcceleration)]"
     }
     
     func serialize() -> [String:Any] {
-        return ["device_id":source.uuidString, "when": "NOT_IMPLEMENTED", "x": xAcceleration, "y": yAcceleration, "z": zAcceleration]
+        return ["device_id":source.uuidString, "when": when.toUnityString(), "x": xAcceleration, "y": yAcceleration, "z": zAcceleration]
     }
 }

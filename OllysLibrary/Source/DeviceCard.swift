@@ -31,10 +31,11 @@ import Foundation
     }
     
     func serialise() -> [String:Any] {
-        return ["name":name, "id":id.uuidString, "signalStrength": signal?.strength ?? -255, "signalTime": "unimplemented"]
+        let signalTime = signal?.when ?? Date.init(timeIntervalSince1970: 0)
+        return ["name":name, "id":id.uuidString, "signalStrength": signal?.strength ?? -255, "signalTime": signalTime.toUnityString()]
     }
     
-    /* damn crap wiht those objective-c requriements for exporting something
+    /* damn crap with those objective-c requriements for exporting something
     public override func hash(into hasher: inout Hasher) {
         hasher.combine(id)
     }*/

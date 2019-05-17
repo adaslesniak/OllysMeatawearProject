@@ -17,13 +17,10 @@ public class DeviceCard {
             "name": "MetaWear"
         }*/
         self.id = serialised["id"].Value<string>();
-        //Debug.Log("got id: " +self.id);
         self.name = serialised["name"].Value<string>();
-        //Debug.Log("got name: " + self.name);
         self.signalStrength = serialised["signalStrength"].Value<int>();
-        //Debug.Log("got signalStrength: " + self.signalStrength);
-        self.signalTime = System.DateTime.Now; //FIXME: that is not implemented
-        //Debug.Log("WARNING: correct deserialisation of signal time not implemented");
+        var dateString = serialised["signalTime"].Value<string>();
+        self.signalTime = DateTimeExt.fromiOSDate(dateString);
         return self;
     }
 
