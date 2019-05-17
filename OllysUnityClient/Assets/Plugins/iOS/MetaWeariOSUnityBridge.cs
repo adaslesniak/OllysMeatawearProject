@@ -16,7 +16,7 @@ public class MetaWearNative : MonoBehaviour {
 
     //NOTE: ensure this are exactly as on iOS side: MetaWearUnity.swift
     class MessageSubjects {
-        public string acceleratorData = "accelerator_measurment";
+        public const string acceleratorData = "accelerator_measurment";
         public const string foundKnownDevices = "known_devices";
         public const string foundNewDevices = "new_devices";
         public const string unspecified = "unspecified";
@@ -178,13 +178,20 @@ public class MetaWearNative : MonoBehaviour {
             foreach (var thingie in jsonData) {
                 devices.Add(DeviceCard.fromIosSerialised(thingie as JObject));
             }
-            print("deserialised " + devices.Count + " cards at ProcessIosMessage<"+subject+">");
+            print("deserialised " + devices.Count + " cards at ProcessIosMessage<" + subject + ">");
             if (subject == MessageSubjects.foundNewDevices) {
                 onNewDevicesScaned?.Invoke(devices);
-            } else if(subject == MessageSubjects.foundKnownDevices) {
+            } else if (subject == MessageSubjects.foundKnownDevices) {
                 onKnowDevicesScaned?.Invoke(devices);
             }
-        } else {
+        } else if(subject == MessageSubjects.acceleratorData) {
+            print("HAVE DATA FROM ACCELEROMETER: " + content);
+            var jContent = JObject.Parse(content);
+            print("it is: "+jContent);
+            var translated = AcceleratorData.fromIosSerialised(jContent);
+            print("so finally we have model: " + translated);
+
+        } else { 
             print(">>> got [" + subject + "] message from iOS inside unity: \n   " + content);
         }
     }

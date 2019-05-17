@@ -1,5 +1,6 @@
 ﻿/* crated by Adas Lesniak on April 30 2019 */
 using Newtonsoft.Json.Linq;
+using System;
 
 public class DeviceCard {
     public string id { get; private set; }
@@ -24,5 +25,9 @@ public class DeviceCard {
         self.signalTime = System.DateTime.Now; //FIXME: that is not implemented
         //Debug.Log("WARNING: correct deserialisation of signal time not implemented");
         return self;
+    }
+
+    public override string ToString() {
+        return $"{name}'s card. Id= {id}; signal({signalStrength}) captured at {signalTime}";
     }
 }
