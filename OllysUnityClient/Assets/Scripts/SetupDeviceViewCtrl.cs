@@ -52,7 +52,7 @@ public class SetupDeviceViewCtrl : MonoBehaviour
                 touchedDevice = null;
             }
             EnableSetupUI(false);
-            //Invoke("Scan", 1.34f); FIXME: uncomment that
+            Invoke("Scan", 1.34f); 
         }
         print("ns1");
         if (found.Count == 0) {
@@ -68,7 +68,7 @@ public class SetupDeviceViewCtrl : MonoBehaviour
             return device.signalStrength <= 0;
         });
         print("ns3");
-        if (nearest.signalStrength < -44) { //FIXME: should be -39
+        if (nearest.signalStrength < -55) { 
             print("there is new device but too far away (signal= ("+nearest.signalStrength+ "); " +
             	" last is: " + found.Last().signalStrength +
             	" first is: " + found.First().signalStrength);
@@ -118,7 +118,7 @@ public class SetupDeviceViewCtrl : MonoBehaviour
             MetaWearNative.StopDeviceLeds(touchedDevice);
             MetaWearNative.RememberDevice(touchedDevice, name);
             touchedDevice = null;
-            //Invoke("Scan", 0.5f); //FIXME: uncomment that after debugging
+            Invoke("Scan", 0.5f); 
         });
     }
 }
