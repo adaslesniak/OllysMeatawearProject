@@ -1,5 +1,6 @@
 // MetaWearUnity.swift [OllysLibrary] created by: Adas Lesniak on: 30/04/2019
 import Foundation
+import MetaWear
 //#import "UnityInterface.h"
 
 @objc public class MetaWearUnity: NSObject {
@@ -66,6 +67,24 @@ import Foundation
     
     @objc public static func stopAccelerometering(_ deviceId: String) {
         deviceCtrl(deviceId)?.stopAccelerometering()
+    }
+    
+    @objc public static func startSensorFusion(_ deviceId:  String) {
+        
+        //deviceCtrl(deviceId)?.device.sensor
+    
+        
+        
+        //deviceCtrl(deviceId)?.startAccelerometering { measurement in
+       //     sendObj2Unity(measurement.serialize(), topic: .accelerometerData)
+        //}
+        print("NOT IMPLEMENTED SENSOR FUSION STUFF!!!")
+    }
+    
+    @objc public static func stopSensorFusion(_ deviceId: String) {
+    //    deviceCtrl(deviceId)?.stopAccelerometering()
+        //deviceCtrl(deviceId)?.
+        print("NOT IMPLEMENTED SENSOR FUSION STUFF!!!")
     }
     
     

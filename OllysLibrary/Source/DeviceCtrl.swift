@@ -80,6 +80,18 @@ import Foundation
         }
     }
     
+    @objc public func startSensorFusion(_ listener: @escaping (AccelerometerMeasurment) -> Void) {
+        connect { [weak self] in
+        //    self?.accelerometerCtrl.startAccelerometering(listener)
+        }
+    }
+    @objc public func stopSensorFusion() {
+        connect { [weak self] in
+          //  self?.accelerometerCtrl.stopAccelrometering()
+        }
+    }
+    
+    
     
     @objc public override var description: String {
         return "[\(device.name): \(device.peripheral.identifier)]"

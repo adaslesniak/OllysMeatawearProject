@@ -3,4 +3,6 @@ platform :ios, '10.0'
 target 'OllysLibrary' do
   use_frameworks!
   pod 'MetaWear', :subspecs => ['Core', 'AsyncUtils', 'UI']
+  pod 'MetaWearPrivate', :git => 'https://github.com/mbientlab/MetaWear-SDK-iOS-macOS-tvOS.git', :commit => '1254b54'
+  
 end

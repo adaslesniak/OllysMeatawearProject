@@ -1,0 +1,231 @@
+fileFormatVersion: 2
+guid: 58bfb4e57167c47c7b49c93f675b7c27
+timeCreated: 1535203053
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Armature
+    100002: Sphere.001
+    100004: Sphere_1
+    100006: Sphere_10
+    100008: Sphere_11
+    100010: Sphere_12
+    100012: Sphere_13
+    100014: Sphere_14
+    100016: Sphere_15
+    100018: Sphere_16
+    100020: Sphere_17
+    100022: Sphere_18
+    100024: Sphere_19
+    100026: Sphere_2
+    100028: Sphere_20
+    100030: Sphere_21
+    100032: Sphere_22
+    100034: Sphere_23
+    100036: Sphere_24
+    100038: Sphere_25
+    100040: Sphere_26
+    100042: Sphere_27
+    100044: Sphere_28
+    100046: Sphere_29
+    100048: Sphere_3
+    100050: Sphere_30
+    100052: Sphere_31
+    100054: Sphere_32
+    100056: Sphere_32_end
+    100058: Sphere_4
+    100060: Sphere_5
+    100062: Sphere_6
+    100064: Sphere_7
+    100066: Sphere_8
+    100068: Sphere_9
+    100070: Sphere_Root
+    100072: //RootNode
+    100074: SurfSphere
+    400000: Armature
+    400002: Sphere.001
+    400004: Sphere_1
+    400006: Sphere_10
+    400008: Sphere_11
+    400010: Sphere_12
+    400012: Sphere_13
+    400014: Sphere_14
+    400016: Sphere_15
+    400018: Sphere_16
+    400020: Sphere_17
+    400022: Sphere_18
+    400024: Sphere_19
+    400026: Sphere_2
+    400028: Sphere_20
+    400030: Sphere_21
+    400032: Sphere_22
+    400034: Sphere_23
+    400036: Sphere_24
+    400038: Sphere_25
+    400040: Sphere_26
+    400042: Sphere_27
+    400044: Sphere_28
+    400046: Sphere_29
+    400048: Sphere_3
+    400050: Sphere_30
+    400052: Sphere_31
+    400054: Sphere_32
+    400056: Sphere_32_end
+    400058: Sphere_4
+    400060: Sphere_5
+    400062: Sphere_6
+    400064: Sphere_7
+    400066: Sphere_8
+    400068: Sphere_9
+    400070: Sphere_Root
+    400072: //RootNode
+    400074: SurfSphere
+    2100000: No Name
+    2300000: SurfSphere
+    3300000: SurfSphere
+    4300000: SurfSphere
+    4300002: Sphere.001
+    7400000: CircleStepAnnim
+    7400002: IDLE
+    7400004: CircleStepAnnim
+    7400006: Annimate
+    7400008: Idle
+    9500000: //RootNode
+    13700000: Sphere.001
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Annimate
+      takeName: Armature|ArmatureAction
+      firstFrame: 0
+      lastFrame: 225
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Idle
+      takeName: Armature|ArmatureAction
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

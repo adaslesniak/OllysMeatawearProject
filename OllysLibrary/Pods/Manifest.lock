@@ -1,5 +1,7 @@
 PODS:
   - Bolts-Swift (1.4.0)
+  - Bolts/Tasks (1.8.4)
+  - FastCoding (3.2.2)
   - MetaWear/AsyncUtils (3.2.0):
     - MetaWear/Core
   - MetaWear/Core (3.2.0):
@@ -7,21 +9,40 @@ PODS:
   - MetaWear/UI (3.2.0):
     - MetaWear/AsyncUtils
     - MetaWear/Core
+  - MetaWearPrivate (2.10.0):
+    - Bolts/Tasks (~> 1.8.4)
+    - FastCoding (~> 3.2.2)
 
 DEPENDENCIES:
   - MetaWear/AsyncUtils
   - MetaWear/Core
   - MetaWear/UI
+  - MetaWearPrivate (from `https://github.com/mbientlab/MetaWear-SDK-iOS-macOS-tvOS.git`, commit `1254b54`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Bolts
     - Bolts-Swift
+    - FastCoding
     - MetaWear
 
+EXTERNAL SOURCES:
+  MetaWearPrivate:
+    :commit: 1254b54
+    :git: https://github.com/mbientlab/MetaWear-SDK-iOS-macOS-tvOS.git
+
+CHECKOUT OPTIONS:
+  MetaWearPrivate:
+    :commit: 1254b54
+    :git: https://github.com/mbientlab/MetaWear-SDK-iOS-macOS-tvOS.git
+
 SPEC CHECKSUMS:
+  Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
   Bolts-Swift: 650d72e8017721b1a6bbe43d542c4578f8e5ba6f
+  FastCoding: f7b1b75a2ccb0dd6ef9c928e46339e20252d98d3
   MetaWear: 387b9c7b55649c04cbf2cebc12775ac9d4dc8170
+  MetaWearPrivate: f9cb466d358f6a4a5639f3cce393ddaf37c4def5
 
-PODFILE CHECKSUM: 84e70044ee1effb57901f9e87ddade4e4350ba59
+PODFILE CHECKSUM: ae209e3bd9e2a56da218b4bf05e899ce1ca94fbd
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.7.0

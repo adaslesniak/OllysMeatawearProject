@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23D843A22293456A0089E0D1 /* SensorFusionCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D843A12293456A0089E0D1 /* SensorFusionCtrl.swift */; };
 		8117530622788021002A9287 /* MetaWearUnityBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8117530522788021002A9287 /* MetaWearUnityBridge.mm */; };
 		811753082278814C002A9287 /* MetaWearUnity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811753072278814C002A9287 /* MetaWearUnity.swift */; };
 		81544DEA228ED7ED00E49A60 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81544DE9228ED7ED00E49A60 /* Date+.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		23D843A12293456A0089E0D1 /* SensorFusionCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorFusionCtrl.swift; sourceTree = "<group>"; };
 		3B1E50389116EBAFCC4CD709 /* Pods-OllysLibrary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OllysLibrary.release.xcconfig"; path = "Pods/Target Support Files/Pods-OllysLibrary/Pods-OllysLibrary.release.xcconfig"; sourceTree = "<group>"; };
 		49EFA33B660FBFC404527F2A /* Pods-OllysLibrary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OllysLibrary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OllysLibrary/Pods-OllysLibrary.debug.xcconfig"; sourceTree = "<group>"; };
 		8117530522788021002A9287 /* MetaWearUnityBridge.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MetaWearUnityBridge.mm; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				8117530522788021002A9287 /* MetaWearUnityBridge.mm */,
 				811753072278814C002A9287 /* MetaWearUnity.swift */,
 				81544DE9228ED7ED00E49A60 /* Date+.swift */,
+				23D843A12293456A0089E0D1 /* SensorFusionCtrl.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 				8117530622788021002A9287 /* MetaWearUnityBridge.mm in Sources */,
 				81544DEA228ED7ED00E49A60 /* Date+.swift in Sources */,
 				81A9E2EC2275E10C009531E0 /* AccelerometerMeasurment.swift in Sources */,
+				23D843A22293456A0089E0D1 /* SensorFusionCtrl.swift in Sources */,
 				811753082278814C002A9287 /* MetaWearUnity.swift in Sources */,
 				81A9E2FF2275E175009531E0 /* unzip.c in Sources */,
 				81A9E2FE2275E175009531E0 /* ioapi.c in Sources */,

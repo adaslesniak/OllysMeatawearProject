@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: 2abda552ca5e84c2e9cc4f03aede9584
+timeCreated: 1552422804
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Nunito SemiBold
+  fontNames:
+  - Nunito SemiBold
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 0323bf2f7686148a58b0b0188dac4985, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

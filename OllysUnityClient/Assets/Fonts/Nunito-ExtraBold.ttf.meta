@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: 8de8fa190409d4f56963e8d4e0bcb487
+timeCreated: 1552422804
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Nunito ExtraBold
+  fontNames:
+  - Nunito ExtraBold
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 17cd6298548f14cf8a3d5a5c2a81f79b, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

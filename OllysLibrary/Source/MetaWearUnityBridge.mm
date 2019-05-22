@@ -1,5 +1,6 @@
 #import <OllysLibrary/OllysLibrary-Swift.h>
 #import <Foundation/Foundation.h>
+#import "MBLSensorFusion.h"
 
 #pragma mark - C interface
 
@@ -41,6 +42,16 @@ extern "C" {
     void ios_stopAccelerometering(const char* deviceId) {
         [MetaWearUnity stopAccelerometering:iosString(deviceId)];
     }
+    
+    void ios_startSensorFusioning(const char* deviceId) {
+        [MetaWearUnity startSensorFusion:iosString(deviceId)];
+    }
+    
+    void ios_stopSensorFusioning(const char* deviceId) {
+        [MetaWearUnity stopSensorFusion:iosString(deviceId)];
+    }
+    
+    
     
     void ios_rememberDevice(const char* deviceId, const char* name) {
         printf("ios_rememberDevice: %s", deviceId);

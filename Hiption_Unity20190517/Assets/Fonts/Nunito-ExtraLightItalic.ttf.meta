@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: be4e55b92e6e74cfa8e5ff25c3fb2b02
+timeCreated: 1552422804
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Nunito ExtraLight
+  fontNames:
+  - Nunito ExtraLight
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 588d7c9a7bfda4434ace2340efd776d4, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
